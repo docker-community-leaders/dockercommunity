@@ -2,16 +2,16 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
 	<sitemap>
-	   	<loc>https://knative.dev/en/sitemap.xml</loc>
+	   	<loc>https://knative.dev/no/sitemap.xml</loc>
 		
-	   	<lastmod>2021-01-20T23:57:50+05:30</lastmod>
+	   	<lastmod>2021-01-21T00:05:05+05:30</lastmod>
 		
 	</sitemap>
 	
 	<sitemap>
-	   	<loc>https://knative.dev/no/sitemap.xml</loc>
+	   	<loc>https://knative.dev/en/sitemap.xml</loc>
 		
-	   	<lastmod>2021-01-20T23:57:50+05:30</lastmod>
+	   	<lastmod>2021-01-21T00:05:05+05:30</lastmod>
 		
 	</sitemap>
 	

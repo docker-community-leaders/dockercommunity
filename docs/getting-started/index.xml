@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Knative – Getting Started</title>
+    <title>Docker Community  – Getting Started</title>
     <link>https://knative.dev/docs/getting-started/</link>
-    <description>Recent content in Getting Started on Knative</description>
+    <description>Recent content in Getting Started on Docker Community </description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="https://knative.dev/docs/getting-started/index.xml" rel="self" type="application/rss+xml" />

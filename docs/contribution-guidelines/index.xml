@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Knative – Contribution Guidelines</title>
+    <title>Docker Community  – Contribution Guidelines</title>
     <link>https://knative.dev/docs/contribution-guidelines/</link>
-    <description>Recent content in Contribution Guidelines on Knative</description>
+    <description>Recent content in Contribution Guidelines on Docker Community </description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="https://knative.dev/docs/contribution-guidelines/index.xml" rel="self" type="application/rss+xml" />

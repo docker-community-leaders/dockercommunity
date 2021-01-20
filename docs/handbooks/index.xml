@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Docker Community  – Handbooks</title>
+    <title> – Handbooks</title>
     <link>https://knative.dev/docs/handbooks/</link>
-    <description>Recent content in Handbooks on Docker Community </description>
+    <description>Recent content in Handbooks on </description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="https://knative.dev/docs/handbooks/index.xml" rel="self" type="application/rss+xml" />

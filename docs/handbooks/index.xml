@@ -175,6 +175,15 @@
 &lt;li&gt;&lt;a href=&#34;dockerhub/dockerhub.md&#34;&gt;Creating Your DockerHub Account&lt;/a&gt; - 15 min&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;getting-started-with-docker-image---1-hour&#34;&gt;Getting Started with Docker Image - 1 hour&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Click &lt;strong&gt;Launch Terminal&lt;/strong&gt;&lt;/p&gt;
+&lt;div id=&#34;my-panel&#34; data-katacoda-ondemand=&#34;true&#34; data-katacoda-port=&#34;30000&#34; data-katacoda-env=&#34;minikube&#34; data-katacoda-command=&#34;start.sh&#34; data-katacoda-ui=&#34;panel&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://katacoda.com/embed.js&#34;&gt;&lt;/script&gt;
+&lt;button class=&#34;button&#34; onclick=&#34;window.katacoda.init(); &#34;&gt;Launch Terminal&lt;/button&gt;
+
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../../helloworld/README.md&#34;&gt;Running Hello World Example&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../../beginners/workingwithdockerimage/workingwithdockerimage.md&#34;&gt;Working with Docker Image&lt;/a&gt;&lt;/li&gt;

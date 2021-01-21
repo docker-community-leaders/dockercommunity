@@ -24,8 +24,8 @@
         
         <![CDATA[<img src="https://knative.dev/blog/2018/10/06/easy-documentation-with-docsy/featured-sunset-get_hu69849a7cdb847c2393a7b3a7f6061c86_387442_640x0_resize_catmullrom_2.png" width="640" height="253"/>]]>
         
-        &lt;p&gt;&lt;strong&gt;This is a typical blog post that includes images.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The front matter specifies the date of the blog post, its title, a short description that will be displayed on the blog landing page, and its author.&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Welcome to New Docker Community Site&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Inviting you to the new Docker Community Site&lt;/p&gt;
 &lt;h2 id=&#34;including-images&#34;&gt;Including images&lt;/h2&gt;
 &lt;p&gt;Here&amp;rsquo;s an image (&lt;code&gt;featured-sunset-get.png&lt;/code&gt;) that includes a byline and a caption.&lt;/p&gt;
 

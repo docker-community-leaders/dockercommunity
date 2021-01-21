@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Community Blog</title>
-    <link>https://knative.dev/blog/</link>
+    <link>https://docker-community-leaders.github.io/dockercommunity/blog/</link>
     <description>Recent content in Community Blog on </description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="https://knative.dev/blog/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://docker-community-leaders.github.io/dockercommunity/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Blog: Another Great Release</title>
-      <link>https://knative.dev/blog/2018/01/04/another-great-release/</link>
+      <link>https://docker-community-leaders.github.io/dockercommunity/blog/2018/01/04/another-great-release/</link>
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/blog/2018/01/04/another-great-release/</guid>
+      <guid>https://docker-community-leaders.github.io/dockercommunity/blog/2018/01/04/another-great-release/</guid>
       <description>
         
         

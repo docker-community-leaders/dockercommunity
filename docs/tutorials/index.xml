@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Tutorials</title>
-    <link>https://knative.dev/docs/tutorials/</link>
+    <link>https://docker-community-leaders.github.io/dockercommunity/docs/tutorials/</link>
     <description>Recent content in Tutorials on </description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 04 Jan 2017 00:00:00 +0000</lastBuildDate>
     
-	  <atom:link href="https://knative.dev/docs/tutorials/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://docker-community-leaders.github.io/dockercommunity/docs/tutorials/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Multi-Bear Domicile Setup</title>
-      <link>https://knative.dev/docs/tutorials/multi-bear/</link>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/tutorials/multi-bear/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/docs/tutorials/multi-bear/</guid>
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/tutorials/multi-bear/</guid>
       <description>
         
         
@@ -329,10 +329,10 @@ bar := &amp;quot;foo&amp;quot;;
     
     <item>
       <title>Docs: Another Tutorial</title>
-      <link>https://knative.dev/docs/tutorials/tutorial2/</link>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/tutorials/tutorial2/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/docs/tutorials/tutorial2/</guid>
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/tutorials/tutorial2/</guid>
       <description>
         
         

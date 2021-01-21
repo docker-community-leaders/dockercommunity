@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Documentation</title>
-    <link>https://knative.dev/docs/</link>
+    <link>https://docker-community-leaders.github.io/dockercommunity/docs/</link>
     <description>Recent content in Documentation on </description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="https://knative.dev/docs/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://docker-community-leaders.github.io/dockercommunity/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Docker101</title>
-      <link>https://knative.dev/docs/handbooks/docker101/</link>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/handbooks/docker101/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/docs/handbooks/docker101/</guid>
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/handbooks/docker101/</guid>
       <description>
         
         
@@ -250,10 +250,10 @@
     
     <item>
       <title>Docs: Bed and Chair Metrics</title>
-      <link>https://knative.dev/docs/tasks/beds/</link>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/tasks/beds/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/docs/tasks/beds/</guid>
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/tasks/beds/</guid>
       <description>
         
         
@@ -563,10 +563,10 @@ bar := &amp;quot;foo&amp;quot;;
     
     <item>
       <title>Docs: Configuring Ponycopters</title>
-      <link>https://knative.dev/docs/tasks/ponycopters/configuring-ponycopters/</link>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/tasks/ponycopters/configuring-ponycopters/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/docs/tasks/ponycopters/configuring-ponycopters/</guid>
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/tasks/ponycopters/configuring-ponycopters/</guid>
       <description>
         
         
@@ -876,10 +876,10 @@ bar := &amp;quot;foo&amp;quot;;
     
     <item>
       <title>Docs: Docker for JAVA developers</title>
-      <link>https://knative.dev/docs/handbooks/docker-java/</link>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/handbooks/docker-java/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/docs/handbooks/docker-java/</guid>
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/handbooks/docker-java/</guid>
       <description>
         
         
@@ -1079,10 +1079,10 @@ bar := &amp;quot;foo&amp;quot;;
     
     <item>
       <title>Docs: Launching Ponycopters</title>
-      <link>https://knative.dev/docs/tasks/ponycopters/launching-ponycopters/</link>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/tasks/ponycopters/launching-ponycopters/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/docs/tasks/ponycopters/launching-ponycopters/</guid>
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/tasks/ponycopters/launching-ponycopters/</guid>
       <description>
         
         
@@ -1392,10 +1392,10 @@ bar := &amp;quot;foo&amp;quot;;
     
     <item>
       <title>Docs: Multi-Bear Domicile Setup</title>
-      <link>https://knative.dev/docs/tutorials/multi-bear/</link>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/tutorials/multi-bear/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/docs/tutorials/multi-bear/</guid>
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/tutorials/multi-bear/</guid>
       <description>
         
         
@@ -1705,10 +1705,10 @@ bar := &amp;quot;foo&amp;quot;;
     
     <item>
       <title>Docs: Porridge Assessment</title>
-      <link>https://knative.dev/docs/tasks/porridge/</link>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/tasks/porridge/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/docs/tasks/porridge/</guid>
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/tasks/porridge/</guid>
       <description>
         
         
@@ -2018,10 +2018,10 @@ bar := &amp;quot;foo&amp;quot;;
     
     <item>
       <title>Docs: Another Task</title>
-      <link>https://knative.dev/docs/tasks/task/</link>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/tasks/task/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/docs/tasks/task/</guid>
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/tasks/task/</guid>
       <description>
         
         
@@ -2331,10 +2331,10 @@ bar := &amp;quot;foo&amp;quot;;
     
     <item>
       <title>Docs: Another Tutorial</title>
-      <link>https://knative.dev/docs/tutorials/tutorial2/</link>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/tutorials/tutorial2/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/docs/tutorials/tutorial2/</guid>
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/tutorials/tutorial2/</guid>
       <description>
         
         
@@ -2644,10 +2644,10 @@ bar := &amp;quot;foo&amp;quot;;
     
     <item>
       <title>Docs: Convex Optimization: A Practical Guide</title>
-      <link>https://knative.dev/docs/examples/cvxguide/</link>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/examples/cvxguide/</link>
       <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/docs/examples/cvxguide/</guid>
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/examples/cvxguide/</guid>
       <description>
         
         
@@ -3530,10 +3530,10 @@ z =&amp;amp;C_zx+D_uu
     
     <item>
       <title>Docs: Example Page</title>
-      <link>https://knative.dev/docs/getting-started/example-page/</link>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/getting-started/example-page/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/docs/getting-started/example-page/</guid>
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/getting-started/example-page/</guid>
       <description>
         
         
@@ -3843,10 +3843,10 @@ bar := &amp;quot;foo&amp;quot;;
     
     <item>
       <title>Docs: Parameter Reference</title>
-      <link>https://knative.dev/docs/reference/parameter-reference/</link>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/reference/parameter-reference/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://knative.dev/docs/reference/parameter-reference/</guid>
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/reference/parameter-reference/</guid>
       <description>
         
         

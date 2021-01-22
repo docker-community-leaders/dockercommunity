@@ -34,5 +34,19 @@
       </description>
     </item>
     
+    <item>
+      <title>Docs: Java Handbook</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/handbooks/java/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/handbooks/java/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;docker-workshop-for-java-developers&#34;&gt;Docker Workshop for Java Developers&lt;/h2&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

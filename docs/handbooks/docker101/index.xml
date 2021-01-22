@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title> – Docker101</title>
+    <title> – Docker101 Workshop</title>
     <link>https://docker-community-leaders.github.io/dockercommunity/docs/handbooks/docker101/</link>
-    <description>Recent content in Docker101 on </description>
+    <description>Recent content in Docker101 Workshop on </description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="https://docker-community-leaders.github.io/dockercommunity/docs/handbooks/docker101/index.xml" rel="self" type="application/rss+xml" />

@@ -13,19 +13,5 @@
       
     
     
-    <item>
-      <title>Docs: Projects</title>
-      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/change-me/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/change-me/</guid>
-      <description>
-        
-        
-        &lt;h2 id=&#34;projects-maintained-by-docker-community-leaders&#34;&gt;Projects maintained by Docker Community Leaders&lt;/h2&gt;
-
-      </description>
-    </item>
-    
   </channel>
 </rss>

@@ -2862,6 +2862,38 @@ b747d43fa277   nginx               &amp;quot;nginx -g &#39;daemon off&amp;quot; 
         
         &lt;h2 id=&#34;docker-handbook-for-intermediate&#34;&gt;Docker Handbook for Intermediate&lt;/h2&gt;
 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;highlight&#34;&gt;
+    &lt;div class=&#34;copy-code-icon&#34; style=&#34;text-align:right&#34;&gt;
+    &lt;a href=&#34;https://%25!s%28%3cnil%3e%29/master/content/en/examples/dockerfile/Dockerfile.add&#34; download=&#34;dockerfile/Dockerfile.add&#34;&gt;&lt;code&gt;dockerfile/Dockerfile.add&lt;/code&gt;
+    &lt;/a&gt;
+    &lt;img src=&#34;../../images/copycode.svg&#34; style=&#34;max-height:24px; cursor: pointer&#34; onclick=&#34;copyCode(&#39;dockerfiledockerfileadd&#39;)&#34; title=&#34;Copy dockerfile/Dockerfile.add to clipboard&#34;&gt;
+    &lt;/img&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;includecode&#34; id=&#34;dockerfiledockerfileadd&#34;&gt;
+    &lt;pre&gt;&lt;code class=&#34;language-add&#34; data-lang=&#34;add&#34;&gt;FROM alpine:3.5
+RUN apk update
+ADD http://www.vlsitechnology.org/pharosc_8.4.tar.gz .
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+
       </description>
     </item>
     

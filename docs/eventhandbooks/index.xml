@@ -92,7 +92,7 @@
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;6&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;../../housekeeping/postevent/README.md&#34;&gt;Post-Event FollowUp&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;#post-event-followup&#34;&gt;Post-Event FollowUp&lt;/a&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -320,7 +320,7 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
 &lt;li&gt;Gentle reminder as the date of workshop come closer&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;sample-confirmation-email-for-the-workshop&#34;&gt;Sample Confirmation email for the workshop&lt;/h3&gt;
-&lt;h2 id=&#34;post-event-follow-up&#34;&gt;Post-Event Follow-up&lt;/h2&gt;
+&lt;h2 id=&#34;post-event-followup&#34;&gt;Post-Event Followup&lt;/h2&gt;
 &lt;h3 id=&#34;1--send-a-thank-you-email&#34;&gt;#1  Send a Thank You email&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;

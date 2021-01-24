@@ -2606,7 +2606,7 @@ hello-world                          latest              f2a91732366c        2 m
 &lt;ul&gt;
 &lt;li&gt;A Linux-based Docker Host running Docker 1.12 or higher&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;a-namedocker_networkastep-1-the-docker-network-command&#34;&gt;&lt;a name=&#34;docker_network&#34;&gt;&lt;/a&gt;Step 1: The &lt;code&gt;docker network&lt;/code&gt; command&lt;/h1&gt;
+&lt;h3 id=&#34;a-namedocker_networkastep-1-the-docker-network-command&#34;&gt;&lt;a name=&#34;docker_network&#34;&gt;&lt;/a&gt;Step 1: The &lt;code&gt;docker network&lt;/code&gt; command&lt;/h3&gt;
 &lt;p&gt;The &lt;code&gt;docker network&lt;/code&gt; command is the main command for configuring and managing container networks.&lt;/p&gt;
 &lt;p&gt;Run a simple &lt;code&gt;docker network&lt;/code&gt; command from any of your lab machines.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$ docker network
@@ -2695,7 +2695,6 @@ Runtimes: runc
 &amp;lt;Snip&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The output above shows the &lt;strong&gt;bridge&lt;/strong&gt;, &lt;strong&gt;host&lt;/strong&gt;, &lt;strong&gt;null&lt;/strong&gt;, and &lt;strong&gt;overlay&lt;/strong&gt; drivers.&lt;/p&gt;
 &lt;h2 id=&#34;bridge-networking&#34;&gt;Bridge networking&lt;/h2&gt;
-&lt;h1 id=&#34;lab-meta&#34;&gt;Lab Meta&lt;/h1&gt;
 &lt;p&gt;In this lab you&amp;rsquo;ll learn how to build, manage, and use &lt;strong&gt;bridge&lt;/strong&gt; networks.&lt;/p&gt;
 &lt;p&gt;You will complete the following steps as part of this lab.&lt;/p&gt;
 &lt;ul&gt;

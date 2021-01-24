@@ -582,15 +582,9 @@ if (!doNotTrack) {
         <li><a href="#running-a-container-from-the-newly-built-image">Running a container from the newly built image</a></li>
         <li><a href="#creating-a-private-local-docker-registry-using-play-with-docker">Creating a Private Local Docker Registry using Play with Docker</a></li>
         <li><a href="#using-docker-network">Using Docker Network</a></li>
-      </ul>
-    </li>
-    <li><a href="#a-namedocker_networkastep-1-the-docker-network-command"><a name="docker_network"></a>Step 1: The <code>docker network</code> command</a>
-      <ul>
-        <li></li>
         <li><a href="#bridge-networking">Bridge networking</a></li>
       </ul>
     </li>
-    <li><a href="#lab-meta">Lab Meta</a></li>
     <li><a href="#prerequisites-1">Prerequisites</a></li>
     <li><a href="#a-namedefault_bridgeastep-1-the-default-bridge-network"><a name="default_bridge"></a>Step 1: The default <strong>bridge</strong> network</a></li>
     <li><a href="#a-nameconnect-containerastep-2-connect-a-container"><a name="connect-container"></a>Step 2: Connect a container</a></li>
@@ -3229,7 +3223,7 @@ hello-world                          latest              f2a91732366c        2 m
 <ul>
 <li>A Linux-based Docker Host running Docker 1.12 or higher</li>
 </ul>
-<h1 id="a-namedocker_networkastep-1-the-docker-network-command"><a name="docker_network"></a>Step 1: The <code>docker network</code> command</h1>
+<h3 id="a-namedocker_networkastep-1-the-docker-network-command"><a name="docker_network"></a>Step 1: The <code>docker network</code> command</h3>
 <p>The <code>docker network</code> command is the main command for configuring and managing container networks.</p>
 <p>Run a simple <code>docker network</code> command from any of your lab machines.</p>
 <pre><code>$ docker network
@@ -3318,7 +3312,6 @@ Runtimes: runc
 &lt;Snip&gt;
 </code></pre><p>The output above shows the <strong>bridge</strong>, <strong>host</strong>, <strong>null</strong>, and <strong>overlay</strong> drivers.</p>
 <h2 id="bridge-networking">Bridge networking</h2>
-<h1 id="lab-meta">Lab Meta</h1>
 <p>In this lab you&rsquo;ll learn how to build, manage, and use <strong>bridge</strong> networks.</p>
 <p>You will complete the following steps as part of this lab.</p>
 <ul>
@@ -3585,7 +3578,7 @@ b747d43fa277   nginx               &quot;nginx -g 'daemon off&quot;   3 seconds 
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.24241: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/74260a379fd8aa6b7c2f322e57b3312993f047d1">Update _index.md (74260a3)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.24241: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/e0993f7c02cd98cac104b664e8a5b692652f9024">Update _index.md (e0993f7)</a>
 </div>
 </div>
 

@@ -481,14 +481,14 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
 &lt;p&gt;&lt;img src=&#34;../../images/beginners/dockerhub1.png&#34; alt=&#34;My image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Enter your username as DockerID and provide your email address( I would suggest you to provide your Gmail ID)&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../images/beginners/dockerhub2.png&#34; alt=&#34;My image&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example:&lt;/h3&gt;
 &lt;p&gt;I have added ajeetraina as my userID as shown below. Please note that we will require this userID at the later point of time during the workshop. Hence, do keep it handy.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../images/dockerhub3.png&#34; alt=&#34;My image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;That&amp;rsquo;s it. Head over to your Email account to validate this account.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../images/dockerhub4.png&#34; alt=&#34;My image&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;getting-started-with-docker-image&#34;&gt;Getting Started with Docker Image&lt;/h2&gt;
 &lt;p&gt;Demonstrating Hello World Example&lt;/p&gt;
-&lt;h2 id=&#34;tested-infrastructure&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;h3 id=&#34;tested-infrastructure&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
@@ -501,7 +501,7 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-1&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-1&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
@@ -511,12 +511,12 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
 &lt;pre&gt;&lt;code&gt;$ docker run hello-world
 
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;../images/beginners/helloworld.png&#34; alt=&#34;alt text&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;explanation&#34;&gt;Explanation&lt;/h2&gt;
+&lt;h3 id=&#34;explanation&#34;&gt;Explanation&lt;/h3&gt;
 &lt;p&gt;This image is a prime example of using the scratch image effectively. See hello.c in &lt;a href=&#34;https://github.com/docker-library/hello-world&#34;&gt;https://github.com/docker-library/hello-world&lt;/a&gt; for the source code of the hello binary included in this image.&lt;/p&gt;
 &lt;p&gt;So what’s happened here? We’ve called the docker run command, which is responsible for launching containers.&lt;/p&gt;
 &lt;p&gt;The argument hello-world is the name of the image someone created on dockerhub for us. It will first search for &amp;ldquo;hello-world&amp;rdquo; image locally and then search in Dockerhub.&lt;/p&gt;
 &lt;p&gt;Once the image has been downloaded, Docker turns the image into a running container and executes it.&lt;/p&gt;
-&lt;h2 id=&#34;did-you-know&#34;&gt;Did you Know?&lt;/h2&gt;
+&lt;h3 id=&#34;did-you-know&#34;&gt;Did you Know?&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;The Hello World Docker Image is only 1.84 KB size.&lt;/li&gt;
 &lt;/ol&gt;
@@ -624,7 +624,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
     }
 ]
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;working-with-docker-images&#34;&gt;Working with Docker Images&lt;/h2&gt;
-&lt;h2 id=&#34;tested-infrastructure-1&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;h3 id=&#34;tested-infrastructure-1&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
@@ -637,7 +637,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-2&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-2&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;

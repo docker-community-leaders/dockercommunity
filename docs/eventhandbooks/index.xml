@@ -643,15 +643,15 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;listing-the-docker-images&#34;&gt;Listing the Docker Images&lt;/h2&gt;
+&lt;h3 id=&#34;listing-the-docker-images&#34;&gt;Listing the Docker Images&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;$ docker images
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 hello-world         latest              4ab4c602aa5e        6 weeks ago         1.84kB
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;show-all-images-default-hides-intermediate-images&#34;&gt;Show all images (default hides intermediate images)&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;show-all-images-default-hides-intermediate-images&#34;&gt;Show all images (default hides intermediate images)&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker images -a
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 hello-world         latest              4ab4c602aa5e        6 weeks ago         1.84kB
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;list-images-by-name-and-tag&#34;&gt;List images by name and tag&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;list-images-by-name-and-tag&#34;&gt;List images by name and tag&lt;/h3&gt;
 &lt;p&gt;The docker images command takes an optional [REPOSITORY[:TAG]] argument that restricts the list to images that match the argument. If you specify REPOSITORY but no TAG, the docker images command lists all images in the given repository.&lt;/p&gt;
 &lt;p&gt;To demo this, let us pull all various versions of alpine OS&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;docker pull alpine:3.6
@@ -669,7 +669,7 @@ alpine              3.9                 5cb3aa00f899        7 days ago          
 $ docker images alpine:3.7
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 alpine              3.7                 6d1ef012b567        7 days ago          4.21MB
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;list-the-full-length-image-ids&#34;&gt;List the full length image IDs&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;list-the-full-length-image-ids&#34;&gt;List the full length image IDs&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;$ docker images --no-trunc
 REPOSITORY          TAG                 IMAGE ID                                                                  CREATED
      SIZE
@@ -681,7 +681,7 @@ alpine              3.8                 sha256:dac7051149965716b0acdcab16380b5f4
      4.41MB
 alpine              3.9                 sha256:5cb3aa00f89934411ffba5c063a9bc98ace875d8f92e77d0029543d9f2ef4ad0   7 days ago
      5.53MB
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;listing-out-images-with-filter&#34;&gt;Listing out images with filter&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;listing-out-images-with-filter&#34;&gt;Listing out images with filter&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;$ docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 ubuntu              latest              94e814e2efa8        3 days ago          88.9MB
@@ -696,7 +696,7 @@ alpine              3.6                 43773d1dba76        7 days ago          
 alpine              3.7                 6d1ef012b567        7 days ago          4.21MB
 alpine              3.8                 dac705114996        7 days ago          4.41MB
 alpine              3.9                 5cb3aa00f899        7 days ago          5.53MB
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;saving-images-and-containers-as-tar-files-for-sharing&#34;&gt;Saving Images and Containers as Tar Files for Sharing&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;saving-images-and-containers-as-tar-files-for-sharing&#34;&gt;Saving Images and Containers as Tar Files for Sharing&lt;/h3&gt;
 &lt;p&gt;Imagine a scenario where you have built Docker images and containers that you would be interested to keep and share it with your other collaborators or colleagues. The below methods shall help you achieve it.&lt;/p&gt;
 &lt;p&gt;Four basic Docker CLI comes into action:&lt;/p&gt;
 &lt;ul&gt;
@@ -705,7 +705,7 @@ alpine              3.9                 5cb3aa00f899        7 days ago          
 &lt;li&gt;The &lt;code&gt;docker save&lt;/code&gt; - Save one or more images to a tar archive (streamed to STDOUT by default)&lt;/li&gt;
 &lt;li&gt;The &lt;code&gt;docker load&lt;/code&gt; - Load an image from a tar archive or STDIN&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;tested-infrastructure-2&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;h3 id=&#34;tested-infrastructure-2&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
@@ -718,13 +718,13 @@ alpine              3.9                 5cb3aa00f899        7 days ago          
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-3&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-3&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;create-nginx-container&#34;&gt;Create Nginx Container&lt;/h2&gt;
+&lt;h3 id=&#34;create-nginx-container&#34;&gt;Create Nginx Container&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;$ docker run -d -p 80:80 nginx
 Unable to find image &#39;nginx:latest&#39; locally
 latest: Pulling from library/nginx
@@ -735,7 +735,7 @@ Digest: sha256:5d32f60db294b5deb55d078cd4feb410ad88e6fe77500c87d3970eca97f54dba
 Status: Downloaded newer image for nginx:latest
 df2caf9283e84a15bb2321a17aabe84e3e0762ec82fc180e2a4c15fcf0f96588
 [node1] (local) root@192.168.0.33 ~
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;displaying-running-container&#34;&gt;Displaying Running Container&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;displaying-running-container&#34;&gt;Displaying Running Container&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;$ docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
 df2caf9283e8        nginx               &amp;quot;nginx -g &#39;daemon of…&amp;quot;   35 seconds ago      Up 34 seconds       0.0.0.0:80-&amp;gt;80/tcp   vigorous_jang
@@ -770,7 +770,7 @@ nginx               latest              568c4670fa80        2 weeks ago         
 $
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;building-your-first-alpine-docker-image-and-push-it-to-dockerhub&#34;&gt;Building Your First Alpine Docker Image and Push it to DockerHub&lt;/h2&gt;
 &lt;p&gt;How to build Your First Alpine Docker Image and Push it to DockerHub&lt;/p&gt;
-&lt;h2 id=&#34;tested-infrastructure-3&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;h3 id=&#34;tested-infrastructure-3&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
@@ -783,7 +783,7 @@ $
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-4&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-4&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
@@ -809,7 +809,7 @@ PRETTY_NAME=&amp;quot;Alpine Linux v3.9&amp;quot;
 HOME_URL=&amp;quot;https://alpinelinux.org/&amp;quot;
 BUG_REPORT_URL=&amp;quot;https://bugs.alpinelinux.org/&amp;quot;
 / #
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;updating-apk-packages&#34;&gt;Updating APK Packages&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;updating-apk-packages&#34;&gt;Updating APK Packages&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;/ # apk update
 fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/main/x86_64/APKINDEX.tar.gz
 fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/community/x86_64/APKINDEX.tar.gz
@@ -829,7 +829,7 @@ Executing busybox-1.29.3-r10.trigger
 Executing ca-certificates-20190108-r0.trigger
 OK: 20 MiB in 21 packages
 / #
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;now-lets-come-out-of-it-by-ctrlpq-and-commit-the-changes&#34;&gt;Now lets come out of it by Ctrl+P+Q and commit the changes&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;now-lets-come-out-of-it-by-ctrlpq-and-commit-the-changes&#34;&gt;Now lets come out of it by Ctrl+P+Q and commit the changes&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;$ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 620e1bcb5ab6        alpine              &amp;quot;sh&amp;quot;                4 minutes ago       Up 4 minutes                            keen_alba
@@ -848,7 +848,7 @@ alpine                  3.8                 dac705114996        7 days ago      
 alpine                  3.9                 5cb3aa00f899        7 days ago          5.53MB
 alpine                  latest              5cb3aa00f899        7 days ago          5.53MB
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There you see a new image just created.&lt;/p&gt;
-&lt;h1 id=&#34;time-to-tag-the-image&#34;&gt;Time to tag the image&lt;/h1&gt;
+&lt;h3 id=&#34;time-to-tag-the-image&#34;&gt;Time to tag the image&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;$ docker tag --help
 
 Usage:  docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
@@ -866,7 +866,7 @@ alpine                  3.7                 6d1ef012b567        7 days ago      
 alpine                  3.8                 dac705114996        7 days ago          4.41MB
 alpine                  3.9                 5cb3aa00f899        7 days ago          5.53MB
 alpine                  latest              5cb3aa00f899        7 days ago          5.53MB
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;pushing-it-to-dockerhub&#34;&gt;Pushing it to DockerHub&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;pushing-it-to-dockerhub&#34;&gt;Pushing it to DockerHub&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;$ docker login
 Login with your Docker ID to push and pull images from Docker Hub. If you don&#39;t have a Docker ID, head over to https://hub.docker
 .com to create one.
@@ -933,7 +933,7 @@ bcf2f368fe23: Mounted from library/alpine
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;accessing-the-container-shell&#34;&gt;Accessing the Container Shell&lt;/h2&gt;
-&lt;h2 id=&#34;tested-infrastructure-4&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;h3 id=&#34;tested-infrastructure-4&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
@@ -960,7 +960,7 @@ bcf2f368fe23: Mounted from library/alpine
 &lt;pre&gt;&lt;code&gt;docker attach &amp;lt;container-id&amp;gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;running-a-command-inside-running-container&#34;&gt;Running a command inside running Container&lt;/h2&gt;
-&lt;h2 id=&#34;tested-infrastructure-5&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;h3 id=&#34;tested-infrastructure-5&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;

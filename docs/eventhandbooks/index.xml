@@ -311,7 +311,7 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;sending-confirmation-email-for-the-workshop&#34;&gt;Sending confirmation email for the workshop&lt;/h2&gt;
+&lt;h2 id=&#34;sending-confirmation-email-for-workshop&#34;&gt;Sending confirmation email for workshop&lt;/h2&gt;
 &lt;p&gt;Once the user register for the event, Community Leaders need to ensure that the interested users should receive a confirmation email.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A Thank you message for registering for this event&lt;/li&gt;

@@ -477,9 +477,9 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
 &lt;/table&gt;
 &lt;h2 id=&#34;creating-a-dockerhub-account&#34;&gt;Creating a DockerHub Account&lt;/h2&gt;
 &lt;p&gt;Open &lt;a href=&#34;https://hub.docker.com&#34;&gt;https://hub.docker.com&lt;/a&gt; and click on &amp;ldquo;Sign Up&amp;rdquo; for DockerHub&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../../images/beginners/dockerhub1.png&#34; alt=&#34;My image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../images/dockerhub1.png&#34; alt=&#34;My image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Enter your username as DockerID and provide your email address( I would suggest you to provide your Gmail ID)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../../images/beginners/dockerhub2.png&#34; alt=&#34;My image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../images/dockerhub2.png&#34; alt=&#34;My image&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;example&#34;&gt;Example:&lt;/h3&gt;
 &lt;p&gt;I have added ajeetraina as my userID as shown below. Please note that we will require this userID at the later point of time during the workshop. Hence, do keep it handy.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../images/dockerhub3.png&#34; alt=&#34;My image&#34;&gt;&lt;/p&gt;
@@ -509,7 +509,7 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
 &lt;h2 id=&#34;running-hello-world-example&#34;&gt;Running Hello World Example&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;$ docker run hello-world
 
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;../images/beginners/helloworld.png&#34; alt=&#34;alt text&#34;&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;../images/helloworld.png&#34; alt=&#34;alt text&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;explanation&#34;&gt;Explanation&lt;/h3&gt;
 &lt;p&gt;This image is a prime example of using the scratch image effectively. See hello.c in &lt;a href=&#34;https://github.com/docker-library/hello-world&#34;&gt;https://github.com/docker-library/hello-world&lt;/a&gt; for the source code of the hello binary included in this image.&lt;/p&gt;
 &lt;p&gt;So what’s happened here? We’ve called the docker run command, which is responsible for launching containers.&lt;/p&gt;

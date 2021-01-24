@@ -1728,8 +1728,8 @@ run                 v2                  784298155541        3 minutes ago       
 &lt;p&gt;The &lt;code&gt;ARG&lt;/code&gt; directive in &lt;code&gt;Dockerfile&lt;/code&gt; defines the parameter name and defines its default value. This default value can be overridden by the &lt;code&gt;--build-arg &amp;lt;parameter name&amp;gt;=&amp;lt;value&amp;gt;&lt;/code&gt; in the build command &lt;code&gt;docker build&lt;/code&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;`ARG &amp;lt;parameter name&amp;gt;[=&amp;lt;default&amp;gt;]`
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The build parameters have the same effect as &lt;code&gt;ENV&lt;/code&gt;, which is to set the environment variables. The difference is that the environment variables of the build environment set by &lt;code&gt;ARG&lt;/code&gt; will not exist in the future when the container is running. But don&amp;rsquo;t use &lt;code&gt;ARG&lt;/code&gt; to save passwords and the like, because &lt;code&gt;docker history&lt;/code&gt; can still see all the values.&lt;/p&gt;
-&lt;h2 id=&#34;pre-requisite-22&#34;&gt;Pre-requisite:&lt;/h2&gt;
-&lt;h2 id=&#34;tested-infrastructure-14&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-22&#34;&gt;Pre-requisite:&lt;/h3&gt;
+&lt;h3 id=&#34;tested-infrastructure-14&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
@@ -1742,13 +1742,13 @@ run                 v2                  784298155541        3 minutes ago       
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-23&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-23&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;assignment-6&#34;&gt;Assignment&lt;/h1&gt;
+&lt;h3 id=&#34;assignment-6&#34;&gt;Assignment&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Writing a Dockerfile with ARG instruction&lt;/li&gt;
 &lt;li&gt;Building Docker Image with default argument&lt;/li&gt;
@@ -1756,7 +1756,7 @@ run                 v2                  784298155541        3 minutes ago       
 &lt;li&gt;Passing the argument during image build time&lt;/li&gt;
 &lt;li&gt;Running container argv:v2&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;writing-a-dockerfile-with-arg-instruction&#34;&gt;Writing a Dockerfile with ARG instruction&lt;/h2&gt;
+&lt;h3 id=&#34;writing-a-dockerfile-with-arg-instruction&#34;&gt;Writing a Dockerfile with ARG instruction&lt;/h3&gt;
 &lt;p&gt;We are writing a Dockerfile which echo &amp;ldquo;Welcome $WELCOME_USER, to Docker World!&amp;rdquo; where default argument value for &lt;b&gt;WELCOME_USER&lt;/b&gt; as &lt;b&gt;Collabnix&lt;/b&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;FROM alpine:3.9.3
 LABEL maintainer=&amp;quot;Collabnix&amp;quot;
@@ -1765,23 +1765,23 @@ LABEL maintainer=&amp;quot;Collabnix&amp;quot;
 ARG WELCOME_USER=Collabnix
 RUN echo &amp;quot;Welcome $WELCOME_USER, to Docker World!&amp;quot; &amp;gt; message.txt
 CMD cat message.txt
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;building-docker-image-with-default-argument&#34;&gt;Building Docker Image with default argument&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;building-docker-image-with-default-argument&#34;&gt;Building Docker Image with default argument&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;$ docker image build -t arg:v1 .
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;running-container-argvv1&#34;&gt;Running container argv:v1&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;running-container-argvv1&#34;&gt;Running container argv:v1&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;$ docker run arg:v1
 
 Welcome Collabnix, to Docker World!
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;passing-the-argumentwelcome_user-during-image-build-time-using-b--build-argb-flag&#34;&gt;Passing the argument(WELCOME_USER) during image build time using &lt;b&gt;&amp;ndash;build-arg&lt;/b&gt; flag&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;passing-the-argumentwelcome_user-during-image-build-time-using-b--build-argb-flag&#34;&gt;Passing the argument(WELCOME_USER) during image build time using &lt;b&gt;&amp;ndash;build-arg&lt;/b&gt; flag&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;$ docker image build -t arg:v2 --build-arg WELCOME_USER=Savio .
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;running-container-argvv2&#34;&gt;Running container argv:v2&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;running-container-argvv2&#34;&gt;Running container argv:v2&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;$ docker run arg:v2
 
 Welcome Savio, to Docker World!
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;b&gt;NOTE:&lt;/b&gt; ARG is the only one instruction which can come before FROM instruction, but then arg value can be used only by FROM.&lt;/p&gt;
 &lt;h2 id=&#34;lab-9-create-an-image-with-env-instruction&#34;&gt;Lab #9: Create an image with ENV instruction&lt;/h2&gt;
 &lt;p&gt;The &lt;code&gt;ENV&lt;/code&gt; instruction in Dockerfile sets the environment variable for your container when you start. The default value can be overridden by passing &lt;code&gt;--env &amp;lt;key&amp;gt;=&amp;lt;value&amp;gt;&lt;/code&gt; when you start the container.&lt;/p&gt;
-&lt;h2 id=&#34;pre-requisite-24&#34;&gt;Pre-requisite:&lt;/h2&gt;
-&lt;h2 id=&#34;tested-infrastructure-15&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-24&#34;&gt;Pre-requisite:&lt;/h3&gt;
+&lt;h3 id=&#34;tested-infrastructure-15&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
@@ -1794,13 +1794,13 @@ Welcome Savio, to Docker World!
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-25&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-25&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;assignment-7&#34;&gt;Assignment&lt;/h1&gt;
+&lt;h3 id=&#34;assignment-7&#34;&gt;Assignment&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Writing a Dockerfile with ENV instruction&lt;/li&gt;
 &lt;li&gt;Building Docker Image&lt;/li&gt;
@@ -1824,8 +1824,8 @@ Welcome to Docker World
 &lt;pre&gt;&lt;code&gt;$ docker container run --env WELCOME_MESSAGE=&amp;quot;Welcome to Docker Workshop&amp;quot; env:v1 
 Welcome to Docker Workshop
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;lab-10-create-an-image-with-volume-instruction&#34;&gt;Lab #10: Create an image with VOLUME instruction&lt;/h2&gt;
-&lt;h2 id=&#34;pre-requisite-26&#34;&gt;Pre-requisite:&lt;/h2&gt;
-&lt;h2 id=&#34;tested-infrastructure-16&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-26&#34;&gt;Pre-requisite:&lt;/h3&gt;
+&lt;h3 id=&#34;tested-infrastructure-16&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
@@ -1838,13 +1838,13 @@ Welcome to Docker Workshop
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;    
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-27&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-27&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;assignment-8&#34;&gt;Assignment&lt;/h1&gt;
+&lt;h2 id=&#34;assignment-8&#34;&gt;Assignment&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an image with VOLUME instruction&lt;/li&gt;
 &lt;li&gt;Finding the volume created on the host&lt;/li&gt;
@@ -1880,8 +1880,8 @@ local               ed09456a448934218f03acbdaa31f465ebbb92e0d45e8284527a2c538cc6
 &lt;pre&gt;&lt;code&gt;$ docker container exec -it volume-test ls myvol
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;lab-11-create-an-image-with-expose-instruction&#34;&gt;Lab #11: Create an image with EXPOSE instruction&lt;/h2&gt;
 &lt;p&gt;The &lt;code&gt;EXPOSE&lt;/code&gt; instruction expose a port, the protocol can be UDP or TCP associated with the indicated port, default is TCP with no specification. The EXPOSE won&amp;rsquo;t be able to map the ports on the host machine. Regardless of the EXPOSE settings, EXPOSE port can be override using &lt;b&gt;-p&lt;/b&gt; flag while starting the container.&lt;/p&gt;
-&lt;h2 id=&#34;pre-requisite-28&#34;&gt;Pre-requisite:&lt;/h2&gt;
-&lt;h2 id=&#34;tested-infrastructure-17&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-28&#34;&gt;Pre-requisite:&lt;/h3&gt;
+&lt;h3 id=&#34;tested-infrastructure-17&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
@@ -1894,13 +1894,13 @@ local               ed09456a448934218f03acbdaa31f465ebbb92e0d45e8284527a2c538cc6
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;    
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-29&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-29&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;assignment-9&#34;&gt;Assignment&lt;/h1&gt;
+&lt;h3 id=&#34;assignment-9&#34;&gt;Assignment&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an image with EXPOSE instruction&lt;/li&gt;
 &lt;li&gt;Inspecting the EXPOSE port in the image&lt;/li&gt;
@@ -1986,11 +1986,11 @@ If a label already exists but with a different value, the most-recently-applied 
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here we take out the project-related build instructions and put them in the subproject. Assuming that the name of the base image is &lt;code&gt;my-node&lt;/code&gt;, the own &lt;code&gt;Dockerfile&lt;/code&gt; in each project becomes:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Dockerfile&#34; data-lang=&#34;Dockerfile&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;FROM&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt; my-node&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Yes, there is only one such line. When constructing a mirror with this one-line &lt;code&gt;Dockerfile&lt;/code&gt; in each project directory, the three lines of the previous base image &lt;code&gt;ONBUILD&lt;/code&gt; will start executing, successfully copy the current project code into the image, and execute for this project. &lt;code&gt;npm install&lt;/code&gt;, generate an application image.&lt;/p&gt;
-&lt;h1 id=&#34;lab&#34;&gt;Lab&lt;/h1&gt;
+&lt;h3 id=&#34;lab&#34;&gt;Lab&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;# Dockerfile
 FROM busybox
 ONBUILD RUN echo &amp;quot;You won&#39;t see me until later&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;docker-build&#34;&gt;Docker build&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;docker-build&#34;&gt;Docker build&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker build -t me/no_echo_here .
 
 Uploading context  2.56 kB
@@ -2013,14 +2013,14 @@ FROM me/no_echo_here
 Uploading context  2.56 kB
 Uploading context
 Step 0 : FROM cpuguy83/no_echo_here&lt;/p&gt;
-&lt;h1 id=&#34;executing-1-build-triggers&#34;&gt;Executing 1 build triggers&lt;/h1&gt;
+&lt;h3 id=&#34;executing-1-build-triggers&#34;&gt;Executing 1 build triggers&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;Step onbuild-0 : RUN echo &amp;quot;You won&#39;t see me until later&amp;quot;
  ---&amp;amp;gt; Running in ebfede7e39c8
 You won&#39;t see me until later
  ---&amp;amp;gt; ca6f025712d4
  ---&amp;amp;gt; ca6f025712d4
 Successfully built ca6f025712d4
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;ubutu-rails&#34;&gt;Ubutu Rails&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;ubutu-rails&#34;&gt;Ubutu Rails&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;FROM ubuntu:12.04
 
 RUN apt-get update -qq &amp;amp;&amp;amp; apt-get install -y ca-certificates sudo curl git-core
@@ -2116,15 +2116,15 @@ Successfully built 23c388fb84c1
 &lt;p&gt;The syntax look like:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;HEALTHCHECK [options] CMD &amp;lt;command&amp;gt;&lt;/code&gt;:&lt;/p&gt;
 &lt;p&gt;The above syntax set the command to check the health of the container&lt;/p&gt;
-&lt;h2 id=&#34;how-does-it-work&#34;&gt;How does it work?&lt;/h2&gt;
+&lt;h3 id=&#34;how-does-it-work&#34;&gt;How does it work?&lt;/h3&gt;
 &lt;p&gt;When a HEALTHCHECK instruction is specified in an image, the container is started with it, the initial state will be starting, and will become healthy after the HEALTHCHECK instruction is checked successfully. If it fails for a certain number of times, it will become unhealthy.&lt;/p&gt;
-&lt;h2 id=&#34;what-options-does-healthcheck-support&#34;&gt;What options does HEALTHCHECK support?&lt;/h2&gt;
+&lt;h3 id=&#34;what-options-does-healthcheck-support&#34;&gt;What options does HEALTHCHECK support?&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;--interval=&amp;lt;interval&amp;gt;&lt;/code&gt;: interval between two health checks, the default is 30 seconds;
 &lt;code&gt;--timeout=&amp;lt;time length&amp;gt;&lt;/code&gt;: The health check command runs the timeout period. If this time is exceeded, the health check is regarded as a failure. The default is 30 seconds.
 &lt;code&gt;--retries=&amp;lt;number&amp;gt;&lt;/code&gt;: When the specified number of consecutive failures, the container status is treated as unhealthy, the default is 3 times.
 Like CMD, ENTRYPOINT, HEALTHCHECK can only appear once. If more than one is written, only the last one will take effect.&lt;/p&gt;
-&lt;h2 id=&#34;pre-requisite-30&#34;&gt;Pre-requisite:&lt;/h2&gt;
-&lt;h2 id=&#34;tested-infrastructure-18&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-30&#34;&gt;Pre-requisite:&lt;/h3&gt;
+&lt;h3 id=&#34;tested-infrastructure-18&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
@@ -2137,13 +2137,13 @@ Like CMD, ENTRYPOINT, HEALTHCHECK can only appear once. If more than one is writ
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-31&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-31&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;assignment-10&#34;&gt;Assignment:&lt;/h2&gt;
+&lt;h3 id=&#34;assignment-10&#34;&gt;Assignment:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Writing a Dockerfile with HEALTHCHECK instruction&lt;/li&gt;
 &lt;li&gt;Build a Docker Image&lt;/li&gt;
@@ -2152,31 +2152,31 @@ Like CMD, ENTRYPOINT, HEALTHCHECK can only appear once. If more than one is writ
 &lt;li&gt;Make Docker container Unhealthy and check&lt;/li&gt;
 &lt;li&gt;Create the nginx.conf file and Making the container go healthy&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;writing-a-dockerfile-with-healthcheck-instruction&#34;&gt;Writing a Dockerfile with HEALTHCHECK instruction&lt;/h2&gt;
+&lt;h3 id=&#34;writing-a-dockerfile-with-healthcheck-instruction&#34;&gt;Writing a Dockerfile with HEALTHCHECK instruction&lt;/h3&gt;
 &lt;p&gt;Suppose we have a simple Web service. We want to add a health check to determine if its Web service is working. We can use curl to help determine the HEALTHCHECK of its Dockerfile:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;FROM nginx:1.13
 HEALTHCHECK --interval=30s --timeout=3s \
   CMD curl -f http://localhost/ || exit 1
 EXPOSE 80
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Here we set a check every 3 seconds (here the interval is very short for the test, it should be relatively long), if the health check command does not respond for more than 3 seconds, it is considered a failure, and use curl -fs http://localhost/ || exit 1 As a health check command.&lt;/p&gt;
-&lt;h2 id=&#34;building-docker-image-11&#34;&gt;Building Docker Image&lt;/h2&gt;
+&lt;h3 id=&#34;building-docker-image-11&#34;&gt;Building Docker Image&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker image build -t nginx:1.13 .
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;check-that-the-nginx-config-file-exists&#34;&gt;Check that the nginx config file exists&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;check-that-the-nginx-config-file-exists&#34;&gt;Check that the nginx config file exists&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker run --name=nginx-proxy -d \
         --health-cmd=&#39;stat /etc/nginx/nginx.conf || exit 1&#39; \
         nginx:1.13
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;check-if-nginx-is-healthy&#34;&gt;Check if nginx is healthy&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;check-if-nginx-is-healthy&#34;&gt;Check if nginx is healthy&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker inspect --format=&#39;{{.State.Health.Status}}&#39; nginx-proxy
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;make-docker-container-unhealthy-and-check&#34;&gt;Make Docker container Unhealthy and check&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;make-docker-container-unhealthy-and-check&#34;&gt;Make Docker container Unhealthy and check&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker exec nginx-proxy rm /etc/nginx/nginx.conf
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;check-if-nginx-is-healthy-1&#34;&gt;Check if nginx is healthy&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;check-if-nginx-is-healthy-1&#34;&gt;Check if nginx is healthy&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;sleep 5; docker inspect --format=&#39;{{.State.Health.Status}}&#39; nginx-proxy
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;creating-the-nginxconf-file-and-making-the-container-go-healthy&#34;&gt;Creating the nginx.conf file and Making the container go healthy&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;creating-the-nginxconf-file-and-making-the-container-go-healthy&#34;&gt;Creating the nginx.conf file and Making the container go healthy&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker exec nginx-proxy touch /etc/nginx/nginx.conf
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;sleep 5; docker inspect --format=&#39;{{.State.Health.Status}}&#39; nginx-proxy
 healthy
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;lab-15-create-an-image-with-shell-instruction&#34;&gt;Lab #15: Create an image with SHELL instruction&lt;/h2&gt;
-&lt;h2 id=&#34;pre-requisite-32&#34;&gt;Pre-requisite:&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-32&#34;&gt;Pre-requisite:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
@@ -2195,7 +2195,7 @@ healthy
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;    
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;how-does-it-work-1&#34;&gt;How does it work?&lt;/h2&gt;
+&lt;h3 id=&#34;how-does-it-work-1&#34;&gt;How does it work?&lt;/h3&gt;
 &lt;p&gt;Format: &lt;code&gt;SHELL [&amp;quot;executable&amp;quot;, &amp;quot;parameters&amp;quot;]&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The SHELL instruction allows the default shell used for the shell form of commands to be overridden.
@@ -2205,7 +2205,7 @@ The SHELL instruction must be written in JSON form in a Dockerfile.&lt;/li&gt;
 &lt;li&gt;The SHELL instruction can appear multiple times.
 Each SHELL instruction overrides all previous SHELL instructions, and affects all subsequent instructions.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;create-a-dockerfile&#34;&gt;Create a Dockerfile&lt;/h2&gt;
+&lt;h3 id=&#34;create-a-dockerfile&#34;&gt;Create a Dockerfile&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;FROM windowsservercore
 
 # Executed as cmd /S /C echo default
@@ -2241,7 +2241,7 @@ SHELL [&amp;quot;powershell&amp;quot;,&amp;quot;-command&amp;quot;]
 RUN New-Item -ItemType Directory C:\Example
 ADD Execute-MyCmdlet.ps1 c:\example\
 RUN c:\example\Execute-MyCmdlet -sample &#39;hello world&#39;
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;build-an-image&#34;&gt;Build an image&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;build-an-image&#34;&gt;Build an image&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;PS E:\docker\build\shell&amp;gt; docker build -t shell .
 Sending build context to Docker daemon 3.584 kB
 Step 1 : FROM windowsservercore
@@ -2295,8 +2295,8 @@ For example, using &lt;code&gt;SHELL cmd /S /C /V:ON|OFF&lt;/code&gt; on Windows
 &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; gosu nobody true&lt;span style=&#34;color:#a40000&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Set CMD and execute it as another user&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;CMD&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;exec&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;gosu&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;redis&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;redis-server&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;pre-requisite-33&#34;&gt;Pre-requisite:&lt;/h2&gt;
-&lt;h2 id=&#34;tested-infrastructure-20&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;pre-requisite-33&#34;&gt;Pre-requisite:&lt;/h3&gt;
+&lt;h3 id=&#34;tested-infrastructure-20&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
@@ -2309,14 +2309,14 @@ For example, using &lt;code&gt;SHELL cmd /S /C /V:ON|OFF&lt;/code&gt; on Windows
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-34&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-34&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;how-is-entrypoint-different-from-the-run-instruction&#34;&gt;How is ENTRYPOINT different from the RUN instruction?&lt;/h2&gt;
-&lt;h2 id=&#34;tested-infrastructure-21&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;h3 id=&#34;tested-infrastructure-21&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
@@ -2329,13 +2329,13 @@ For example, using &lt;code&gt;SHELL cmd /S /C /V:ON|OFF&lt;/code&gt; on Windows
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-35&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-35&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;what-is-entrypoint-meant-for&#34;&gt;What is ENTRYPOINT meant for?&lt;/h2&gt;
+&lt;h3 id=&#34;what-is-entrypoint-meant-for&#34;&gt;What is ENTRYPOINT meant for?&lt;/h3&gt;
 &lt;p&gt;ENTRYPOINT is meant to provide the executable while CMD is to pass the default arguments to the executable.
 To understand it clearly, let us consider the below Dockerfile:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/collabnix/dockerlabs/master/beginners/dockerfile/dockerfile-1.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
@@ -2347,13 +2347,13 @@ To understand it clearly, let us consider the below Dockerfile:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/collabnix/dockerlabs/master/beginners/dockerfile/dockerfile-4.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;This clearly state that ENTRYPOINT is meant to provide the executable while CMD is to pass the default arguments to the executable.&lt;/p&gt;
 &lt;h2 id=&#34;writing-dockerfile-with-hello-python-script-added&#34;&gt;Writing Dockerfile with Hello Python Script Added&lt;/h2&gt;
-&lt;h2 id=&#34;pre-requisite-36&#34;&gt;Pre-requisite:&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-36&#34;&gt;Pre-requisite:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;tested-infrastructure-22&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;h3 id=&#34;tested-infrastructure-22&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;

@@ -972,18 +972,18 @@ bcf2f368fe23: Mounted from library/alpine
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-6&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-6&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;create-ubuntu-container-1&#34;&gt;Create Ubuntu Container&lt;/h2&gt;
+&lt;h3 id=&#34;create-ubuntu-container-1&#34;&gt;Create Ubuntu Container&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker run -dit ubuntu
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;opening-up-the-bash-shell&#34;&gt;Opening up the bash shell&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;opening-up-the-bash-shell&#34;&gt;Opening up the bash shell&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker exec -t &amp;lt;container-id&amp;gt; bash
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;managing-docker-containers&#34;&gt;Managing Docker containers&lt;/h2&gt;
-&lt;h2 id=&#34;tested-infrastructure-6&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;h3 id=&#34;tested-infrastructure-6&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
@@ -996,18 +996,18 @@ bcf2f368fe23: Mounted from library/alpine
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-7&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-7&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;preparations&#34;&gt;Preparations&lt;/h2&gt;
+&lt;h3 id=&#34;preparations&#34;&gt;Preparations&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Clean your docker host using the commands (in bash):&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code&gt;$ docker rm -f $(docker ps -a -q)
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;instructions&#34;&gt;Instructions&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Run the following containers from the dockerhub:&lt;/li&gt;
 &lt;/ul&gt;
@@ -1134,7 +1134,7 @@ bcf2f368fe23: Mounted from library/alpine
 &lt;li&gt;Execution of these instructions takes place on a base image.&lt;/li&gt;
 &lt;li&gt;On building the Dockerfile, the successive actions form a new image from the base parent image.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;understanding-image-layering-concept-with-dockerfile&#34;&gt;Understanding Image Layering Concept with Dockerfile&lt;/h2&gt;
+&lt;h3 id=&#34;understanding-image-layering-concept-with-dockerfile&#34;&gt;Understanding Image Layering Concept with Dockerfile&lt;/h3&gt;
 &lt;p&gt;Docker container is a runnable instance of an image, which is actually made by writing a readable/writable layer on top of some read-only layers.&lt;/p&gt;
 &lt;p&gt;The parent image used to create another image from a Dockerfile is read-only. When we execute instructions on this parent image, new layers keep adding up.
 These layers are created when we run docker build command.&lt;/p&gt;
@@ -1250,7 +1250,7 @@ RUN chmod 600 /hello/hello/hello.txt
     }
 ]
 
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;do-you-want-to-visualize-layers-of-docker-image&#34;&gt;Do you want to visualize layers of Docker Image?&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;do-you-want-to-visualize-layers-of-docker-image&#34;&gt;Do you want to visualize layers of Docker Image?&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock  wagoodman/dive testimage
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[● Layers]───────────────────────────────────────────────────────────────────────────── [Current Layer Contents]───────────────────────────────────────────────────────────────
 Cmp   Size  Command                                                                     Permission     UID:GID       Size  Filetree
@@ -1291,8 +1291,8 @@ Count   Total Space  Path                                                       
                                                                                         -rwxr-xr-x         0:0     5.9 kB  │   ├── gzexe
                                                                                         -rwxr-xr-x         0:0     102 kB  │   ├── gzip
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;lab-1-create-an-image-with-git-installed&#34;&gt;Lab #1: Create an image with GIT installed&lt;/h2&gt;
-&lt;h2 id=&#34;pre-requisite-8&#34;&gt;Pre-requisite:&lt;/h2&gt;
-&lt;h2 id=&#34;tested-infrastructure-7&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-8&#34;&gt;Pre-requisite:&lt;/h3&gt;
+&lt;h3 id=&#34;tested-infrastructure-7&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
@@ -1305,48 +1305,48 @@ Count   Total Space  Path                                                       
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-9&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-9&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;assignment&#34;&gt;Assignment:&lt;/h2&gt;
+&lt;h3 id=&#34;assignment&#34;&gt;Assignment:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an image with GIT installed&lt;/li&gt;
 &lt;li&gt;Tag your image as labs-git:v1.0&lt;/li&gt;
 &lt;li&gt;Create a container based on that image, and run git &amp;ndash;version to check that it is installed correctly&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;creating-dockerfile&#34;&gt;Creating Dockerfile&lt;/h2&gt;
+&lt;h3 id=&#34;creating-dockerfile&#34;&gt;Creating Dockerfile&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;FROM alpine:3.5
 RUN apk update
 RUN apk add git
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;build-docker-image&#34;&gt;Build Docker Image&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;build-docker-image&#34;&gt;Build Docker Image&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker build -t ajeetraina/alpine-git .
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;tagging-image-as-labs-git&#34;&gt;Tagging image as labs-git&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;tagging-image-as-labs-git&#34;&gt;Tagging image as labs-git&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker tag ajeetraina/alpine-git ajeetraina/labs-git:v1.0
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;verify-the-images&#34;&gt;Verify the Images&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;verify-the-images&#34;&gt;Verify the Images&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;$ docker images
 REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
 ajeetraina/alpine-git   latest              cb913e37a593        16 seconds ago      26.6MB
 ajeetraina/labs-git     v1.0                cb913e37a593        16 seconds ago      26.6MB
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;create-a-container&#34;&gt;Create a container&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;create-a-container&#34;&gt;Create a container&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker run -itd ajeetraina/labs-git:v1.0 /bin/sh
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ docker ps
 CONTAINER ID        IMAGE                      COMMAND             CREATED             STATUS              PORTS               NAMES
 3e26a5268f55        ajeetraina/labs-git:v1.0   &amp;quot;/bin/sh&amp;quot;           4 seconds ago       Up 2 seconds                            elated_neumann
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;enter-into-container-shell&#34;&gt;Enter into Container Shell&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;enter-into-container-shell&#34;&gt;Enter into Container Shell&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker attach 3e26
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Please press &amp;ldquo;Enter&amp;rdquo; key twice so as to enter into container shell&lt;/p&gt;
-&lt;h2 id=&#34;verify-if-git-is-installed&#34;&gt;Verify if GIT is installed&lt;/h2&gt;
+&lt;h3 id=&#34;verify-if-git-is-installed&#34;&gt;Verify if GIT is installed&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;/ # git --version
 git version 2.13.7
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;lab-2-create-an-image-with-add-instruction&#34;&gt;Lab #2: Create an image with ADD instruction&lt;/h2&gt;
 &lt;p&gt;COPY and ADD are both Dockerfile instructions that serve similar purposes. They let you copy files from a specific location into a Docker image.&lt;/p&gt;
 &lt;p&gt;COPY takes in a src and destination. It only lets you copy in a local file or directory from your host (the machine building the Docker image) into the Docker image itself.&lt;/p&gt;
 &lt;p&gt;ADD lets you do that too, but it also supports 2 other sources. First, you can use a URL instead of a local file / directory. Secondly, you can extract a tar file from the source directly into the destination.&lt;/p&gt;
-&lt;h2 id=&#34;pre-requisite-10&#34;&gt;Pre-requisite:&lt;/h2&gt;
-&lt;h2 id=&#34;tested-infrastructure-8&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-10&#34;&gt;Pre-requisite:&lt;/h3&gt;
+&lt;h3 id=&#34;tested-infrastructure-8&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
@@ -1359,40 +1359,40 @@ git version 2.13.7
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-11&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-11&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;assignment-1&#34;&gt;Assignment:&lt;/h2&gt;
+&lt;h3 id=&#34;assignment-1&#34;&gt;Assignment:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an image with ADD instruction&lt;/li&gt;
 &lt;li&gt;Tag your image as labs-add:v1.0&lt;/li&gt;
 &lt;li&gt;Create a container based on that image, and see the extracted tar file.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;creating-dockerfile-1&#34;&gt;Creating Dockerfile&lt;/h2&gt;
+&lt;h3 id=&#34;creating-dockerfile-1&#34;&gt;Creating Dockerfile&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;FROM alpine:3.5
 RUN apk update
 ADD http://www.vlsitechnology.org/pharosc_8.4.tar.gz .
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;build-docker-image-1&#34;&gt;Build Docker Image&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;build-docker-image-1&#34;&gt;Build Docker Image&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker build -t saiyam911/alpine-add . -f &amp;lt;name of dockerfile&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;tagging-image-as-labs-git-1&#34;&gt;Tagging image as labs-git&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;tagging-image-as-labs-git-1&#34;&gt;Tagging image as labs-git&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker tag saiyam911/alpine-add saiyam911/labs-add:v1.0
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;verify-the-images-1&#34;&gt;Verify the Images&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;verify-the-images-1&#34;&gt;Verify the Images&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;$ docker images
 REPOSITORY                   TAG                 IMAGE ID            CREATED             SIZE
 saiyam911/alpine-add        latest              cdf97cb49d48        38 minutes ago       300MB
 saiyam911/labs-add          v1.0                cdf97cb49d48        38 minutes ago       300MB
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;create-a-container-1&#34;&gt;Create a container&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;create-a-container-1&#34;&gt;Create a container&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker run -itd saiyam911/labs-add:v1.0 /bin/sh
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ docker ps
 CONTAINER ID        IMAGE                      COMMAND             CREATED             STATUS              PORTS               NAMES
 f0940750f61a        saiyam911/labs-add:v1.0   &amp;quot;/bin/sh&amp;quot;           20 seconds ago      Up 18 seconds                           distracted_darwin
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;enter-into-container-shell-1&#34;&gt;Enter into Container Shell&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;enter-into-container-shell-1&#34;&gt;Enter into Container Shell&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker attach f094
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Please press &amp;ldquo;Enter&amp;rdquo; key twice so as to enter into container shell&lt;/p&gt;
-&lt;h2 id=&#34;verify-if-the-link-has-been-extracted-onto-the-container&#34;&gt;Verify if the link has been extracted onto the container&lt;/h2&gt;
+&lt;h3 id=&#34;verify-if-the-link-has-been-extracted-onto-the-container&#34;&gt;Verify if the link has been extracted onto the container&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;/ # ls -ltr
 -rw-------    1 root     root     295168000 Sep 19  2007 pharosc_8.4.tar.gz
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;ADD Command lets you to add a tar directly from a link and explode to the container.&lt;/p&gt;
@@ -1401,8 +1401,7 @@ f0940750f61a        saiyam911/labs-add:v1.0   &amp;quot;/bin/sh&amp;quot;       
 &lt;p&gt;Two form of COPY instruction&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;COPY [--chown=&amp;lt;user&amp;gt;:&amp;lt;group&amp;gt;] &amp;lt;src&amp;gt;... &amp;lt;dest&amp;gt;
 COPY [--chown=&amp;lt;user&amp;gt;:&amp;lt;group&amp;gt;] [&amp;quot;&amp;lt;src&amp;gt;&amp;quot;,... &amp;quot;&amp;lt;dest&amp;gt;&amp;quot;] (this form is required for paths containing whitespace)
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;pre-requisite-12&#34;&gt;Pre-requisite:&lt;/h2&gt;
-&lt;h2 id=&#34;tested-infrastructure-9&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;tested-infrastructure-9&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
@@ -1415,13 +1414,13 @@ COPY [--chown=&amp;lt;user&amp;gt;:&amp;lt;group&amp;gt;] [&amp;quot;&amp;lt;src
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-13&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-12&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;assignment-2&#34;&gt;Assignment:&lt;/h2&gt;
+&lt;h3 id=&#34;assignment-2&#34;&gt;Assignment:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an image with COPY instruction&lt;/li&gt;
 &lt;li&gt;COPY instruction in Multi-stage Builds&lt;/li&gt;
@@ -1462,8 +1461,7 @@ Welcome to Docker Labs !
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;b&gt;NOTE:&lt;/b&gt; You can name your stages, by adding an AS &lt;NAME&gt; to the FROM instruction.By default, the stages are not named, and you can refer to them by their integer number, starting with 0 for the first FROM instruction.You are not limited to copying from stages you created earlier in your Dockerfile, you can use the COPY &amp;ndash;from instruction to copy from a separate image, either using the local image name, a tag available locally or on a Docker registry.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;COPY --from=nginx:latest /etc/nginx/nginx.conf /nginx.conf
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;lab-4-create-an-image-with-cmd-instruction&#34;&gt;Lab #4: Create an image with CMD instruction&lt;/h2&gt;
-&lt;h2 id=&#34;pre-requisite-14&#34;&gt;Pre-requisite:&lt;/h2&gt;
-&lt;h2 id=&#34;tested-infrastructure-10&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;h3 id=&#34;tested-infrastructure-10&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
@@ -1476,20 +1474,20 @@ Welcome to Docker Labs !
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-15&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-13&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;creating-dockerfile-2&#34;&gt;Creating Dockerfile&lt;/h2&gt;
+&lt;h3 id=&#34;creating-dockerfile-2&#34;&gt;Creating Dockerfile&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;FROM alpine:3.6
 
 RUN apk update
 CMD [&amp;quot;top&amp;quot;]
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;building-docker-container&#34;&gt;Building Docker Container&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;building-docker-container&#34;&gt;Building Docker Container&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker build -t ajeetraina/lab3_cmd . -f Dockerfile_cmd
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;running-the-docker-container&#34;&gt;Running the Docker container&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;running-the-docker-container&#34;&gt;Running the Docker container&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker run ajeetraina/lab3_cmd:latest
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;lab-5-create-an-image-with-entrypoint-instruction&#34;&gt;Lab #5: Create an image with ENTRYPOINT instruction&lt;/h2&gt;
 &lt;p&gt;The &lt;code&gt;ENTRYPOINT&lt;/code&gt; instruction make your container run as an executable. &lt;br&gt;
@@ -1501,7 +1499,6 @@ ENTRYPOINT [&amp;ldquo;executable&amp;rdquo;, &amp;ldquo;param1&amp;rdquo;, &amp
 ENTRYPOINT command param1 param2 &lt;br&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;If an image has an ENTRYPOINT if you pass an argument it, while running container it wont override the existing entrypoint, it will append what you passed with the entrypoint.To override the existing ENTRYPOINT you should user &lt;b&gt;&amp;ndash;entrypoint&lt;/b&gt; flag when running container.&lt;/p&gt;
-&lt;h2 id=&#34;pre-requisite-16&#34;&gt;Pre-requisite:&lt;/h2&gt;
 &lt;h2 id=&#34;tested-infrastructure-11&#34;&gt;Tested Infrastructure&lt;/h2&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
@@ -1515,13 +1512,13 @@ ENTRYPOINT command param1 param2 &lt;br&gt;&lt;/li&gt;
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-17&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-14&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;assignment-3&#34;&gt;Assignment:&lt;/h2&gt;
+&lt;h3 id=&#34;assignment-3&#34;&gt;Assignment:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an image with ENTRYPOINT instruction(Exec Form)&lt;/li&gt;
 &lt;li&gt;ENTRYPOINT instruction in Shell Form&lt;/li&gt;
@@ -1570,8 +1567,7 @@ Hello, Welocme to Docker Meetup!
 &lt;p&gt;The &lt;code&gt;WORKDIR&lt;/code&gt; directive in &lt;code&gt;Dockerfile&lt;/code&gt; defines the working directory for the rest of the instructions in the Dockerfile. The WORKDIR instruction wont create a new layer in the image but will add metadata to the image config. If the WORKDIR doesn’t exist, it will be created even if it’s not used in any subsequent Dockerfile instruction. you can have multiple WORKDIR in same Dockerfile. If a relative path is provided, it will be relative to the previous WORKDIR instruction.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;WORKDIR /path/to/workdir
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If no WORKDIR is specified in the Dockerfile then the default path is &lt;code&gt;/&lt;/code&gt;. The WORKDIR instruction can resolve environment variables previously set in Dockerfile using ENV.&lt;/p&gt;
-&lt;h2 id=&#34;pre-requisite-18&#34;&gt;Pre-requisite:&lt;/h2&gt;
-&lt;h2 id=&#34;tested-infrastructure-12&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;h3 id=&#34;tested-infrastructure-12&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
@@ -1584,13 +1580,13 @@ Hello, Welocme to Docker Meetup!
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-19&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-15&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;assignment-4&#34;&gt;Assignment&lt;/h1&gt;
+&lt;h3 id=&#34;assignment-4&#34;&gt;Assignment&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Dockerfile with WORKDIR instruction&lt;/li&gt;
 &lt;li&gt;WORKDIR with Relative path&lt;/li&gt;
@@ -1652,8 +1648,7 @@ RUN instruction can be wrote in two forms:&lt;/p&gt;
 &lt;li&gt;RUN &lt;command&gt; (shell form)&lt;/li&gt;
 &lt;li&gt;RUN [&amp;ldquo;executable&amp;rdquo;, &amp;ldquo;param1&amp;rdquo;, &amp;ldquo;param2&amp;rdquo;] (exec form)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;pre-requisite-20&#34;&gt;Pre-requisite:&lt;/h2&gt;
-&lt;h2 id=&#34;tested-infrastructure-13&#34;&gt;Tested Infrastructure&lt;/h2&gt;
+&lt;h3 id=&#34;tested-infrastructure-13&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
     &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
@@ -1666,13 +1661,13 @@ RUN instruction can be wrote in two forms:&lt;/p&gt;
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;pre-requisite-21&#34;&gt;Pre-requisite&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisite-16&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;assignment-5&#34;&gt;Assignment:&lt;/h2&gt;
+&lt;h3 id=&#34;assignment-5&#34;&gt;Assignment:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an image with RUN instruction&lt;/li&gt;
 &lt;li&gt;Combining multiple RUN instruction to one&lt;/li&gt;
@@ -1727,7 +1722,6 @@ run                 v2                  784298155541        3 minutes ago       
 &lt;p&gt;The &lt;code&gt;ARG&lt;/code&gt; directive in &lt;code&gt;Dockerfile&lt;/code&gt; defines the parameter name and defines its default value. This default value can be overridden by the &lt;code&gt;--build-arg &amp;lt;parameter name&amp;gt;=&amp;lt;value&amp;gt;&lt;/code&gt; in the build command &lt;code&gt;docker build&lt;/code&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;`ARG &amp;lt;parameter name&amp;gt;[=&amp;lt;default&amp;gt;]`
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The build parameters have the same effect as &lt;code&gt;ENV&lt;/code&gt;, which is to set the environment variables. The difference is that the environment variables of the build environment set by &lt;code&gt;ARG&lt;/code&gt; will not exist in the future when the container is running. But don&amp;rsquo;t use &lt;code&gt;ARG&lt;/code&gt; to save passwords and the like, because &lt;code&gt;docker history&lt;/code&gt; can still see all the values.&lt;/p&gt;
-&lt;h3 id=&#34;pre-requisite-22&#34;&gt;Pre-requisite:&lt;/h3&gt;
 &lt;h3 id=&#34;tested-infrastructure-14&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
@@ -1741,7 +1735,7 @@ run                 v2                  784298155541        3 minutes ago       
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;pre-requisite-23&#34;&gt;Pre-requisite&lt;/h3&gt;
+&lt;h3 id=&#34;pre-requisite-17&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
@@ -1779,7 +1773,6 @@ Welcome Savio, to Docker World!
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;b&gt;NOTE:&lt;/b&gt; ARG is the only one instruction which can come before FROM instruction, but then arg value can be used only by FROM.&lt;/p&gt;
 &lt;h2 id=&#34;lab-9-create-an-image-with-env-instruction&#34;&gt;Lab #9: Create an image with ENV instruction&lt;/h2&gt;
 &lt;p&gt;The &lt;code&gt;ENV&lt;/code&gt; instruction in Dockerfile sets the environment variable for your container when you start. The default value can be overridden by passing &lt;code&gt;--env &amp;lt;key&amp;gt;=&amp;lt;value&amp;gt;&lt;/code&gt; when you start the container.&lt;/p&gt;
-&lt;h3 id=&#34;pre-requisite-24&#34;&gt;Pre-requisite:&lt;/h3&gt;
 &lt;h3 id=&#34;tested-infrastructure-15&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
@@ -1793,7 +1786,7 @@ Welcome Savio, to Docker World!
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;pre-requisite-25&#34;&gt;Pre-requisite&lt;/h3&gt;
+&lt;h3 id=&#34;pre-requisite-18&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
@@ -1823,7 +1816,7 @@ Welcome to Docker World
 &lt;pre&gt;&lt;code&gt;$ docker container run --env WELCOME_MESSAGE=&amp;quot;Welcome to Docker Workshop&amp;quot; env:v1 
 Welcome to Docker Workshop
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;lab-10-create-an-image-with-volume-instruction&#34;&gt;Lab #10: Create an image with VOLUME instruction&lt;/h2&gt;
-&lt;h3 id=&#34;pre-requisite-26&#34;&gt;Pre-requisite:&lt;/h3&gt;
+&lt;h3 id=&#34;pre-requisite-19&#34;&gt;Pre-requisite:&lt;/h3&gt;
 &lt;h3 id=&#34;tested-infrastructure-16&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
@@ -1837,7 +1830,7 @@ Welcome to Docker Workshop
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;    
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;pre-requisite-27&#34;&gt;Pre-requisite&lt;/h3&gt;
+&lt;h3 id=&#34;pre-requisite-20&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
@@ -1879,7 +1872,7 @@ local               ed09456a448934218f03acbdaa31f465ebbb92e0d45e8284527a2c538cc6
 &lt;pre&gt;&lt;code&gt;$ docker container exec -it volume-test ls myvol
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;lab-11-create-an-image-with-expose-instruction&#34;&gt;Lab #11: Create an image with EXPOSE instruction&lt;/h2&gt;
 &lt;p&gt;The &lt;code&gt;EXPOSE&lt;/code&gt; instruction expose a port, the protocol can be UDP or TCP associated with the indicated port, default is TCP with no specification. The EXPOSE won&amp;rsquo;t be able to map the ports on the host machine. Regardless of the EXPOSE settings, EXPOSE port can be override using &lt;b&gt;-p&lt;/b&gt; flag while starting the container.&lt;/p&gt;
-&lt;h3 id=&#34;pre-requisite-28&#34;&gt;Pre-requisite:&lt;/h3&gt;
+&lt;h3 id=&#34;pre-requisite-21&#34;&gt;Pre-requisite:&lt;/h3&gt;
 &lt;h3 id=&#34;tested-infrastructure-17&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
@@ -1893,7 +1886,7 @@ local               ed09456a448934218f03acbdaa31f465ebbb92e0d45e8284527a2c538cc6
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;    
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;pre-requisite-29&#34;&gt;Pre-requisite&lt;/h3&gt;
+&lt;h3 id=&#34;pre-requisite-22&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
@@ -2122,7 +2115,7 @@ Successfully built 23c388fb84c1
 &lt;code&gt;--timeout=&amp;lt;time length&amp;gt;&lt;/code&gt;: The health check command runs the timeout period. If this time is exceeded, the health check is regarded as a failure. The default is 30 seconds.
 &lt;code&gt;--retries=&amp;lt;number&amp;gt;&lt;/code&gt;: When the specified number of consecutive failures, the container status is treated as unhealthy, the default is 3 times.
 Like CMD, ENTRYPOINT, HEALTHCHECK can only appear once. If more than one is written, only the last one will take effect.&lt;/p&gt;
-&lt;h3 id=&#34;pre-requisite-30&#34;&gt;Pre-requisite:&lt;/h3&gt;
+&lt;h3 id=&#34;pre-requisite-23&#34;&gt;Pre-requisite:&lt;/h3&gt;
 &lt;h3 id=&#34;tested-infrastructure-18&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
@@ -2136,7 +2129,7 @@ Like CMD, ENTRYPOINT, HEALTHCHECK can only appear once. If more than one is writ
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;pre-requisite-31&#34;&gt;Pre-requisite&lt;/h3&gt;
+&lt;h3 id=&#34;pre-requisite-24&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
@@ -2175,7 +2168,7 @@ EXPOSE 80
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;sleep 5; docker inspect --format=&#39;{{.State.Health.Status}}&#39; nginx-proxy
 healthy
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;lab-15-create-an-image-with-shell-instruction&#34;&gt;Lab #15: Create an image with SHELL instruction&lt;/h2&gt;
-&lt;h3 id=&#34;pre-requisite-32&#34;&gt;Pre-requisite:&lt;/h3&gt;
+&lt;h3 id=&#34;pre-requisite-25&#34;&gt;Pre-requisite:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
@@ -2294,7 +2287,7 @@ For example, using &lt;code&gt;SHELL cmd /S /C /V:ON|OFF&lt;/code&gt; on Windows
 &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; gosu nobody true&lt;span style=&#34;color:#a40000&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Set CMD and execute it as another user&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;CMD&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;exec&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;gosu&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;redis&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;redis-server&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;pre-requisite-33&#34;&gt;Pre-requisite:&lt;/h3&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;pre-requisite-26&#34;&gt;Pre-requisite:&lt;/h3&gt;
 &lt;h3 id=&#34;tested-infrastructure-20&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
@@ -2308,7 +2301,7 @@ For example, using &lt;code&gt;SHELL cmd /S /C /V:ON|OFF&lt;/code&gt; on Windows
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;pre-requisite-34&#34;&gt;Pre-requisite&lt;/h3&gt;
+&lt;h3 id=&#34;pre-requisite-27&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
@@ -2328,7 +2321,7 @@ For example, using &lt;code&gt;SHELL cmd /S /C /V:ON|OFF&lt;/code&gt; on Windows
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;pre-requisite-35&#34;&gt;Pre-requisite&lt;/h3&gt;
+&lt;h3 id=&#34;pre-requisite-28&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
@@ -2346,7 +2339,7 @@ To understand it clearly, let us consider the below Dockerfile:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/collabnix/dockerlabs/master/beginners/dockerfile/dockerfile-4.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;This clearly state that ENTRYPOINT is meant to provide the executable while CMD is to pass the default arguments to the executable.&lt;/p&gt;
 &lt;h2 id=&#34;writing-dockerfile-with-hello-python-script-added&#34;&gt;Writing Dockerfile with Hello Python Script Added&lt;/h2&gt;
-&lt;h3 id=&#34;pre-requisite-36&#34;&gt;Pre-requisite:&lt;/h3&gt;
+&lt;h3 id=&#34;pre-requisite-29&#34;&gt;Pre-requisite:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
@@ -2445,7 +2438,7 @@ $
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;pre-requisite-37&#34;&gt;Pre-requisite&lt;/h3&gt;
+&lt;h3 id=&#34;pre-requisite-30&#34;&gt;Pre-requisite&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;

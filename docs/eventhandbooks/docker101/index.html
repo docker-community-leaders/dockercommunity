@@ -580,6 +580,166 @@ if (!doNotTrack) {
     <li><a href="#pushing-it-to-dockerhub">Pushing it to DockerHub</a>
       <ul>
         <li><a href="#test-your-knowledge---quiz1">Test Your Knowledge - Quiz1</a></li>
+        <li><a href="#accessing-the-container-shell">Accessing the Container Shell</a></li>
+        <li><a href="#tested-infrastructure-4">Tested Infrastructure</a></li>
+        <li><a href="#pre-requisite-5">Pre-requisite</a></li>
+        <li><a href="#create-ubuntu-container">Create Ubuntu Container</a></li>
+        <li><a href="#accessing-the-container-shell-1">Accessing the container shell</a></li>
+        <li><a href="#accesssing-the-container-shell">Accesssing the container shell</a></li>
+        <li><a href="#running-a-command-inside-running-container">Running a command inside running Container</a></li>
+        <li><a href="#tested-infrastructure-5">Tested Infrastructure</a></li>
+        <li><a href="#pre-requisite-6">Pre-requisite</a></li>
+        <li><a href="#create-ubuntu-container-1">Create Ubuntu Container</a></li>
+        <li><a href="#opening-up-the-bash-shell">Opening up the bash shell</a></li>
+        <li><a href="#managing-docker-containers">Managing Docker containers</a></li>
+        <li><a href="#tested-infrastructure-6">Tested Infrastructure</a></li>
+        <li><a href="#pre-requisite-7">Pre-requisite</a></li>
+        <li><a href="#preparations">Preparations</a></li>
+        <li><a href="#instructions">Instructions</a></li>
+        <li><a href="#test-your-knowledge---quiz2">Test Your Knowledge - Quiz2</a></li>
+        <li><a href="#what-is-a-dockerfile">What is a Dockerfile?</a></li>
+        <li><a href="#understanding-image-layering-concept-with-dockerfile">Understanding Image Layering Concept with Dockerfile</a></li>
+      </ul>
+    </li>
+    <li><a href="#do-you-want-to-visualize-layers-of-docker-image">Do you want to visualize layers of Docker Image?</a>
+      <ul>
+        <li><a href="#lab-1-create-an-image-with-git-installed">Lab #1: Create an image with GIT installed</a></li>
+        <li><a href="#pre-requisite-8">Pre-requisite:</a></li>
+        <li><a href="#tested-infrastructure-7">Tested Infrastructure</a></li>
+        <li><a href="#pre-requisite-9">Pre-requisite</a></li>
+        <li><a href="#assignment">Assignment:</a></li>
+        <li><a href="#creating-dockerfile">Creating Dockerfile</a></li>
+        <li><a href="#build-docker-image">Build Docker Image</a></li>
+        <li><a href="#tagging-image-as-labs-git">Tagging image as labs-git</a></li>
+        <li><a href="#verify-the-images">Verify the Images</a></li>
+        <li><a href="#create-a-container">Create a container</a></li>
+        <li><a href="#enter-into-container-shell">Enter into Container Shell</a></li>
+        <li><a href="#verify-if-git-is-installed">Verify if GIT is installed</a></li>
+        <li><a href="#lab-2-create-an-image-with-add-instruction">Lab #2: Create an image with ADD instruction</a></li>
+        <li><a href="#pre-requisite-10">Pre-requisite:</a></li>
+        <li><a href="#tested-infrastructure-8">Tested Infrastructure</a></li>
+        <li><a href="#pre-requisite-11">Pre-requisite</a></li>
+        <li><a href="#assignment-1">Assignment:</a></li>
+        <li><a href="#creating-dockerfile-1">Creating Dockerfile</a></li>
+        <li><a href="#build-docker-image-1">Build Docker Image</a></li>
+        <li><a href="#tagging-image-as-labs-git-1">Tagging image as labs-git</a></li>
+        <li><a href="#verify-the-images-1">Verify the Images</a></li>
+        <li><a href="#create-a-container-1">Create a container</a></li>
+        <li><a href="#enter-into-container-shell-1">Enter into Container Shell</a></li>
+        <li><a href="#verify-if-the-link-has-been-extracted-onto-the-container">Verify if the link has been extracted onto the container</a></li>
+        <li><a href="#lab-3-create-an-image-with-copy-instruction">Lab #3: Create an image with COPY instruction</a></li>
+        <li><a href="#pre-requisite-12">Pre-requisite:</a></li>
+        <li><a href="#tested-infrastructure-9">Tested Infrastructure</a></li>
+        <li><a href="#pre-requisite-13">Pre-requisite</a></li>
+        <li><a href="#assignment-2">Assignment:</a></li>
+        <li><a href="#lab-4-create-an-image-with-cmd-instruction">Lab #4: Create an image with CMD instruction</a></li>
+        <li><a href="#pre-requisite-14">Pre-requisite:</a></li>
+        <li><a href="#tested-infrastructure-10">Tested Infrastructure</a></li>
+        <li><a href="#pre-requisite-15">Pre-requisite</a></li>
+        <li><a href="#creating-dockerfile-2">Creating Dockerfile</a></li>
+        <li><a href="#building-docker-container">Building Docker Container</a></li>
+        <li><a href="#running-the-docker-container">Running the Docker container</a></li>
+        <li><a href="#lab-5-create-an-image-with-entrypoint-instruction">Lab #5: Create an image with ENTRYPOINT instruction</a></li>
+        <li><a href="#pre-requisite-16">Pre-requisite:</a></li>
+        <li><a href="#tested-infrastructure-11">Tested Infrastructure</a></li>
+        <li><a href="#pre-requisite-17">Pre-requisite</a></li>
+        <li><a href="#assignment-3">Assignment:</a></li>
+        <li><a href="#lab-6-create-an-image-with-workdir-instruction">Lab #6: Create an image with WORKDIR instruction</a></li>
+        <li><a href="#pre-requisite-18">Pre-requisite:</a></li>
+        <li><a href="#tested-infrastructure-12">Tested Infrastructure</a></li>
+        <li><a href="#pre-requisite-19">Pre-requisite</a></li>
+      </ul>
+    </li>
+    <li><a href="#assignment-4">Assignment</a>
+      <ul>
+        <li></li>
+        <li><a href="#lab-7-create-an-image-with-run-instruction">Lab #7: Create an image with RUN instruction</a></li>
+        <li><a href="#pre-requisite-20">Pre-requisite:</a></li>
+        <li><a href="#tested-infrastructure-13">Tested Infrastructure</a></li>
+        <li><a href="#pre-requisite-21">Pre-requisite</a></li>
+        <li><a href="#assignment-5">Assignment:</a></li>
+        <li><a href="#lab-8-create-an-image-with-arg-instruction">Lab #8: Create an image with ARG instruction</a></li>
+        <li><a href="#pre-requisite-22">Pre-requisite:</a></li>
+        <li><a href="#tested-infrastructure-14">Tested Infrastructure</a></li>
+        <li><a href="#pre-requisite-23">Pre-requisite</a></li>
+      </ul>
+    </li>
+    <li><a href="#assignment-6">Assignment</a>
+      <ul>
+        <li><a href="#writing-a-dockerfile-with-arg-instruction">Writing a Dockerfile with ARG instruction</a></li>
+        <li><a href="#building-docker-image-with-default-argument">Building Docker Image with default argument</a></li>
+        <li><a href="#running-container-argvv1">Running container argv:v1</a></li>
+        <li><a href="#passing-the-argumentwelcome_user-during-image-build-time-using-b--build-argb-flag">Passing the argument(WELCOME_USER) during image build time using <b>&ndash;build-arg</b> flag</a></li>
+        <li><a href="#running-container-argvv2">Running container argv:v2</a></li>
+        <li><a href="#lab-9-create-an-image-with-env-instruction">Lab #9: Create an image with ENV instruction</a></li>
+        <li><a href="#pre-requisite-24">Pre-requisite:</a></li>
+        <li><a href="#tested-infrastructure-15">Tested Infrastructure</a></li>
+        <li><a href="#pre-requisite-25">Pre-requisite</a></li>
+      </ul>
+    </li>
+    <li><a href="#assignment-7">Assignment</a>
+      <ul>
+        <li></li>
+        <li><a href="#lab-10-create-an-image-with-volume-instruction">Lab #10: Create an image with VOLUME instruction</a></li>
+        <li><a href="#pre-requisite-26">Pre-requisite:</a></li>
+        <li><a href="#tested-infrastructure-16">Tested Infrastructure</a></li>
+        <li><a href="#pre-requisite-27">Pre-requisite</a></li>
+      </ul>
+    </li>
+    <li><a href="#assignment-8">Assignment</a>
+      <ul>
+        <li></li>
+        <li><a href="#lab-11-create-an-image-with-expose-instruction">Lab #11: Create an image with EXPOSE instruction</a></li>
+        <li><a href="#pre-requisite-28">Pre-requisite:</a></li>
+        <li><a href="#tested-infrastructure-17">Tested Infrastructure</a></li>
+        <li><a href="#pre-requisite-29">Pre-requisite</a></li>
+      </ul>
+    </li>
+    <li><a href="#assignment-9">Assignment</a>
+      <ul>
+        <li></li>
+        <li><a href="#lab-12-create-an-image-with-label-instruction">Lab #12: Create an image with LABEL Instruction</a></li>
+        <li><a href="#lab-13-create-an-image-with-onbuild-instruction">Lab #13: Create an image with ONBUILD instruction</a></li>
+      </ul>
+    </li>
+    <li><a href="#lab">Lab</a></li>
+    <li><a href="#docker-build">Docker build</a></li>
+    <li><a href="#executing-1-build-triggers">Executing 1 build triggers</a>
+      <ul>
+        <li><a href="#ubutu-rails">Ubutu Rails</a></li>
+        <li><a href="#lab-14-create-an-image-with-healthcheck-instruction">Lab #14: Create an image with HEALTHCHECK instruction</a></li>
+        <li><a href="#how-does-it-work">How does it work?</a></li>
+        <li><a href="#what-options-does-healthcheck-support">What options does HEALTHCHECK support?</a></li>
+        <li><a href="#pre-requisite-30">Pre-requisite:</a></li>
+        <li><a href="#tested-infrastructure-18">Tested Infrastructure</a></li>
+        <li><a href="#pre-requisite-31">Pre-requisite</a></li>
+        <li><a href="#assignment-10">Assignment:</a></li>
+        <li><a href="#writing-a-dockerfile-with-healthcheck-instruction">Writing a Dockerfile with HEALTHCHECK instruction</a></li>
+        <li><a href="#building-docker-image-11">Building Docker Image</a></li>
+        <li><a href="#check-that-the-nginx-config-file-exists">Check that the nginx config file exists</a></li>
+        <li><a href="#check-if-nginx-is-healthy">Check if nginx is healthy</a></li>
+        <li><a href="#make-docker-container-unhealthy-and-check">Make Docker container Unhealthy and check</a></li>
+        <li><a href="#check-if-nginx-is-healthy-1">Check if nginx is healthy</a></li>
+        <li><a href="#creating-the-nginxconf-file-and-making-the-container-go-healthy">Creating the nginx.conf file and Making the container go healthy</a></li>
+        <li><a href="#lab-15-create-an-image-with-shell-instruction">Lab #15: Create an image with SHELL instruction</a></li>
+        <li><a href="#pre-requisite-32">Pre-requisite:</a></li>
+        <li><a href="#how-does-it-work-1">How does it work?</a></li>
+        <li><a href="#create-a-dockerfile">Create a Dockerfile</a></li>
+        <li><a href="#build-an-image">Build an image</a></li>
+        <li><a href="#lab-16-create-an-image-with-user-instruction">Lab 16: Create an image with USER Instruction</a></li>
+        <li><a href="#pre-requisite-33">Pre-requisite:</a></li>
+        <li><a href="#tested-infrastructure-20">Tested Infrastructure</a></li>
+        <li><a href="#pre-requisite-34">Pre-requisite</a></li>
+        <li><a href="#how-is-entrypoint-different-from-the-run-instruction">How is ENTRYPOINT different from the RUN instruction?</a></li>
+        <li><a href="#tested-infrastructure-21">Tested Infrastructure</a></li>
+        <li><a href="#pre-requisite-35">Pre-requisite</a></li>
+        <li><a href="#what-is-entrypoint-meant-for">What is ENTRYPOINT meant for?</a></li>
+        <li><a href="#writing-dockerfile-with-hello-python-script-added">Writing Dockerfile with Hello Python Script Added</a></li>
+        <li><a href="#pre-requisite-36">Pre-requisite:</a></li>
+        <li><a href="#tested-infrastructure-22">Tested Infrastructure</a></li>
+        <li><a href="#writing-a-dockerfile">Writing a Dockerfile</a></li>
+        <li><a href="#building-a-dockerfile">Building a Dockerfile</a></li>
+        <li><a href="#running-a-container-from-the-newly-built-image">Running a container from the newly built image</a></li>
       </ul>
     </li>
   </ul>
@@ -1541,6 +1701,1506 @@ bcf2f368fe23: Mounted from library/alpine
 </tr>
 </tbody>
 </table>
+<h2 id="accessing-the-container-shell">Accessing the Container Shell</h2>
+<h2 id="tested-infrastructure-4">Tested Infrastructure</h2>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>
+  </tr>
+</table>
+<h2 id="pre-requisite-5">Pre-requisite</h2>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h2 id="create-ubuntu-container">Create Ubuntu Container</h2>
+<pre><code>docker run -dit ubuntu 
+</code></pre><h2 id="accessing-the-container-shell-1">Accessing the container shell</h2>
+<pre><code>docker exec -t &lt;container-id&gt; bash
+</code></pre><h2 id="accesssing-the-container-shell">Accesssing the container shell</h2>
+<pre><code>docker attach &lt;container-id&gt;
+
+</code></pre><h2 id="running-a-command-inside-running-container">Running a command inside running Container</h2>
+<h2 id="tested-infrastructure-5">Tested Infrastructure</h2>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>
+  </tr>
+</table>
+<h2 id="pre-requisite-6">Pre-requisite</h2>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h2 id="create-ubuntu-container-1">Create Ubuntu Container</h2>
+<pre><code>docker run -dit ubuntu
+</code></pre><h2 id="opening-up-the-bash-shell">Opening up the bash shell</h2>
+<pre><code>docker exec -t &lt;container-id&gt; bash
+</code></pre><h2 id="managing-docker-containers">Managing Docker containers</h2>
+<h2 id="tested-infrastructure-6">Tested Infrastructure</h2>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>
+  </tr>
+</table>
+<h2 id="pre-requisite-7">Pre-requisite</h2>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h2 id="preparations">Preparations</h2>
+<ul>
+<li>Clean your docker host using the commands (in bash):</li>
+</ul>
+<pre><code>$ docker rm -f $(docker ps -a -q)
+</code></pre><h2 id="instructions">Instructions</h2>
+<ul>
+<li>Run the following containers from the dockerhub:</li>
+</ul>
+<pre><code>$ docker run -d -p 5000:5000 --name app1 selaworkshops/python-app:1.0
+</code></pre><pre><code>$ docker run -d -p 5001:5001 -e &quot;port=5001&quot; --name app2 selaworkshops/python-app:2.0
+</code></pre><ul>
+<li>Ensure the containers are running:</li>
+</ul>
+<pre><code>$ docker ps
+</code></pre><ul>
+<li>Stop the first container:</li>
+</ul>
+<pre><code>$ docker stop app1
+</code></pre><ul>
+<li>Kill the second container:</li>
+</ul>
+<pre><code>$ docker kill app2
+</code></pre><ul>
+<li>Display running containers:</li>
+</ul>
+<pre><code>$ docker ps
+</code></pre><ul>
+<li>Show all the containers (includind non running containers):</li>
+</ul>
+<pre><code>$ docker ps -a
+</code></pre><ul>
+<li>Let&rsquo;s start both containers again:</li>
+</ul>
+<pre><code>$ docker start app1 app2
+</code></pre><ul>
+<li>Restart the second container:</li>
+</ul>
+<pre><code>$ docker restart app2
+</code></pre><ul>
+<li>Display the docker host information with:</li>
+</ul>
+<pre><code>$ docker info
+</code></pre><ul>
+<li>Show the running processes in the first container using:</li>
+</ul>
+<pre><code>$ docker top app1
+</code></pre><ul>
+<li>Retrieve the history of the second container:</li>
+</ul>
+<pre><code>$ docker history selaworkshops/python-app:2.0
+</code></pre><ul>
+<li>Inspect the second container image:</li>
+</ul>
+<pre><code>$ docker inspect selaworkshops/python-app:2.0
+</code></pre><ul>
+<li>Inspect the first container and look for the internal ip:</li>
+</ul>
+<pre><code>$ docker inspect app1
+</code></pre><pre><code>&quot;Networks&quot;: {
+                &quot;bridge&quot;: {
+                    &quot;IPAMConfig&quot;: null,
+                    &quot;Links&quot;: null,
+                    &quot;Aliases&quot;: null,
+                    &quot;NetworkID&quot;: &quot;822cb66790c6358d9decab874916120f3bdeff7193a4375c94ca54d50832303d&quot;,
+                    &quot;EndpointID&quot;: &quot;9aa96dc29be08eddc6d8f429ebecd2285c064fda288681a3611812413cbdfc1f&quot;,
+                    &quot;Gateway&quot;: &quot;172.17.0.1&quot;,
+                    &quot;IPAddress&quot;: &quot;172.17.0.3&quot;,
+                    &quot;IPPrefixLen&quot;: 16,
+                    &quot;IPv6Gateway&quot;: &quot;&quot;,
+                    &quot;GlobalIPv6Address&quot;: &quot;&quot;,
+                    &quot;GlobalIPv6PrefixLen&quot;: 0,
+                    &quot;MacAddress&quot;: &quot;02:42:ac:11:00:03&quot;,
+                    &quot;DriverOpts&quot;: null
+                }
+            }
+</code></pre><ul>
+<li>Show the logs of the second container using the flag &ndash;follow:</li>
+</ul>
+<pre><code>$ docker logs --follow app2
+</code></pre><ul>
+<li>Browse to the application and see the containers logs from the terminal:</li>
+</ul>
+<pre><code>http://localhost:5001
+</code></pre><ul>
+<li>Stop to tracking logs:</li>
+</ul>
+<pre><code>$ CTRL + C
+</code></pre><h2 id="test-your-knowledge---quiz2">Test Your Knowledge - Quiz2</h2>
+<table>
+<thead>
+<tr>
+<th align="left">S. No.</th>
+<th align="left">Question.</th>
+<th align="left">Response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left">What are different ways to access container shell?</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">How to run a command inside a Docker container</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Is it possible to stop overall Docker containers in a single shot?</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">How do you remove all dangling images in Docker?</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">How do you access services ports under Docker?</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-is-a-dockerfile">What is a Dockerfile?</h2>
+<ul>
+<li>A Dockerfile is a text file which contains a series of commands or instructions.</li>
+<li>These instructions are executed in the order in which they are written.</li>
+<li>Execution of these instructions takes place on a base image.</li>
+<li>On building the Dockerfile, the successive actions form a new image from the base parent image.</li>
+</ul>
+<h2 id="understanding-image-layering-concept-with-dockerfile">Understanding Image Layering Concept with Dockerfile</h2>
+<p>Docker container is a runnable instance of an image, which is actually made by writing a readable/writable layer on top of some read-only layers.</p>
+<p>The parent image used to create another image from a Dockerfile is read-only. When we execute instructions on this parent image, new layers keep adding up.
+These layers are created when we run docker build command.</p>
+<p>The instructions RUN, COPY, ADD mostly contribute to the addition of layers in a Docker build.</p>
+<p>Each layer is read-only except the last one - this is added to the image for generating a runnable container. This last layer is called &ldquo;container layer&rdquo;. All changes made to the container, like making new files, installing applications, etc. are done in this thin layer.</p>
+<p>Let&rsquo;s understand this layering using an example:</p>
+<p>Consider the Dockerfile given below:</p>
+<pre><code>FROM ubuntu:latest
+RUN mkdir -p /hello/hello
+COPY hello.txt /hello/hello
+RUN chmod 600 /hello/hello/hello.txt
+
+</code></pre><h3 id="layer-id">Layer ID</h3>
+<p>Each instruction the Dockerfile generates a layer. Each of this layer has a randomly generated unique ID. This ID can be seen at the time of build. See the image below:</p>
+<p><img src="https://raw.githubusercontent.com/Prashansa-K/Docker/master/Writing%20Dockerfiles/layering2.png" alt="Docker layers during Build"></p>
+<p>To view all these layers once an image is built from a Dockerfile, we can use docker history command.</p>
+<p><img src="https://raw.githubusercontent.com/Prashansa-K/Docker/master/Writing%20Dockerfiles/layering3.png" alt="Docker history"></p>
+<p>To see more information about the Docker image and the layers use &lsquo;docker inspect&rsquo; command as such:</p>
+<pre><code># docker inspect testimage:latest
+
+[
+    {
+        &quot;Id&quot;: &quot;sha256:c5701e02ed095ae7cabaef9fcef009d1f272206ff707deca13a680e024db7f02&quot;,
+        &quot;RepoTags&quot;: [
+            &quot;testimage:latest&quot;
+        ],
+        &quot;RepoDigests&quot;: [],
+        &quot;Parent&quot;: &quot;sha256:694569c6db07ecef432cee1a9a4a6d45f2fd1f6be16814bf59e101bed966e612&quot;,
+        &quot;Comment&quot;: &quot;&quot;,
+        &quot;Created&quot;: &quot;2019-06-03T23:47:01.026463541Z&quot;,
+        &quot;Container&quot;: &quot;ac8873a003cb9ed972b4675f8d27181b99112e7530a5803ff89780e3ecc18b1c&quot;,
+        &quot;ContainerConfig&quot;: {
+            &quot;Hostname&quot;: &quot;&quot;,
+            &quot;Domainname&quot;: &quot;&quot;,
+            &quot;User&quot;: &quot;&quot;,
+            &quot;AttachStdin&quot;: false,
+            &quot;AttachStdout&quot;: false,
+            &quot;AttachStderr&quot;: false,
+            &quot;Tty&quot;: false,
+            &quot;OpenStdin&quot;: false,
+            &quot;StdinOnce&quot;: false,
+            &quot;Env&quot;: [
+                &quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;
+            ],
+            &quot;Cmd&quot;: [
+                &quot;/bin/sh&quot;,
+                &quot;-c&quot;,
+                &quot;chmod 600 /home/hello/hello.txt&quot;
+            ],
+            &quot;ArgsEscaped&quot;: true,
+            &quot;Image&quot;: &quot;sha256:694569c6db07ecef432cee1a9a4a6d45f2fd1f6be16814bf59e101bed966e612&quot;,
+            &quot;Volumes&quot;: null,
+            &quot;WorkingDir&quot;: &quot;&quot;,
+            &quot;Entrypoint&quot;: null,
+            &quot;OnBuild&quot;: null,
+            &quot;Labels&quot;: null
+        },
+        &quot;DockerVersion&quot;: &quot;18.03.1-ce&quot;,
+        &quot;Author&quot;: &quot;&quot;,
+        &quot;Config&quot;: {
+            &quot;Hostname&quot;: &quot;&quot;,
+            &quot;Domainname&quot;: &quot;&quot;,
+            &quot;User&quot;: &quot;&quot;,
+            &quot;AttachStdin&quot;: false,
+            &quot;AttachStdout&quot;: false,
+            &quot;AttachStderr&quot;: false,
+            &quot;Tty&quot;: false,
+            &quot;OpenStdin&quot;: false,
+            &quot;StdinOnce&quot;: false,
+            &quot;Env&quot;: [
+                &quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;
+            ],
+            &quot;Cmd&quot;: [
+                &quot;/bin/bash&quot;
+            ],
+            &quot;ArgsEscaped&quot;: true,
+            &quot;Image&quot;: &quot;sha256:694569c6db07ecef432cee1a9a4a6d45f2fd1f6be16814bf59e101bed966e612&quot;,
+            &quot;Volumes&quot;: null,
+            &quot;WorkingDir&quot;: &quot;&quot;,
+            &quot;Entrypoint&quot;: null,
+            &quot;OnBuild&quot;: null,
+            &quot;Labels&quot;: null
+        },
+        &quot;Architecture&quot;: &quot;amd64&quot;,
+        &quot;Os&quot;: &quot;linux&quot;,
+        &quot;Size&quot;: 222876395,
+        &quot;VirtualSize&quot;: 222876395,
+        &quot;GraphDriver&quot;: {
+            &quot;Data&quot;: {
+                &quot;LowerDir&quot;: &quot;/var/lib/docker/overlay2/86a76eac21ae67f6d78e59076107a121e6dfb9cc922e68e1be975fc97e711eb1/diff:/var/lib/docker/overlay2/0604b502d31eff670769257ba3411fca09fbe2eab03343660ba557024915a1e6/diff:/var/lib/docker/overlay2/16af32e079fbc252ea5de044628285d5c3a34fc8441602a762729482666b2431/diff:/var/lib/docker/overlay2/732c4ab0164f92664ce831b4a830251132bf17cbcb7d093334a7a367b1a665e5/diff:/var/lib/docker/overlay2/c8a69709e5093c6eefa317f015cbf1422a446b2fe5d3f3d52a7e0d8af8dc6a28/diff:/var/lib/docker/overlay2/c93b36ec3a753592518727a2ea4547ab4e53d58489b9fae0838b2806e9c18346/diff:/var/lib/docker/overlay2/e67589599c2a5ed3bd74a269f3effaa52f94975fd811a866f1fe2bbcb2edabe4/diff&quot;,
+                &quot;MergedDir&quot;: &quot;/var/lib/docker/overlay2/31c68adcd824f155d23de4197b3d0b8776b079c307c1e4c0f2f8bbc73807adc0/merged&quot;,
+                &quot;UpperDir&quot;: &quot;/var/lib/docker/overlay2/31c68adcd824f155d23de4197b3d0b8776b079c307c1e4c0f2f8bbc73807adc0/diff&quot;,
+                &quot;WorkDir&quot;: &quot;/var/lib/docker/overlay2/31c68adcd824f155d23de4197b3d0b8776b079c307c1e4c0f2f8bbc73807adc0/work&quot;
+            },
+            &quot;Name&quot;: &quot;overlay2&quot;
+        },
+        &quot;RootFS&quot;: {
+            &quot;Type&quot;: &quot;layers&quot;,
+            &quot;Layers&quot;: [
+                &quot;sha256:05b0f7f2a81723fd647744a7340477ef9619f5ddeba3f2ca039dac3dd143cd59&quot;,
+                &quot;sha256:0c3819952093832ffd8865bf72bc17f2f5475795cffe97e2b4c4ff36e638c244&quot;,
+                &quot;sha256:14fa4a9494bf9e61f83a1bb96cd9e963ab0cbbdaf8ed91ff5eec5196c5bf7b12&quot;,
+                &quot;sha256:b33859b66bfd3ad176ccf3be8dbd52d6b9823de8cc26688f2efeb76a0ea24a78&quot;,
+                &quot;sha256:4622c8e1bdc0716e185fa3b338fa415dfdad3724336315de0bebd173a6ceaf05&quot;,
+                &quot;sha256:6427efc3a0d7bae1fe315b844703580b2095073dcdf54a6ed9c7b1c0d982d9b0&quot;,
+                &quot;sha256:59cd898074ac7765bacd76a11724b8d666ed8e9c14e7806dfb20a486102f6f1e&quot;,
+                &quot;sha256:ad24f18512fddb8794612f7ec5955d06dcee93641d02932d809f0640263b8e79&quot;
+            ]
+        },
+        &quot;Metadata&quot;: {
+            &quot;LastTagTime&quot;: &quot;2019-06-04T05:17:01.430558997+05:30&quot;
+        }
+    }
+]
+
+</code></pre><h1 id="do-you-want-to-visualize-layers-of-docker-image">Do you want to visualize layers of Docker Image?</h1>
+<pre><code>docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock  wagoodman/dive testimage
+</code></pre><pre><code>[● Layers]───────────────────────────────────────────────────────────────────────────── [Current Layer Contents]───────────────────────────────────────────────────────────────
+Cmp   Size  Command                                                                     Permission     UID:GID       Size  Filetree
+     63 MB  FROM e388568efdf7281                                                        drwxr-xr-x         0:0     4.8 MB  ├── bin
+    988 kB  [ -z &quot;$(apt-get indextargets)&quot; ]                                            -rwxr-xr-x         0:0     1.1 MB  │   ├── bash
+     745 B  set -xe   &amp;&amp; echo '#!/bin/sh' &gt; /usr/sbin/policy-rc.d  &amp;&amp; echo 'exit 101' &gt; -rwxr-xr-x         0:0      35 kB  │   ├── bunzip2
+       7 B  mkdir -p /run/systemd &amp;&amp; echo 'docker' &gt; /run/systemd/container             -rwxr-xr-x         0:0        0 B  │   ├── bzcat → bin/bunzip2
+       0 B  mkdir -p /hello/hello                                                       -rwxrwxrwx         0:0        0 B  │   ├── bzcmp → bzdiff
+      37 B  #(nop) COPY file:666735678ded52c6f9e0693ca27b4dc3d466e3d79c585a58c3b9a91357 -rwxr-xr-x         0:0     2.1 kB  │   ├── bzdiff
+      37 B  chmod 600 /hello/hello/hello.txt                                            -rwxrwxrwx         0:0        0 B  │   ├── bzegrep → bzgrep
+                                                                                        -rwxr-xr-x         0:0     4.9 kB  │   ├── bzexe
+[Layer Details]──────────────────────────────────────────────────────────────────────── -rwxrwxrwx         0:0        0 B  │   ├── bzfgrep → bzgrep
+                                                                                        -rwxr-xr-x         0:0     3.6 kB  │   ├── bzgrep
+Tags:   (unavailable)                                                                   -rwxr-xr-x         0:0        0 B  │   ├── bzip2 → bin/bunzip2
+Id:     e388568efdf72814bd6439a80d822ce06b631689a82292a2b96382d020d63a4c                -rwxr-xr-x         0:0      14 kB  │   ├── bzip2recover
+Digest: sha256:43c67172d1d182ca5460fc962f8f053f33028e0a3a1d423e05d91b532429e73d         -rwxrwxrwx         0:0        0 B  │   ├── bzless → bzmore
+Command:                                                                                -rwxr-xr-x         0:0     1.3 kB  │   ├── bzmore
+#(nop) ADD file:08e718ed0796013f5957a1be7da3bef6225f3d82d8be0a86a7114e5caad50cbc in /   -rwxr-xr-x         0:0      35 kB  │   ├── cat
+                                                                                        -rwxr-xr-x         0:0      64 kB  │   ├── chgrp
+[Image Details]──────────────────────────────────────────────────────────────────────── -rwxr-xr-x         0:0      60 kB  │   ├── chmod
+                                                                                        -rwxr-xr-x         0:0      68 kB  │   ├── chown
+Total Image size: 64 MB                                                                 -rwxr-xr-x         0:0     142 kB  │   ├── cp
+Potential wasted space: 308 B                                                           -rwxr-xr-x         0:0     121 kB  │   ├── dash
+Image efficiency score: 99 %                                                            -rwxr-xr-x         0:0     101 kB  │   ├── date
+                                                                                        -rwxr-xr-x         0:0      76 kB  │   ├── dd
+Count   Total Space  Path                                                               -rwxr-xr-x         0:0      85 kB  │   ├── df
+    2         234 B  /var/lib/dpkg/diversions                                           -rwxr-xr-x         0:0     134 kB  │   ├── dir
+    2          74 B  /hello/hello/hello.txt                                             -rwxr-xr-x         0:0      72 kB  │   ├── dmesg
+                                                                                        -rwxrwxrwx         0:0        0 B  │   ├── dnsdomainname → hostname
+                                                                                        -rwxrwxrwx         0:0        0 B  │   ├── domainname → hostname
+                                                                                        -rwxr-xr-x         0:0      35 kB  │   ├── echo
+                                                                                        -rwxr-xr-x         0:0       28 B  │   ├── egrep
+                                                                                        -rwxr-xr-x         0:0      31 kB  │   ├── false
+                                                                                        -rwxr-xr-x         0:0       28 B  │   ├── fgrep
+                                                                                        -rwxr-xr-x         0:0      65 kB  │   ├── findmnt
+                                                                                        -rwxr-xr-x         0:0     220 kB  │   ├── grep
+                                                                                        -rwxr-xr-x         0:0     2.3 kB  │   ├── gunzip
+                                                                                        -rwxr-xr-x         0:0     5.9 kB  │   ├── gzexe
+                                                                                        -rwxr-xr-x         0:0     102 kB  │   ├── gzip
+</code></pre><h2 id="lab-1-create-an-image-with-git-installed">Lab #1: Create an image with GIT installed</h2>
+<h2 id="pre-requisite-8">Pre-requisite:</h2>
+<h2 id="tested-infrastructure-7">Tested Infrastructure</h2>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>
+  </tr>
+</table>
+<h2 id="pre-requisite-9">Pre-requisite</h2>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h2 id="assignment">Assignment:</h2>
+<ul>
+<li>Create an image with GIT installed</li>
+<li>Tag your image as labs-git:v1.0</li>
+<li>Create a container based on that image, and run git &ndash;version to check that it is installed correctly</li>
+</ul>
+<h2 id="creating-dockerfile">Creating Dockerfile</h2>
+<pre><code>FROM alpine:3.5
+RUN apk update
+RUN apk add git
+</code></pre><h2 id="build-docker-image">Build Docker Image</h2>
+<pre><code>docker build -t ajeetraina/alpine-git .
+</code></pre><h2 id="tagging-image-as-labs-git">Tagging image as labs-git</h2>
+<pre><code>docker tag ajeetraina/alpine-git ajeetraina/labs-git:v1.0
+</code></pre><h2 id="verify-the-images">Verify the Images</h2>
+<pre><code>$ docker images
+REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+ajeetraina/alpine-git   latest              cb913e37a593        16 seconds ago      26.6MB
+ajeetraina/labs-git     v1.0                cb913e37a593        16 seconds ago      26.6MB
+</code></pre><h2 id="create-a-container">Create a container</h2>
+<pre><code>docker run -itd ajeetraina/labs-git:v1.0 /bin/sh
+</code></pre><pre><code>$ docker ps
+CONTAINER ID        IMAGE                      COMMAND             CREATED             STATUS              PORTS               NAMES
+3e26a5268f55        ajeetraina/labs-git:v1.0   &quot;/bin/sh&quot;           4 seconds ago       Up 2 seconds                            elated_neumann
+</code></pre><h2 id="enter-into-container-shell">Enter into Container Shell</h2>
+<pre><code>docker attach 3e26
+</code></pre><p>Please press &ldquo;Enter&rdquo; key twice so as to enter into container shell</p>
+<h2 id="verify-if-git-is-installed">Verify if GIT is installed</h2>
+<pre><code>/ # git --version
+git version 2.13.7
+</code></pre><h2 id="lab-2-create-an-image-with-add-instruction">Lab #2: Create an image with ADD instruction</h2>
+<p>COPY and ADD are both Dockerfile instructions that serve similar purposes. They let you copy files from a specific location into a Docker image.</p>
+<p>COPY takes in a src and destination. It only lets you copy in a local file or directory from your host (the machine building the Docker image) into the Docker image itself.</p>
+<p>ADD lets you do that too, but it also supports 2 other sources. First, you can use a URL instead of a local file / directory. Secondly, you can extract a tar file from the source directly into the destination.</p>
+<h2 id="pre-requisite-10">Pre-requisite:</h2>
+<h2 id="tested-infrastructure-8">Tested Infrastructure</h2>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>
+  </tr>
+</table>
+<h2 id="pre-requisite-11">Pre-requisite</h2>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h2 id="assignment-1">Assignment:</h2>
+<ul>
+<li>Create an image with ADD instruction</li>
+<li>Tag your image as labs-add:v1.0</li>
+<li>Create a container based on that image, and see the extracted tar file.</li>
+</ul>
+<h2 id="creating-dockerfile-1">Creating Dockerfile</h2>
+<pre><code>FROM alpine:3.5
+RUN apk update
+ADD http://www.vlsitechnology.org/pharosc_8.4.tar.gz .
+</code></pre><h2 id="build-docker-image-1">Build Docker Image</h2>
+<pre><code>docker build -t saiyam911/alpine-add . -f &lt;name of dockerfile&gt;
+</code></pre><h2 id="tagging-image-as-labs-git-1">Tagging image as labs-git</h2>
+<pre><code>docker tag saiyam911/alpine-add saiyam911/labs-add:v1.0
+</code></pre><h2 id="verify-the-images-1">Verify the Images</h2>
+<pre><code>$ docker images
+REPOSITORY                   TAG                 IMAGE ID            CREATED             SIZE
+saiyam911/alpine-add        latest              cdf97cb49d48        38 minutes ago       300MB
+saiyam911/labs-add          v1.0                cdf97cb49d48        38 minutes ago       300MB
+</code></pre><h2 id="create-a-container-1">Create a container</h2>
+<pre><code>docker run -itd saiyam911/labs-add:v1.0 /bin/sh
+</code></pre><pre><code>$ docker ps
+CONTAINER ID        IMAGE                      COMMAND             CREATED             STATUS              PORTS               NAMES
+f0940750f61a        saiyam911/labs-add:v1.0   &quot;/bin/sh&quot;           20 seconds ago      Up 18 seconds                           distracted_darwin
+</code></pre><h2 id="enter-into-container-shell-1">Enter into Container Shell</h2>
+<pre><code>docker attach f094
+</code></pre><p>Please press &ldquo;Enter&rdquo; key twice so as to enter into container shell</p>
+<h2 id="verify-if-the-link-has-been-extracted-onto-the-container">Verify if the link has been extracted onto the container</h2>
+<pre><code>/ # ls -ltr
+-rw-------    1 root     root     295168000 Sep 19  2007 pharosc_8.4.tar.gz
+</code></pre><p>ADD Command lets you to add a tar directly from a link and explode to the container.</p>
+<h2 id="lab-3-create-an-image-with-copy-instruction">Lab #3: Create an image with COPY instruction</h2>
+<p>The COPY instruction copies files or directories from source and adds them to the filesystem of the container at destinatio.</p>
+<p>Two form of COPY instruction</p>
+<pre><code>COPY [--chown=&lt;user&gt;:&lt;group&gt;] &lt;src&gt;... &lt;dest&gt;
+COPY [--chown=&lt;user&gt;:&lt;group&gt;] [&quot;&lt;src&gt;&quot;,... &quot;&lt;dest&gt;&quot;] (this form is required for paths containing whitespace)
+</code></pre><h2 id="pre-requisite-12">Pre-requisite:</h2>
+<h2 id="tested-infrastructure-9">Tested Infrastructure</h2>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>
+  </tr>
+</table>
+<h2 id="pre-requisite-13">Pre-requisite</h2>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h2 id="assignment-2">Assignment:</h2>
+<ul>
+<li>Create an image with COPY instruction</li>
+<li>COPY instruction in Multi-stage Builds</li>
+</ul>
+<h3 id="create-an-image-with-copy-instruction">Create an image with COPY instruction</h3>
+<p>Dockerfile</p>
+<pre><code>FROM nginx:alpine
+LABEL maintainer=&quot;Collabnix&quot;
+
+COPY index.html /usr/share/nginx/html/
+ENTRYPOINT [&quot;nginx&quot;, &quot;-g&quot;, &quot;daemon off;&quot;]
+</code></pre><p>Lets create the <b>index.html</b> file</p>
+<pre><code>$ echo &quot;Welcome to Dockerlabs !&quot; &gt; index.html
+</code></pre><h4 id="building-docker-image">Building Docker Image</h4>
+<pre><code>$ docker image build -t cpy:v1 .
+</code></pre><h4 id="staring-the-container">Staring the container</h4>
+<pre><code>$ docker container run -d --rm --name myapp1 -p 80:80 cpy:v1
+</code></pre><h4 id="checking-index-file">Checking index file</h4>
+<pre><code>$ curl localhost
+Welcome to Dockerlabs !
+</code></pre><h3 id="copy-instruction-in-multi-stage-builds">COPY instruction in Multi-stage Builds</h3>
+<p>Dockerfile</p>
+<pre><code>FROM alpine AS stage1
+LABEL maintainer=&quot;Collabnix&quot;
+RUN echo &quot;Welcome to Docker Labs!&quot; &gt; /opt/index.html
+
+FROM nginx:alpine
+LABEL maintainer=&quot;Collabnix&quot;
+COPY --from=stage1 /opt/index.html /usr/share/nginx/html/
+ENTRYPOINT [&quot;nginx&quot;, &quot;-g&quot;, &quot;daemon off;&quot;]
+</code></pre><h4 id="building-docker-image-1">Building Docker Image</h4>
+<pre><code>$ docker image build -t cpy:v2 .
+</code></pre><h4 id="staring-the-container-1">Staring the container</h4>
+<pre><code>$ docker container run -d --rm --name myapp2 -p 8080:80 cpy:v2
+</code></pre><h4 id="checking-index-file-1">Checking index file</h4>
+<pre><code>$ curl localhost:8080
+Welcome to Docker Labs !
+</code></pre><p><b>NOTE:</b> You can name your stages, by adding an AS <NAME> to the FROM instruction.By default, the stages are not named, and you can refer to them by their integer number, starting with 0 for the first FROM instruction.You are not limited to copying from stages you created earlier in your Dockerfile, you can use the COPY &ndash;from instruction to copy from a separate image, either using the local image name, a tag available locally or on a Docker registry.</p>
+<pre><code>COPY --from=nginx:latest /etc/nginx/nginx.conf /nginx.conf
+</code></pre><h2 id="lab-4-create-an-image-with-cmd-instruction">Lab #4: Create an image with CMD instruction</h2>
+<h2 id="pre-requisite-14">Pre-requisite:</h2>
+<h2 id="tested-infrastructure-10">Tested Infrastructure</h2>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>
+  </tr>
+</table>
+<h2 id="pre-requisite-15">Pre-requisite</h2>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h2 id="creating-dockerfile-2">Creating Dockerfile</h2>
+<pre><code>FROM alpine:3.6
+
+RUN apk update
+CMD [&quot;top&quot;]
+</code></pre><h2 id="building-docker-container">Building Docker Container</h2>
+<pre><code>docker build -t ajeetraina/lab3_cmd . -f Dockerfile_cmd
+</code></pre><h2 id="running-the-docker-container">Running the Docker container</h2>
+<pre><code>docker run ajeetraina/lab3_cmd:latest
+</code></pre><h2 id="lab-5-create-an-image-with-entrypoint-instruction">Lab #5: Create an image with ENTRYPOINT instruction</h2>
+<p>The <code>ENTRYPOINT</code> instruction make your container run as an executable. <br>
+ENTRYPOINT can be configured in two forms:</p>
+<ul>
+<li><b> Exec Form </b><br>
+ENTRYPOINT [&ldquo;executable&rdquo;, &ldquo;param1&rdquo;, &ldquo;param2&rdquo;]  <br></li>
+<li><b>Shell Form</b><br>
+ENTRYPOINT command param1 param2 <br></li>
+</ul>
+<p>If an image has an ENTRYPOINT if you pass an argument it, while running container it wont override the existing entrypoint, it will append what you passed with the entrypoint.To override the existing ENTRYPOINT you should user <b>&ndash;entrypoint</b> flag when running container.</p>
+<h2 id="pre-requisite-16">Pre-requisite:</h2>
+<h2 id="tested-infrastructure-11">Tested Infrastructure</h2>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>
+  </tr>
+</table>
+<h2 id="pre-requisite-17">Pre-requisite</h2>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h2 id="assignment-3">Assignment:</h2>
+<ul>
+<li>Create an image with ENTRYPOINT instruction(Exec Form)</li>
+<li>ENTRYPOINT instruction in Shell Form</li>
+<li>Override the existing ENTRYPOINT</li>
+</ul>
+<h3 id="create-an-image-with-entrypoint-instructionexec-form">Create an image with ENTRYPOINT instruction(Exec Form)</h3>
+<p>Dockerfile</p>
+<pre><code>FROM alpine:3.5
+LABEL maintainer=&quot;Collabnix&quot;
+
+ENTRYPOINT [&quot;/bin/echo&quot;, &quot;Hi, your ENTRYPOINT instruction in Exec Form !&quot;]
+</code></pre><h4 id="build-docker-image-2">Build Docker Image</h4>
+<pre><code>$ docker build -t entrypoint:v1 .
+</code></pre><h4 id="verify-the-image">Verify the Image</h4>
+<pre><code>$ docker image ls
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+entrypoint          v1                  1d06f06c2062        2 minutes ago       4MB
+alpine              3.5                 f80194ae2e0c        7 months ago        4MB
+</code></pre><h4 id="create-a-container-2">Create a container</h4>
+<pre><code>$ docker container run entrypoint:v1
+Hi, your ENTRYPOINT instruction in Exec Form !
+</code></pre><h3 id="entrypoint-instruction-in-shell-form">ENTRYPOINT instruction in Shell Form</h3>
+<p>Dockerfile</p>
+<pre><code>$ cat Dockerfile 
+FROM alpine:3.5
+LABEL maintainer=&quot;Collabnix&quot;
+
+ENTRYPOINT echo &quot;Hi, your ENTRYPOINT instruction in Shell Form !&quot;
+</code></pre><h4 id="build-docker-image-3">Build Docker Image</h4>
+<pre><code>$ docker build -t entrypoint:v2 .
+</code></pre><h4 id="verify-the-image-1">Verify the Image</h4>
+<pre><code>$ docker image ls
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+entrypoint          v2                  cde521f13080        2 minutes ago       4MB
+entrypoint          v1                  1d06f06c2062        5 minutes ago      4MB
+alpine              3.5                 f80194ae2e0c        7 months ago        4MB
+</code></pre><h4 id="create-a-container-3">Create a container</h4>
+<pre><code>$ docker container run entrypoint:v2
+Hi, your ENTRYPOINT instruction in Shell Form !
+</code></pre><h3 id="override-the-existing-entrypoint">Override the existing ENTRYPOINT</h3>
+<pre><code>$ docker container run --entrypoint &quot;/bin/echo&quot; entrypoint:v2 &quot;Hello, Welocme to Docker Meetup! &quot;
+Hello, Welocme to Docker Meetup! 
+</code></pre><h2 id="lab-6-create-an-image-with-workdir-instruction">Lab #6: Create an image with WORKDIR instruction</h2>
+<p>The <code>WORKDIR</code> directive in <code>Dockerfile</code> defines the working directory for the rest of the instructions in the Dockerfile. The WORKDIR instruction wont create a new layer in the image but will add metadata to the image config. If the WORKDIR doesn’t exist, it will be created even if it’s not used in any subsequent Dockerfile instruction. you can have multiple WORKDIR in same Dockerfile. If a relative path is provided, it will be relative to the previous WORKDIR instruction.</p>
+<pre><code>WORKDIR /path/to/workdir
+</code></pre><p>If no WORKDIR is specified in the Dockerfile then the default path is <code>/</code>. The WORKDIR instruction can resolve environment variables previously set in Dockerfile using ENV.</p>
+<h2 id="pre-requisite-18">Pre-requisite:</h2>
+<h2 id="tested-infrastructure-12">Tested Infrastructure</h2>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>
+  </tr>
+</table>
+<h2 id="pre-requisite-19">Pre-requisite</h2>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h1 id="assignment-4">Assignment</h1>
+<ul>
+<li>Dockerfile with WORKDIR instruction</li>
+<li>WORKDIR with Relative path</li>
+<li>WORKDIR with Absolute path</li>
+<li>WORKDIR with environment variables as path</li>
+</ul>
+<h4 id="dockerfile-with-workdir-instruction">Dockerfile with WORKDIR instruction</h4>
+<p>Dockerfile</p>
+<pre><code>FROM alpine:3.9.3
+LABEL maintainer=&quot;Collabnix&quot;
+
+WORKDIR /opt
+</code></pre><h4 id="building-docker-image-2">Building Docker image</h4>
+<pre><code>$ docker build -t workdir:v1 .
+</code></pre><h4 id="testing-current-workdir-by-running-container">Testing current WORKDIR by running container</h4>
+<pre><code>$ docker run -it workdir:v1 pwd
+</code></pre><h3 id="workdir-with-relative-path">WORKDIR with relative path</h3>
+<p>Dockerfile</p>
+<pre><code>FROM alpine:3.9.3
+LABEL maintainer=&quot;Collabnix&quot;
+
+WORKDIR /opt
+RUN echo &quot;Welcome to Docker Labs&quot; &gt; opt.txt
+WORKDIR folder1
+RUN echo &quot;Welcome to Docker Labs&quot; &gt; folder1.txt
+WORKDIR folder2
+RUN echo &quot;Welcome to Docker Labs&quot; &gt; folder2.txt
+</code></pre><h4 id="building-docker-image-3">Building Docker image</h4>
+<pre><code>$ docker build -t workdir:v2 .
+</code></pre><h4 id="testing-current-workdir-by-running-container-1">Testing current WORKDIR by running container</h4>
+<pre><code>$ docker run -it workdir:v2 pwd
+</code></pre><h3 id="workdir-with-absolute-path">WORKDIR with Absolute path</h3>
+<p>Dockerfile</p>
+<pre><code>FROM alpine:3.9.3
+LABEL maintainer=&quot;Collabnix&quot;
+
+WORKDIR /opt/folder1
+RUN echo &quot;Welcome to Docker Labs&quot; &gt; opt.txt
+WORKDIR /var/tmp/
+</code></pre><h4 id="building-docker-image-4">Building Docker image</h4>
+<pre><code>$ docker build -t workdir:v3 .
+</code></pre><h4 id="testing-current-workdir-by-running-container-2">Testing current WORKDIR by running container</h4>
+<pre><code>$ docker run -it workdir:v3 pwd
+</code></pre><h3 id="workdir-with-environment-variables-as-path">WORKDIR with environment variables as path</h3>
+<p>Dockerfile</p>
+<pre><code>FROM alpine:3.9.3
+LABEL maintainer=&quot;Collabnix&quot;
+
+ENV DIRPATH /myfolder
+WORKDIR $DIRPATH
+</code></pre><h4 id="building-docker-image-5">Building Docker image</h4>
+<pre><code>$ docker build -t workdir:v4 .
+</code></pre><h4 id="testing-current-workdir-by-running-container-3">Testing current WORKDIR by running container</h4>
+<pre><code>$ docker run -it workdir:v4 pwd
+</code></pre><h2 id="lab-7-create-an-image-with-run-instruction">Lab #7: Create an image with RUN instruction</h2>
+<p>The <code>RUN</code> instruction execute command on top of the below layer and create a new layer. <br>
+RUN instruction can be wrote in two forms:</p>
+<ul>
+<li>RUN <command> (shell form)</li>
+<li>RUN [&ldquo;executable&rdquo;, &ldquo;param1&rdquo;, &ldquo;param2&rdquo;] (exec form)</li>
+</ul>
+<h2 id="pre-requisite-20">Pre-requisite:</h2>
+<h2 id="tested-infrastructure-13">Tested Infrastructure</h2>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>
+  </tr>
+</table>
+<h2 id="pre-requisite-21">Pre-requisite</h2>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h2 id="assignment-5">Assignment:</h2>
+<ul>
+<li>Create an image with RUN instruction</li>
+<li>Combining multiple RUN instruction to one</li>
+</ul>
+<h3 id="create-an-image-with-run-instruction">Create an image with RUN instruction</h3>
+<pre><code>FROM alpine:3.9.3
+LABEL maintainer=&quot;Collabnix&quot;
+RUN apk add --update 
+RUN apk add curl
+RUN rm -rf /var/cache/apk/
+</code></pre><h4 id="building-docker-image-6">Building Docker image</h4>
+<pre><code>$ docker image build -t run:v1 .
+</code></pre><h4 id="checking-layer-of-the-image">Checking layer of the image</h4>
+<pre><code>$  docker image history run:v1 
+IMAGE               CREATED             CREATED BY                                      SIZE                
+NT
+5b09d7ba1736        19 seconds ago      /bin/sh -c rm -rf /var/cache/apk/               0B                  
+192115cc597a        21 seconds ago      /bin/sh -c apk add curl                         1.55MB              
+0518580850f1        43 seconds ago      /bin/sh -c apk add --update                     1.33MB              
+8590497d994e        45 seconds ago      /bin/sh -c #(nop)  LABEL maintainer=Collabnix   0B                  
+cdf98d1859c1        4 months ago        /bin/sh -c #(nop)  CMD [&quot;/bin/sh&quot;]              0B                  
+&lt;missing&gt;           4 months ago        /bin/sh -c #(nop) ADD file:2e3a37883f56a4a27…   5.53MB 
+</code></pre><p>Number of layers 6</p>
+<h4 id="checking-image-size">Checking image size</h4>
+<pre><code>$ docker image ls run:v1
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+run                 v1                  5b09d7ba1736        4 minutes ago       8.42MB
+</code></pre><p>Its 8.42MB</p>
+<h3 id="combining-multiple-run-instruction-to-one">Combining multiple RUN instruction to one</h3>
+<pre><code>FROM alpine:3.9.3
+LABEL maintainer=&quot;Collabnix&quot;
+RUN apk add --update &amp;&amp; \
+	apk add curl  &amp;&amp; \  
+	rm -rf /var/cache/apk/
+</code></pre><h4 id="building-docker-image-7">Building Docker image</h4>
+<pre><code>$ docker image build -t run:v2 .
+</code></pre><h4 id="checking-layer-of-the-image-1">Checking layer of the image</h4>
+<pre><code>$ docker image history run:v2
+IMAGE               CREATED             CREATED BY                                      SIZE            
+NT
+784298155541        50 seconds ago      /bin/sh -c apk add --update  &amp;&amp; apk add curl…   1.55MB              
+8590497d994e        8 minutes ago       /bin/sh -c #(nop)  LABEL maintainer=Collabnix   0B                  
+cdf98d1859c1        4 months ago        /bin/sh -c #(nop)  CMD [&quot;/bin/sh&quot;]              0B                  
+&lt;missing&gt;           4 months ago        /bin/sh -c #(nop) ADD file:2e3a37883f56a4a27…   5.53MB
+</code></pre><p>Number of layers 4</p>
+<h4 id="checking-image-size-1">Checking image size</h4>
+<pre><code>$ docker image ls run:v2
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+run                 v2                  784298155541        3 minutes ago       7.08MB
+</code></pre><p>its now 7.08MB</p>
+<h2 id="lab-8-create-an-image-with-arg-instruction">Lab #8: Create an image with ARG instruction</h2>
+<p>The <code>ARG</code> directive in <code>Dockerfile</code> defines the parameter name and defines its default value. This default value can be overridden by the <code>--build-arg &lt;parameter name&gt;=&lt;value&gt;</code> in the build command <code>docker build</code>.</p>
+<pre><code>`ARG &lt;parameter name&gt;[=&lt;default&gt;]`
+</code></pre><p>The build parameters have the same effect as <code>ENV</code>, which is to set the environment variables. The difference is that the environment variables of the build environment set by <code>ARG</code> will not exist in the future when the container is running. But don&rsquo;t use <code>ARG</code> to save passwords and the like, because <code>docker history</code> can still see all the values.</p>
+<h2 id="pre-requisite-22">Pre-requisite:</h2>
+<h2 id="tested-infrastructure-14">Tested Infrastructure</h2>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>
+  </tr>
+</table>
+<h2 id="pre-requisite-23">Pre-requisite</h2>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h1 id="assignment-6">Assignment</h1>
+<ul>
+<li>Writing a Dockerfile with ARG instruction</li>
+<li>Building Docker Image with default argument</li>
+<li>Running container argv:v1</li>
+<li>Passing the argument during image build time</li>
+<li>Running container argv:v2</li>
+</ul>
+<h2 id="writing-a-dockerfile-with-arg-instruction">Writing a Dockerfile with ARG instruction</h2>
+<p>We are writing a Dockerfile which echo &ldquo;Welcome $WELCOME_USER, to Docker World!&rdquo; where default argument value for <b>WELCOME_USER</b> as <b>Collabnix</b>.</p>
+<pre><code>FROM alpine:3.9.3
+LABEL maintainer=&quot;Collabnix&quot;
+
+#Setting a default value to Argument WELCOME_USER
+ARG WELCOME_USER=Collabnix
+RUN echo &quot;Welcome $WELCOME_USER, to Docker World!&quot; &gt; message.txt
+CMD cat message.txt
+</code></pre><h2 id="building-docker-image-with-default-argument">Building Docker Image with default argument</h2>
+<pre><code>$ docker image build -t arg:v1 .
+</code></pre><h2 id="running-container-argvv1">Running container argv:v1</h2>
+<pre><code>$ docker run arg:v1
+
+Welcome Collabnix, to Docker World!
+</code></pre><h2 id="passing-the-argumentwelcome_user-during-image-build-time-using-b--build-argb-flag">Passing the argument(WELCOME_USER) during image build time using <b>&ndash;build-arg</b> flag</h2>
+<pre><code>$ docker image build -t arg:v2 --build-arg WELCOME_USER=Savio .
+</code></pre><h2 id="running-container-argvv2">Running container argv:v2</h2>
+<pre><code>$ docker run arg:v2
+
+Welcome Savio, to Docker World!
+</code></pre><p><b>NOTE:</b> ARG is the only one instruction which can come before FROM instruction, but then arg value can be used only by FROM.</p>
+<h2 id="lab-9-create-an-image-with-env-instruction">Lab #9: Create an image with ENV instruction</h2>
+<p>The <code>ENV</code> instruction in Dockerfile sets the environment variable for your container when you start. The default value can be overridden by passing <code>--env &lt;key&gt;=&lt;value&gt;</code> when you start the container.</p>
+<h2 id="pre-requisite-24">Pre-requisite:</h2>
+<h2 id="tested-infrastructure-15">Tested Infrastructure</h2>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>
+  </tr>
+</table>
+<h2 id="pre-requisite-25">Pre-requisite</h2>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h1 id="assignment-7">Assignment</h1>
+<ul>
+<li>Writing a Dockerfile with ENV instruction</li>
+<li>Building Docker Image</li>
+<li>Running container env:v1</li>
+<li>Override existing env while running container</li>
+</ul>
+<h3 id="writing-a-dockerfile-with-env-instruction">Writing a Dockerfile with ENV instruction</h3>
+<p>Dockerfile</p>
+<pre><code>FROM alpine:3.9.3
+LABEL maintainer=&quot;Collabnix&quot;
+
+ENV WELCOME_MESSAGE=&quot;Welcome to Docker World&quot;
+
+CMD [&quot;sh&quot;, &quot;-c&quot;, &quot;echo $WELCOME_MESSAGE&quot;]
+</code></pre><h4 id="building-docker-image-8">Building Docker Image</h4>
+<pre><code>$ docker build -t env:v1 .
+</code></pre><h3 id="running-container-envv1">Running container env:v1</h3>
+<pre><code>$ docker container run env:v1
+Welcome to Docker World
+</code></pre><h3 id="override-existing-env-while-running-container">Override existing env while running container</h3>
+<pre><code>$ docker container run --env WELCOME_MESSAGE=&quot;Welcome to Docker Workshop&quot; env:v1 
+Welcome to Docker Workshop
+</code></pre><h2 id="lab-10-create-an-image-with-volume-instruction">Lab #10: Create an image with VOLUME instruction</h2>
+<h2 id="pre-requisite-26">Pre-requisite:</h2>
+<h2 id="tested-infrastructure-16">Tested Infrastructure</h2>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>    
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>    
+  </tr>
+</table>
+<h2 id="pre-requisite-27">Pre-requisite</h2>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h1 id="assignment-8">Assignment</h1>
+<ul>
+<li>Create an image with VOLUME instruction</li>
+<li>Finding the volume created on the host</li>
+<li>Testing mount working as exepected</li>
+</ul>
+<h3 id="create-an-image-with-volume-instruction">Create an image with VOLUME instruction</h3>
+<p>Dockerfile</p>
+<pre><code>FROM nginx:alpine
+LABEL maintainer=&quot;Collabnix&quot;
+
+VOLUME /myvol
+CMD [ &quot;nginx&quot;,&quot;-g&quot;,&quot;daemon off;&quot; ]
+</code></pre><h4 id="building-docker-image-9">Building Docker image</h4>
+<pre><code>$ docker build -t volume:v1 .
+</code></pre><h4 id="create-a-container-based-on-volumev1-image">Create a container based on volume:v1 image</h4>
+<pre><code>$ docker container run --rm -d --name volume-test volume:v1
+</code></pre><h3 id="finding-the-volume-created-on-the-host">Finding the volume created on the host</h3>
+<h4 id="checking-the-volume-name-of-the-container">Checking the volume name of the container</h4>
+<pre><code>$ docker container inspect -f '{{ (index .Mounts 0).Name }}' volume-test
+ed09456a448934218f03acbdaa31f465ebbb92e0d45e8284527a2c538cc6b016
+</code></pre><h4 id="listout-volume-in-the-host">Listout Volume in the host</h4>
+<pre><code>$ docker volume ls
+DRIVER              VOLUME NAME
+local               ed09456a448934218f03acbdaa31f465ebbb92e0d45e8284527a2c538cc6b016
+</code></pre><p>You will see the volume has been created.</p>
+<h4 id="volume-mount-path-in-host">Volume mount path in host</h4>
+<pre><code>$ docker container inspect -f '{{ (index .Mounts 0).Source }}' volume-test
+/var/lib/docker/volumes/ed09456a448934218f03acbdaa31f465ebbb92e0d45e8284527a2c538cc6b016/_data
+</code></pre><h3 id="testing-mount-working-as-exepected">Testing mount working as exepected</h3>
+<h4 id="create-a-file-in-this-folder">Create a file in this folder</h4>
+<pre><code>$ touch /var/lib/docker/volumes/ed09456a448934218f03acbdaa31f465ebbb92e0d45e8284527a2c538cc6b016/_data/mytestfile.txt
+</code></pre><h4 id="checking-file-is-there-in-run-container">Checking file is there in run container</h4>
+<pre><code>$ docker container exec -it volume-test ls myvol
+</code></pre><h2 id="lab-11-create-an-image-with-expose-instruction">Lab #11: Create an image with EXPOSE instruction</h2>
+<p>The <code>EXPOSE</code> instruction expose a port, the protocol can be UDP or TCP associated with the indicated port, default is TCP with no specification. The EXPOSE won&rsquo;t be able to map the ports on the host machine. Regardless of the EXPOSE settings, EXPOSE port can be override using <b>-p</b> flag while starting the container.</p>
+<h2 id="pre-requisite-28">Pre-requisite:</h2>
+<h2 id="tested-infrastructure-17">Tested Infrastructure</h2>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>    
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>    
+  </tr>
+</table>
+<h2 id="pre-requisite-29">Pre-requisite</h2>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h1 id="assignment-9">Assignment</h1>
+<ul>
+<li>Create an image with EXPOSE instruction</li>
+<li>Inspecting the EXPOSE port in the image</li>
+<li>Publish all exposed port</li>
+</ul>
+<h3 id="create-an-image-with-volume-instruction-1">Create an image with VOLUME instruction</h3>
+<p>Dockerfile</p>
+<pre><code>FROM nginx:alpine
+LABEL maintainer=&quot;Collabnix&quot;
+
+EXPOSE 80/tcp
+EXPOSE 80/udp
+
+CMD [ &quot;nginx&quot;,&quot;-g&quot;,&quot;daemon off;&quot; ]
+</code></pre><h4 id="building-docker-image-10">Building Docker image</h4>
+<pre><code>$ docker build -t expose:v1 .
+</code></pre><h4 id="create-a-container-based-on-exposev1-image">Create a container based on expose:v1 image</h4>
+<pre><code>$  docker container run --rm -d --name expose-inst expose:v1
+</code></pre><h3 id="inspecting-the-expose-port-in-the-image">Inspecting the EXPOSE port in the image</h3>
+<pre><code>$ docker image inspect --format={{.ContainerConfig.ExposedPorts}} expose:v1
+</code></pre><h3 id="publish-all-exposed-ports">Publish all exposed ports</h3>
+<p>We can publish all EXPOSE port using <b>-P</b> flag.</p>
+<pre><code>$ docker container run --rm -P -d --name expose-inst-Publish expose:v1
+</code></pre><h4 id="checking-the-publish-port">Checking the publish port</h4>
+<pre><code>$  docker container ls
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                          NAMES
+24983e09bd86        expose:v1           &quot;nginx -g 'daemon of…&quot;   46 seconds ago      Up 45 seconds       0.0.0.0:32768-&gt;80/tcp, 0.0.0.0:32768-&gt;80/udp   expose-inst-Publish
+</code></pre><h2 id="lab-12-create-an-image-with-label-instruction">Lab #12: Create an image with LABEL Instruction</h2>
+<p>You can add labels to your image to help organize images by project, record licensing information, to aid in automation, or for other reasons.
+For each label, add a line beginning with LABEL and with one or more key-value pairs.
+The following examples show the different acceptable formats.</p>
+<p>Docker offers support to add labels into images as a way to add custom metadata on them.
+The label syntax on your Dockerfile is as follows:</p>
+<pre><code>LABEL &lt;key&gt;=&lt;value&gt; &lt;key&gt;=&lt;value&gt; &lt;key&gt;=&lt;value&gt; ...
+</code></pre><p>The LABEL instruction adds metadata to an image.
+A LABEL is a key-value pair.
+To include spaces within a LABEL value, use quotes and backslashes as you would in command-line parsing.
+A few usage examples:</p>
+<pre><code>LABEL &quot;com.example.vendor&quot;=&quot;ACME Incorporated&quot;
+LABEL com.example.label-with-value=&quot;foo&quot;
+LABEL version=&quot;1.0&quot;
+LABEL description=&quot;This text illustrates \
+that label-values can span multiple lines.&quot;
+</code></pre><p>An image can have more than one label.
+You can specify multiple labels on a single line.
+Prior to Docker 1.10, this decreased the size of the final image, but this is no longer the case.
+You may still choose to specify multiple labels in a single instruction, in one of the following two ways:</p>
+<pre><code>LABEL multi.label1=&quot;value1&quot; multi.label2=&quot;value2&quot; other=&quot;value3&quot;
+</code></pre><pre><code>LABEL multi.label1=&quot;value1&quot; \
+      multi.label2=&quot;value2&quot; \
+      other=&quot;value3&quot;
+</code></pre><p>Labels included in base or parent images (images in the FROM line) are inherited by your image.
+If a label already exists but with a different value, the most-recently-applied value overrides any previously-set value.</p>
+<p>To view an image’s labels, use the <code>docker inspect</code> command.</p>
+<pre><code>&quot;Labels&quot;: {
+    &quot;com.example.vendor&quot;: &quot;ACME Incorporated&quot;
+    &quot;com.example.label-with-value&quot;: &quot;foo&quot;,
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;description&quot;: &quot;This text illustrates that label-values can span multiple lines.&quot;,
+    &quot;multi.label1&quot;: &quot;value1&quot;,
+    &quot;multi.label2&quot;: &quot;value2&quot;,
+    &quot;other&quot;: &quot;value3&quot;
+},
+</code></pre><h2 id="lab-13-create-an-image-with-onbuild-instruction">Lab #13: Create an image with ONBUILD instruction</h2>
+<p>Format: <code>ONBUILD &lt;other instructions&gt;</code>.</p>
+<p><code>ONBUILD</code> is a special instruction, followed by other instructions, such as <code>RUN</code>, <code>COPY</code>, etc., and these instructions will not be executed when the current image is built. Only when the current image is mirrored, the next level of mirroring will be executed.</p>
+<p>The other instructions in <code>Dockerfile</code> are prepared to customize the current image. Only <code>ONBUILD</code> is prepared to help others customize themselves.</p>
+<p>Suppose we want to make an image of the application written by Node.js. We all know that Node.js uses <code>npm</code> for package management, and all dependencies, configuration, startup information, etc. are placed in the <code>package.json</code> file. After getting the program code, you need to do <code>npm install</code> first to get all the required dependencies. Then you can start the app with <code>npm start</code>. Therefore, in general, <code>Dockerfile</code> will be written like this:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#204a87;font-weight:bold">FROM</span><span style="color:#4e9a06"> node:slim</span><span style="color:#a40000">
+</span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">RUN</span> mkdir /app<span style="color:#a40000">
+</span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">WORKDIR</span><span style="color:#4e9a06"> /app</span><span style="color:#a40000">
+</span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">COPY</span> ./package.json /app<span style="color:#a40000">
+</span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">RUN</span> <span style="color:#ce5c00;font-weight:bold">[</span> <span style="color:#4e9a06">&#34;npm&#34;</span>, <span style="color:#4e9a06">&#34;install&#34;</span> <span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#a40000">
+</span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">COPY</span> . /app/<span style="color:#a40000">
+</span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">CMD</span> <span style="color:#000;font-weight:bold">[</span> <span style="color:#4e9a06">&#34;npm&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;start&#34;</span> <span style="color:#000;font-weight:bold">]</span><span style="color:#a40000">
+</span></code></pre></div><p>Put this <code>Dockerfile</code> in the root directory of the Node.js project, and after building the image, you can use it to start the container. But what if we have a second Node.js project? Ok, then copy this <code>Dockerfile</code> to the second project. If there is a third project? Copy it again? The more copies of a file, the more difficult it is to have version control, so let&rsquo;s continue to look at the maintenance of such scenarios.</p>
+<p>If the first Node.js project is in development, I find that there is a problem in this <code>Dockerfile</code>, such as typing a typo, or installing an extra package, then the developer fixes the <code>Dockerfile</code>, builds it again, and solves the problem. The first project is ok, but the second one? Although the original <code>Dockerfile</code> was copied and pasted from the first project, it will not fix their <code>Dockerfile</code> because the first project, and the <code>Dockerfile</code> of the second project will be automatically fixed.</p>
+<p>So can we make a base image, and then use the base image for each project? In this way, the basic image is updated, and each project does not need to synchronize the changes of <code>Dockerfile</code>. After rebuilding, it inherits the update of the base image. Ok, yes, let&rsquo;s see the result. Then the above <code>Dockerfile</code> will become:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#204a87;font-weight:bold">FROM</span><span style="color:#4e9a06"> node:slim</span><span style="color:#a40000">
+</span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">RUN</span> mkdir /app<span style="color:#a40000">
+</span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">WORKDIR</span><span style="color:#4e9a06"> /app</span><span style="color:#a40000">
+</span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">CMD</span> <span style="color:#000;font-weight:bold">[</span> <span style="color:#4e9a06">&#34;npm&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;start&#34;</span> <span style="color:#000;font-weight:bold">]</span><span style="color:#a40000">
+</span></code></pre></div><p>Here we take out the project-related build instructions and put them in the subproject. Assuming that the name of the base image is <code>my-node</code>, the own <code>Dockerfile</code> in each project becomes:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#204a87;font-weight:bold">FROM</span><span style="color:#4e9a06"> my-node</span><span style="color:#a40000">
+</span></code></pre></div><p>Yes, there is only one such line. When constructing a mirror with this one-line <code>Dockerfile</code> in each project directory, the three lines of the previous base image <code>ONBUILD</code> will start executing, successfully copy the current project code into the image, and execute for this project. <code>npm install</code>, generate an application image.</p>
+<h1 id="lab">Lab</h1>
+<pre><code># Dockerfile
+FROM busybox
+ONBUILD RUN echo &quot;You won't see me until later&quot;
+</code></pre><h1 id="docker-build">Docker build</h1>
+<pre><code>docker build -t me/no_echo_here .
+
+Uploading context  2.56 kB
+Uploading context
+Step 0 : FROM busybox
+Pulling repository busybox
+769b9341d937: Download complete
+511136ea3c5a: Download complete
+bf747efa0e2f: Download complete
+48e5f45168b9: Download complete
+ ---&amp;gt; 769b9341d937
+Step 1 : ONBUILD RUN echo &quot;You won't see me until later&quot;
+ ---&amp;gt; Running in 6bf1e8f65f00
+ ---&amp;gt; f864c417cc99
+Successfully built f864c417cc9
+</code></pre><p>Here the ONBUILD instruction is read, not run, but stored for later use.</p>
+<pre><code># Dockerfile
+FROM me/no_echo_here
+</code></pre><p>docker build -t me/echo_here .
+Uploading context  2.56 kB
+Uploading context
+Step 0 : FROM cpuguy83/no_echo_here</p>
+<h1 id="executing-1-build-triggers">Executing 1 build triggers</h1>
+<pre><code>Step onbuild-0 : RUN echo &quot;You won't see me until later&quot;
+ ---&amp;gt; Running in ebfede7e39c8
+You won't see me until later
+ ---&amp;gt; ca6f025712d4
+ ---&amp;gt; ca6f025712d4
+Successfully built ca6f025712d4
+</code></pre><h2 id="ubutu-rails">Ubutu Rails</h2>
+<pre><code>FROM ubuntu:12.04
+
+RUN apt-get update -qq &amp;&amp; apt-get install -y ca-certificates sudo curl git-core
+RUN rm /bin/sh &amp;&amp; ln -s /bin/bash /bin/sh
+
+RUN locale-gen  en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
+
+RUN curl -L https://get.rvm.io | bash -s stable
+ENV PATH /usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+RUN /bin/bash -l -c rvm requirements
+RUN source /usr/local/rvm/scripts/rvm &amp;&amp; rvm install ruby
+RUN rvm all do gem install bundler
+
+ONBUILD ADD . /opt/rails_demo
+ONBUILD WORKDIR /opt/rails_demo
+ONBUILD RUN rvm all do bundle install
+ONBUILD CMD rvm all do bundle exec rails server
+
+</code></pre><p>This Dockerfile is doing some initial setup of a base image. Installs Ruby and bundler. Pretty typical stuff. At the end are the ONBUILD instructions.</p>
+<p>ONBUILD ADD . /opt/rails_demo Tells any child image to add everything in the current directory to /opt/railsdemo. Remember, this only gets run from a child image, that is when another image uses this one as a base (or FROM). And it just so happens if you look in the repo I have a skeleton rails app in railsdemo that has it&rsquo;s own Dockerfile in it, we&rsquo;ll take a look at this later.</p>
+<p>ONBUILD WORKDIR /opt/rails_demo Tells any child image to set the working directory to /opt/rails_demo, which is where we told ADD to put any project files</p>
+<p>ONBUILD RUN rvm all do bundle install Tells any child image to have bundler install all gem dependencies, because we are assuming a Rails app here.</p>
+<p>ONBUILD CMD rvm all do bundle exec rails server Tells any child image to set the CMD to start the rails server</p>
+<p>Ok, so let&rsquo;s see this image build, go ahead and do this for yourself so you can see the output.</p>
+<pre><code>git clone git@github.com:sangam14/docker_onbuild.git 
+cd docker_onbuild
+docker build -t sangam14/docker_onbuild .
+
+Step 0 : FROM ubuntu:12.04
+ ---&amp;gt; 9cd978db300e
+Step 1 : RUN apt-get update -qq &amp;amp;&amp;amp; apt-get install -y ca-certificates sudo curl git-core
+ ---&amp;gt; Running in b32a089b7d2d
+# output supressed
+ldconfig deferred processing now taking place
+ ---&amp;gt; d3fdefaed447
+Step 2 : RUN rm /bin/sh &amp;amp;&amp;amp; ln -s /bin/bash /bin/sh
+ ---&amp;gt; Running in f218cafc54d7
+ ---&amp;gt; 21a59f8613e1
+Step 3 : RUN locale-gen  en_US.UTF-8
+ ---&amp;gt; Running in 0fcd7672ddd5
+Generating locales...
+done
+Generation complete.
+ ---&amp;gt; aa1074531047
+Step 4 : ENV LANG en_US.UTF-8
+ ---&amp;gt; Running in dcf936d57f38
+ ---&amp;gt; b9326a787f78
+Step 5 : ENV LANGUAGE en_US.UTF-8
+ ---&amp;gt; Running in 2133c36335f5
+ ---&amp;gt; 3382c53f7f40
+Step 6 : ENV LC_ALL en_US.UTF-8
+ ---&amp;gt; Running in 83f353aba4c8
+ ---&amp;gt; f849fc6bd0cd
+Step 7 : RUN curl -L https://get.rvm.io | bash -s stable
+ ---&amp;gt; Running in b53cc257d59c
+# output supressed
+---&amp;gt; 482a9f7ac656
+Step 8 : ENV PATH /usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ ---&amp;gt; Running in c4666b639c70
+ ---&amp;gt; b5d5c3e25730
+Step 9 : RUN /bin/bash -l -c rvm requirements
+ ---&amp;gt; Running in 91469dbc25a6
+# output supressed
+Step 10 : RUN source /usr/local/rvm/scripts/rvm &amp;amp;&amp;amp; rvm install ruby
+ ---&amp;gt; Running in cb4cdfcda68f
+# output supressed
+Step 11 : RUN rvm all do gem install bundler
+ ---&amp;gt; Running in 9571104b3b65
+Successfully installed bundler-1.5.3
+Parsing documentation for bundler-1.5.3
+Installing ri documentation for bundler-1.5.3
+Done installing documentation for bundler after 3 seconds
+1 gem installed
+ ---&amp;gt; e2ea33486d62
+Step 12 : ONBUILD ADD . /opt/rails_demo
+ ---&amp;gt; Running in 5bef85f266a4
+ ---&amp;gt; 4082e2a71c7e
+Step 13 : ONBUILD WORKDIR /opt/rails_demo
+ ---&amp;gt; Running in be1a06c7f9ab
+ ---&amp;gt; 23bec71dce21
+Step 14 : ONBUILD RUN rvm all do bundle install
+ ---&amp;gt; Running in 991da8dc7f61
+ ---&amp;gt; 1547bef18de8
+Step 15 : ONBUILD CMD rvm all do bundle exec rails server
+ ---&amp;gt; Running in c49139e13a0c
+ ---&amp;gt; 23c388fb84c1
+Successfully built 23c388fb84c1
+</code></pre><h2 id="lab-14-create-an-image-with-healthcheck-instruction">Lab #14: Create an image with HEALTHCHECK instruction</h2>
+<p>The HEALTHCHECK directive tells Docker how to determine if the state of the container is normal. This was a new directive introduced during Docker 1.12. Before the HEALTHCHECK directive, the Docker engine can only determine if the container is in a state of abnormality by whether the main process in the container exits. In many cases, this is fine, but if the program enters a deadlock state, or an infinite loop state, the application process does not exit, but the container is no longer able to provide services. Prior to 1.12, Docker did not detect this state of the container and would not reschedule it, causing some containers to be unable to serve, but still accepting user requests.</p>
+<p>The syntax look like:</p>
+<p><code>HEALTHCHECK [options] CMD &lt;command&gt;</code>:</p>
+<p>The above syntax set the command to check the health of the container</p>
+<h2 id="how-does-it-work">How does it work?</h2>
+<p>When a HEALTHCHECK instruction is specified in an image, the container is started with it, the initial state will be starting, and will become healthy after the HEALTHCHECK instruction is checked successfully. If it fails for a certain number of times, it will become unhealthy.</p>
+<h2 id="what-options-does-healthcheck-support">What options does HEALTHCHECK support?</h2>
+<p><code>--interval=&lt;interval&gt;</code>: interval between two health checks, the default is 30 seconds;
+<code>--timeout=&lt;time length&gt;</code>: The health check command runs the timeout period. If this time is exceeded, the health check is regarded as a failure. The default is 30 seconds.
+<code>--retries=&lt;number&gt;</code>: When the specified number of consecutive failures, the container status is treated as unhealthy, the default is 3 times.
+Like CMD, ENTRYPOINT, HEALTHCHECK can only appear once. If more than one is written, only the last one will take effect.</p>
+<h2 id="pre-requisite-30">Pre-requisite:</h2>
+<h2 id="tested-infrastructure-18">Tested Infrastructure</h2>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>
+  </tr>
+</table>
+<h2 id="pre-requisite-31">Pre-requisite</h2>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h2 id="assignment-10">Assignment:</h2>
+<ul>
+<li>Writing a Dockerfile with HEALTHCHECK instruction</li>
+<li>Build a Docker Image</li>
+<li>Check that the nginx config file exists</li>
+<li>Check if nginx is healthy</li>
+<li>Make Docker container Unhealthy and check</li>
+<li>Create the nginx.conf file and Making the container go healthy</li>
+</ul>
+<h2 id="writing-a-dockerfile-with-healthcheck-instruction">Writing a Dockerfile with HEALTHCHECK instruction</h2>
+<p>Suppose we have a simple Web service. We want to add a health check to determine if its Web service is working. We can use curl to help determine the HEALTHCHECK of its Dockerfile:</p>
+<pre><code>FROM nginx:1.13
+HEALTHCHECK --interval=30s --timeout=3s \
+  CMD curl -f http://localhost/ || exit 1
+EXPOSE 80
+</code></pre><p>Here we set a check every 3 seconds (here the interval is very short for the test, it should be relatively long), if the health check command does not respond for more than 3 seconds, it is considered a failure, and use curl -fs http://localhost/ || exit 1 As a health check command.</p>
+<h2 id="building-docker-image-11">Building Docker Image</h2>
+<pre><code>docker image build -t nginx:1.13 .
+</code></pre><h2 id="check-that-the-nginx-config-file-exists">Check that the nginx config file exists</h2>
+<pre><code>docker run --name=nginx-proxy -d \
+        --health-cmd='stat /etc/nginx/nginx.conf || exit 1' \
+        nginx:1.13
+</code></pre><h2 id="check-if-nginx-is-healthy">Check if nginx is healthy</h2>
+<pre><code>docker inspect --format='{{.State.Health.Status}}' nginx-proxy
+</code></pre><h2 id="make-docker-container-unhealthy-and-check">Make Docker container Unhealthy and check</h2>
+<pre><code>docker exec nginx-proxy rm /etc/nginx/nginx.conf
+</code></pre><h2 id="check-if-nginx-is-healthy-1">Check if nginx is healthy</h2>
+<pre><code>sleep 5; docker inspect --format='{{.State.Health.Status}}' nginx-proxy
+</code></pre><h2 id="creating-the-nginxconf-file-and-making-the-container-go-healthy">Creating the nginx.conf file and Making the container go healthy</h2>
+<pre><code>docker exec nginx-proxy touch /etc/nginx/nginx.conf
+</code></pre><pre><code>sleep 5; docker inspect --format='{{.State.Health.Status}}' nginx-proxy
+healthy
+</code></pre><h2 id="lab-15-create-an-image-with-shell-instruction">Lab #15: Create an image with SHELL instruction</h2>
+<h2 id="pre-requisite-32">Pre-requisite:</h2>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h3 id="tested-infrastructure-19">Tested Infrastructure</h3>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>    
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>    
+  </tr>
+</table>
+<h2 id="how-does-it-work-1">How does it work?</h2>
+<p>Format: <code>SHELL [&quot;executable&quot;, &quot;parameters&quot;]</code></p>
+<ul>
+<li>The SHELL instruction allows the default shell used for the shell form of commands to be overridden.
+The default shell on Linux is <code>[&quot;/bin/sh&quot;, &quot;-c&quot;]</code>, and on Windows is <code>[&quot;cmd&quot;, &quot;/S&quot;, &quot;/C&quot;]</code>.
+The SHELL instruction must be written in JSON form in a Dockerfile.</li>
+<li>The SHELL instruction is particularly useful on Windows where there are two commonly used and quite different native shells: <code>cmd</code> and <code>powershell</code>, as well as alternate shells available including <code>sh</code>.</li>
+<li>The SHELL instruction can appear multiple times.
+Each SHELL instruction overrides all previous SHELL instructions, and affects all subsequent instructions.</li>
+</ul>
+<h2 id="create-a-dockerfile">Create a Dockerfile</h2>
+<pre><code>FROM windowsservercore
+
+# Executed as cmd /S /C echo default
+RUN echo default
+
+# Executed as cmd /S /C powershell -command Write-Host default
+RUN powershell -command Write-Host default
+
+# Executed as powershell -command Write-Host hello
+SHELL [&quot;powershell&quot;, &quot;-command&quot;]
+RUN Write-Host hello
+
+# Executed as cmd /S /C echo hello
+SHELL [&quot;cmd&quot;, &quot;/S&quot;&quot;, &quot;/C&quot;]
+RUN echo hello
+</code></pre><p>The following instructions can be affected by the <code>SHELL</code> instruction when the shell form of them is used in a Dockerfile: <code>RUN</code>, <code>CMD</code> and <code>ENTRYPOINT</code>.
+The following example is a common pattern found on Windows which can be streamlined by using the SHELL instruction:</p>
+<pre><code>RUN powershell -command Execute-MyCmdlet -param1 &quot;c:\foo.txt&quot;
+</code></pre><p>The command invoked by docker will be:</p>
+<pre><code>cmd /S /C powershell -command Execute-MyCmdlet -param1 &quot;c:\foo.txt&quot;
+</code></pre><p>This is inefficient for two reasons.
+First, there is an un-necessary <code>cmd.exe</code> command processor (aka shell) being invoked.
+Second, each <code>RUN</code> instruction in the shell form requires an extra powershell <code>-command</code> prefixing the command.</p>
+<p>To make it more efficient, one of two mechanisms can be employed.
+One is to use the JSON form of the RUN command such as:</p>
+<pre><code>RUN [&quot;powershell&quot;, &quot;-command&quot;, &quot;Execute-MyCmdlet&quot;, &quot;-param1 \&quot;c:\\foo.txt\&quot;&quot;]
+</code></pre><p>While the JSON form is unambiguous and does not use the un-necessary <code>cmd.exe</code>, it does require more verbosity through double-quoting and escaping.
+The alternate mechanism is to use the SHELL instruction and the shell form, making a more natural syntax for Windows users, especially when combined with the escape parser directive:</p>
+<pre><code># escape=`
+
+FROM windowsservercore
+SHELL [&quot;powershell&quot;,&quot;-command&quot;]
+RUN New-Item -ItemType Directory C:\Example
+ADD Execute-MyCmdlet.ps1 c:\example\
+RUN c:\example\Execute-MyCmdlet -sample 'hello world'
+</code></pre><h2 id="build-an-image">Build an image</h2>
+<pre><code>PS E:\docker\build\shell&gt; docker build -t shell .
+Sending build context to Docker daemon 3.584 kB
+Step 1 : FROM windowsservercore
+ ---&gt; 5bc36a335344
+Step 2 : SHELL powershell -command
+ ---&gt; Running in 87d7a64c9751
+ ---&gt; 4327358436c1
+Removing intermediate container 87d7a64c9751
+Step 3 : RUN New-Item -ItemType Directory C:\Example
+ ---&gt; Running in 3e6ba16b8df9
+
+
+Directory: C:\
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----         6/2/2016   2:59 PM                Example
+
+
+ ---&gt; 1f1dfdcec085
+Removing intermediate container 3e6ba16b8df9
+Step 4 : ADD Execute-MyCmdlet.ps1 c:\example\
+ ---&gt; 6770b4c17f29
+Removing intermediate container b139e34291dc
+Step 5 : RUN c:\example\Execute-MyCmdlet -sample 'hello world'
+ ---&gt; Running in abdcf50dfd1f
+Hello from Execute-MyCmdlet.ps1 - passed hello world
+ ---&gt; ba0e25255fda
+Removing intermediate container abdcf50dfd1f
+Successfully built ba0e25255fda
+PS E:\docker\build\shell&gt;
+</code></pre><ul>
+<li>The SHELL instruction could also be used to modify the way in which a shell operates.
+For example, using <code>SHELL cmd /S /C /V:ON|OFF</code> on Windows, delayed environment variable expansion semantics could be modified.</li>
+<li>The <code>SHELL</code> instruction can also be used on Linux should an alternate shell be required such <code>zsh</code>, <code>csh</code>, <code>tcsh</code> and others.</li>
+<li>The <code>SHELL</code> feature was added in Docker 1.12.</li>
+</ul>
+<h2 id="lab-16-create-an-image-with-user-instruction">Lab 16: Create an image with USER Instruction</h2>
+<p>The <code>USER</code> directive is similar to <code>WORKDIR</code>, which changes the state of the environment and affects future layers. <code>WORKDIR</code> is to change the working directory, and <code>USER</code> is the identity of the commands such as <code>RUN</code>, <code>CMD</code> and <code>ENTRYPOINT</code>.</p>
+<p>Of course, like <code>WORKDIR</code>, <code>USER</code> just helps you switch to the specified user. This user must be pre-established, otherwise it cannot be switched.</p>
+<p>Example:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#204a87;font-weight:bold">RUN</span> groupadd -r redis <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> useradd -r -g redis redis<span style="color:#a40000">
+</span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">USER</span><span style="color:#4e9a06"> redis</span><span style="color:#a40000">
+</span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">RUN</span> <span style="color:#ce5c00;font-weight:bold">[</span> <span style="color:#4e9a06">&#34;redis-server&#34;</span> <span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#a40000">
+</span></code></pre></div><p>If the script executed with <code>root</code> wants to change the identity during execution, such as wanting to run a service process with an already established user, don&rsquo;t use <code>su</code> or <code>sudo</code>, which requires a more cumbersome configuration. And often in the absence of TTY environment. It is recommended to use [<code>gosu</code>] (<a href="https://github.com/tianon/gosu)">https://github.com/tianon/gosu)</a>.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#8f5902;font-style:italic"># Create a redis user and use gosu to change another user to execute the command</span><span style="color:#a40000">
+</span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">RUN</span> groupadd -r redis <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> useradd -r -g redis redis<span style="color:#a40000">
+</span><span style="color:#a40000"></span><span style="color:#8f5902;font-style:italic"># download gosu</span><span style="color:#a40000">
+</span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">RUN</span> wget -O /usr/local/bin/gosu <span style="color:#4e9a06">&#34;https://github.com/tianon/gosu/releases/download/1.7/gosu-amd64&#34;</span> <span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>    <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> chmod +x /usr/local/bin/gosu <span style="color:#4e9a06">\
+</span><span style="color:#4e9a06"></span>    <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> gosu nobody true<span style="color:#a40000">
+</span><span style="color:#a40000"></span><span style="color:#8f5902;font-style:italic"># Set CMD and execute it as another user</span><span style="color:#a40000">
+</span><span style="color:#a40000"></span><span style="color:#204a87;font-weight:bold">CMD</span> <span style="color:#000;font-weight:bold">[</span> <span style="color:#4e9a06">&#34;exec&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;gosu&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;redis&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;redis-server&#34;</span> <span style="color:#000;font-weight:bold">]</span><span style="color:#a40000">
+</span></code></pre></div><h2 id="pre-requisite-33">Pre-requisite:</h2>
+<h2 id="tested-infrastructure-20">Tested Infrastructure</h2>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>
+  </tr>
+</table>
+<h2 id="pre-requisite-34">Pre-requisite</h2>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h2 id="how-is-entrypoint-different-from-the-run-instruction">How is ENTRYPOINT different from the RUN instruction?</h2>
+<h2 id="tested-infrastructure-21">Tested Infrastructure</h2>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>
+  </tr>
+</table>
+<h2 id="pre-requisite-35">Pre-requisite</h2>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h2 id="what-is-entrypoint-meant-for">What is ENTRYPOINT meant for?</h2>
+<p>ENTRYPOINT is meant to provide the executable while CMD is to pass the default arguments to the executable.
+To understand it clearly, let us consider the below Dockerfile:</p>
+<p><img src="https://raw.githubusercontent.com/collabnix/dockerlabs/master/beginners/dockerfile/dockerfile-1.png" alt="My Image"></p>
+<p>If you try building this Docker image using <code>docker build command</code> -</p>
+<p><img src="https://raw.githubusercontent.com/collabnix/dockerlabs/master/beginners/dockerfile/dockerfile-2.png" alt="My Image"></p>
+<p>Let us run this image without any argument.</p>
+<p><img src="https://raw.githubusercontent.com/collabnix/dockerlabs/master/beginners/dockerfile/dockerfile-3.png" alt="My Image"></p>
+<p>Let&rsquo;s run it passing a command line argument</p>
+<p><img src="https://raw.githubusercontent.com/collabnix/dockerlabs/master/beginners/dockerfile/dockerfile-4.png" alt="My Image"></p>
+<p>This clearly state that ENTRYPOINT is meant to provide the executable while CMD is to pass the default arguments to the executable.</p>
+<h2 id="writing-dockerfile-with-hello-python-script-added">Writing Dockerfile with Hello Python Script Added</h2>
+<h2 id="pre-requisite-36">Pre-requisite:</h2>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h2 id="tested-infrastructure-22">Tested Infrastructure</h2>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>    
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>    
+  </tr>  
+</table>
+<pre><code>[node1] (local) root@192.168.0.38 ~
+$ mkdir /test
+</code></pre><pre><code>[node1] (local) root@192.168.0.38 ~
+$ cd /test
+</code></pre><pre><code>[node1] (local) root@192.168.0.38 /test
+$ pwd
+/test
+</code></pre><p>Open a file named &lsquo;Dockerfile&rsquo; with a text editor.</p>
+<pre><code>[node1] (local) root@192.168.0.38 /test
+$ vi Dockerfile
+</code></pre><h2 id="writing-a-dockerfile">Writing a Dockerfile</h2>
+<h4 id="setting-a-base-image-using-from-keyword">Setting a Base Image using FROM keyword</h4>
+<pre><code>FROM ubuntu
+</code></pre><p>Thus, our image would start building taking base as Ubuntu.</p>
+<h4 id="defining-the-author-optional-using-maintainer-keyword">Defining the Author (Optional) using MAINTAINER keyword</h4>
+<pre><code>MAINTAINER Prashansa Kulshrestha
+</code></pre><h4 id="running-a-commands-on-the-base-image-to-form-new-layers-using-run-keyword">Running a commands on the base image to form new layers using RUN keyword</h4>
+<pre><code>RUN apt-get update
+RUN apt-get install python
+</code></pre><p>Since, the base image was Ubuntu, we can run Ubuntu commands here. These commands above install python over Ubuntu.</p>
+<h4 id="adding-a-simple-hello-world-printing-python-file-to-the-containers-file-system-using-add-command">Adding a simple Hello World printing python file to the container&rsquo;s file system using ADD command</h4>
+<pre><code>ADD hello.py /home/hello.py
+ADD a.py /home/a.py
+</code></pre><p>We will place our hello.py and a.py files in the newly created directory itself (/test). ADD command would copy it from /test (current working directory) of host system
+to container&rsquo;s filesystem at /home. The destination directories in the container would be create incase they don&rsquo;t exist.</p>
+<p>Code for hello.py:</p>
+<pre><code>print (&quot;Hello World&quot;)
+</code></pre><p>Code for a.py:</p>
+<pre><code>print (&quot;Overriden Hello&quot;)
+</code></pre><h4 id="specifying-default-execution-environment-for-the-container-using-cmd-and-entrypoint">Specifying default execution environment for the container using CMD and ENTRYPOINT</h4>
+<p>These keywords let us define the default execution environment for a container when it just initiates from an image or just starts.
+If a command is specified with CMD keyword, it is the first command which a container executes as soon as it instantiates from an image. However, command and arguments provided with CMD can be overridden if user specifies his own commands while running the container using &lsquo;docker run&rsquo; command.&rsquo;</p>
+<p>ENTRYPOINT helps to create a executable container and the commands and arguments provided with this keyword are not overridden.</p>
+<p>We can also provide the default application environment using ENTRYPOINT and default arguments to be passed to it via CMD keyword. This can be done as follows:</p>
+<pre><code>CMD [&quot;/home/hello.py&quot;]
+ENTRYPOINT [&quot;python&quot;]
+</code></pre><p>So, default application mode of container would be python and if no other filename is provided as argument to it then it will execute hello.py placed in its /home directory.</p>
+<p>Benefit of this is that user can choose some other file to run with the same application at runtime, that is, while launching the container.</p>
+<p>So, our overall Dockerfile currently looks like this:</p>
+<pre><code>FROM ubuntu
+MAINTAINER Prashansa Kulshrestha
+RUN apt-get update
+RUN apt-get install -y python
+ADD hello.py /home/hello.py
+ADD a.py /home/a.py
+CMD [&quot;/home/hello.py&quot;]
+ENTRYPOINT [&quot;python&quot;]
+</code></pre><h2 id="building-a-dockerfile">Building a Dockerfile</h2>
+<p>To create an image from the Dockerfile, we need to build it. This is done as follows:</p>
+<pre><code>[node1] (local) root@192.168.0.38 /test
+$ docker build -t pythonimage .
+</code></pre><p>The option -t lets us tag our image with a name we desire. So, here we have named our image as &lsquo;pythonimage&rsquo;.
+The &lsquo;.&rsquo; in the end specifies current working directory i.e. /test. We initiated our build process from here. Docker would find the file named &lsquo;Dockerfile&rsquo; in the current directory to process the build.</p>
+<h2 id="running-a-container-from-the-newly-built-image">Running a container from the newly built image</h2>
+<pre><code>[node1] (local) root@192.168.0.38 /test
+$ docker run --name test1 pythonimage
+Hello World
+[node1] (local) root@192.168.0.38 /test
+$
+</code></pre><p>So, here /home/hello.py file placed in the container executed and displayed the output &lsquo;Hello World&rsquo;, since it was specified as default with CMD keyword.</p>
+<pre><code>[node1] (local) root@192.168.0.38 /test
+$ docker run --name test2 pythonimage /home/a.py
+Overriden Hello 
+[node1] (local) root@192.168.0.38 /test
+$
+</code></pre><p>Here, user specified another file to be run with python (default application for this container). So, the file specified with CMD got overridden and we obtained the output from /home/a.py.</p>
 
         <div class="section-index">
     
@@ -1655,7 +3315,7 @@ bcf2f368fe23: Mounted from library/alpine
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.24241: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/603abce9012132f2dad8a13700451ccac46ae72f">Update _index.html (603abce)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.24241: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/c07160b1ad6c223a8d861be183f52dfd8ef61d9b">Update _index.md (c07160b)</a>
 </div>
 </div>
 

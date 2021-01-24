@@ -749,7 +749,7 @@ ADD http://www.vlsitechnology.org/pharosc_8.4.tar.gz .
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.25251: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/013226f4012729ab79fc98aadedc31ed5f76b8ba">Create sweetalert-2.1.2.min.js (013226f)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.25251: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/8b061f3f59ebcfbdc597abbb8c92b252bff04c71">Create body-end.html (8b061f3)</a>
 </div>
 </div>
 
@@ -843,6 +843,44 @@ ADD http://www.vlsitechnology.org/pharosc_8.4.tar.gz .
 <script src="../../../js/main.min.3f977db73b73c3ce452881894e84f9a709331842c2820a135e9829c6c4c76134.js" integrity="sha256-P5d9tztzw85FKIGJToT5pwkzGELCggoTXpgpxsTHYTQ=" crossorigin="anonymous"></script>
 
 
+<script async src="../../../js/sweetalert-2.1.2.min.js"></script>
+<script type="text/javascript">
+function copyCode(elem){
+  if (document.getElementById(elem)) {
+    
+    var targetId = "_hiddenCopyText_";
+    
+    target = document.getElementById(targetId);
+    if (!target) {
+      var target = document.createElement("textarea");
+      target.style.position = "absolute";
+      target.style.left = "-9999px";
+      target.style.top = "0";
+      target.id = targetId;
+      document.body.appendChild(target);
+    }
+    target.value = document.getElementById(elem).innerText;
+    
+    target.select();
+
+    
+    var succeed;
+    try {
+        succeed = document.execCommand("copy");
+    } catch(e) {
+        swal("Oh, no…","Sorry, your browser doesn't support copying this example to your clipboard.");
+        succeed = false;
+    }
+    if (succeed) {
+      swal("Copied to clipboard: ",elem);
+      return succeed;
+    } else {
+      swal("Oops!", elem + " not found when trying to copy code");
+      return false;
+    }
+  }
+}
+</script>
 
 <script type="text/javascript" async
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">

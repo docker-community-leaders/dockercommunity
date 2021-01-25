@@ -3064,6 +3064,7 @@ $ go version
 &lt;/div&gt;
 
 &lt;/p&gt;
+&lt;p&gt;Now that we have our server, let’s set about writing our Dockerfile and constructing the container in which our newly born Go application will live.&lt;/p&gt;
 &lt;p&gt;create dockerfile with following content:
 
 
@@ -3100,6 +3101,95 @@ CMD [&amp;#34;/app/main&amp;#34;]
 &lt;/div&gt;
 
 &lt;/p&gt;
+&lt;p&gt;Now that we have defined everything we need for our Go application to run in our Dockerfile we can now build an image using this file. In order to do that, we’ll need to run the following command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker build -t my-go-app .
+Sending build context to Docker daemon   5.12kB
+Step 1/6 : FROM golang:1.12.0-alpine3.9
+ ---&amp;gt; d4953956cf1e
+Step 2/6 : RUN mkdir /app
+ ---&amp;gt; Using cache
+ ---&amp;gt; be346f9ff24f
+Step 3/6 : ADD . /app
+ ---&amp;gt; eb420da7413c
+Step 4/6 : WORKDIR /app
+ ---&amp;gt; Running in d623a88e4a00
+Removing intermediate container d623a88e4a00
+ ---&amp;gt; ffc439c5bec5
+Step 5/6 : RUN go build -o main .
+ ---&amp;gt; Running in 15805f4f7685
+Removing intermediate container 15805f4f7685
+ ---&amp;gt; 31828faf8ae4
+Step 6/6 : CMD [&amp;quot;/app/main&amp;quot;]
+ ---&amp;gt; Running in 9d54463b7e84
+Removing intermediate container 9d54463b7e84
+ ---&amp;gt; 3f9244a1a240
+Successfully built 3f9244a1a240
+Successfully tagged my-go-app:latest
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;We can now verify that our image exists on our machine by typing docker images:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker images
+REPOSITORY                                 TAG                 IMAGE ID            CREATED             SIZE
+my-go-app                                  latest              3f9244a1a240        2 minutes ago       355MB$ docker images
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In order to run this newly created image, we can use the docker run command and pass in the ports we want to map to and the image we wish to run.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker run -p 8080:8081 -it my-go-app
+
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-p 8080:8081&lt;/code&gt; - This exposes our application which is running on port 8081 within our container on http://localhost:8080 on our local machine.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-it&lt;/code&gt; - This flag specifies that we want to run this image in interactive mode with a tty for this container process.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;my-go-app &lt;/code&gt; - This is the name of the image that we want to run in a container.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Awesome, if we open up http://localhost:8080 within our browser, we should see that our application is successfully responding with &lt;code&gt;Hello, &amp;quot;/&amp;quot;.&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;running-our-container-in-the-background&#34;&gt;Running our Container In the Background&lt;/h1&gt;
+&lt;p&gt;You’ll notice that if we &lt;code&gt;ctrl-c&lt;/code&gt; this within the terminal, it will kill the container. If we want to have it run permanently in the background, you can replace -it with &lt;code&gt;-d &lt;/code&gt; to run this container in detached mode.&lt;/p&gt;
+&lt;p&gt;In order to view the list of containers running in the background you can use docker ps which should output something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+70fcc9195865        my-go-app           &amp;quot;/app/main&amp;quot;              5 seconds ago       Up 3 seconds        0.0.0.0:8080-&amp;gt;8081/tcp   silly_swirles
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;working-with-go-modules-and-docker&#34;&gt;Working with Go Modules and Docker&lt;/h1&gt;
+&lt;p&gt;Let’s look at a more complex example which features imported modules. In this instance, we will need to add a step within our Dockerfile which does the job of downloading our dependencies prior to the go build command executing:&lt;/p&gt;
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;highlight&#34;&gt;
+    &lt;div class=&#34;copy-code-icon&#34; style=&#34;text-align:right&#34;&gt;
+    &lt;a href=&#34;https://%25!s%28%3cnil%3e%29/master/content/en/examples//Golang/simple-app/Dockerfile.module&#34; download=&#34;/Golang/simple-app/Dockerfile.module&#34;&gt;&lt;code&gt;/Golang/simple-app/Dockerfile.module&lt;/code&gt;
+    &lt;/a&gt;
+    &lt;img src=&#34;https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg&#34; style=&#34;max-height:24px; cursor: pointer&#34; onclick=&#34;copyCode(&#39;golangsimple-appdockerfilemodule&#39;)&#34; title=&#34;Copy /Golang/simple-app/Dockerfile.module to clipboard&#34;&gt;
+    &lt;/img&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;includecode&#34; id=&#34;golangsimple-appdockerfilemodule&#34;&gt;
+    &lt;pre&gt;&lt;code class=&#34;language-module&#34; data-lang=&#34;module&#34;&gt;FROM golang:1.12.0-alpine3.9
+RUN mkdir /app
+ADD . /app
+WORKDIR /app
+## Add this go mod download command to pull in any dependencies
+RUN go mod download
+## Our project will now successfully build with the necessary go libraries included.
+RUN go build -o main .
+## Our start command which kicks off
+## our newly created binary executable
+CMD [&amp;#34;/app/main&amp;#34;]
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
 
       </description>
     </item>

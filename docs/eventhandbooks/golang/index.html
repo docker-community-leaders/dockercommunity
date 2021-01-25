@@ -579,6 +579,13 @@ if (!doNotTrack) {
 
 
 
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#downlaod-golang--latest-version-golang-157-">Downlaod Golang ( latest version Golang 15.7 )</a></li>
+    <li><a href="#install-golang">Install Golang</a></li>
+  </ul>
+</nav>
+
 
 
           </div>
@@ -625,7 +632,90 @@ if (!doNotTrack) {
 	<h1>GOLANG</h1>
         <div class="lead">Docker Workshop for Golang Developers</div>
 	
+	<h1 id="downlaod-golang--latest-version-golang-157-">Downlaod Golang ( latest version Golang 15.7 )</h1>
+<ul>
+<li><a href="https://golang.org/dl/go1.15.7.windows-amd64.msi">Windows</a></li>
+<li><a href="https://golang.org/dl/go1.15.7.darwin-amd64.pkg">Apple Macos </a></li>
+<li><a href="https://golang.org/dl/go1.15.7.linux-amd64.tar.gz">Linux</a></li>
+<li><a href="https://golang.org/dl/go1.15.7.src.tar.gz">github source</a></li>
+</ul>
+<h1 id="install-golang">Install Golang</h1>
+<p>Select the tab for your computer&rsquo;s operating system below, then follow its installation instructions.</p>
+<ul class="nav nav-tabs" id="install-golang" role="tablist"><li class="nav-item"><a data-toggle="tab" class="nav-link active" href="#install-golang-0" role="tab" aria-controls="install-golang-0" aria-selected="true">Linux</a></li>
+	  
+		<li class="nav-item"><a data-toggle="tab" class="nav-link" href="#install-golang-1" role="tab" aria-controls="install-golang-1">Mac</a></li></ul>
+<div class="tab-content" id="install-golang"><div id="install-golang-0" class="tab-pane show active" role="tabpanel" aria-labelledby="install-golang-0">
+
+<p><p>This is <strong>some markdown.</strong></p>
+<ul>
+<li>
+<ol>
+<li>if you have a previous version of Go installed, be sure to <a href="">remove it</a><a href="https://golang.org/doc/manage-install">https://golang.org/doc/manage-install</a> before installing another.</li>
+</ol>
+</li>
+</ul>
+<p>Download the archive and extract it into <code>/usr/local</code>, creating a Go tree in <code>/usr/local/go</code>.
+For example, run the following as root or through sudo:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tar -C /usr/local -xzf go1.15.7.linux-amd64.tar.gz
+
+</code></pre></div><ul>
+<li>
+<ol start="2">
+<li>Add <code>/usr/local/go/bin</code> to the PATH environment variable.
+You can do this by adding the following line to your $HOME/.profile or /etc/profile (for a system-wide installation):</li>
+</ol>
+</li>
+</ul>
+<pre><code>export PATH=$PATH:/usr/local/go/bin
+
+</code></pre><blockquote class="note callout">
+  <div><strong>Note:</strong> Changes made to a profile file may not apply until the next time you log into your computer. To apply the changes immediately, just run the shell commands directly or execute them from the profile using a command such as source <code>$HOME/.profile</code>.</div>
+</blockquote>
+<ul>
+<li>
+<ol start="3">
+<li>Verify that you&rsquo;ve installed Go by opening a command prompt and typing the following command:</li>
+</ol>
+</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+$ go version
+
+</code></pre></div><ol start="4">
+<li>Confirm that the command prints the installed version of Go.</li>
+</ol>
+</div>
+  <div id="install-golang-1" class="tab-pane" role="tabpanel" aria-labelledby="install-golang-1">
+
+<p>
+
+1.Open the package file you downloaded and follow the prompts to install Go.
+
+The package installs the Go distribution to /usr/local/go. The package should put the /usr/local/go/bin directory in your PATH environment variable. You may need to restart any open Terminal sessions for the change to take effect.
+
+```bash
+
+$ go version
+```
+3. Confirm that the command prints the installed version of Go.
+
+
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+</div></div>
+
+
         <div class="section-index">
     
     
@@ -743,7 +833,7 @@ if (!doNotTrack) {
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.25251: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/9da7cc747dbced200b0b0559807e75215c4965ca">Create _index.md (9da7cc7)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.25251: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/cce7e031bdef68a238d2e3f64a6651fd431712b1">Update _index.md (cce7e03)</a>
 </div>
 </div>
 

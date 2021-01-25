@@ -2913,6 +2913,19 @@ ADD http://www.vlsitechnology.org/pharosc_8.4.tar.gz .
     </item>
     
     <item>
+      <title>Docs: GOLANG</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/golang/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/golang/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: JAVA</title>
       <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -583,6 +583,7 @@ if (!doNotTrack) {
   <ul>
     <li><a href="#downlaod-golang--latest-version-golang-157-">Downlaod Golang ( latest version Golang 15.7 )</a></li>
     <li><a href="#install-golang">Install Golang</a></li>
+    <li><a href="#dockerize-your-first-golang-application">Dockerize your first Golang Application</a></li>
   </ul>
 </nav>
 
@@ -726,6 +727,91 @@ $ go version
 </ul>
 </div></div>
 
+<h1 id="dockerize-your-first-golang-application">Dockerize your first Golang Application</h1>
+<p>Create the main.go file with the following content:
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="highlight">
+    <div class="copy-code-icon" style="text-align:right">
+    <a href="https://%25!s%28%3cnil%3e%29/master/content/en/examples//Golang/simple-app/main.go" download="/Golang/simple-app/main.go"><code>/Golang/simple-app/main.go</code>
+    </a>
+    <img src="https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg" style="max-height:24px; cursor: pointer" onclick="copyCode('golangsimple-appmaingo')" title="Copy /Golang/simple-app/main.go to clipboard">
+    </img>
+    </div>
+    <div class="includecode" id="golangsimple-appmaingo">
+    <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">package</span> <span style="color:#000">main</span>
+
+<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000;font-weight:bold">(</span>
+	<span style="color:#4e9a06">&#34;fmt&#34;</span>
+	<span style="color:#4e9a06">&#34;log&#34;</span>
+	<span style="color:#4e9a06">&#34;net/http&#34;</span>
+<span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#204a87;font-weight:bold">func</span> <span style="color:#000">main</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+	<span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Go Docker Tutorial&#34;</span><span style="color:#000;font-weight:bold">)</span>
+
+	<span style="color:#000">http</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">HandleFunc</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;/&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">func</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">w</span> <span style="color:#000">http</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ResponseWriter</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">r</span> <span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">http</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Request</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+		<span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Fprintf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">w</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Hello World&#34;</span><span style="color:#000;font-weight:bold">)</span>
+	<span style="color:#000;font-weight:bold">})</span>
+
+	<span style="color:#000">log</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Fatal</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">http</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ListenAndServe</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;:8081&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">nil</span><span style="color:#000;font-weight:bold">))</span>
+
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div>
+    </div>
+</div>
+
+</p>
+<p>create dockerfile with following content:
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="highlight">
+    <div class="copy-code-icon" style="text-align:right">
+    <a href="https://%25!s%28%3cnil%3e%29/master/content/en/examples//Golang/simple-app/Dockerfile" download="/Golang/simple-app/Dockerfile"><code>/Golang/simple-app/Dockerfile</code>
+    </a>
+    <img src="https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg" style="max-height:24px; cursor: pointer" onclick="copyCode('golangsimple-appdockerfile')" title="Copy /Golang/simple-app/Dockerfile to clipboard">
+    </img>
+    </div>
+    <div class="includecode" id="golangsimple-appdockerfile">
+    <pre><code>FROM golang:1.12.0-alpine3.9
+RUN mkdir /app
+ADD . /app
+WORKDIR /app
+RUN go build -o main .
+CMD [&#34;/app/main&#34;]
+</code></pre>
+    </div>
+</div>
+
+</p>
 
         <div class="section-index">
     
@@ -844,7 +930,7 @@ $ go version
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.25251: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/46df9a5114bdff0cd48cd7b5298fe3d29c72c458">Update _index.md (46df9a5)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.25251: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/10f45f4893061d0b6a7f23450b4e2d4ba20e510b">Update _index.md (10f45f4)</a>
 </div>
 </div>
 
@@ -938,7 +1024,44 @@ $ go version
 <script src="../../../js/main.min.3f977db73b73c3ce452881894e84f9a709331842c2820a135e9829c6c4c76134.js" integrity="sha256-P5d9tztzw85FKIGJToT5pwkzGELCggoTXpgpxsTHYTQ=" crossorigin="anonymous"></script>
 
 
+<script async src="../../../js/sweetalert-2.1.2.min.js"></script>
+<script type="text/javascript">
+function copyCode(elem){
+  if (document.getElementById(elem)) {
+    
+    var targetId = "_hiddenCopyText_";
+    
+    target = document.getElementById(targetId);
+    if (!target) {
+      var target = document.createElement("textarea");
+      target.style.position = "absolute";
+      target.style.left = "-9999px";
+      target.style.top = "0";
+      target.id = targetId;
+      document.body.appendChild(target);
+    }
+    target.value = document.getElementById(elem).innerText;
+    
+    target.select();
 
+    
+    var succeed;
+    try {
+        succeed = document.execCommand("copy");
+    } catch(e) {
+        swal("Oh, no…","Sorry, your browser doesn't support copying this example to your clipboard.");
+        succeed = false;
+    }
+    if (succeed) {
+      swal("Copied to clipboard: ",elem);
+      return succeed;
+    } else {
+      swal("Oops!", elem + " not found when trying to copy code");
+      return false;
+    }
+  }
+}
+</script>
 
 <script type="text/javascript" async
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">

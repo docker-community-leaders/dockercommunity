@@ -2820,6 +2820,226 @@ Click on &quot;`Finish`&quot; to build the image. The image is shown in the &quo
 ![My Image](docker-netbeans-build-image-services.png)
 
 
+## Docker and IntelliJ IDEA
+
+This chapter will show you basic Docker tooling with IntelliJ IDEA:
+
+- Pull Docker images
+- Run, stop, delete a Container
+- Build an Image
+
+## Install Docker Plugin in IDEA
+
+Go to &quot;`Preferences`&quot;, &quot;`Plugins`&quot;, &quot;`Install JetBrains plugin...`&quot;, search on &quot;`docker`&quot; and click on &quot;`Install`&quot;
+
+![My Image](docker-intellij-plugin-install.png)
+
+Restart IntelliJ IDEA to active plugin.
+
+Click on &quot;`Create New Project`&quot;, select &quot;`Java`&quot;, &quot;`Web Application`&quot;
+
+![My Image](docker-intellij-create-java-project.png)
+
+Click on &quot;`Next`&quot;, give the project a name &quot;`dockercon`&quot;, click on &quot;`Finish`&quot;. This will open up the project in IntelliJ window.
+
+Go to &quot;`Preferences`&quot;, &quot;`Clouds`&quot;, add a new deployment by clicking on &quot;`+`&quot;. Click on &quot;`Import credentials from Docker Machine`&quot;, &quot;`Detect`&quot;, and see a successful connection. You may have to check the IP address of your Docker Machine. Find the IP address of your Docker Machine as `docker-machine ip &lt;machine-name&gt;` and specify the correct IP address here.
+
+![My Image](docker-intellij-cloud-connection.png)
+
+Go to &quot;`View`&quot;, &quot;`Tool Windows`&quot;, &quot;`Docker Tooling Window`&quot;. Click on &quot;`Connect`&quot;&quot; to connect with Docker Machine. Make sure Docker Machine is running. 
+
+WARNING: IDEA does not work with &quot;`Docker for Mac`&quot; at this time. (ADD BUG #)
+
+![My Image](docker-intellij-tool-window.png)
+
+## Pull an Image
+
+Select top-level node with the name &quot;`Docker`&quot;, click on &quot;`Pull image`&quot;
+
+![My Image](docker-intellij-pull-image.png)
+
+Type an image name, such as `arungupta/couchbase`, and &quot;`OK`&quot;
+
+![My Image](docker-intellij-repository-name.png)
+
+Expand &quot;`Containers`&quot; and &quot;`Images`&quot; to see existing running containers and images.
+
+The specified image is now downloaded and shown as well.
+
+## Run a Container
+
+Select the downloaded image, click on &quot;`Create container`&quot;
+
+Select &quot;`After launch`&quot; and enter the URL as `http://192.168.99.100:8091`. Make sure to match the IP address of your Docker Machine.
+
+![My Image](docker-intellij-deployment-after-launch.png)
+
+In &quot;`Container`&quot; tab, add &quot;`Port bindings`&quot; for `8091:8091`
+
+![My Image](docker-intellij-container-ports.png)
+
+Click on &quot;`Run`&quot; to run the container.
+
+This will bring up the browser window and display the page http://192.168.99.100:8091 and looks like:
+
+![My Image](docker-intellij-run-container-browser.png)
+
+This image uses http://developer.couchbase.com/documentation/server/current/rest-api/rest-endpoints-all.html[Couchbase REST API] to configure the Couchbase server. 
+
+Right-click on the running container, select &quot;`Inspect`&quot; to see more details about the container.
+
+![My Image](docker-intellij-container-inspect.png)
+
+Click on &quot;`Stop container`&quot; to stop the container and &quot;`Delete container`&quot; to delete the container.
+
+## Build an Image
+
+- Refer to the instructions https://www.jetbrains.com/help/idea/2016.1/docker.html
+
+- Right-click on the project, create a new directory `docker-dir`
+- Artifact
+  - Click on top-right for &quot;`Project Structure`&quot;
+  -  select &quot;`Artifacts`&quot;
+  - change &quot;`Type:`&quot; to &quot;`Web Application: Archive`&quot;
+  - change the name to `dockercon`
+  - change `Output directory` to `docker-dir`
+- Create &quot;`Dockerfile`&quot; in this directory. Use the contents
+
+
+</code></pre><p>FROM jboss/wildfly</p>
+<p>ADD dockercon.war /opt/jboss/wildfly/standalone/deployments/</p>
+<pre><code>
+
+- &quot;`Run`&quot;, &quot;`Edit Configurations`&quot;, add new &quot;`Docker Deployment`&quot;
+  -  &quot;`Deployment`&quot; tab
+     - Change the name to `dockercon`
+     - Select &quot;`After launch`&quot;, change the URL to &quot;`http://192.168.99.100:18080/dockercon/index.jsp`&quot;
+     - In &quot;`Before launch`&quot;, add &quot;`Build Artifacts`&quot; and select the artifact
+   -  &quot;`Container`&quot; tab
+     -  Add &quot;`Port bindings`&quot; for &quot;`8080:18080`&quot;
+- View, Tool Windows, Docker, connect to it
+- Run the project
+
+# Docker and Eclipse
+
+This chapter will show you basic Docker tooling with Eclipse:
+
+- Pull/Push/Build Docker images
+- Run/Start/Stop/Kill Docker containers
+- Customize views
+
+Watch a quick video explaining the key steps in https://www.youtube.com/watch?v=XmhEZiS26os.
+
+## Install Docker Tooling in Eclipse
+
+Download http://www.eclipse.org/downloads/eclipse-packages/[Eclipse IDE for Java EE Developers] and install.
+
+Go to &quot;`Help`&quot; menu, &quot;`Install New Software...`&quot;.
+
+Select Eclipse update site for the release, search for Docker, select &quot;`Docker Tooling`&quot;.
+
+![My Image](docker-eclipse-update-site-selection.png)
+
+Click on &quot;`Next&gt;`&quot;, &quot;`Next&gt;`&quot;, accept the license agreement, click on &quot;`Finish`&quot; to start the installation.
+
+Restart Eclipse for the installation to complete.
+
+## Docker Perspective and View
+
+Go to &quot;`Window`&quot;, &quot;`Perspective`&quot;, &quot;`Open Perspective`&quot;, &quot;`Other...`&quot;, &quot;`Docker Tooling`&quot;.
+
+![My Image](docker-eclipse-docker-perspective.png)
+
+Click on &quot;`OK`&quot; to see the perspective.
+
+![My Image](docker-eclipse-docker-perspective-default-look.png)
+
+This has three views:
+
+- *Docker Explorer*: a tree view listing all connected Docker instances, with image and containers.
+- *Docker Images*: a table view listing containers for selected Docker connection.
+- *Docker Containers*: a table view listing containers for selected Docker connection
+
+Click on the text in Docker Explorer to create a new connection. If you are on Mac/Windows, you are likely using Docker for Mac/Windows or Docker Toolbox to setup Docker Host. Eclipse allows to configure Docker Engine using both Docker for Mac/Windows and Docker Toolbox.
+
+If you are using Docker for Mac/Windows, then the default values are shown:
+
+![My Image](docker-eclipse-docker-connection.png)
+
+Click on &quot;`Test Connection`&quot; to test the connection.
+
+![My Image](docker-eclipse-docker-connection-test.png)
+
+If you are using Toolbox, enter the values as shown:
+
+![My Image](docker-eclipse-docker-connection-toolbox.png)
+
+The exact value of TCP Connection can be found using `docker-machine ls` command. The path for authentication is the directory name where certificates for your Docker Machine, `couchbase` in this case, are stored.
+
+Click on &quot;`Test Connection`&quot; to make sure the connection is successfully configured.
+
+![My Image](docker-eclipse-docker-connection-test-toolbox.png)
+
+In either case, the configuration can be completed once the connection is tested. Click on &quot;`Finish`&quot; to complete the configuration.
+
+Docker Explorer is updated to show the connection.
+
+Containers and Images configured for the Docker Machine are shown in tabs. They can be expanded to see the list in Explorer itself.
+
+## Pull an Image
+
+Expand the connection to see &quot;`Containers`&quot; and &quot;`Images`&quot;.
+
+Right-click on &quot;`Images`&quot; and select &quot;`Pull...`&quot;.
+
+Type the image name and click on &quot;`Finish`&quot;.
+
+![My Image](docker-eclipse-pull-image.png)
+
+This image is now shown in Explorer and Docker Images tab.
+
+![My Image](docker-eclipse-pulled-image.png)
+
+Any existing images on the Docker Host will be shown here.
+
+## Run a Container
+
+Select an image, right-click on it, and click on &quot;`Run...`&quot;. It shows the options that can be configured for running the container. Some of them are:
+
+- Publish ports on Docker host interface (`-P` or `-p` in `docker run` command)
+- Keep STDIN open and allocate pseudo-TTY (`-it` on CLI)
+- Remove container after it exits (`--rm` on CLI)
+- Volume mapping (`-v` on CLI)
+- Environment variables (`-e` on CLI)
+
+Uncheck &quot;`Publish all exposed ports`&quot; box to map to corresponding ports.
+
+![My Image](docker-eclipse-run-container-config.png)
+
+Click on &quot;`Finish`&quot; to run the container.
+
+Right-click on the started container, select &quot;`Display Log`&quot; to show the log.
+
+![My Image](docker-eclipse-container-display-log.png)
+
+The container can be paused, stopped and killed from here as well.
+
+To see more details about the container, right-click on the container, select &quot;`Show In`&quot;, &quot;`Properties`&quot;.
+
+![My Image](docker-eclipse-container-properties.png)
+
+## Build an Image
+
+In Docker Images tab, click on the hammer icon on top right.
+
+Give the image name, specify an empty directory, click on &quot;`Edit Dockerfile`&quot; to edit the contents of Dockerfile
+
+![My Image](docker-eclipse-build-image.png)
+
+Click on &quot;`Save`&quot; and &quot;`Finish`&quot; to create the image.
+
+
+
 </code></pre>
         <div class="section-index">
     
@@ -2936,7 +3156,7 @@ Click on &quot;`Finish`&quot; to build the image. The image is shown in the &quo
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.25251: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/62abddd19adc083975d2c83656a23d478b7608df">Update _index.md (62abddd)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.25251: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/30f8e58544f36cffcaff0043684cfcf42228736e">Update _index.md (30f8e58)</a>
 </div>
 </div>
 

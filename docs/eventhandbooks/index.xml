@@ -3073,7 +3073,7 @@ ADD http://www.vlsitechnology.org/pharosc_8.4.tar.gz .
 &lt;/ul&gt;
 &lt;h3 id=&#34;building-and-running-a-docker-containerbuilding-and-running-a-docker-container---1-hour&#34;&gt;&lt;a href=&#34;#building-and-running-a-docker-container&#34;&gt;Building and Running a Docker Container&lt;/a&gt; - 1 hour&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#builda-docker-image&#34;&gt;Build a Docker Image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#build-a-docker-image&#34;&gt;Build a Docker Image&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#running-a-docker-container&#34;&gt;Running a Docker Container&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#running-a-JAVA11-Docker-Container&#34;&gt;Running a JAVA 11 Docker Container&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -3348,7 +3348,7 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;setup-docker-environments&#34;&gt;Setup Docker Environments&lt;/h2&gt;
+&lt;h2 id=&#34;setup-a-docker-environment&#34;&gt;Setup a Docker Environment&lt;/h2&gt;
 &lt;p&gt;This section describes the hardware and software needed for this workshop, and how to configure them.
 This workshop is designed for a BYOL (Bring Your Own Laptop) style hands-on-lab.&lt;/p&gt;
 &lt;h3 id=&#34;hardware--software&#34;&gt;Hardware &amp;amp; Software&lt;/h3&gt;
@@ -3454,14 +3454,14 @@ Install them only if you plan to attempt them.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;docker-basic-concepts&#34;&gt;Docker Basic Concepts&lt;/h2&gt;
+&lt;h2 id=&#34;basics-of-docker&#34;&gt;Basics of Docker&lt;/h2&gt;
 &lt;p&gt;This section introduces the basic terminology of Docker.&lt;/p&gt;
 &lt;p&gt;Docker is a platform for developers and sysadmins to build, ship, and run applications. Docker lets you quickly assemble applications from components and eliminates the friction that can come when shipping code. Docker lets you test and deploy your code into production as fast as possible.&lt;/p&gt;
 &lt;p&gt;Docker simplifies software delivery by making it easy to build and share images that contain your application’s entire environment, or &lt;em&gt;application operating system&lt;/em&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;what-does-it-mean-by-an-application-operating-system-&#34;&gt;What does it mean by an application operating system ?&lt;/h2&gt;
 &lt;p&gt;Your application typically requires specific versions for your operating system, application server, JDK, and database server, may require to tune the configuration files, and similarly multiple other dependencies. The application may need binding to specific ports and certain amount of memory. The components and configuration together required to run your application is what is referred to as application operating system.&lt;/p&gt;
 &lt;p&gt;You can certainly provide an installation script that will download and install these components. Docker simplifies this process by allowing to create an image that contains your application and infrastructure together, managed as one component. These images are then used to create Docker containers which run on the container virtualization platform, provided by Docker.&lt;/p&gt;
-&lt;h2 id=&#34;main-components&#34;&gt;Main Components&lt;/h2&gt;
+&lt;h2 id=&#34;main-components-of-docker-system&#34;&gt;Main Components of Docker System&lt;/h2&gt;
 &lt;p&gt;Docker has three main components:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Images are the &lt;em&gt;build component&lt;/em&gt; of Docker and are the read-only templates defining an application operating system.&lt;/li&gt;

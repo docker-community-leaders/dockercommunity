@@ -642,7 +642,9 @@ if (!doNotTrack) {
 <h1 id="install-golang">Install Golang</h1>
 <p>Select the tab for your computer&rsquo;s operating system below, then follow its installation instructions.</p>
 <ul class="nav nav-tabs" id="install-golang" role="tablist"><li class="nav-item"><a data-toggle="tab" class="nav-link active" href="#install-golang-0" role="tab" aria-controls="install-golang-0" aria-selected="true">Linux</a></li>
-	  </ul>
+	  
+		<li class="nav-item"><a data-toggle="tab" class="nav-link" href="#install-golang-1" role="tab" aria-controls="install-golang-1">Mac</a></li>
+		<li class="nav-item"><a data-toggle="tab" class="nav-link" href="#install-golang-2" role="tab" aria-controls="install-golang-2">Windows</a></li></ul>
 <div class="tab-content" id="install-golang"><div id="install-golang-0" class="tab-pane show active" role="tabpanel" aria-labelledby="install-golang-0">
 
 <p><p>This is <strong>some markdown.</strong></p>
@@ -683,6 +685,45 @@ $ go version
 </code></pre></div><ol start="4">
 <li>Confirm that the command prints the installed version of Go.</li>
 </ol>
+</div>
+  <div id="install-golang-1" class="tab-pane" role="tabpanel" aria-labelledby="install-golang-1">
+
+<p><p>1.Open the package file you downloaded and follow the prompts to install Go.</p>
+<p>The package installs the Go distribution to /usr/local/go. The package should put the /usr/local/go/bin directory in your PATH environment variable. You may need to restart any open Terminal sessions for the change to take effect.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+$ go version
+</code></pre></div><ol start="3">
+<li>Confirm that the command prints the installed version of Go.</li>
+</ol>
+</div>
+  <div id="install-golang-2" class="tab-pane" role="tabpanel" aria-labelledby="install-golang-2">
+
+<p><ul>
+<li>
+<ol>
+<li>Open the MSI file you downloaded and follow the prompts to install Go.
+By default, the installer will install Go to C:\Go. You can change the location as needed. After installing, you will need to close and reopen any open command prompts so that changes to the environment made by the installer are reflected at the command prompt.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>Verify that you&rsquo;ve installed Go.</li>
+</ol>
+</li>
+</ul>
+<p>1.In Windows, click the Start menu. <br>
+2.In the menu&rsquo;s search box, type cmd, then press the Enter key. <br>
+3.In the Command Prompt window that appears, type the following command: <br></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+$ go version
+
+</code></pre></div><ul>
+<li>
+<ol start="3">
+<li>Confirm that the command prints the installed version of Go.</li>
+</ol>
+</li>
+</ul>
 </div></div>
 
 
@@ -803,7 +844,7 @@ $ go version
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.25251: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/b0794675d1e533282127274147581841a870bab3">Update _index.md (b079467)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.25251: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/46df9a5114bdff0cd48cd7b5298fe3d29c72c458">Update _index.md (46df9a5)</a>
 </div>
 </div>
 

@@ -2335,5 +2335,193 @@ $
       </description>
     </item>
     
+    <item>
+      <title>Docs: Creating Private Docker Registry </title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/docker101/registry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/docker101/registry/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;creating-private-docker-registry---30-min&#34;&gt;Creating Private Docker Registry - 30 min&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../../../beginners/docker-registry/README.md&#34;&gt;Building a Private Docker Registry&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../../../beginners/docker-registry/quiz4/README.md&#34;&gt;Test Your Knowledge&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;creating-a-private-local-docker-registry-using-play-with-docker&#34;&gt;Creating a Private Local Docker Registry using Play with Docker&lt;/h2&gt;
+&lt;h3 id=&#34;tested-infrastructure&#34;&gt;Tested Infrastructure&lt;/h3&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
+    &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Number of Instance&lt;/b&gt;&lt;/th&gt;
+    &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Reading Time&lt;/b&gt;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt; Play with Docker&lt;/b&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;1&lt;/b&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;pre-requisite&#34;&gt;Pre-requisite&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
+&lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;create-a-directory-to-permanently-store-images&#34;&gt;Create a directory to permanently store images.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ mkdir -p /registry/data
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;authenticate-with-dockerhub&#34;&gt;Authenticate with DockerHub&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$docker login
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;start-the-registry-container&#34;&gt;Start the registry container.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ docker run -d \
+  -p 5000:5000 \
+  --name registry \
+  -v /registry/data:/var/lib/registry \
+  --restart always \
+  registry:2
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;b1a641f8d710eee34405ad575050179f5a1262f1c845806cc3c2b435dea1648c
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;display-running-containers&#34;&gt;Display running containers.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ docker ps
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS
+                    NAMES
+3a056bf96c6d        registry:2          &amp;quot;/entrypoint.sh /etc…&amp;quot;   About an hour ago   Up About an hour    0.0.0
+.0:5000-&amp;gt;5000/tcp   registry
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;pull-alpine-36-image-from-official-repository&#34;&gt;Pull Alpine 3.6 image from official repository.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ docker pull alpine:3.6
+
+stretch: Pulling from library/alpine
+723254a2c089: Pull complete
+Digest: sha256:0a5fcee6f52d5170f557ee2447d7a10a5bdcf715dd7f0250be0b678c556a501b
+Status: Downloaded newer image for alpine:3.6
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;tag-local-alpine-36-image-with-an-additional-tag---local-repository-address&#34;&gt;Tag local alpine 3.6 image with an additional tag - local repository address.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ docker tag alpine:3.6 localhost:5000/alpine:3.6
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;push-image-to-the-local-repository&#34;&gt;Push image to the local repository.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;[node1] (local) root@192.168.0.23 ~
+$ docker push localhost:5000/alpine:3.6
+The push refers to repository [localhost:5000/alpine:3.6]
+90d1009ce6fe: Pushed
+stretch: digest: sha256:38236c068c393272ad02db100e09cac36a5465149e2924a035ee60d6c60c38fe size: 529
+[node1] (local) root@192.168.0.23 ~
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;remove-local-images&#34;&gt;Remove local images.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;[node1] (local) root@192.168.0.23 ~
+$ docker image remove alpine:3.6
+Untagged: alpine:3.6
+Untagged: alpine@sha256:df6ebd5e9c87d0d7381360209f3a05c62981b5c2a3ec94228da4082ba07c4f05
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[node1] (local) root@192.168.0.23 ~
+$ docker image remove localhost:5000/alpine:3.6
+Untagged: localhost:5000/alpine:3.6
+Untagged: localhost:5000/debian@sha256:38236c068c393272ad02db100e09cac36a5465149e2924a035ee60d6c60c38fe
+Deleted: sha256:4879790bd60d439cfe39c063660eef7af525d5f6f1cbb701a14c7cfc11cbfcf7
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;pull-alpine-36-image-from-local-repository&#34;&gt;Pull Alpine 3.6 image from local repository.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;[node1] (local) root@192.168.0.23 ~
+$ docker pull localhost:5000/alpine:3.6
+stretch: Pulling from alpine
+54f7e8ac135a: Pull complete
+Digest: sha256:38236c068c393272ad02db100e09cac36a5465149e2924a035ee60d6c60c38fe
+Status: Downloaded newer image for localhost:5000/alpine:3.6
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;list-stored-images&#34;&gt;List stored images.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;[node1] (local) root@192.168.0.23 ~
+$ docker image ls
+REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+localhost:5000/alpine   3.6                 4879790bd60d        12 days ago         101MB
+registry                2                   2e2f252f3c88        2 months ago        33.3MB
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;shared-local-registry&#34;&gt;Shared local registry&lt;/h3&gt;
+&lt;p&gt;Create a directory to permanently store images.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ mkdir -p /srv/registry/data
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;create-a-directory-to-permanently-store-certificates-and-authentication-data&#34;&gt;Create a directory to permanently store certificates and authentication data.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ mkdir -p /srv/registry/security
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Store domain and intermediate certificates using /srv/registry/security/registry.crt file, private key using /srv/registry/security/registry.key file. Use valid certificate and do not waste time with self-signed one. This step is required do use basic authentication.&lt;/p&gt;
+&lt;h3 id=&#34;install-apache2-utils-to-use-htpasswd-utility&#34;&gt;Install apache2-utils to use htpasswd utility.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;[node1] (local) root@192.168.0.23 ~
+$ apk add apache2-utils
+OK: 302 MiB in 110 packages
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Create initial username and password. The only supported password format is bcrypt.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ : | sudo tee /srv/registry/security/htpasswd
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[node1] (local) root@192.168.0.23 ~
+$ echo &amp;quot;password&amp;quot; | sudo htpasswd -iB /srv/registry/security/htpasswd username
+Adding password for user username
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;adding-password-for-user-username&#34;&gt;Adding password for user username&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$
+[node1] (local) root@192.168.0.23 ~
+$ cat /srv/registry/security/htpasswd
+username:$2y$05$q9R5FSNYpAppB4Vw/AGWb.RqMCGE8DmZ4q5HZC/1wC87oTWyvB9vy
+[node1] (local) root@192.168.0.23 ~
+$
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;stop-and-remove-all-old-containers&#34;&gt;Stop and Remove all old containers&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ docker stop $(docker ps -a -q)
+3a056bf96c6d
+[node1] (local) root@192.168.0.23 ~
+$ docker rm -f $(docker ps -a -q)
+3a056bf96c6d
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;start-the-registry-container-1&#34;&gt;Start the registry container.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;[node1] (local) root@192.168.0.23 ~
+$ docker run -d   -p 443:5000   --name registry   -v /srv/registry/data:/var/lib/registry   -v /srv/registry/security:/etc/security   -e REGISTRY_HTTP_TLS_CERTIFICATE=/etc/security/registry.crt   -e REGISTRY_HTTP_TLS_KEY=/etc/security/registry.key   -e REGISTRY_AUTH=htpasswd   -e REGISTRY_AUTH_HTPASSWD_PATH=/etc/security/htpasswd   -e REGISTRY_AUTH_HTPASSWD_REALM=&amp;quot;Registry Realm&amp;quot;   --restart always   registry:2
+e7755af8cbd70ea84ab77237a87cb97fd1abb18c7726fbc116c40f081d3b7098
+[node1] (local) root@192.168.0.23 ~
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;display-running-containers-1&#34;&gt;Display running containers.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;[node1] (local) root@192.168.0.23 ~
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS        PORTS               NAMES
+e7755af8cbd7        registry:2          &amp;quot;/entrypoint.sh /etc…&amp;quot;   About a minute ago   Restarting (1) 22 seconds ago                       registry
+[node1] (local) root@192.168.0.23 ~
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;pull-alpine-image-from-official-repository&#34;&gt;Pull Alpine image from official repository.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ docker pull alpine:3.6
+
+stretch: Pulling from library/alpine
+723254a2c089: Pull complete
+Digest: sha256:0a5fcee6f52d5170f557ee2447d7a10a5bdcf715dd7f0250be0b678c556a501b
+Status: Downloaded newer image for alpine:3.6
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;tag-local-alpine-image-with-an-additional-tag---local-repository-address&#34;&gt;Tag local Alpine image with an additional tag - local repository address.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ docker tag alpine:3.6 registry.collabnix.com/alpine:3.6
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This time you need to provide login credentials to use local repository.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker push registry.collabnix.com/alpine:3.6
+
+e27a10675c56: Preparing
+no basic auth credentials
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ docker pull registry.collabnix.com/alpine:3.6
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Error response from daemon: Get &lt;a href=&#34;https://registry.collabnix.com/v2/alpine/manifests/3.6:&#34;&gt;https://registry.collabnix.com/v2/alpine/manifests/3.6:&lt;/a&gt; no basic auth credentials&lt;/p&gt;
+&lt;h3 id=&#34;log-in-to-the-local-registry&#34;&gt;Log in to the local registry.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ docker login --username username registry.collabnix.com
+Password: ********
+
+Login Succeeded
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;push-image-to-the-local-repository-1&#34;&gt;Push image to the local repository.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ docker push registry.collabnix.com/alpine:3.6
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;The push refers to repository [registry.collabnix.com/alpine]
+e27a10675c56: Pushed
+stretch: digest: sha256:02741df16aee1b81c4aaff4c48d75cc2c308bade918b22679df570c170feef7c size: 529
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;remove-local-images-1&#34;&gt;Remove local images.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ docker image remove alpine:3.6
+
+Untagged: alpine:3.6
+Untagged: alpine@sha256:0a5fcee6f52d5170f557ee2447d7a10a5bdcf715dd7f0250be0b678c556a501b
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ docker image remove registry.collabnix.com/alpine:3.6
+
+Untagged: registry.collabnix.com/alpine:3.6
+Untagged: registry.sl.collabnix.com/alpine@sha256:02741df16aee1b81c4aaff4c48d75cc2c308bade918b22679df570c170feef7c
+Deleted: sha256:da653cee0545dfbe3c1864ab3ce782805603356a9cc712acc7b3100d9932fa5e
+Deleted: sha256:e27a10675c5656bafb7bfa9e4631e871499af0a5ddfda3cebc0ac401dfe19382
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;pull-debian-stretch-image-from-local-repository&#34;&gt;Pull Debian Stretch image from local repository.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ docker pull registry.collabnix.com/alpine:3.6
+
+stretch: Pulling from alpine
+723254a2c089: Pull complete
+Digest: sha256:02741df16aee1b81c4aaff4c48d75cc2c308bade918b22679df570c170feef7c
+Status: Downloaded newer image for registry.collabnix.com/alpine:3.6
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;list-stored-images-1&#34;&gt;List stored images.&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ docker image ls
+
+REPOSITORY                           TAG                 IMAGE ID            CREATED             SIZE
+registry                             2                   d1fd7d86a825        4 weeks ago         33.3MB
+registry.collabnix.com/alpine        3.6             da653cee0545        2 months ago        100MB
+hello-world                          latest              f2a91732366c        2 months ago     
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;test-your-knowledge---quiz3&#34;&gt;Test Your Knowledge - Quiz3&lt;/h3&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

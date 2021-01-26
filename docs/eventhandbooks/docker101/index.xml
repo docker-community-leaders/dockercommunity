@@ -596,5 +596,98 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
       </description>
     </item>
     
+    <item>
+      <title>Docs: Accessing &amp; Managing Docker Image</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/docker101/accessing-and-managing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/docker101/accessing-and-managing/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;accessing--managing-docker-container---1-hour&#34;&gt;Accessing &amp;amp; Managing Docker Container - 1 hour&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#accessing-the-container-shell&#34;&gt;Accessing the Container Shell&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#running-a-command-inside-running-container&#34;&gt;Running a Command inside running Container&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#managing-docker-containers&#34;&gt;Managing Docker Containers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#test-your-knowledge-quiz1&#34;&gt;Test Your Knowledge&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;working-with-docker-images&#34;&gt;Working with Docker Images&lt;/h2&gt;
+&lt;h3 id=&#34;tested-infrastructure&#34;&gt;Tested Infrastructure&lt;/h3&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
+    &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Number of Instance&lt;/b&gt;&lt;/th&gt;
+    &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Reading Time&lt;/b&gt;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt; Play with Docker&lt;/b&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;1&lt;/b&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;pre-requisite&#34;&gt;Pre-requisite&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
+&lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;listing-the-docker-images&#34;&gt;Listing the Docker Images&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ docker images
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hello-world         latest              4ab4c602aa5e        6 weeks ago         1.84kB
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;show-all-images-default-hides-intermediate-images&#34;&gt;Show all images (default hides intermediate images)&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;docker images -a
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hello-world         latest              4ab4c602aa5e        6 weeks ago         1.84kB
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;list-images-by-name-and-tag&#34;&gt;List images by name and tag&lt;/h3&gt;
+&lt;p&gt;The docker images command takes an optional [REPOSITORY[:TAG]] argument that restricts the list to images that match the argument. If you specify REPOSITORY but no TAG, the docker images command lists all images in the given repository.&lt;/p&gt;
+&lt;p&gt;To demo this, let us pull all various versions of alpine OS&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker pull alpine:3.6
+docker pull alpine:3.7
+docker pull alpine:3.8
+docker pull alpine:3.9
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[node4] (local) root@192.168.0.20 ~
+$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+alpine              3.6                 43773d1dba76        7 days ago          4.03MB
+alpine              3.7                 6d1ef012b567        7 days ago          4.21MB
+alpine              3.8                 dac705114996        7 days ago          4.41MB
+alpine              3.9                 5cb3aa00f899        7 days ago          5.53MB
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[node4] (local) root@192.168.0.20 ~
+$ docker images alpine:3.7
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+alpine              3.7                 6d1ef012b567        7 days ago          4.21MB
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;list-the-full-length-image-ids&#34;&gt;List the full length image IDs&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ docker images --no-trunc
+REPOSITORY          TAG                 IMAGE ID                                                                  CREATED
+     SIZE
+alpine              3.6                 sha256:43773d1dba76c4d537b494a8454558a41729b92aa2ad0feb23521c3e58cd0440   7 days ago
+     4.03MB
+alpine              3.7                 sha256:6d1ef012b5674ad8a127ecfa9b5e6f5178d171b90ee462846974177fd9bdd39f   7 days ago
+     4.21MB
+alpine              3.8                 sha256:dac7051149965716b0acdcab16380b5f4ab6f2a1565c86ed5f651e954d1e615c   7 days ago
+     4.41MB
+alpine              3.9                 sha256:5cb3aa00f89934411ffba5c063a9bc98ace875d8f92e77d0029543d9f2ef4ad0   7 days ago
+     5.53MB
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;listing-out-images-with-filter&#34;&gt;Listing out images with filter&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              94e814e2efa8        3 days ago          88.9MB
+alpine              3.6                 43773d1dba76        7 days ago          4.03MB
+alpine              3.7                 6d1ef012b567        7 days ago          4.21MB
+alpine              3.8                 dac705114996        7 days ago          4.41MB
+alpine              3.9                 5cb3aa00f899        7 days ago          5.53MB
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you want to filter out just alpine&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker images --filter=reference=&#39;alpine&#39;
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+alpine              3.6                 43773d1dba76        7 days ago          4.03MB
+alpine              3.7                 6d1ef012b567        7 days ago          4.21MB
+alpine              3.8                 dac705114996        7 days ago          4.41MB
+alpine              3.9                 5cb3aa00f899        7 days ago          5.53MB
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
   </channel>
 </rss>

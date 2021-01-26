@@ -5758,5 +5758,287 @@ CMD [&amp;quot;./app”]
       </description>
     </item>
     
+    <item>
+      <title>Docs: Docker Networking</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/networking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/networking/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;docker-networking---1-hour&#34;&gt;Docker Networking - 1 hour&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../../beginners/networking/using-docker-network/README.md&#34;&gt;The docker network Command&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../../beginners/networking/using-docker-network/A1-network-basics.md#step-2-list-networks&#34;&gt;Lab #1: Listing the Networks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../../beginners/networking/using-docker-network/A1-network-basics.md#step-3-inspect-a-network&#34;&gt;Lab #2: Inspecting a Network&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../../beginners/networking/using-docker-network/A1-network-basics.md#step-4-list-network-driver-plugins&#34;&gt;Lab #3: List network driver plugins&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../../beginners/networking/using-docker-network/A2-bridge-networking.md&#34;&gt;Lab #4: Docker Bridge Networking&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../../beginners/networking/using-docker-network/A2-bridge-networking.md#step-1-the-default-bridge-network&#34;&gt;Lab #5: Basics of Docker Bridge Networking&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../../beginners/networking/using-docker-network/A2-bridge-networking.md#step-2-connect-a-container&#34;&gt;Lab #6: Connect a Docker container to bridge network&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../../beginners/networking/using-docker-network/A2-bridge-networking.md#step-3-test-network-connectivity&#34;&gt;Lab #7: Test Network Connectivity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../../beginners/networking/using-docker-network/A2-bridge-networking.md#step-4-configure-nat-for-external-connectivity&#34;&gt;Lab #8: Configure NAT for external connectivity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../../beginners/networking/quiz6/README.md&#34;&gt;Test Your Knowledge&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;using-docker-network&#34;&gt;Using Docker Network&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#docker_network&#34;&gt;Step 1 - The &lt;code&gt;docker network&lt;/code&gt; command&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#list_networks&#34;&gt;Step 2 - List networks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#inspect&#34;&gt;Step 3 - Inspect a network&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#list_drivers&#34;&gt;Step 4 - List network driver plugins&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
+&lt;p&gt;You will need all of the following to complete this lab:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A Linux-based Docker Host running Docker 1.12 or higher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;a-namedocker_networkastep-1-the-docker-network-command&#34;&gt;&lt;a name=&#34;docker_network&#34;&gt;&lt;/a&gt;Step 1: The &lt;code&gt;docker network&lt;/code&gt; command&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;docker network&lt;/code&gt; command is the main command for configuring and managing container networks.&lt;/p&gt;
+&lt;p&gt;Run a simple &lt;code&gt;docker network&lt;/code&gt; command from any of your lab machines.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker network
+
+Usage:  docker network COMMAND
+
+Manage Docker networks
+
+Options:
+      --help   Print usage
+
+Commands:
+  connect     Connect a container to a network
+  create      Create a network
+  disconnect  Disconnect a container from a network
+  inspect     Display detailed information on one or more networks
+  ls          List networks
+  rm          Remove one or more networks
+
+Run &#39;docker network COMMAND --help&#39; for more information on a command.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The command output shows how to use the command as well as all of the &lt;code&gt;docker network&lt;/code&gt; sub-commands. As you can see from the output, the &lt;code&gt;docker network&lt;/code&gt; command allows you to create new networks, list existing networks, inspect networks, and remove networks. It also allows you to connect and disconnect containers from networks.&lt;/p&gt;
+&lt;h3 id=&#34;a-namelist_networksastep-2-list-networks&#34;&gt;&lt;a name=&#34;list_networks&#34;&gt;&lt;/a&gt;Step 2: List networks&lt;/h3&gt;
+&lt;p&gt;Run a &lt;code&gt;docker network ls&lt;/code&gt; command to view existing container networks on the current Docker host.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+1befe23acd58        bridge              bridge              local
+726ead8f4e6b        host                host                local
+ef4896538cc7        none                null                local
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The output above shows the container networks that are created as part of a standard installation of Docker.&lt;/p&gt;
+&lt;p&gt;New networks that you create will also show up in the output of the &lt;code&gt;docker network ls&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;You can see that each network gets a unique &lt;code&gt;ID&lt;/code&gt; and &lt;code&gt;NAME&lt;/code&gt;. Each network is also associated with a single driver. Notice that the &amp;ldquo;bridge&amp;rdquo; network and the &amp;ldquo;host&amp;rdquo; network have the same name as their respective drivers.&lt;/p&gt;
+&lt;h3 id=&#34;a-nameinspectastep-3-inspect-a-network&#34;&gt;&lt;a name=&#34;inspect&#34;&gt;&lt;/a&gt;Step 3: Inspect a network&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;docker network inspect&lt;/code&gt; command is used to view network configuration details. These details include; name, ID, driver, IPAM driver, subnet info, connected containers, and more.&lt;/p&gt;
+&lt;p&gt;Use &lt;code&gt;docker network inspect&lt;/code&gt; to view configuration details of the container networks on your Docker host. The command below shows the details of the network called &lt;code&gt;bridge&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker network inspect bridge
+[
+    {
+        &amp;quot;Name&amp;quot;: &amp;quot;bridge&amp;quot;,
+        &amp;quot;Id&amp;quot;: &amp;quot;1befe23acd58cbda7290c45f6d1f5c37a3b43de645d48de6c1ffebd985c8af4b&amp;quot;,
+        &amp;quot;Scope&amp;quot;: &amp;quot;local&amp;quot;,
+        &amp;quot;Driver&amp;quot;: &amp;quot;bridge&amp;quot;,
+        &amp;quot;EnableIPv6&amp;quot;: false,
+        &amp;quot;IPAM&amp;quot;: {
+            &amp;quot;Driver&amp;quot;: &amp;quot;default&amp;quot;,
+            &amp;quot;Options&amp;quot;: null,
+            &amp;quot;Config&amp;quot;: [
+                {
+                    &amp;quot;Subnet&amp;quot;: &amp;quot;172.17.0.0/16&amp;quot;,
+                    &amp;quot;Gateway&amp;quot;: &amp;quot;172.17.0.1&amp;quot;
+                }
+            ]
+        },
+        &amp;quot;Internal&amp;quot;: false,
+        &amp;quot;Containers&amp;quot;: {},
+        &amp;quot;Options&amp;quot;: {
+            &amp;quot;com.docker.network.bridge.default_bridge&amp;quot;: &amp;quot;true&amp;quot;,
+            &amp;quot;com.docker.network.bridge.enable_icc&amp;quot;: &amp;quot;true&amp;quot;,
+            &amp;quot;com.docker.network.bridge.enable_ip_masquerade&amp;quot;: &amp;quot;true&amp;quot;,
+            &amp;quot;com.docker.network.bridge.host_binding_ipv4&amp;quot;: &amp;quot;0.0.0.0&amp;quot;,
+            &amp;quot;com.docker.network.bridge.name&amp;quot;: &amp;quot;docker0&amp;quot;,
+            &amp;quot;com.docker.network.driver.mtu&amp;quot;: &amp;quot;1500&amp;quot;
+        },
+        &amp;quot;Labels&amp;quot;: {}
+    }
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; The syntax of the &lt;code&gt;docker network inspect&lt;/code&gt; command is &lt;code&gt;docker network inspect &amp;lt;network&amp;gt;&lt;/code&gt;, where &lt;code&gt;&amp;lt;network&amp;gt;&lt;/code&gt; can be either network name or network ID. In the example above we are showing the configuration details for the network called &amp;ldquo;bridge&amp;rdquo;. Do not confuse this with the &amp;ldquo;bridge&amp;rdquo; driver.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;a-namelist_driversastep-4-list-network-driver-plugins&#34;&gt;&lt;a name=&#34;list_drivers&#34;&gt;&lt;/a&gt;Step 4: List network driver plugins&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;docker info&lt;/code&gt; command shows a lot of interesting information about a Docker installation.&lt;/p&gt;
+&lt;p&gt;Run a &lt;code&gt;docker info&lt;/code&gt; command on any of your Docker hosts and locate the list of network plugins.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker info
+Containers: 0
+ Running: 0
+ Paused: 0
+ Stopped: 0
+Images: 0
+Server Version: 1.12.3
+Storage Driver: aufs
+&amp;lt;Snip&amp;gt;
+Plugins:
+ Volume: local
+ Network: bridge host null overlay    &amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;
+Swarm: inactive
+Runtimes: runc
+&amp;lt;Snip&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The output above shows the &lt;strong&gt;bridge&lt;/strong&gt;, &lt;strong&gt;host&lt;/strong&gt;, &lt;strong&gt;null&lt;/strong&gt;, and &lt;strong&gt;overlay&lt;/strong&gt; drivers.&lt;/p&gt;
+&lt;h2 id=&#34;bridge-networking&#34;&gt;Bridge networking&lt;/h2&gt;
+&lt;p&gt;In this lab you&amp;rsquo;ll learn how to build, manage, and use &lt;strong&gt;bridge&lt;/strong&gt; networks.&lt;/p&gt;
+&lt;p&gt;You will complete the following steps as part of this lab.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#default_bridge&#34;&gt;Step 1 - The default &lt;strong&gt;bridge&lt;/strong&gt; network&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#connect_container&#34;&gt;Step 2 - Connect a container to the default &lt;em&gt;bridge&lt;/em&gt; network&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ping_local&#34;&gt;Step 3 - Test the network connectivity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#nat&#34;&gt;Step 4 - Configure NAT for external access&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;prerequisites-1&#34;&gt;Prerequisites&lt;/h1&gt;
+&lt;p&gt;You will need all of the following to complete this lab:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A Linux-based Docker host running Docker 1.12 or higher&lt;/li&gt;
+&lt;li&gt;The lab was built and tested using Ubuntu 16.04&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;a-namedefault_bridgeastep-1-the-default-bridge-network&#34;&gt;&lt;a name=&#34;default_bridge&#34;&gt;&lt;/a&gt;Step 1: The default &lt;strong&gt;bridge&lt;/strong&gt; network&lt;/h1&gt;
+&lt;p&gt;Every clean installation of Docker comes with a pre-built network called &lt;strong&gt;bridge&lt;/strong&gt;. Verify this with the &lt;code&gt;docker network ls&lt;/code&gt; command.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+1befe23acd58        bridge              bridge              local
+726ead8f4e6b        host                host                local
+ef4896538cc7        none                null                local
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The output above shows that the &lt;strong&gt;bridge&lt;/strong&gt; network is associated with the &lt;em&gt;bridge&lt;/em&gt; driver. It&amp;rsquo;s important to note that the network and the driver are connected, but they are not the same. In this example the network and the driver have the same name - but they are not the same thing!&lt;/p&gt;
+&lt;p&gt;The output above also shows that the &lt;strong&gt;bridge&lt;/strong&gt; network is scoped locally. This means that the network only exists on this Docker host. This is true of all networks using the &lt;em&gt;bridge&lt;/em&gt; driver - the &lt;em&gt;bridge&lt;/em&gt; driver provides single-host networking.&lt;/p&gt;
+&lt;p&gt;All networks created with the &lt;em&gt;bridge&lt;/em&gt; driver are based on a Linux bridge (a.k.a. a virtual switch).&lt;/p&gt;
+&lt;p&gt;Install the &lt;code&gt;brctl&lt;/code&gt; command and use it to list the Linux bridges on your Docker host.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Install the brctl tools
+
+$ apt-get install bridge-utils
+&amp;lt;Snip&amp;gt;
+
+# List the bridges on your Docker host
+
+$ brctl show
+bridge name     bridge id               STP enabled     interfaces
+docker0         8000.0242f17f89a6       no
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The output above shows a single Linux bridge called &lt;strong&gt;docker0&lt;/strong&gt;. This is the bridge that was automatically created for the &lt;strong&gt;bridge&lt;/strong&gt; network. You can see that it has no interfaces currently connected to it.&lt;/p&gt;
+&lt;p&gt;You can also use the &lt;code&gt;ip&lt;/code&gt; command to view details of the &lt;strong&gt;docker0&lt;/strong&gt; bridge.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ ip a
+&amp;lt;Snip&amp;gt;
+3: docker0: &amp;lt;NO-CARRIER,BROADCAST,MULTICAST,UP&amp;gt; mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:f1:7f:89:a6 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:f1ff:fe7f:89a6/64 scope link
+       valid_lft forever preferred_lft forever
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;a-nameconnect-containerastep-2-connect-a-container&#34;&gt;&lt;a name=&#34;connect-container&#34;&gt;&lt;/a&gt;Step 2: Connect a container&lt;/h1&gt;
+&lt;p&gt;The &lt;strong&gt;bridge&lt;/strong&gt; network is the default network for new containers. This means that unless you specify a different network, all new containers will be connected to the &lt;strong&gt;bridge&lt;/strong&gt; network.&lt;/p&gt;
+&lt;p&gt;Create a new container.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker run -dt ubuntu sleep infinity
+6dd93d6cdc806df6c7812b6202f6096e43d9a013e56e5e638ee4bfb4ae8779ce
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This command will create a new container based on the &lt;code&gt;ubuntu:latest&lt;/code&gt; image and will run the &lt;code&gt;sleep&lt;/code&gt; command to keep the container running in the background. As no network was specified on the &lt;code&gt;docker run&lt;/code&gt; command, the container will be added to the &lt;strong&gt;bridge&lt;/strong&gt; network.&lt;/p&gt;
+&lt;p&gt;Run the &lt;code&gt;brctl show&lt;/code&gt; command again.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ brctl show
+bridge name     bridge id               STP enabled     interfaces
+docker0         8000.0242f17f89a6       no              veth3a080f
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Notice how the &lt;strong&gt;docker0&lt;/strong&gt; bridge now has an interface connected. This interface connects the &lt;strong&gt;docker0&lt;/strong&gt; bridge to the new container just created.&lt;/p&gt;
+&lt;p&gt;Inspect the &lt;strong&gt;bridge&lt;/strong&gt; network again to see the new container attached to it.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker network inspect bridge
+&amp;lt;Snip&amp;gt;
+        &amp;quot;Containers&amp;quot;: {
+            &amp;quot;6dd93d6cdc806df6c7812b6202f6096e43d9a013e56e5e638ee4bfb4ae8779ce&amp;quot;: {
+                &amp;quot;Name&amp;quot;: &amp;quot;reverent_dubinsky&amp;quot;,
+                &amp;quot;EndpointID&amp;quot;: &amp;quot;dda76da5577960b30492fdf1526c7dd7924725e5d654bed57b44e1a6e85e956c&amp;quot;,
+                &amp;quot;MacAddress&amp;quot;: &amp;quot;02:42:ac:11:00:02&amp;quot;,
+                &amp;quot;IPv4Address&amp;quot;: &amp;quot;172.17.0.2/16&amp;quot;,
+                &amp;quot;IPv6Address&amp;quot;: &amp;quot;&amp;quot;
+            }
+        },
+&amp;lt;Snip&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;a-nameping_localastep-3-test-network-connectivity&#34;&gt;&lt;a name=&#34;ping_local&#34;&gt;&lt;/a&gt;Step 3: Test network connectivity&lt;/h1&gt;
+&lt;p&gt;The output to the previous &lt;code&gt;docker network inspect&lt;/code&gt; command shows the IP address of the new container. In the previous example it is &amp;ldquo;172.17.0.2&amp;rdquo; but yours might be different.&lt;/p&gt;
+&lt;p&gt;Ping the IP address of the container from the shell prompt of your Docker host. Remember to use the IP of the container in &lt;strong&gt;your&lt;/strong&gt; environment.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ ping 172.17.0.2
+64 bytes from 172.17.0.2: icmp_seq=1 ttl=64 time=0.069 ms
+64 bytes from 172.17.0.2: icmp_seq=2 ttl=64 time=0.052 ms
+64 bytes from 172.17.0.2: icmp_seq=3 ttl=64 time=0.050 ms
+64 bytes from 172.17.0.2: icmp_seq=4 ttl=64 time=0.049 ms
+64 bytes from 172.17.0.2: icmp_seq=5 ttl=64 time=0.049 ms
+^C
+--- 172.17.0.2 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 3999ms
+rtt min/avg/max/mdev = 0.049/0.053/0.069/0.012 ms
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Press &lt;code&gt;Ctrl-C&lt;/code&gt; to stop the ping. The replies above show that the Docker host can ping the container over the &lt;strong&gt;bridge&lt;/strong&gt; network.&lt;/p&gt;
+&lt;p&gt;Log in to the container, install the &lt;code&gt;ping&lt;/code&gt;
+program and ping &lt;code&gt;www.dockercon.com&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Get the ID of the container started in the previous step.
+$ docker ps
+CONTAINER ID    IMAGE    COMMAND             CREATED  STATUS  NAMES
+6dd93d6cdc80    ubuntu   &amp;quot;sleep infinity&amp;quot;    5 mins   Up      reverent_dubinsky
+
+# Exec into the container
+$ docker exec -it 6dd93d6cdc80 /bin/bash
+
+# Update APT package lists and install the iputils-ping package
+root@6dd93d6cdc80:/# apt-get update
+&amp;lt;Snip&amp;gt;
+
+apt-get install iputils-ping
+Reading package lists... Done
+&amp;lt;Snip&amp;gt;
+
+# Ping www.dockercon.com from within the container
+root@6dd93d6cdc80:/# ping www.dockercon.com
+PING www.dockercon.com (104.239.220.248) 56(84) bytes of data.
+64 bytes from 104.239.220.248: icmp_seq=1 ttl=39 time=93.9 ms
+64 bytes from 104.239.220.248: icmp_seq=2 ttl=39 time=93.8 ms
+64 bytes from 104.239.220.248: icmp_seq=3 ttl=39 time=93.8 ms
+^C
+--- www.dockercon.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 93.878/93.895/93.928/0.251 ms
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This shows that the new container can ping the internet and therefore has a valid and working network configuration.&lt;/p&gt;
+&lt;h1 id=&#34;a-namenatastep-4-configure-nat-for-external-connectivity&#34;&gt;&lt;a name=&#34;nat&#34;&gt;&lt;/a&gt;Step 4: Configure NAT for external connectivity&lt;/h1&gt;
+&lt;p&gt;In this step we&amp;rsquo;ll start a new &lt;strong&gt;NGINX&lt;/strong&gt; container and map port 8080 on the Docker host to port 80 inside of the container. This means that traffic that hits the Docker host on port 8080 will be passed on to port 80 inside the container.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; If you start a new container from the official NGINX image without specifying a command to run, the container will run a basic web server on port 80.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Start a new container based off the official NGINX image.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker run --name web1 -d -p 8080:80 nginx
+Unable to find image &#39;nginx:latest&#39; locally
+latest: Pulling from library/nginx
+386a066cd84a: Pull complete
+7bdb4b002d7f: Pull complete
+49b006ddea70: Pull complete
+Digest: sha256:9038d5645fa5fcca445d12e1b8979c87f46ca42cfb17beb1e5e093785991a639
+Status: Downloaded newer image for nginx:latest
+b747d43fa277ec5da4e904b932db2a3fe4047991007c2d3649e3f0c615961038
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Check that the container is running and view the port mapping.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker ps
+CONTAINER ID    IMAGE               COMMAND                  CREATED             STATUS              PORTS                           NAMES
+b747d43fa277   nginx               &amp;quot;nginx -g &#39;daemon off&amp;quot;   3 seconds ago       Up 2 seconds        443/tcp, 0.0.0.0:8080-&amp;gt;80/tcp   web1
+6dd93d6cdc80        ubuntu              &amp;quot;sleep infinity&amp;quot;         About an hour ago   Up About an hour                                    reverent_dubinsky
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There are two containers listed in the output above. The top line shows the new &lt;strong&gt;web1&lt;/strong&gt; container running NGINX. Take note of the command the container is running as well as the port mapping - &lt;code&gt;0.0.0.0:8080-&amp;gt;80/tcp&lt;/code&gt; maps port 8080 on all host interfaces to port 80 inside the &lt;strong&gt;web1&lt;/strong&gt; container. This port mapping is what effectively makes the containers web service accessible from external sources (via the Docker hosts IP address on port 8080).&lt;/p&gt;
+&lt;p&gt;Now that the container is running and mapped to a port on a host interface you can test connectivity to the NGINX web server.&lt;/p&gt;
+&lt;p&gt;To complete the following task you will need the IP address of your Docker host. This will need to be an IP address that you can reach (e.g. if your lab is in AWS this will need to be the instance&amp;rsquo;s Public IP).&lt;/p&gt;
+&lt;p&gt;Point your web browser to the IP and port 8080 of your Docker host. The following example shows a web browser pointed to &lt;code&gt;52.213.169.69:8080&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;concepts/img/browser.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;If you try connecting to the same IP address on a different port number it will fail.&lt;/p&gt;
+&lt;p&gt;If for some reason you cannot open a session from a web broswer, you can connect from your Docker host using the &lt;code&gt;curl&lt;/code&gt; command.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ curl 127.0.0.1:8080
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;title&amp;gt;Welcome to nginx!&amp;lt;/title&amp;gt;
+    &amp;lt;Snip&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Thank you for using nginx.&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you try and curl the IP address on a different port number it will fail.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; The port mapping is actually port address translation (PAT).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

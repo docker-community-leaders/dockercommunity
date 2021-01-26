@@ -335,5 +335,81 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
       </description>
     </item>
     
+    <item>
+      <title>Docs: Agenda</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/docker101/agenda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/docker101/agenda/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;recommended-agenda&#34;&gt;Recommended Agenda&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Timing&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Welcome&lt;/td&gt;
+&lt;td&gt;8:45 AM to 9:00 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#creating-a-dockerhub-account&#34;&gt;Creating a DockerHub Account&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;9:00 AM to 9:15 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#getting-started-with-docker-image---1-hour&#34;&gt;Getting Started with Docker Image&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;9:15 AM to 10:15 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#accessing--managing-docker-container---1-hour&#34;&gt;Accessing &amp;amp; Managing Docker Container&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;10:15 AM to 11:15 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Coffee/Tea Break&lt;/td&gt;
+&lt;td&gt;11:15 AM to 11:30 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#getting-started-with-dockerfile---3-hours&#34;&gt;Getting Started with Dockerfile - Part 1&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;11:30 AM to 1:00 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Lunch&lt;/td&gt;
+&lt;td&gt;1:00 PM to 2:00 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#getting-started-with-dockerfile---3-hours&#34;&gt;Getting Started with Dockerfile - Part 2&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;2:00 PM to 3:30 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#creating-private-docker-registry---30-min&#34;&gt;Creating Private Docker Registry&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;3:30 PM to 4:00 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#docker-volumes---30-min&#34;&gt;Docker Volumes&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;4:00 PM to 4:30 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Coffee/Tea Break&lt;/td&gt;
+&lt;td&gt;4:00 PM to 4:30 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#docker-networking---1-hour&#34;&gt;Docker Networking&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;4:45 PM to 5:45 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Quiz/Prize/Certificate Distribution&lt;/td&gt;
+&lt;td&gt;5:45 PM to 6:00 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

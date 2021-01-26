@@ -679,21 +679,51 @@ if (!doNotTrack) {
         <li><a href="#stop-all-running-containers">Stop all running containers:</a></li>
         <li><a href="#stop-only-the-exited-containers">Stop only the exited containers:</a></li>
         <li><a href="#remove-container">Remove container</a></li>
+        <li><a href="#remove-containers-meeting-a-regular-expression">Remove containers meeting a regular expression</a></li>
+        <li><a href="#remove-all-containers-without-any-criteria">Remove all containers, without any criteria</a></li>
+        <li><a href="#additional-ways-to-find-port-mapping">Additional ways to find port mapping</a></li>
+        <li><a href="#build-a-docker-image-with-jdk-9">Build a Docker Image with JDK 9</a></li>
+        <li><a href="#create-a-docker-image-using-jdk-9">Create a Docker Image using JDK 9</a></li>
+        <li><a href="#build-the-image-using-the-command-1">Build the image using the command:</a></li>
+        <li><a href="#list-the-images-available-using-docker-image-ls-1">List the images available using <code>docker image ls</code>:</a></li>
+        <li><a href="#run-the-container-using-the-command">Run the container using the command:</a></li>
+        <li><a href="#create-a-docker-image-using-jdk-9-and-alpine-linux">Create a Docker Image using JDK 9 and Alpine Linux</a></li>
+        <li><a href="#build-the-image-using-the-command-2">Build the image using the command:</a></li>
+        <li><a href="#list-the-images-available-using-docker-image-ls-2">List the images available using <code>docker image ls</code>:</a></li>
+        <li><a href="#create-a-docker-image-using-jdk-9-and-a-java-application">Create a Docker Image using JDK 9 and a Java application</a></li>
+        <li><a href="#list-the-images-available-using-docker-image-ls-3">List the images available using <code>docker image ls</code>:</a></li>
+        <li><a href="#reduce-the-size-of-a-docker-image-using-jdk-9-and-a-java-application">Reduce the size of a Docker Image using JDK 9 and a Java application</a></li>
+        <li><a href="#list-the-images-available-using-docker-image-ls-4">List the images available using <code>docker image ls</code>:</a></li>
+        <li><a href="#what-is-docker-compose">What is Docker Compose</a></li>
+        <li><a href="#configuration-file">Configuration file</a></li>
+        <li><a href="#start-application">Start application</a></li>
+        <li><a href="#verify-application">Verify application</a></li>
+        <li><a href="#shutdown-application">Shutdown application</a></li>
+        <li><a href="#deploy-application-using-swarm-mode">Deploy application using Swarm mode</a></li>
+        <li><a href="#initialize-swarm">Initialize Swarm</a></li>
+        <li><a href="#access-application">Access application</a></li>
+        <li><a href="#stop-application">Stop application</a></li>
+        <li><a href="#docker-and-netbeans">Docker and NetBeans</a></li>
+        <li><a href="#configure-docker-host">Configure Docker Host</a></li>
+        <li><a href="#pull-an-image">Pull an Image</a></li>
+        <li><a href="#run-a-container">Run a Container</a></li>
+        <li><a href="#build-an-image">Build an Image</a></li>
+        <li><a href="#docker-and-intellij-idea">Docker and IntelliJ IDEA</a></li>
+        <li><a href="#install-docker-plugin-in-idea">Install Docker Plugin in IDEA</a></li>
+        <li><a href="#pull-an-image-1">Pull an Image</a></li>
+        <li><a href="#run-a-container-1">Run a Container</a></li>
+        <li><a href="#build-an-image-1">Build an Image</a></li>
       </ul>
     </li>
-    <li><a href="#a-jdk-9-with-debian-slim">A JDK 9 with Debian slim</a></li>
-    <li><a href="#download-from-httpjdkjavanet9">Download from <a href="http://jdk.java.net/9/">http://jdk.java.net/9/</a></a></li>
-    <li><a href="#add-httpdownloadjavanetjavagajdk99binariesopenjdk-9_linux-x64_bintargz-opt">ADD <a href="http://download.java.net/java/GA/jdk9/9/binaries/openjdk-9_linux-x64_bin.tar.gz">http://download.java.net/java/GA/jdk9/9/binaries/openjdk-9_linux-x64_bin.tar.gz</a> /opt</a></li>
-    <li><a href="#set-up-env-variables">Set up env variables</a></li>
-    <li><a href="#a-jdk-9-with-alpine-linux">A JDK 9 with Alpine Linux</a></li>
-    <li><a href="#add-the-musl-based-jdk-9-distribution">Add the musl-based JDK 9 distribution</a></li>
-    <li><a href="#download-from-httpjdkjavanet9-1">Download from <a href="http://jdk.java.net/9/">http://jdk.java.net/9/</a></a></li>
-    <li><a href="#add-httpdownloadjavanetjavajdk9-alpinearchive181binariesjdk-9-ea181_linux-x64-musl_bintargz">ADD <a href="http://download.java.net/java/jdk9-alpine/archive/181/binaries/jdk-9-ea+181_linux-x64-musl_bin.tar.gz">http://download.java.net/java/jdk9-alpine/archive/181/binaries/jdk-9-ea+181_linux-x64-musl_bin.tar.gz</a></a></li>
-    <li><a href="#set-up-env-variables-1">Set up env variables</a></li>
-    <li><a href="#hello-world-application-with-jdk-9-and-debian-slim">Hello world application with JDK 9 and Debian slim</a></li>
-    <li><a href="#set-up-env-variables-2">Set up env variables</a></li>
-    <li><a href="#hello-world-application-with-custom-java-runtime-with-just-the-base-module-and-debian-slim">Hello world application with custom Java runtime with just the base module and Debian slim</a></li>
-    <li><a href="#set-up-env-variables-3">Set up env variables</a></li>
+    <li><a href="#docker-and-eclipse">Docker and Eclipse</a>
+      <ul>
+        <li><a href="#install-docker-tooling-in-eclipse">Install Docker Tooling in Eclipse</a></li>
+        <li><a href="#docker-perspective-and-view">Docker Perspective and View</a></li>
+        <li><a href="#pull-an-image-2">Pull an Image</a></li>
+        <li><a href="#run-a-container-2">Run a Container</a></li>
+        <li><a href="#build-an-image-2">Build an Image</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -1841,131 +1871,88 @@ docker container stop &lt;NAME&gt;
 <pre><code>docker container ps -a -f &quot;exited=-1&quot;
 </code></pre><h2 id="remove-container">Remove container</h2>
 <p>Remove a specific container by id or name:</p>
-<p>``
-docker container rm &lt;CONTAINER_ID&gt;
-docker container rm <NAME></p>
-<pre><code>
-## Remove containers meeting a regular expression
-
-</code></pre><p>docker container ps -a | grep wildfly | awk &lsquo;{print $1}&rsquo; | xargs docker container rm</p>
-<pre><code>
-## Remove all containers, without any criteria
-
-</code></pre><p>docker container rm $(docker container ps -aq)</p>
-<pre><code>
-##  Additional ways to find port mapping
-
-The exact mapped port can also be found using `docker port` command:
-
-</code></pre><p>docker container port &lt;CONTAINER_ID&gt; or <NAME></p>
-<pre><code>
-This shows the output as:
-
-</code></pre><p>8080/tcp -&gt; 0.0.0.0:8080</p>
-<pre><code>
-Port mapping can be also be found using `docker inspect` command:
-
-</code></pre><p>docker container inspect &ndash;format=&rsquo;{{(index (index .NetworkSettings.Ports &ldquo;8080/tcp&rdquo;) 0).HostPort}}&rsquo; <CONTAINER ID></p>
-<pre><code>
-## Build a Docker Image with JDK 9
-
-This chapter explains how to create a Docker image with JDK 9.
-
-The link:ch03-build-image.adoc[prior chapter] explained how, in general, to build a Docker image with Java.
-This chapter expands on this topic and focuses on JDK 9 features.
-
-## Create a Docker Image using JDK 9
-
-Create a new directory, for example `docker-jdk9`.
-
-In that directory, create a new text file `jdk-9-debian-slim.Dockerfile`.
-Use the following contents:
-
-</code></pre><h1 id="a-jdk-9-with-debian-slim">A JDK 9 with Debian slim</h1>
-<p>FROM debian:stable-slim</p>
-<h1 id="download-from-httpjdkjavanet9">Download from <a href="http://jdk.java.net/9/">http://jdk.java.net/9/</a></h1>
-<h1 id="add-httpdownloadjavanetjavagajdk99binariesopenjdk-9_linux-x64_bintargz-opt">ADD <a href="http://download.java.net/java/GA/jdk9/9/binaries/openjdk-9_linux-x64_bin.tar.gz">http://download.java.net/java/GA/jdk9/9/binaries/openjdk-9_linux-x64_bin.tar.gz</a> /opt</h1>
-<p>ADD openjdk-9_linux-x64_bin.tar.gz /opt</p>
-<h1 id="set-up-env-variables">Set up env variables</h1>
-<p>ENV JAVA_HOME=/opt/jdk-9
+<pre><code>docker container rm &lt;CONTAINER_ID&gt;
+docker container rm &lt;NAME&gt;
+</code></pre><h2 id="remove-containers-meeting-a-regular-expression">Remove containers meeting a regular expression</h2>
+<pre><code>docker container ps -a | grep wildfly | awk '{print $1}' | xargs docker container rm
+</code></pre><h2 id="remove-all-containers-without-any-criteria">Remove all containers, without any criteria</h2>
+<pre><code>docker container rm $(docker container ps -aq)
+</code></pre><h2 id="additional-ways-to-find-port-mapping">Additional ways to find port mapping</h2>
+<p>The exact mapped port can also be found using <code>docker port</code> command:</p>
+<pre><code>docker container port &lt;CONTAINER_ID&gt; or &lt;NAME&gt;
+</code></pre><p>This shows the output as:</p>
+<pre><code>8080/tcp -&gt; 0.0.0.0:8080
+</code></pre><p>Port mapping can be also be found using <code>docker inspect</code> command:</p>
+<pre><code>docker container inspect --format='{{(index (index .NetworkSettings.Ports &quot;8080/tcp&quot;) 0).HostPort}}' &lt;CONTAINER ID&gt;
+</code></pre><h2 id="build-a-docker-image-with-jdk-9">Build a Docker Image with JDK 9</h2>
+<p>This chapter explains how to create a Docker image with JDK 9.</p>
+<p>The link:ch03-build-image.adoc[prior chapter] explained how, in general, to build a Docker image with Java.
+This chapter expands on this topic and focuses on JDK 9 features.</p>
+<h2 id="create-a-docker-image-using-jdk-9">Create a Docker Image using JDK 9</h2>
+<p>Create a new directory, for example <code>docker-jdk9</code>.</p>
+<p>In that directory, create a new text file <code>jdk-9-debian-slim.Dockerfile</code>.
+Use the following contents:</p>
+<pre><code># A JDK 9 with Debian slim
+FROM debian:stable-slim
+# Download from http://jdk.java.net/9/
+# ADD http://download.java.net/java/GA/jdk9/9/binaries/openjdk-9_linux-x64_bin.tar.gz /opt
+ADD openjdk-9_linux-x64_bin.tar.gz /opt
+# Set up env variables
+ENV JAVA_HOME=/opt/jdk-9
 ENV PATH=$PATH:$JAVA_HOME/bin
-CMD [&ldquo;jshell&rdquo;, &ldquo;-J-XX:+UnlockExperimentalVMOptions&rdquo;,<br>
-&ldquo;-J-XX:+UseCGroupMemoryLimitForHeap&rdquo;,<br>
-&ldquo;-R-XX:+UnlockExperimentalVMOptions&rdquo;,<br>
-&ldquo;-R-XX:+UseCGroupMemoryLimitForHeap&rdquo;]</p>
-<pre><code>
-This image uses `debian` slim as the base image and installs the OpenJDK build
+CMD [&quot;jshell&quot;, &quot;-J-XX:+UnlockExperimentalVMOptions&quot;, \
+               &quot;-J-XX:+UseCGroupMemoryLimitForHeap&quot;, \
+               &quot;-R-XX:+UnlockExperimentalVMOptions&quot;, \
+               &quot;-R-XX:+UseCGroupMemoryLimitForHeap&quot;]
+</code></pre><p>This image uses <code>debian</code> slim as the base image and installs the OpenJDK build
 of JDK for linux x64 (see the link:ch01-setup.adoc[setup section] for how to download this into the
-current directory).
-
-The image is configured by default to run `jshell` the Java REPL. Read more JShell at link:https://docs.oracle.com/javase/9/jshell/introduction-jshell.htm[Introduction to JShell]. The
-experimental flag `-XX:+UseCGroupMemoryLimitForHeap` is passed to the REPL
+current directory).</p>
+<p>The image is configured by default to run <code>jshell</code> the Java REPL. Read more JShell at link:https://docs.oracle.com/javase/9/jshell/introduction-jshell.htm[Introduction to JShell]. The
+experimental flag <code>-XX:+UseCGroupMemoryLimitForHeap</code> is passed to the REPL
 process (the frontend Java process managing user input and the backend Java
 process managing compilation).  This option will ensure container memory
-constraints are honored.
-
-## Build the image using the command:
-
-</code></pre><p>docker image build -t jdk-9-debian-slim -f jdk-9-debian-slim.Dockerfile .</p>
-<pre><code>
-
-## List the images available using `docker image ls`:
-
-</code></pre><p>REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+constraints are honored.</p>
+<h2 id="build-the-image-using-the-command-1">Build the image using the command:</h2>
+<pre><code>docker image build -t jdk-9-debian-slim -f jdk-9-debian-slim.Dockerfile .
+</code></pre><h2 id="list-the-images-available-using-docker-image-ls-1">List the images available using <code>docker image ls</code>:</h2>
+<pre><code>REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
 jdk-9-debian-slim       latest              023f6999d94a        4 hours ago         400MB
-debian                  stable-slim         d30525fb4ed2        4 days ago          55.3MB</p>
-<pre><code>
-Other images may be shown as well but we are interested in these two images for
+debian                  stable-slim         d30525fb4ed2        4 days ago          55.3MB
+</code></pre><p>Other images may be shown as well but we are interested in these two images for
 now.  The large difference in size is attributed to JDK 9, which is larger
 in size than JDK 8 because it also explicitly provides Java modules that we
-shall see more of later on in this chapter.
+shall see more of later on in this chapter.</p>
+<h2 id="run-the-container-using-the-command">Run the container using the command:</h2>
+<pre><code>docker container run -m=200M -it --rm jdk-9-debian-slim
+</code></pre><p>to see the output:</p>
+<pre><code>INFO: Created user preferences directory.
+|  Welcome to JShell -- Version 9
+|  For an introduction type: /help intro
 
-## Run the container using the command:
-
-</code></pre><p>docker container run -m=200M -it &ndash;rm jdk-9-debian-slim</p>
-<pre><code>
-to see the output:
-
-</code></pre><p>INFO: Created user preferences directory.
-|  Welcome to JShell &ndash; Version 9
-|  For an introduction type: /help intro</p>
-<p>jshell&gt;</p>
-<pre><code>
-Query the available memory of the Java process by typing the following
-expression into the Java REPL:
-
-  Runtime.getRuntime().maxMemory() / (1 &lt;&lt; 20)
-
-to see the output:
-
-</code></pre><p>jshell&gt; Runtime.getRuntime().maxMemory() / (1 &laquo; 20)
-$1 ==&gt; 100</p>
-<pre><code>
-Notice that the Java process is honoring memory constraints (see the `--memory`
-of `docker container run`) and will not allocate memory beyond that specified for the
-container.
-
-In a future release of the JDK it will no longer be necessary to specify an
-experimental flag (`-XX:+UnlockExperimentalVMOptions`) once the mechanism by
-which memory constraints are efficiently detected is stable.
-
-JDK 9 supports the set CPUs constraint (see the `--cpuset-cpus` of
-`docker container run`) but does not currently support other CPU constraints such as
-CPU shares.  This is ongoing work http://openjdk.java.net/jeps/8182070[tracked]
-in the OpenJDK project.
-
-Note: the support for CPU sets and memory constraints have also been backported
-to JDK 8 release 8u131 and above.
-
-Type `Ctrl` + `D` to exit out of `jshell`.
-
-To list all the Java modules distributed with JDK 9 run the following command:
-
-</code></pre><p>docker container run -m=200M -it &ndash;rm jdk-9-debian-slim java &ndash;list-modules</p>
-<pre><code>
-This will show an output:
-
-</code></pre><p>java.activation@9
+jshell&gt;
+</code></pre><p>Query the available memory of the Java process by typing the following
+expression into the Java REPL:</p>
+<p>Runtime.getRuntime().maxMemory() / (1 &laquo; 20)</p>
+<p>to see the output:</p>
+<pre><code>jshell&gt; Runtime.getRuntime().maxMemory() / (1 &lt;&lt; 20)
+$1 ==&gt; 100
+</code></pre><p>Notice that the Java process is honoring memory constraints (see the <code>--memory</code>
+of <code>docker container run</code>) and will not allocate memory beyond that specified for the
+container.</p>
+<p>In a future release of the JDK it will no longer be necessary to specify an
+experimental flag (<code>-XX:+UnlockExperimentalVMOptions</code>) once the mechanism by
+which memory constraints are efficiently detected is stable.</p>
+<p>JDK 9 supports the set CPUs constraint (see the <code>--cpuset-cpus</code> of
+<code>docker container run</code>) but does not currently support other CPU constraints such as
+CPU shares.  This is ongoing work <a href="http://openjdk.java.net/jeps/8182070%5Btracked%5D">http://openjdk.java.net/jeps/8182070[tracked]</a>
+in the OpenJDK project.</p>
+<p>Note: the support for CPU sets and memory constraints have also been backported
+to JDK 8 release 8u131 and above.</p>
+<p>Type <code>Ctrl</code> + <code>D</code> to exit out of <code>jshell</code>.</p>
+<p>To list all the Java modules distributed with JDK 9 run the following command:</p>
+<pre><code>docker container run -m=200M -it --rm jdk-9-debian-slim java --list-modules
+</code></pre><p>This will show an output:</p>
+<pre><code>java.activation@9
 java.base@9
 java.compiler@9
 java.corba@9
@@ -2039,154 +2026,114 @@ jdk.unsupported@9
 jdk.xml.bind@9
 jdk.xml.dom@9
 jdk.xml.ws@9
-jdk.zipfs@9</p>
-<pre><code>
-In total there should be 75 modules:
-
-</code></pre><p>$ docker container run -m=200M -it &ndash;rm jdk-9-debian-slim java &ndash;list-modules | wc -l
-75</p>
-<pre><code>
-##  Create a Docker Image using JDK 9 and Alpine Linux
-
-Instead of `debian` as the base image it is possible to use Alpine Linux
+jdk.zipfs@9
+</code></pre><p>In total there should be 75 modules:</p>
+<pre><code>$ docker container run -m=200M -it --rm jdk-9-debian-slim java --list-modules | wc -l
+      75
+</code></pre><h2 id="create-a-docker-image-using-jdk-9-and-alpine-linux">Create a Docker Image using JDK 9 and Alpine Linux</h2>
+<p>Instead of <code>debian</code> as the base image it is possible to use Alpine Linux
 with an early access build of JDK 9 that is compatible with the muslc library
-shipped with Alpine Linux.
-
-Create a new text file `jdk-9-alpine.Dockerfile`.
-Use the following contents:
-
-</code></pre><h1 id="a-jdk-9-with-alpine-linux">A JDK 9 with Alpine Linux</h1>
-<p>FROM alpine:3.6</p>
-<h1 id="add-the-musl-based-jdk-9-distribution">Add the musl-based JDK 9 distribution</h1>
-<p>RUN mkdir /opt</p>
-<h1 id="download-from-httpjdkjavanet9-1">Download from <a href="http://jdk.java.net/9/">http://jdk.java.net/9/</a></h1>
-<h1 id="add-httpdownloadjavanetjavajdk9-alpinearchive181binariesjdk-9-ea181_linux-x64-musl_bintargz">ADD <a href="http://download.java.net/java/jdk9-alpine/archive/181/binaries/jdk-9-ea+181_linux-x64-musl_bin.tar.gz">http://download.java.net/java/jdk9-alpine/archive/181/binaries/jdk-9-ea+181_linux-x64-musl_bin.tar.gz</a></h1>
-<p>ADD jdk-9-ea+181_linux-x64-musl_bin.tar.gz /opt</p>
-<h1 id="set-up-env-variables-1">Set up env variables</h1>
-<p>ENV JAVA_HOME=/opt/jdk-9
+shipped with Alpine Linux.</p>
+<p>Create a new text file <code>jdk-9-alpine.Dockerfile</code>.
+Use the following contents:</p>
+<pre><code># A JDK 9 with Alpine Linux
+FROM alpine:3.6
+# Add the musl-based JDK 9 distribution
+RUN mkdir /opt
+# Download from http://jdk.java.net/9/
+# ADD http://download.java.net/java/jdk9-alpine/archive/181/binaries/jdk-9-ea+181_linux-x64-musl_bin.tar.gz
+ADD jdk-9-ea+181_linux-x64-musl_bin.tar.gz /opt
+# Set up env variables
+ENV JAVA_HOME=/opt/jdk-9
 ENV PATH=$PATH:$JAVA_HOME/bin
-CMD [&ldquo;jshell&rdquo;, &ldquo;-J-XX:+UnlockExperimentalVMOptions&rdquo;,<br>
-&ldquo;-J-XX:+UseCGroupMemoryLimitForHeap&rdquo;,<br>
-&ldquo;-R-XX:+UnlockExperimentalVMOptions&rdquo;,<br>
-&ldquo;-R-XX:+UseCGroupMemoryLimitForHeap&rdquo;]</p>
-<pre><code>
-This image uses `alpine` 3.6 as the base image and installs the OpenJDK build
+CMD [&quot;jshell&quot;, &quot;-J-XX:+UnlockExperimentalVMOptions&quot;, \
+               &quot;-J-XX:+UseCGroupMemoryLimitForHeap&quot;, \
+               &quot;-R-XX:+UnlockExperimentalVMOptions&quot;, \
+               &quot;-R-XX:+UseCGroupMemoryLimitForHeap&quot;]
+</code></pre><p>This image uses <code>alpine</code> 3.6 as the base image and installs the OpenJDK build
 of JDK for Alpine Linux x64 (see the link:ch01-setup.adoc[Setup Environments]
-chapter for how to download this into the current directory).
-
-The image is configured in the same manner as for the `debian`-based image.
-
-## Build the image using the command:
-
-</code></pre><p>docker image build -t jdk-9-alpine -f jdk-9-alpine.Dockerfile .</p>
-<pre><code>
-## List the images available using `docker image ls`:
-
-</code></pre><p>REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+chapter for how to download this into the current directory).</p>
+<p>The image is configured in the same manner as for the <code>debian</code>-based image.</p>
+<h2 id="build-the-image-using-the-command-2">Build the image using the command:</h2>
+<pre><code>docker image build -t jdk-9-alpine -f jdk-9-alpine.Dockerfile .
+</code></pre><h2 id="list-the-images-available-using-docker-image-ls-2">List the images available using <code>docker image ls</code>:</h2>
+<pre><code>REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
 jdk-9-debian-slim       latest              023f6999d94a        4 hours ago         400MB
 jdk-9-alpine            latest              f5a57382f240        4 hours ago         356MB
 debian                  stable-slim         d30525fb4ed2        4 days ago          55.3MB
-alpine                  3.6                 7328f6f8b418        3 months ago        3.97MB</p>
-<pre><code>
-Notice the difference in image sizes.  Alpine Linux by design has been carefully
+alpine                  3.6                 7328f6f8b418        3 months ago        3.97MB
+</code></pre><p>Notice the difference in image sizes.  Alpine Linux by design has been carefully
 crafted to produce a minimal running OS image. A cost of such a design is
-an alternative standard library https://www.musl-libc.org/[musl libc] that is
+an alternative standard library <a href="https://www.musl-libc.org/%5Bmusl">https://www.musl-libc.org/[musl</a> libc] that is
 not compatible with the C standard library (libc).  As a result the JDK requires
 modifications to run on Alpine Linux.  Such modifications have been proposed
-by the OpenJDK http://openjdk.java.net/projects/portola/[Portola Project].
-
-
-##  Create a Docker Image using JDK 9 and a Java application
-
-Clone the GitHib project https://github.com/PaulSandoz/helloworld-java-9 that
-contains a simple Java 9-based project:
-
-</code></pre><p>git clone <a href="https://github.com/PaulSandoz/helloworld-java-9.git">https://github.com/PaulSandoz/helloworld-java-9.git</a></p>
-<pre><code>
-(If you have a github account you may wish to fork it and then clone the fork
-so you can make modifications.)
-
-Enter the directory `helloworld-java-9` and build the project from within a
-running Docker container with JDK 9 installed:
-
-</code></pre><p>docker container run &ndash;volume $PWD:/helloworld-java-9 &ndash;workdir /helloworld-java-9<br>
--it &ndash;rm openjdk:9-jdk-slim<br>
-./mvnw package</p>
-<pre><code>
-(If you have JDK 9 installed locally on the host system you can build directly
-with `./mvnw package`.)
-
-In this case we are using the `openjdk:9-jdk-slim` on Docker hub that has been
+by the OpenJDK <a href="http://openjdk.java.net/projects/portola/%5BPortola">http://openjdk.java.net/projects/portola/[Portola</a> Project].</p>
+<h2 id="create-a-docker-image-using-jdk-9-and-a-java-application">Create a Docker Image using JDK 9 and a Java application</h2>
+<p>Clone the GitHib project <a href="https://github.com/PaulSandoz/helloworld-java-9">https://github.com/PaulSandoz/helloworld-java-9</a> that
+contains a simple Java 9-based project:</p>
+<pre><code>git clone https://github.com/PaulSandoz/helloworld-java-9.git
+</code></pre><p>(If you have a github account you may wish to fork it and then clone the fork
+so you can make modifications.)</p>
+<p>Enter the directory <code>helloworld-java-9</code> and build the project from within a
+running Docker container with JDK 9 installed:</p>
+<pre><code>docker container run --volume $PWD:/helloworld-java-9 --workdir /helloworld-java-9 \
+      -it --rm openjdk:9-jdk-slim \
+      ./mvnw package
+</code></pre><p>(If you have JDK 9 installed locally on the host system you can build directly
+with <code>./mvnw package</code>.)</p>
+<p>In this case we are using the <code>openjdk:9-jdk-slim</code> on Docker hub that has been
 configured to work with SSL certificates so that the maven wrapper tool can
 successfully download the maven tool.  This image is not produced or in anyway
 endorsed by the OpenJDK project (unlike the JDK 9 distributions that were
 previously required).  It is anticipated that future releases of the JDK from
 the OpenJDK project will have root CA certificates (see issue
-https://bugs.openjdk.java.net/browse/JDK-8189131[JDK-8189131])
-
-To build Docker image for this application use the file `helloworld-jdk-9.Dockerfile` from the checked out repo to build your image. The contents of the file are shown below:
-
-</code></pre><h1 id="hello-world-application-with-jdk-9-and-debian-slim">Hello world application with JDK 9 and Debian slim</h1>
-<p>FROM jdk-9-debian-slim
-COPY target/helloworld-1.0-SNAPSHOT.jar /opt/helloworld/helloworld-1.0-SNAPSHOT.jar</p>
-<h1 id="set-up-env-variables-2">Set up env variables</h1>
-<p>CMD java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap<br>
--cp /opt/helloworld/helloworld-1.0-SNAPSHOT.jar org.examples.java.App</p>
-<pre><code>
-Build a Docker image containing the simple Java application based of the Docker
-image `jdk-9-debian-slim`:
-
-</code></pre><p>docker image build -t helloworld-jdk-9 -f helloworld-jdk-9.Dockerfile .</p>
-<pre><code>
-## List the images available using `docker image ls`:
-
-</code></pre><p>REPOSITORY              TAG                 IMAGE ID            CREATED              SIZE
+<a href="https://bugs.openjdk.java.net/browse/JDK-8189131%5BJDK-8189131%5D">https://bugs.openjdk.java.net/browse/JDK-8189131[JDK-8189131]</a>)</p>
+<p>To build Docker image for this application use the file <code>helloworld-jdk-9.Dockerfile</code> from the checked out repo to build your image. The contents of the file are shown below:</p>
+<pre><code># Hello world application with JDK 9 and Debian slim
+FROM jdk-9-debian-slim
+COPY target/helloworld-1.0-SNAPSHOT.jar /opt/helloworld/helloworld-1.0-SNAPSHOT.jar
+# Set up env variables
+CMD java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap \
+  -cp /opt/helloworld/helloworld-1.0-SNAPSHOT.jar org.examples.java.App
+</code></pre><p>Build a Docker image containing the simple Java application based of the Docker
+image <code>jdk-9-debian-slim</code>:</p>
+<pre><code>docker image build -t helloworld-jdk-9 -f helloworld-jdk-9.Dockerfile .
+</code></pre><h2 id="list-the-images-available-using-docker-image-ls-3">List the images available using <code>docker image ls</code>:</h2>
+<pre><code>REPOSITORY              TAG                 IMAGE ID            CREATED              SIZE
 helloworld-jdk-9        latest              eb0539e9529a        19 seconds ago       400MB
 jdk-9-debian-slim       latest              023f6999d94a        5 hours ago          400MB
 jdk-9-alpine            latest              f5a57382f240        5 hours ago          356MB
 openjdk                 9-jdk-slim          6dca67f4790e        3 days ago           372MB
 debian                  stable-slim         d30525fb4ed2        4 days ago           55.3MB
-alpine                  3.6                 7328f6f8b418        3 months ago         3.97MB</p>
-<pre><code>
-Notice how large the application image `helloworld-jdk-9`.
-
-Run the `jdeps` tool to see what modules the application depends on:
-
-</code></pre><p>docker container run -it &ndash;rm helloworld-jdk-9 jdeps &ndash;list-deps /opt/helloworld/helloworld-1.0-SNAPSHOT.jar</p>
-<pre><code>
-and observe that the application only depends on the `java.base` module.
-
-## Reduce the size of a Docker Image using JDK 9 and a Java application
-
-The Java application is extremely simple and as a result uses very little of the
+alpine                  3.6                 7328f6f8b418        3 months ago         3.97MB
+</code></pre><p>Notice how large the application image <code>helloworld-jdk-9</code>.</p>
+<p>Run the <code>jdeps</code> tool to see what modules the application depends on:</p>
+<pre><code>docker container run -it --rm helloworld-jdk-9 jdeps --list-deps /opt/helloworld/helloworld-1.0-SNAPSHOT.jar
+</code></pre><p>and observe that the application only depends on the <code>java.base</code> module.</p>
+<h2 id="reduce-the-size-of-a-docker-image-using-jdk-9-and-a-java-application">Reduce the size of a Docker Image using JDK 9 and a Java application</h2>
+<p>The Java application is extremely simple and as a result uses very little of the
 functionality shipped with JDK 9 distribution, specifically the application
-only depends on functionality present in the `java.base` module.  We can create
-a custom Java runtime that only contains the `java.base` module and include
-that in application Docker image.
-
-Create a custom Java runtime that is small and only contains the `java.base`
-module:
-
-</code></pre><p>docker container run &ndash;rm<br>
-&ndash;volume $PWD:/out<br>
-jdk-9-debian-slim<br>
-jlink &ndash;module-path /opt/jdk-9/jmods<br>
-&ndash;verbose<br>
-&ndash;add-modules java.base<br>
-&ndash;compress 2<br>
-&ndash;no-header-files<br>
-&ndash;output /out/target/openjdk-9-base_linux-x64</p>
-<pre><code>
-This command exists as `create-minimal-java-runtime.sh` script in the repo earlier checked out from link:https://github.com/PaulSandoz/helloworld-java-9[helloworld-java-9].
-
-The JDK 9 tool `jlink` is used to create the custom Java runtime. Read more jlink in the https://docs.oracle.com/javase/9/tools/jlink.htm[Tools Reference]. The tool
+only depends on functionality present in the <code>java.base</code> module.  We can create
+a custom Java runtime that only contains the <code>java.base</code> module and include
+that in application Docker image.</p>
+<p>Create a custom Java runtime that is small and only contains the <code>java.base</code>
+module:</p>
+<pre><code>docker container run --rm \
+      --volume $PWD:/out \
+      jdk-9-debian-slim \
+      jlink --module-path /opt/jdk-9/jmods \
+        --verbose \
+        --add-modules java.base \
+        --compress 2 \
+        --no-header-files \
+        --output /out/target/openjdk-9-base_linux-x64
+</code></pre><p>This command exists as <code>create-minimal-java-runtime.sh</code> script in the repo earlier checked out from link:https://github.com/PaulSandoz/helloworld-java-9[helloworld-java-9].</p>
+<p>The JDK 9 tool <code>jlink</code> is used to create the custom Java runtime. Read more jlink in the <a href="https://docs.oracle.com/javase/9/tools/jlink.htm%5BTools">https://docs.oracle.com/javase/9/tools/jlink.htm[Tools</a> Reference]. The tool
 is executed from with the container containing JDK 9 and directory where the
-modules reside, `/opt/jdk-9/jmods`, is declared in the module path.  Only the
-`java.base` module is selected.
-
-The custom runtime is output to the `target` directory:
-
-</code></pre><p>$ du -k target/openjdk-9-base_linux-x64/
+modules reside, <code>/opt/jdk-9/jmods</code>, is declared in the module path.  Only the
+<code>java.base</code> module is selected.</p>
+<p>The custom runtime is output to the <code>target</code> directory:</p>
+<pre><code>$ du -k target/openjdk-9-base_linux-x64/
 24      target/openjdk-9-base_linux-x64//bin
 12      target/openjdk-9-base_linux-x64//conf/security/policy/limited
 8       target/openjdk-9-base_linux-x64//conf/security/policy/unlimited
@@ -2199,28 +2146,22 @@ The custom runtime is output to the `target` directory:
 16      target/openjdk-9-base_linux-x64//lib/security
 19824   target/openjdk-9-base_linux-x64//lib/server
 31656   target/openjdk-9-base_linux-x64//lib
-31804   target/openjdk-9-base_linux-x64/</p>
-<pre><code>
-To build Docker image for this application use the file `helloworld-jdk-9-base.Dockerfile` from the checked out repo. The contents of the file are shown below:
-
-</code></pre><h1 id="hello-world-application-with-custom-java-runtime-with-just-the-base-module-and-debian-slim">Hello world application with custom Java runtime with just the base module and Debian slim</h1>
-<p>FROM debian:stable-slim
+31804   target/openjdk-9-base_linux-x64/
+</code></pre><p>To build Docker image for this application use the file <code>helloworld-jdk-9-base.Dockerfile</code> from the checked out repo. The contents of the file are shown below:</p>
+<pre><code># Hello world application with custom Java runtime with just the base module and Debian slim
+FROM debian:stable-slim
 COPY target/openjdk-9-base_linux-x64 /opt/jdk-9
-COPY target/helloworld-1.0-SNAPSHOT.jar /opt/helloworld/helloworld-1.0-SNAPSHOT.jar</p>
-<h1 id="set-up-env-variables-3">Set up env variables</h1>
-<p>ENV JAVA_HOME=/opt/jdk-9
+COPY target/helloworld-1.0-SNAPSHOT.jar /opt/helloworld/helloworld-1.0-SNAPSHOT.jar
+# Set up env variables
+ENV JAVA_HOME=/opt/jdk-9
 ENV PATH=$PATH:$JAVA_HOME/bin
-CMD java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap<br>
--cp /opt/helloworld/helloworld-1.0-SNAPSHOT.jar org.examples.java.App</p>
-<pre><code>
-Build a Docker image containing the simple Java application based of the Docker
-image `debian:stable-slim`:
-
-</code></pre><p>docker image build -t helloworld-jdk-9-base -f helloworld-jdk-9-base.Dockerfile .</p>
-<pre><code>
-## List the images available using `docker image ls`:
-
-</code></pre><p>REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+CMD java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap \
+  -cp /opt/helloworld/helloworld-1.0-SNAPSHOT.jar org.examples.java.App
+</code></pre><p>Build a Docker image containing the simple Java application based of the Docker
+image <code>debian:stable-slim</code>:</p>
+<pre><code>docker image build -t helloworld-jdk-9-base -f helloworld-jdk-9-base.Dockerfile .
+</code></pre><h2 id="list-the-images-available-using-docker-image-ls-4">List the images available using <code>docker image ls</code>:</h2>
+<pre><code>REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
 helloworld-jdk-9-base   latest              7052483fdb77        24 seconds ago      87.7MB
 helloworld-jdk9         latest              eb0539e9529a        17 minutes ago      400MB
 jdk-9-debian-slim       latest              023f6999d94a        5 hours ago         400MB
@@ -2228,298 +2169,302 @@ jdk-9-alpine            latest              f5a57382f240        5 hours ago     
 openjdk                 9-jdk-slim          6dca67f4790e        3 days ago          372MB
 debian                  stable-slim         d30525fb4ed2        4 days ago          55.3MB
 alpine                  3.6                 7328f6f8b418        3 months ago        3.97MB
-[source, text]</p>
-<pre><code>
-The `helloworld-jdk-9-base` is much smaller and could be reduced further if
-Alpine Linux was used instead of Debian Slim.
-
-A realistic application will depend on more JDK modules but it's still possible
+[source, text]
+</code></pre><p>The <code>helloworld-jdk-9-base</code> is much smaller and could be reduced further if
+Alpine Linux was used instead of Debian Slim.</p>
+<p>A realistic application will depend on more JDK modules but it&rsquo;s still possible
 to significantly reduce the Java runtime to only the required modules (for
-example many applications will not require Corba or RMI nor the compiler tools).
-
-## What is Docker Compose
-
-
-Docker Compose is a tool for defining and running complex applications with Docker. With Compose, you define a multi-container application in a single file, then spin your application up in a single command which does everything that needs to be done to get it running.
-
-An application using Docker containers will typically consist of multiple containers. With Docker Compose, there is no need to write shell scripts to start your containers. All the containers are defined in a configuration file using _services_, and then `docker-compose` script is used to start, stop, and restart the application and all the services in that application, and all the containers within that service. The complete list of commands is:
-
-| Command | Purpose |
-:------------ | :-------------| 
-| `build` | Build or rebuild services |
-| `help` | Get help on a command |
-| `kill` | Kill containers|
-| `logs` | View output from containers|
-| `port` | Print the public port for a port binding|
-| `ps` | List containers|
-| `pull` | Pulls service images|
-| `restart` | Restart services|
-| `rm` | Remove stopped containers|
-| `run` | Run a one-off command|
-| `scale` | Set number of containers for a service|
-| `start` | Start services|
-| `stop` | Stop services|
-| `up` | Create and start containers|
-| `migrate-to-labels  Recreate containers to add labels|
-|====
-
-The application used in this section is a Java EE application talking to a database. The application publishes a REST endpoint that can be invoked using `curl. It is deployed using http://wildfly-swarm.io/[WildFly Swarm] that communicates to MySQL database.
-
-WildFly Swarm and MySQL will be running in two separate containers, and thus making this a multi-container application.
-
-## Configuration file
-
-The entry point to Docker Compose is a Compose file, usually called `docker-compose.yml`. Create a new directory `javaee`. In that directory, create a new file `docker-compose.yml` in it. Use the following contents:
-
-</code></pre><p>version: &lsquo;3.3&rsquo;
+example many applications will not require Corba or RMI nor the compiler tools).</p>
+<h2 id="what-is-docker-compose">What is Docker Compose</h2>
+<p>Docker Compose is a tool for defining and running complex applications with Docker. With Compose, you define a multi-container application in a single file, then spin your application up in a single command which does everything that needs to be done to get it running.</p>
+<p>An application using Docker containers will typically consist of multiple containers. With Docker Compose, there is no need to write shell scripts to start your containers. All the containers are defined in a configuration file using <em>services</em>, and then <code>docker-compose</code> script is used to start, stop, and restart the application and all the services in that application, and all the containers within that service. The complete list of commands is:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Command</th>
+<th align="left">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>build</code></td>
+<td align="left">Build or rebuild services</td>
+</tr>
+<tr>
+<td align="left"><code>help</code></td>
+<td align="left">Get help on a command</td>
+</tr>
+<tr>
+<td align="left"><code>kill</code></td>
+<td align="left">Kill containers</td>
+</tr>
+<tr>
+<td align="left"><code>logs</code></td>
+<td align="left">View output from containers</td>
+</tr>
+<tr>
+<td align="left"><code>port</code></td>
+<td align="left">Print the public port for a port binding</td>
+</tr>
+<tr>
+<td align="left"><code>ps</code></td>
+<td align="left">List containers</td>
+</tr>
+<tr>
+<td align="left"><code>pull</code></td>
+<td align="left">Pulls service images</td>
+</tr>
+<tr>
+<td align="left"><code>restart</code></td>
+<td align="left">Restart services</td>
+</tr>
+<tr>
+<td align="left"><code>rm</code></td>
+<td align="left">Remove stopped containers</td>
+</tr>
+<tr>
+<td align="left"><code>run</code></td>
+<td align="left">Run a one-off command</td>
+</tr>
+<tr>
+<td align="left"><code>scale</code></td>
+<td align="left">Set number of containers for a service</td>
+</tr>
+<tr>
+<td align="left"><code>start</code></td>
+<td align="left">Start services</td>
+</tr>
+<tr>
+<td align="left"><code>stop</code></td>
+<td align="left">Stop services</td>
+</tr>
+<tr>
+<td align="left"><code>up</code></td>
+<td align="left">Create and start containers</td>
+</tr>
+<tr>
+<td align="left">`migrate-to-labels  Recreate containers to add labels|</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">====</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The application used in this section is a Java EE application talking to a database. The application publishes a REST endpoint that can be invoked using `curl. It is deployed using <a href="http://wildfly-swarm.io/%5BWildFly">http://wildfly-swarm.io/[WildFly</a> Swarm] that communicates to MySQL database.</p>
+<p>WildFly Swarm and MySQL will be running in two separate containers, and thus making this a multi-container application.</p>
+<h2 id="configuration-file">Configuration file</h2>
+<p>The entry point to Docker Compose is a Compose file, usually called <code>docker-compose.yml</code>. Create a new directory <code>javaee</code>. In that directory, create a new file <code>docker-compose.yml</code> in it. Use the following contents:</p>
+<pre><code>version: '3.3'
 services:
-db:
-container_name: db
-image: mysql:8
-environment:
-MYSQL_DATABASE: employees
-MYSQL_USER: mysql
-MYSQL_PASSWORD: mysql
-MYSQL_ROOT_PASSWORD: supersecret
-ports:
-- 3306:3306
-web:
-image: arungupta/docker-javaee:dockerconeu17
-ports:
-- 8080:8080
-- 9990:9990
-depends_on:
-- db</p>
-<pre><code>
-In this Compose file:
-
-- Two services in this Compose are defined by the name `db` and `web` attributes
-- Image name for each service defined using `image` attribute
-- The `mysql:8` image starts the MySQL server.
-- `environment` attribute defines environment variables to initialize MySQL server.
-  -  `MYSQL_DATABASE` allows you to specify the name of a database to be created on image startup.
-  -  `MYSQL_USER` and `MYSQL_PASSWORD` are used in conjunction to create a new user and to set that user's password. This user will be granted superuser permissions for the database specified by the `MYSQL_DATABASE` variable.
-  -  `MYSQL_ROOT_PASSWORD` is mandatory and specifies the password that will be set for the MySQL root superuser account.
-- Java EE application uses the `db` service as specified in the `connection-url` as specified at https://github.com/arun-gupta/docker-javaee/blob/master/employees/src/main/resources/project-defaults.yml/.
-- The `arungupta/docker-javaee:dockerconeu17` image starts WildFly Swarm application server. It consists of the Java EE application built from https://github.com/arun-gupta/docker-javaee. Clone that project if you want to build your own image.
-- Port forwarding is achieved using `ports` attribute.
-- `depends_on` attribute allows to express dependency between services. In this case, MySQL will be started before WildFly. Application-level health check are still user's responsibility.
-
-## Start application
-
-All services in the application can be started, in detached mode, by giving the command:
-
-</code></pre><p>docker-compose up -d</p>
-<pre><code>
-An alternate Compose file name can be specified using `-f` option.
-
-An alternate directory where the compose file exists can be specified using `-p` option.
-
-This shows the output as:
-
-</code></pre><p>docker-compose up -d
-Creating network &ldquo;javaee_default&rdquo; with the default driver
-Creating db &hellip;
-Creating db &hellip; done
-Creating javaee_web_1 &hellip;
-Creating javaee_web_1 &hellip; done</p>
-<pre><code>
-The output may differ slightly if the images are downloaded as well.
-
-Started services can be verified using the command `docker-compose ps`:
-
-</code></pre><pre><code>Name                  Command               State                       Ports                     
-</code></pre>
-<hr>
-<p>db             docker-entrypoint.sh mysqld      Up      0.0.0.0:3306-&gt;3306/tcp                     <br>
-javaee_web_1   /bin/sh -c java -jar /opt/ &hellip;   Up      0.0.0.0:8080-&gt;8080/tcp, 0.0.0.0:9990-&gt;9990/tcp</p>
-<pre><code>
-This provides a consolidated view of all the services, and containers within each of them.
-
-Alternatively, the containers in this application, and any additional containers running on this Docker host can be verified by using the usual `docker container ls` command:
-
-</code></pre><pre><code>Name                  Command               State                       Ports                     
-</code></pre>
-<hr>
-<p>db             docker-entrypoint.sh mysqld      Up      0.0.0.0:3306-&gt;3306/tcp                     <br>
-javaee_web_1   /bin/sh -c java -jar /opt/ &hellip;   Up      0.0.0.0:8080-&gt;8080/tcp, 0.0.0.0:9990-&gt;9990/tcp
+  db:
+    container_name: db
+    image: mysql:8
+    environment:
+      MYSQL_DATABASE: employees
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: mysql
+      MYSQL_ROOT_PASSWORD: supersecret
+    ports:
+      - 3306:3306
+  web:
+    image: arungupta/docker-javaee:dockerconeu17
+    ports:
+      - 8080:8080
+      - 9990:9990
+    depends_on:
+      - db
+</code></pre><p>In this Compose file:</p>
+<ul>
+<li>Two services in this Compose are defined by the name <code>db</code> and <code>web</code> attributes</li>
+<li>Image name for each service defined using <code>image</code> attribute</li>
+<li>The <code>mysql:8</code> image starts the MySQL server.</li>
+<li><code>environment</code> attribute defines environment variables to initialize MySQL server.
+<ul>
+<li><code>MYSQL_DATABASE</code> allows you to specify the name of a database to be created on image startup.</li>
+<li><code>MYSQL_USER</code> and <code>MYSQL_PASSWORD</code> are used in conjunction to create a new user and to set that user&rsquo;s password. This user will be granted superuser permissions for the database specified by the <code>MYSQL_DATABASE</code> variable.</li>
+<li><code>MYSQL_ROOT_PASSWORD</code> is mandatory and specifies the password that will be set for the MySQL root superuser account.</li>
+</ul>
+</li>
+<li>Java EE application uses the <code>db</code> service as specified in the <code>connection-url</code> as specified at <a href="https://github.com/arun-gupta/docker-javaee/blob/master/employees/src/main/resources/project-defaults.yml/">https://github.com/arun-gupta/docker-javaee/blob/master/employees/src/main/resources/project-defaults.yml/</a>.</li>
+<li>The <code>arungupta/docker-javaee:dockerconeu17</code> image starts WildFly Swarm application server. It consists of the Java EE application built from <a href="https://github.com/arun-gupta/docker-javaee">https://github.com/arun-gupta/docker-javaee</a>. Clone that project if you want to build your own image.</li>
+<li>Port forwarding is achieved using <code>ports</code> attribute.</li>
+<li><code>depends_on</code> attribute allows to express dependency between services. In this case, MySQL will be started before WildFly. Application-level health check are still user&rsquo;s responsibility.</li>
+</ul>
+<h2 id="start-application">Start application</h2>
+<p>All services in the application can be started, in detached mode, by giving the command:</p>
+<pre><code>docker-compose up -d
+</code></pre><p>An alternate Compose file name can be specified using <code>-f</code> option.</p>
+<p>An alternate directory where the compose file exists can be specified using <code>-p</code> option.</p>
+<p>This shows the output as:</p>
+<pre><code>docker-compose up -d
+Creating network &quot;javaee_default&quot; with the default driver
+Creating db ... 
+Creating db ... done
+Creating javaee_web_1 ... 
+Creating javaee_web_1 ... done
+</code></pre><p>The output may differ slightly if the images are downloaded as well.</p>
+<p>Started services can be verified using the command <code>docker-compose ps</code>:</p>
+<pre><code>    Name                  Command               State                       Ports                     
+------------------------------------------------------------------------------------------------------
+db             docker-entrypoint.sh mysqld      Up      0.0.0.0:3306-&gt;3306/tcp                        
+javaee_web_1   /bin/sh -c java -jar /opt/ ...   Up      0.0.0.0:8080-&gt;8080/tcp, 0.0.0.0:9990-&gt;9990/tcp
+</code></pre><p>This provides a consolidated view of all the services, and containers within each of them.</p>
+<p>Alternatively, the containers in this application, and any additional containers running on this Docker host can be verified by using the usual <code>docker container ls</code> command:</p>
+<pre><code>    Name                  Command               State                       Ports                     
+------------------------------------------------------------------------------------------------------
+db             docker-entrypoint.sh mysqld      Up      0.0.0.0:3306-&gt;3306/tcp                        
+javaee_web_1   /bin/sh -c java -jar /opt/ ...   Up      0.0.0.0:8080-&gt;8080/tcp, 0.0.0.0:9990-&gt;9990/tcp
 javaee $ docker container ls
 CONTAINER ID        IMAGE                                   COMMAND                  CREATED             STATUS              PORTS                                            NAMES
-e862a5eb9484        arungupta/docker-javaee:dockerconeu17   &ldquo;/bin/sh -c &lsquo;java &hellip;&rdquo;   38 seconds ago      Up 36 seconds       0.0.0.0:8080-&gt;8080/tcp, 0.0.0.0:9990-&gt;9990/tcp   javaee_web_1
-08792c20c066        mysql:8                                 &ldquo;docker-entrypoint&hellip;&rdquo;   39 seconds ago      Up 37 seconds       0.0.0.0:3306-&gt;3306/tcp                           db</p>
-<pre><code>
-Service logs can be seen using `docker-compose logs` command, and looks like:
-
-</code></pre><p>Attaching to dockerjavaee_web_1, db
+e862a5eb9484        arungupta/docker-javaee:dockerconeu17   &quot;/bin/sh -c 'java ...&quot;   38 seconds ago      Up 36 seconds       0.0.0.0:8080-&gt;8080/tcp, 0.0.0.0:9990-&gt;9990/tcp   javaee_web_1
+08792c20c066        mysql:8                                 &quot;docker-entrypoint...&quot;   39 seconds ago      Up 37 seconds       0.0.0.0:3306-&gt;3306/tcp                           db
+</code></pre><p>Service logs can be seen using <code>docker-compose logs</code> command, and looks like:</p>
+<pre><code>Attaching to dockerjavaee_web_1, db
 web_1  | 23:54:21,584 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
-web_1  | 23:54:21,688 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: WildFly Core 2.0.10.Final &ldquo;Kenny&rdquo; starting
-web_1  | 2017-10-06 23:54:22,687 INFO  [org.wildfly.extension.io] (ServerService Thread Pool &ndash; 20) WFLYIO001: Worker &lsquo;default&rsquo; has auto-configured to 8 core threads with 64 task threads based on your 4 available processors</p>
-<p>. . .</p>
-<p>web_1  | 2017-10-06 23:54:23,259 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-3) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
-web_1  | 2017-10-06 23:54:24,962 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Core 2.0.10.Final &ldquo;Kenny&rdquo; started in 3406ms - Started 112 of 124 services (21 services are lazy, passive or on-demand)
+web_1  | 23:54:21,688 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: WildFly Core 2.0.10.Final &quot;Kenny&quot; starting
+web_1  | 2017-10-06 23:54:22,687 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 20) WFLYIO001: Worker 'default' has auto-configured to 8 core threads with 64 task threads based on your 4 available processors
+
+. . .
+
+web_1  | 2017-10-06 23:54:23,259 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-3) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+web_1  | 2017-10-06 23:54:24,962 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Core 2.0.10.Final &quot;Kenny&quot; started in 3406ms - Started 112 of 124 services (21 services are lazy, passive or on-demand)
 web_1  | 2017-10-06 23:54:25,020 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0006: Undertow HTTP listener default listening on 0.0.0.0:8080
 web_1  | 2017-10-06 23:54:26,146 INFO  [org.wildfly.swarm.runtime.deployer] (main) deploying docker-javaee.war
-web_1  | 2017-10-06 23:54:26,169 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0027: Starting deployment of &ldquo;docker-javaee.war&rdquo; (runtime-name: &ldquo;docker-javaee.war&rdquo;)
+web_1  | 2017-10-06 23:54:26,169 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0027: Starting deployment of &quot;docker-javaee.war&quot; (runtime-name: &quot;docker-javaee.war&quot;)
 web_1  | 2017-10-06 23:54:27,748 INFO  [org.jboss.as.jpa] (MSC service thread 1-2) WFLYJPA0002: Read persistence.xml for MyPU
-web_1  | 2017-10-06 23:54:27,887 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-7) WFLYSRV0018: Deployment &ldquo;deployment.docker-javaee.war&rdquo; is using a private module (&ldquo;org.jboss.jts:main&rdquo;) which may be changed or removed in future versions without notice.</p>
-<p>. . .</p>
-<p>web_1  | 2017-10-06 23:54:29,128 INFO  [stdout] (ServerService Thread Pool &ndash; 4) Hibernate: create table EMPLOYEE_SCHEMA (id integer not null, name varchar(40), primary key (id))
-web_1  | 2017-10-06 23:54:29,132 INFO  [stdout] (ServerService Thread Pool &ndash; 4) Hibernate: INSERT INTO EMPLOYEE_SCHEMA(ID, NAME) VALUES (1, &lsquo;Penny&rsquo;)
-web_1  | 2017-10-06 23:54:29,133 INFO  [stdout] (ServerService Thread Pool &ndash; 4) Hibernate: INSERT INTO EMPLOYEE_SCHEMA(ID, NAME) VALUES (2, &lsquo;Sheldon&rsquo;)
-web_1  | 2017-10-06 23:54:29,133 INFO  [stdout] (ServerService Thread Pool &ndash; 4) Hibernate: INSERT INTO EMPLOYEE_SCHEMA(ID, NAME) VALUES (3, &lsquo;Amy&rsquo;)
-web_1  | 2017-10-06 23:54:29,133 INFO  [stdout] (ServerService Thread Pool &ndash; 4) Hibernate: INSERT INTO EMPLOYEE_SCHEMA(ID, NAME) VALUES (4, &lsquo;Leonard&rsquo;)</p>
-<p>. . .</p>
-<p>web_1  | 2017-10-06 23:54:30,050 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool &ndash; 4) WFLYUT0021: Registered web context: /
-web_1  | 2017-10-06 23:54:30,518 INFO  [org.jboss.as.server] (main) WFLYSRV0010: Deployed &ldquo;docker-javaee.war&rdquo; (runtime-name : &ldquo;docker-javaee.war&rdquo;)
+web_1  | 2017-10-06 23:54:27,887 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-7) WFLYSRV0018: Deployment &quot;deployment.docker-javaee.war&quot; is using a private module (&quot;org.jboss.jts:main&quot;) which may be changed or removed in future versions without notice.
+
+. . .
+
+web_1  | 2017-10-06 23:54:29,128 INFO  [stdout] (ServerService Thread Pool -- 4) Hibernate: create table EMPLOYEE_SCHEMA (id integer not null, name varchar(40), primary key (id))
+web_1  | 2017-10-06 23:54:29,132 INFO  [stdout] (ServerService Thread Pool -- 4) Hibernate: INSERT INTO EMPLOYEE_SCHEMA(ID, NAME) VALUES (1, 'Penny')
+web_1  | 2017-10-06 23:54:29,133 INFO  [stdout] (ServerService Thread Pool -- 4) Hibernate: INSERT INTO EMPLOYEE_SCHEMA(ID, NAME) VALUES (2, 'Sheldon')
+web_1  | 2017-10-06 23:54:29,133 INFO  [stdout] (ServerService Thread Pool -- 4) Hibernate: INSERT INTO EMPLOYEE_SCHEMA(ID, NAME) VALUES (3, 'Amy')
+web_1  | 2017-10-06 23:54:29,133 INFO  [stdout] (ServerService Thread Pool -- 4) Hibernate: INSERT INTO EMPLOYEE_SCHEMA(ID, NAME) VALUES (4, 'Leonard')
+
+. . .
+
+web_1  | 2017-10-06 23:54:30,050 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 4) WFLYUT0021: Registered web context: /
+web_1  | 2017-10-06 23:54:30,518 INFO  [org.jboss.as.server] (main) WFLYSRV0010: Deployed &quot;docker-javaee.war&quot; (runtime-name : &quot;docker-javaee.war&quot;)
 web_1  | 2017-10-06 23:56:01,766 INFO  [stdout] (default task-1) Hibernate: select employee0_.id as id1_0_, employee0_.name as name2_0_ from EMPLOYEE_SCHEMA employee0_
-db     | Initializing database</p>
-<p>. . .</p>
-<p>db     |
-db     |
+db     | Initializing database
+
+. . .
+
+db     | 
+db     | 
 db     | MySQL init process done. Ready for start up.
-db     |</p>
-<p>. . .</p>
-<p>db     | 2017-10-06T23:54:29.434423Z 0 [Note] /usr/sbin/mysqld: ready for connections. Version: &lsquo;8.0.3-rc-log&rsquo;  socket: &lsquo;/var/run/mysqld/mysqld.sock&rsquo;  port: 3306  MySQL Community Server (GPL)
-db     | 2017-10-06T23:54:30.281973Z 0 [Note] InnoDB: Buffer pool(s) load completed at 171006 23:54:30</p>
-<pre><code>
+db     | 
 
-`depends_on` attribute in the Compose definition file ensures the container start up order. But application-level start up needs to be ensured by the applications running inside container. In our case, this can be achieved by WildFly Swarm using `swarm.datasources.data-sources.KEY.stale-connection-checker-class-name` as defined at https://reference.wildfly-swarm.io/fractions/datasources.html.
+. . .
 
-## Verify application
-
-Now that the WildFly Swarm and MySQL have been configured, let's access the application. You need to specify IP address of the host where WildFly is running (`localhost` in our case).
-
-The endpoint can be accessed in this case as:
-
-</code></pre><p>curl -v http://localhost:8080/resources/employees</p>
-<pre><code>
-The output is shown as:
-
-</code></pre><p>curl -v http://localhost:8080/resources/employees</p>
-<ul>
-<li>Trying ::1&hellip;</li>
-<li>TCP_NODELAY set</li>
-<li>Connected to localhost (::1) port 8080 (#0)</li>
-</ul>
-<blockquote>
-<p>GET /resources/employees HTTP/1.1
-Host: localhost:8080
-User-Agent: curl/7.51.0
-Accept: <em>/</em></p>
-</blockquote>
-<p>&lt; HTTP/1.1 200 OK
+db     | 2017-10-06T23:54:29.434423Z 0 [Note] /usr/sbin/mysqld: ready for connections. Version: '8.0.3-rc-log'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+db     | 2017-10-06T23:54:30.281973Z 0 [Note] InnoDB: Buffer pool(s) load completed at 171006 23:54:30
+</code></pre><p><code>depends_on</code> attribute in the Compose definition file ensures the container start up order. But application-level start up needs to be ensured by the applications running inside container. In our case, this can be achieved by WildFly Swarm using <code>swarm.datasources.data-sources.KEY.stale-connection-checker-class-name</code> as defined at <a href="https://reference.wildfly-swarm.io/fractions/datasources.html">https://reference.wildfly-swarm.io/fractions/datasources.html</a>.</p>
+<h2 id="verify-application">Verify application</h2>
+<p>Now that the WildFly Swarm and MySQL have been configured, let&rsquo;s access the application. You need to specify IP address of the host where WildFly is running (<code>localhost</code> in our case).</p>
+<p>The endpoint can be accessed in this case as:</p>
+<pre><code>curl -v http://localhost:8080/resources/employees
+</code></pre><p>The output is shown as:</p>
+<pre><code>curl -v http://localhost:8080/resources/employees
+*   Trying ::1...
+* TCP_NODELAY set
+* Connected to localhost (::1) port 8080 (#0)
+&gt; GET /resources/employees HTTP/1.1
+&gt; Host: localhost:8080
+&gt; User-Agent: curl/7.51.0
+&gt; Accept: */*
+&gt; 
+&lt; HTTP/1.1 200 OK
 &lt; Connection: keep-alive
 &lt; Content-Type: application/xml
 &lt; Content-Length: 478
 &lt; Date: Sat, 07 Oct 2017 00:05:41 GMT
-&lt;</p>
-<ul>
-<li>Curl_http_done: called premature == 0</li>
-<li>Connection #0 to host localhost left intact</li>
-</ul>
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><collection><employee><id>1</id><name>Penny</name></employee><employee><id>2</id><name>Sheldon</name></employee><employee><id>3</id><name>Amy</name></employee><employee><id>4</id><name>Leonard</name></employee><employee><id>5</id><name>Bernadette</name></employee><employee><id>6</id><name>Raj</name></employee><employee><id>7</id><name>Howard</name></employee><employee><id>8</id><name>Priya</name></employee></collection>
-<pre><code>
-This shows the result from querying the database.
-
-A single resource can be obtained:
-
-</code></pre><p>curl -v http://localhost:8080/resources/employees/1</p>
-<pre><code>
-It shows the output:
-
-</code></pre><p>curl -v http://localhost:8080/resources/employees/1</p>
-<ul>
-<li>Trying ::1&hellip;</li>
-<li>TCP_NODELAY set</li>
-<li>Connected to localhost (::1) port 8080 (#0)</li>
-</ul>
-<blockquote>
-<p>GET /resources/employees/1 HTTP/1.1
-Host: localhost:8080
-User-Agent: curl/7.51.0
-Accept: <em>/</em></p>
-</blockquote>
-<p>&lt; HTTP/1.1 200 OK
+&lt; 
+* Curl_http_done: called premature == 0
+* Connection #0 to host localhost left intact
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;&lt;collection&gt;&lt;employee&gt;&lt;id&gt;1&lt;/id&gt;&lt;name&gt;Penny&lt;/name&gt;&lt;/employee&gt;&lt;employee&gt;&lt;id&gt;2&lt;/id&gt;&lt;name&gt;Sheldon&lt;/name&gt;&lt;/employee&gt;&lt;employee&gt;&lt;id&gt;3&lt;/id&gt;&lt;name&gt;Amy&lt;/name&gt;&lt;/employee&gt;&lt;employee&gt;&lt;id&gt;4&lt;/id&gt;&lt;name&gt;Leonard&lt;/name&gt;&lt;/employee&gt;&lt;employee&gt;&lt;id&gt;5&lt;/id&gt;&lt;name&gt;Bernadette&lt;/name&gt;&lt;/employee&gt;&lt;employee&gt;&lt;id&gt;6&lt;/id&gt;&lt;name&gt;Raj&lt;/name&gt;&lt;/employee&gt;&lt;employee&gt;&lt;id&gt;7&lt;/id&gt;&lt;name&gt;Howard&lt;/name&gt;&lt;/employee&gt;&lt;employee&gt;&lt;id&gt;8&lt;/id&gt;&lt;name&gt;Priya&lt;/name&gt;&lt;/employee&gt;&lt;/collection&gt;
+</code></pre><p>This shows the result from querying the database.</p>
+<p>A single resource can be obtained:</p>
+<pre><code>curl -v http://localhost:8080/resources/employees/1
+</code></pre><p>It shows the output:</p>
+<pre><code>curl -v http://localhost:8080/resources/employees/1
+*   Trying ::1...
+* TCP_NODELAY set
+* Connected to localhost (::1) port 8080 (#0)
+&gt; GET /resources/employees/1 HTTP/1.1
+&gt; Host: localhost:8080
+&gt; User-Agent: curl/7.51.0
+&gt; Accept: */*
+&gt; 
+&lt; HTTP/1.1 200 OK
 &lt; Connection: keep-alive
 &lt; Content-Type: application/xml
 &lt; Content-Length: 104
 &lt; Date: Sat, 07 Oct 2017 00:06:33 GMT
-&lt;</p>
-<ul>
-<li>Curl_http_done: called premature == 0</li>
-<li>Connection #0 to host localhost left intact</li>
-</ul>
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><employee><id>1</id><name>Penny</name></employee>
-<pre><code>
-## Shutdown application
-
-Shutdown the application using `docker-compose down`:
-
-</code></pre><p>Stopping javaee_web_1 &hellip; done
-Stopping db           &hellip; done
-Removing javaee_web_1 &hellip; done
-Removing db           &hellip; done
-Removing network javaee_default</p>
-<pre><code>
-This stops the container in each service and removes all the services. It also deletes any networks that were created as part of this application.
-
-## Deploy application using Swarm mode
-
-Docker Engine includes swarm mode for natively managing a cluster of Docker Engines. The Docker CLI can be used to create a swarm, deploy application services to a swarm, and manage swarm behavior. Complete details are available at: https://docs.docker.com/engine/swarm/. It's important to understand the https://docs.docker.com/engine/swarm/key-concepts/[Swarm mode key concepts] before starting with this chapter.
-
-Swarm is typically a cluster of multiple Docker Engines. But for simplicity we'll run a single node Swarm.
-
-This section will deploy an application that will provide a CRUD/REST interface on a data bucket in https://www.mysql.com/[MySQL]. This is achieved by using a Java EE application deployed on http://wildfly.org[WildFly] to access the database.
-
-## Initialize Swarm
-
-Initialize Swarm mode using the following command:
-
-    docker swarm init
-
-This starts a Swarm Manager. By default, a manager node is also a worker but can be configured to be a manager-only.
-
-Find some information about this one-node cluster using the command `docker info`
-
-</code></pre><p>Containers: 0
-Running: 0
-Paused: 0
-Stopped: 0
+&lt; 
+* Curl_http_done: called premature == 0
+* Connection #0 to host localhost left intact
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;&lt;employee&gt;&lt;id&gt;1&lt;/id&gt;&lt;name&gt;Penny&lt;/name&gt;&lt;/employee&gt;
+</code></pre><h2 id="shutdown-application">Shutdown application</h2>
+<p>Shutdown the application using <code>docker-compose down</code>:</p>
+<pre><code>Stopping javaee_web_1 ... done
+Stopping db           ... done
+Removing javaee_web_1 ... done
+Removing db           ... done
+Removing network javaee_default
+</code></pre><p>This stops the container in each service and removes all the services. It also deletes any networks that were created as part of this application.</p>
+<h2 id="deploy-application-using-swarm-mode">Deploy application using Swarm mode</h2>
+<p>Docker Engine includes swarm mode for natively managing a cluster of Docker Engines. The Docker CLI can be used to create a swarm, deploy application services to a swarm, and manage swarm behavior. Complete details are available at: <a href="https://docs.docker.com/engine/swarm/">https://docs.docker.com/engine/swarm/</a>. It&rsquo;s important to understand the <a href="https://docs.docker.com/engine/swarm/key-concepts/%5BSwarm">https://docs.docker.com/engine/swarm/key-concepts/[Swarm</a> mode key concepts] before starting with this chapter.</p>
+<p>Swarm is typically a cluster of multiple Docker Engines. But for simplicity we&rsquo;ll run a single node Swarm.</p>
+<p>This section will deploy an application that will provide a CRUD/REST interface on a data bucket in <a href="https://www.mysql.com/%5BMySQL%5D">https://www.mysql.com/[MySQL]</a>. This is achieved by using a Java EE application deployed on <a href="http://wildfly.org">http://wildfly.org</a>[WildFly] to access the database.</p>
+<h2 id="initialize-swarm">Initialize Swarm</h2>
+<p>Initialize Swarm mode using the following command:</p>
+<pre><code>docker swarm init
+</code></pre>
+<p>This starts a Swarm Manager. By default, a manager node is also a worker but can be configured to be a manager-only.</p>
+<p>Find some information about this one-node cluster using the command <code>docker info</code></p>
+<pre><code>Containers: 0
+ Running: 0
+ Paused: 0
+ Stopped: 0
 Images: 17
 Server Version: 17.09.0-ce
 Storage Driver: overlay2
-Backing Filesystem: extfs
-Supports d_type: true
-Native Overlay Diff: true
+ Backing Filesystem: extfs
+ Supports d_type: true
+ Native Overlay Diff: true
 Logging Driver: json-file
 Cgroup Driver: cgroupfs
 Plugins:
-Volume: local
-Network: bridge host ipvlan macvlan null overlay
-Log: awslogs fluentd gcplogs gelf journald json-file logentries splunk syslog
+ Volume: local
+ Network: bridge host ipvlan macvlan null overlay
+ Log: awslogs fluentd gcplogs gelf journald json-file logentries splunk syslog
 Swarm: active
-NodeID: p9a1tqcjh58ro9ucgtqxa2wgq
-Is Manager: true
-ClusterID: r3xdxly8zv82e4kg38krd0vog
-Managers: 1
-Nodes: 1
-Orchestration:
-Task History Retention Limit: 5
-Raft:
-Snapshot Interval: 10000
-Number of Old Snapshots to Retain: 0
-Heartbeat Tick: 1
-Election Tick: 3
-Dispatcher:
-Heartbeat Period: 5 seconds
-CA Configuration:
-Expiry Duration: 3 months
-Force Rotate: 0
-Autolock Managers: false
-Root Rotation In Progress: false
-Node Address: 192.168.65.2
-Manager Addresses:
-192.168.65.2:2377
+ NodeID: p9a1tqcjh58ro9ucgtqxa2wgq
+ Is Manager: true
+ ClusterID: r3xdxly8zv82e4kg38krd0vog
+ Managers: 1
+ Nodes: 1
+ Orchestration:
+  Task History Retention Limit: 5
+ Raft:
+  Snapshot Interval: 10000
+  Number of Old Snapshots to Retain: 0
+  Heartbeat Tick: 1
+  Election Tick: 3
+ Dispatcher:
+  Heartbeat Period: 5 seconds
+ CA Configuration:
+  Expiry Duration: 3 months
+  Force Rotate: 0
+ Autolock Managers: false
+ Root Rotation In Progress: false
+ Node Address: 192.168.65.2
+ Manager Addresses:
+  192.168.65.2:2377
 Runtimes: runc
 Default Runtime: runc
 Init Binary: docker-init
@@ -2527,8 +2472,8 @@ containerd version: 06b9cb35161009dcb7123345749fef02f7cea8e0
 runc version: 3f2f8b84a77f73d38244dd690525642a72156c64
 init version: 949e6fa
 Security Options:
-seccomp
-Profile: default
+ seccomp
+  Profile: default
 Kernel Version: 4.9.49-moby
 Operating System: Alpine Linux v3.5
 OSType: linux
@@ -2540,582 +2485,433 @@ ID: TJSZ:O44Y:PWGZ:ZWZM:SA73:2UHI:VVKV:KLAH:5NPO:AXQZ:XWZD:6IRJ
 Docker Root Dir: /var/lib/docker
 Debug Mode (client): false
 Debug Mode (server): true
-File Descriptors: 35
-Goroutines: 142
-System Time: 2017-10-05T20:57:14.037442426Z
-EventsListeners: 1
-Registry: <a href="https://index.docker.io/v1/">https://index.docker.io/v1/</a>
+ File Descriptors: 35
+ Goroutines: 142
+ System Time: 2017-10-05T20:57:14.037442426Z
+ EventsListeners: 1
+Registry: https://index.docker.io/v1/
 Experimental: true
 Insecure Registries:
-127.0.0.0/8
-Live Restore Enabled: false</p>
-<pre><code>
-This cluster has 1 node, and that is a manager. By default, the manager node is also a worker node. This means the containers can run on this node.
+ 127.0.0.0/8
+Live Restore Enabled: false
+</code></pre><p>This cluster has 1 node, and that is a manager. By default, the manager node is also a worker node. This means the containers can run on this node.</p>
+<p>== Multi-container application</p>
+<p>This section describes how to deploy a multi-container application using Docker Compose to Swarm mode use Docker CLI.</p>
+<p>Create a new directory and <code>cd</code> to it:</p>
+<pre><code>mkdir webapp
+cd webapp
+</code></pre>
+<p>Create a new Compose definition <code>docker-compose.yml</code> using this link:ch05-compose.adoc#configuration-file[ configuration file].</p>
+<p>This application can be started as:</p>
+<pre><code>docker stack deploy --compose-file=docker-compose.yml webapp
+</code></pre>
+<p>This shows the output as:</p>
+<pre><code>Ignoring deprecated options:
 
-== Multi-container application
+container_name: Setting the container name is not supported.
 
-This section describes how to deploy a multi-container application using Docker Compose to Swarm mode use Docker CLI. 
-
-Create a new directory and `cd` to it:
-
-    mkdir webapp
-    cd webapp
-
-Create a new Compose definition `docker-compose.yml` using this link:ch05-compose.adoc#configuration-file[ configuration file].
-
-This application can be started as:
-
-    docker stack deploy --compose-file=docker-compose.yml webapp
-
-This shows the output as:
-
-</code></pre><p>Ignoring deprecated options:</p>
-<p>container_name: Setting the container name is not supported.</p>
-<p>Creating network webapp_default
+Creating network webapp_default
 Creating service webapp_db
-Creating service webapp_web</p>
-<pre><code>
-WildFly Swarm and MySQL services are started on this node. Each service has a single container. If the Swarm mode is enabled on multiple nodes then the containers will be distributed across them.
-
-A new overlay network is created. This can be verified using the command `docker network ls`. This network allows multiple containers on different hosts to communicate with each other.
-
-== Verify service and containers in application
-
-Verify that the WildFly and MySQL services are running using `docker service ls`:
-
-</code></pre><p>ID                  NAME                MODE                REPLICAS            IMAGE                                   PORTS
+Creating service webapp_web
+</code></pre><p>WildFly Swarm and MySQL services are started on this node. Each service has a single container. If the Swarm mode is enabled on multiple nodes then the containers will be distributed across them.</p>
+<p>A new overlay network is created. This can be verified using the command <code>docker network ls</code>. This network allows multiple containers on different hosts to communicate with each other.</p>
+<p>== Verify service and containers in application</p>
+<p>Verify that the WildFly and MySQL services are running using <code>docker service ls</code>:</p>
+<pre><code>ID                  NAME                MODE                REPLICAS            IMAGE                                   PORTS
 j21lwelj529f        webapp_db           replicated          1/1                 mysql:8                                 *:3306-&gt;3306/tcp
-m0m44axt35cg        webapp_web          replicated          1/1                 arungupta/docker-javaee:dockerconeu17   <em>:8080-&gt;8080/tcp,</em>:9990-&gt;9990/tcp</p>
-<pre><code>
-More details about the service can be obtained using `docker service inspect webapp_web`:
-
-</code></pre><p>[
-{
-&ldquo;ID&rdquo;: &ldquo;m0m44axt35cgjetcjwzls7u9r&rdquo;,
-&ldquo;Version&rdquo;: {
-&ldquo;Index&rdquo;: 22
-},
-&ldquo;CreatedAt&rdquo;: &ldquo;2017-10-07T00:17:44.038961419Z&rdquo;,
-&ldquo;UpdatedAt&rdquo;: &ldquo;2017-10-07T00:17:44.040746062Z&rdquo;,
-&ldquo;Spec&rdquo;: {
-&ldquo;Name&rdquo;: &ldquo;webapp_web&rdquo;,
-&ldquo;Labels&rdquo;: {
-&ldquo;com.docker.stack.image&rdquo;: &ldquo;arungupta/docker-javaee:dockerconeu17&rdquo;,
-&ldquo;com.docker.stack.namespace&rdquo;: &ldquo;webapp&rdquo;
-},
-&ldquo;TaskTemplate&rdquo;: {
-&ldquo;ContainerSpec&rdquo;: {
-&ldquo;Image&rdquo;: &ldquo;arungupta/docker-javaee:dockerconeu17@sha256:6a403c35d2ab4442f029849207068eadd8180c67e2166478bc3294adbf578251&rdquo;,
-&ldquo;Labels&rdquo;: {
-&ldquo;com.docker.stack.namespace&rdquo;: &ldquo;webapp&rdquo;
-},
-&ldquo;Privileges&rdquo;: {
-&ldquo;CredentialSpec&rdquo;: null,
-&ldquo;SELinuxContext&rdquo;: null
-},
-&ldquo;StopGracePeriod&rdquo;: 10000000000,
-&ldquo;DNSConfig&rdquo;: {}
-},
-&ldquo;Resources&rdquo;: {},
-&ldquo;RestartPolicy&rdquo;: {
-&ldquo;Condition&rdquo;: &ldquo;any&rdquo;,
-&ldquo;Delay&rdquo;: 5000000000,
-&ldquo;MaxAttempts&rdquo;: 0
-},
-&ldquo;Placement&rdquo;: {
-&ldquo;Platforms&rdquo;: [
-{
-&ldquo;Architecture&rdquo;: &ldquo;amd64&rdquo;,
-&ldquo;OS&rdquo;: &ldquo;linux&rdquo;
-}
+m0m44axt35cg        webapp_web          replicated          1/1                 arungupta/docker-javaee:dockerconeu17   *:8080-&gt;8080/tcp,*:9990-&gt;9990/tcp
+</code></pre><p>More details about the service can be obtained using <code>docker service inspect webapp_web</code>:</p>
+<pre><code>[
+    {
+        &quot;ID&quot;: &quot;m0m44axt35cgjetcjwzls7u9r&quot;,
+        &quot;Version&quot;: {
+            &quot;Index&quot;: 22
+        },
+        &quot;CreatedAt&quot;: &quot;2017-10-07T00:17:44.038961419Z&quot;,
+        &quot;UpdatedAt&quot;: &quot;2017-10-07T00:17:44.040746062Z&quot;,
+        &quot;Spec&quot;: {
+            &quot;Name&quot;: &quot;webapp_web&quot;,
+            &quot;Labels&quot;: {
+                &quot;com.docker.stack.image&quot;: &quot;arungupta/docker-javaee:dockerconeu17&quot;,
+                &quot;com.docker.stack.namespace&quot;: &quot;webapp&quot;
+            },
+            &quot;TaskTemplate&quot;: {
+                &quot;ContainerSpec&quot;: {
+                    &quot;Image&quot;: &quot;arungupta/docker-javaee:dockerconeu17@sha256:6a403c35d2ab4442f029849207068eadd8180c67e2166478bc3294adbf578251&quot;,
+                    &quot;Labels&quot;: {
+                        &quot;com.docker.stack.namespace&quot;: &quot;webapp&quot;
+                    },
+                    &quot;Privileges&quot;: {
+                        &quot;CredentialSpec&quot;: null,
+                        &quot;SELinuxContext&quot;: null
+                    },
+                    &quot;StopGracePeriod&quot;: 10000000000,
+                    &quot;DNSConfig&quot;: {}
+                },
+                &quot;Resources&quot;: {},
+                &quot;RestartPolicy&quot;: {
+                    &quot;Condition&quot;: &quot;any&quot;,
+                    &quot;Delay&quot;: 5000000000,
+                    &quot;MaxAttempts&quot;: 0
+                },
+                &quot;Placement&quot;: {
+                    &quot;Platforms&quot;: [
+                        {
+                            &quot;Architecture&quot;: &quot;amd64&quot;,
+                            &quot;OS&quot;: &quot;linux&quot;
+                        }
+                    ]
+                },
+                &quot;Networks&quot;: [
+                    {
+                        &quot;Target&quot;: &quot;bwnp1nvkkga68dirhp1ue7qey&quot;,
+                        &quot;Aliases&quot;: [
+                            &quot;web&quot;
+                        ]
+                    }
+                ],
+                &quot;ForceUpdate&quot;: 0,
+                &quot;Runtime&quot;: &quot;container&quot;
+            },
+            &quot;Mode&quot;: {
+                &quot;Replicated&quot;: {
+                    &quot;Replicas&quot;: 1
+                }
+            },
+            &quot;UpdateConfig&quot;: {
+                &quot;Parallelism&quot;: 1,
+                &quot;FailureAction&quot;: &quot;pause&quot;,
+                &quot;Monitor&quot;: 5000000000,
+                &quot;MaxFailureRatio&quot;: 0,
+                &quot;Order&quot;: &quot;stop-first&quot;
+            },
+            &quot;RollbackConfig&quot;: {
+                &quot;Parallelism&quot;: 1,
+                &quot;FailureAction&quot;: &quot;pause&quot;,
+                &quot;Monitor&quot;: 5000000000,
+                &quot;MaxFailureRatio&quot;: 0,
+                &quot;Order&quot;: &quot;stop-first&quot;
+            },
+            &quot;EndpointSpec&quot;: {
+                &quot;Mode&quot;: &quot;vip&quot;,
+                &quot;Ports&quot;: [
+                    {
+                        &quot;Protocol&quot;: &quot;tcp&quot;,
+                        &quot;TargetPort&quot;: 8080,
+                        &quot;PublishedPort&quot;: 8080,
+                        &quot;PublishMode&quot;: &quot;ingress&quot;
+                    },
+                    {
+                        &quot;Protocol&quot;: &quot;tcp&quot;,
+                        &quot;TargetPort&quot;: 9990,
+                        &quot;PublishedPort&quot;: 9990,
+                        &quot;PublishMode&quot;: &quot;ingress&quot;
+                    }
+                ]
+            }
+        },
+        &quot;Endpoint&quot;: {
+            &quot;Spec&quot;: {
+                &quot;Mode&quot;: &quot;vip&quot;,
+                &quot;Ports&quot;: [
+                    {
+                        &quot;Protocol&quot;: &quot;tcp&quot;,
+                        &quot;TargetPort&quot;: 8080,
+                        &quot;PublishedPort&quot;: 8080,
+                        &quot;PublishMode&quot;: &quot;ingress&quot;
+                    },
+                    {
+                        &quot;Protocol&quot;: &quot;tcp&quot;,
+                        &quot;TargetPort&quot;: 9990,
+                        &quot;PublishedPort&quot;: 9990,
+                        &quot;PublishMode&quot;: &quot;ingress&quot;
+                    }
+                ]
+            },
+            &quot;Ports&quot;: [
+                {
+                    &quot;Protocol&quot;: &quot;tcp&quot;,
+                    &quot;TargetPort&quot;: 8080,
+                    &quot;PublishedPort&quot;: 8080,
+                    &quot;PublishMode&quot;: &quot;ingress&quot;
+                },
+                {
+                    &quot;Protocol&quot;: &quot;tcp&quot;,
+                    &quot;TargetPort&quot;: 9990,
+                    &quot;PublishedPort&quot;: 9990,
+                    &quot;PublishMode&quot;: &quot;ingress&quot;
+                }
+            ],
+            &quot;VirtualIPs&quot;: [
+                {
+                    &quot;NetworkID&quot;: &quot;vysfza7wgjepdlutuwuigbws1&quot;,
+                    &quot;Addr&quot;: &quot;10.255.0.5/16&quot;
+                },
+                {
+                    &quot;NetworkID&quot;: &quot;bwnp1nvkkga68dirhp1ue7qey&quot;,
+                    &quot;Addr&quot;: &quot;10.0.0.4/24&quot;
+                }
+            ]
+        }
+    }
 ]
-},
-&ldquo;Networks&rdquo;: [
-{
-&ldquo;Target&rdquo;: &ldquo;bwnp1nvkkga68dirhp1ue7qey&rdquo;,
-&ldquo;Aliases&rdquo;: [
-&ldquo;web&rdquo;
-]
-}
-],
-&ldquo;ForceUpdate&rdquo;: 0,
-&ldquo;Runtime&rdquo;: &ldquo;container&rdquo;
-},
-&ldquo;Mode&rdquo;: {
-&ldquo;Replicated&rdquo;: {
-&ldquo;Replicas&rdquo;: 1
-}
-},
-&ldquo;UpdateConfig&rdquo;: {
-&ldquo;Parallelism&rdquo;: 1,
-&ldquo;FailureAction&rdquo;: &ldquo;pause&rdquo;,
-&ldquo;Monitor&rdquo;: 5000000000,
-&ldquo;MaxFailureRatio&rdquo;: 0,
-&ldquo;Order&rdquo;: &ldquo;stop-first&rdquo;
-},
-&ldquo;RollbackConfig&rdquo;: {
-&ldquo;Parallelism&rdquo;: 1,
-&ldquo;FailureAction&rdquo;: &ldquo;pause&rdquo;,
-&ldquo;Monitor&rdquo;: 5000000000,
-&ldquo;MaxFailureRatio&rdquo;: 0,
-&ldquo;Order&rdquo;: &ldquo;stop-first&rdquo;
-},
-&ldquo;EndpointSpec&rdquo;: {
-&ldquo;Mode&rdquo;: &ldquo;vip&rdquo;,
-&ldquo;Ports&rdquo;: [
-{
-&ldquo;Protocol&rdquo;: &ldquo;tcp&rdquo;,
-&ldquo;TargetPort&rdquo;: 8080,
-&ldquo;PublishedPort&rdquo;: 8080,
-&ldquo;PublishMode&rdquo;: &ldquo;ingress&rdquo;
-},
-{
-&ldquo;Protocol&rdquo;: &ldquo;tcp&rdquo;,
-&ldquo;TargetPort&rdquo;: 9990,
-&ldquo;PublishedPort&rdquo;: 9990,
-&ldquo;PublishMode&rdquo;: &ldquo;ingress&rdquo;
-}
-]
-}
-},
-&ldquo;Endpoint&rdquo;: {
-&ldquo;Spec&rdquo;: {
-&ldquo;Mode&rdquo;: &ldquo;vip&rdquo;,
-&ldquo;Ports&rdquo;: [
-{
-&ldquo;Protocol&rdquo;: &ldquo;tcp&rdquo;,
-&ldquo;TargetPort&rdquo;: 8080,
-&ldquo;PublishedPort&rdquo;: 8080,
-&ldquo;PublishMode&rdquo;: &ldquo;ingress&rdquo;
-},
-{
-&ldquo;Protocol&rdquo;: &ldquo;tcp&rdquo;,
-&ldquo;TargetPort&rdquo;: 9990,
-&ldquo;PublishedPort&rdquo;: 9990,
-&ldquo;PublishMode&rdquo;: &ldquo;ingress&rdquo;
-}
-]
-},
-&ldquo;Ports&rdquo;: [
-{
-&ldquo;Protocol&rdquo;: &ldquo;tcp&rdquo;,
-&ldquo;TargetPort&rdquo;: 8080,
-&ldquo;PublishedPort&rdquo;: 8080,
-&ldquo;PublishMode&rdquo;: &ldquo;ingress&rdquo;
-},
-{
-&ldquo;Protocol&rdquo;: &ldquo;tcp&rdquo;,
-&ldquo;TargetPort&rdquo;: 9990,
-&ldquo;PublishedPort&rdquo;: 9990,
-&ldquo;PublishMode&rdquo;: &ldquo;ingress&rdquo;
-}
-],
-&ldquo;VirtualIPs&rdquo;: [
-{
-&ldquo;NetworkID&rdquo;: &ldquo;vysfza7wgjepdlutuwuigbws1&rdquo;,
-&ldquo;Addr&rdquo;: &ldquo;10.255.0.5/16&rdquo;
-},
-{
-&ldquo;NetworkID&rdquo;: &ldquo;bwnp1nvkkga68dirhp1ue7qey&rdquo;,
-&ldquo;Addr&rdquo;: &ldquo;10.0.0.4/24&rdquo;
-}
-]
-}
-}
-]</p>
-<pre><code>
-Logs for the service can be seen using `docker service logs -f webapp_web`:
+</code></pre><p>Logs for the service can be seen using <code>docker service logs -f webapp_web</code>:</p>
+<pre><code>webapp_web.1.lf3y5k7pkpt9@moby    | 00:17:47,296 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+webapp_web.1.lf3y5k7pkpt9@moby    | 00:17:47,404 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: WildFly Core 2.0.10.Final &quot;Kenny&quot; starting
+webapp_web.1.lf3y5k7pkpt9@moby    | 2017-10-07 00:17:48,636 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 20) WFLYIO001: Worker 'default' has auto-configured to 8 core threads with 64 task threads based on your 4 available processors
 
-</code></pre><p>webapp_web.1.lf3y5k7pkpt9@moby    | 00:17:47,296 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
-webapp_web.1.lf3y5k7pkpt9@moby    | 00:17:47,404 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: WildFly Core 2.0.10.Final &ldquo;Kenny&rdquo; starting
-webapp_web.1.lf3y5k7pkpt9@moby    | 2017-10-07 00:17:48,636 INFO  [org.wildfly.extension.io] (ServerService Thread Pool &ndash; 20) WFLYIO001: Worker &lsquo;default&rsquo; has auto-configured to 8 core threads with 64 task threads based on your 4 available processors</p>
-<p>. . .</p>
-<p>webapp_web.1.lf3y5k7pkpt9@moby    | 2017-10-07 00:17:56,619 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool &ndash; 12) RESTEASY002225: Deploying javax.ws.rs.core.Application: class org.javaee.samples.employees.MyApplication
-webapp_web.1.lf3y5k7pkpt9@moby    | 2017-10-07 00:17:56,621 WARN  [org.jboss.as.weld] (ServerService Thread Pool &ndash; 12) WFLYWELD0052: Using deployment classloader to load proxy classes for module com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider:main. Package-private access will not work. To fix this the module should declare dependencies on [org.jboss.weld.core, org.jboss.weld.spi]
-webapp_web.1.lf3y5k7pkpt9@moby    | 2017-10-07 00:17:56,682 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool &ndash; 12) WFLYUT0021: Registered web context: /
-webapp_web.1.lf3y5k7pkpt9@moby    | 2017-10-07 00:17:57,094 INFO  [org.jboss.as.server] (main) WFLYSRV0010: Deployed &ldquo;docker-javaee.war&rdquo; (runtime-name : &ldquo;docker-javaee.war&rdquo;)</p>
-<pre><code>
-Make sure to wait for the last log statement to show.
+. . .
 
-## Access application
-
-Now that the WildFly and MySQL servers have been configured, let's access the application. You need to specify IP address of the host where WildFly is running (`localhost` in our case).
-
-The endpoint can be accessed in this case as:
-
-    curl -v http://localhost:8080/resources/employees
-
-The output is shown as:
-
-</code></pre><ul>
-<li>Trying ::1&hellip;</li>
-<li>TCP_NODELAY set</li>
-<li>Connected to localhost (::1) port 8080 (#0)</li>
-</ul>
-<blockquote>
-<p>GET /resources/employees HTTP/1.1
-Host: localhost:8080
-User-Agent: curl/7.51.0
-Accept: <em>/</em></p>
-</blockquote>
-<p>&lt; HTTP/1.1 200 OK
+webapp_web.1.lf3y5k7pkpt9@moby    | 2017-10-07 00:17:56,619 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 12) RESTEASY002225: Deploying javax.ws.rs.core.Application: class org.javaee.samples.employees.MyApplication
+webapp_web.1.lf3y5k7pkpt9@moby    | 2017-10-07 00:17:56,621 WARN  [org.jboss.as.weld] (ServerService Thread Pool -- 12) WFLYWELD0052: Using deployment classloader to load proxy classes for module com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider:main. Package-private access will not work. To fix this the module should declare dependencies on [org.jboss.weld.core, org.jboss.weld.spi]
+webapp_web.1.lf3y5k7pkpt9@moby    | 2017-10-07 00:17:56,682 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 12) WFLYUT0021: Registered web context: /
+webapp_web.1.lf3y5k7pkpt9@moby    | 2017-10-07 00:17:57,094 INFO  [org.jboss.as.server] (main) WFLYSRV0010: Deployed &quot;docker-javaee.war&quot; (runtime-name : &quot;docker-javaee.war&quot;)
+</code></pre><p>Make sure to wait for the last log statement to show.</p>
+<h2 id="access-application">Access application</h2>
+<p>Now that the WildFly and MySQL servers have been configured, let&rsquo;s access the application. You need to specify IP address of the host where WildFly is running (<code>localhost</code> in our case).</p>
+<p>The endpoint can be accessed in this case as:</p>
+<pre><code>curl -v http://localhost:8080/resources/employees
+</code></pre>
+<p>The output is shown as:</p>
+<pre><code>*   Trying ::1...
+* TCP_NODELAY set
+* Connected to localhost (::1) port 8080 (#0)
+&gt; GET /resources/employees HTTP/1.1
+&gt; Host: localhost:8080
+&gt; User-Agent: curl/7.51.0
+&gt; Accept: */*
+&gt; 
+&lt; HTTP/1.1 200 OK
 &lt; Connection: keep-alive
 &lt; Content-Type: application/xml
 &lt; Content-Length: 478
 &lt; Date: Sat, 07 Oct 2017 00:22:59 GMT
-&lt;</p>
-<ul>
-<li>Curl_http_done: called premature == 0</li>
-<li>Connection #0 to host localhost left intact</li>
-</ul>
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><collection><employee><id>1</id><name>Penny</name></employee><employee><id>2</id><name>Sheldon</name></employee><employee><id>3</id><name>Amy</name></employee><employee><id>4</id><name>Leonard</name></employee><employee><id>5</id><name>Bernadette</name></employee><employee><id>6</id><name>Raj</name></employee><employee><id>7</id><name>Howard</name></employee><employee><id>8</id><name>Priya</name></employee></collection>
-<pre><code>
-This shows all employees stored in the database.
-
-## Stop application
-
-If you only want to stop the application temporarily while keeping any networks that were created as part of this application, the recommended way is to set the amount of service replicas to 0.
-
-    docker service scale webapp_db=0 webapp_web=0
-
-It shows the output:
-
-</code></pre><p>webapp_db scaled to 0
-webapp_web scaled to 0
-Since &ndash;detach=false was not specified, tasks will be scaled in the background.
-In a future release, &ndash;detach=false will become the default.</p>
-<pre><code>
-This is especially useful if the stack contains volumes and you want to keep the data. It allows you to simply start the stack again with setting the replicas to a number higher than 0.
-
-== Remove application completely
-
-Shutdown the application using `docker stack rm webapp`:
-
-</code></pre><p>Removing service webapp_db
-Removing service webapp_web
-Removing network webapp_default</p>
-<pre><code>
-This stops the container in each service and removes the services. It also deletes any networks that were created as part of this application.
-
-
-## Docker and NetBeans
-
-This chapter will show you basic Docker tooling with NetBeans:
-
-- Pull/Build Docker images
-- Run/Start/Stop Docker containers
-
-NOTE: NetBeans only supports configuring Docker Engine running using Docker Toolbox. This means that if you are running Docker for Mac or Docker for Windows then NetBeans cannot be used.
-
-## Configure Docker Host
-
-In &quot;`Services`&quot; window, right-click on &quot;`Docker`&quot;, click on &quot;`Add Docker...`&quot;
-
-![My Image](docker-netbeans-add-docker.png)
-
-Specify Docker Machine coordinates, click on &quot;`Test Connection`&quot; to validate the connection:
-
-![My Image](docker-netbeans-add-docker-instance.png)
-
-NOTE: No support for Docker for Mac/Windows, filed as https://netbeans.org/bugzilla/show_bug.cgi?id=262398[#262398].
-
-Click on &quot;`Finish`&quot; to see:
-
-![My Image](docker-netbeans-added-docker-instance.png)
-
-Expand the connection to see &quot;`Images`&quot; and &quot;`Containers`&quot;.
-
-## Pull an Image
-
-Right-click on Docker node and select &quot;`Pull...`&quot;.
-
-![My Image](docker-netbeans-pull-image.png)
-
-Type the image name to narrow down the search from Docker Store:
-
-![My Image](docker-netbeans-search-image.png)
-
-Click on &quot;`Pull`&quot; to pull the image.
-
-Log is updated in the Output window:
-
-![My Image](docker-netbeans-pull-image-output.png)
-
-This image is now shown in Services tab
-
-![My Image](docker-netbeans-pulled-image.png)
-
-Any existing images on the Docker Host will be shown here as well.
-
-## Run a Container
-
-Select an image, right-click on it, and click on &quot;`Run...`&quot;.
-
-![My Image](docker-netbeans-run-container.png)
-
-This brings up a dialog that allows the options that can be configured for running the container. Some of them are:
-
-- Container name
-- Override the command
-- Keep STDIN open and allocate pseudo-TTY (`-it` on CLI)
-- Publish ports on Docker host interface (`-P` or `-p` in `docker run` command)
-
-![My Image](docker-netbeans-run-container-option1.png)
-
-Click on &quot;`Next&gt;`&quot; to see the options to configure exposed ports. Click on &quot;`Add`&quot; to explicitly map host port &quot;`8091`&quot; to container port &quot;`8091`&quot;.
-
-![My Image](docker-netbeans-run-container-option2.png)
-
-Click on &quot;`Finish`&quot; to run the container. &quot;`Services`&quot; window is updated as:
-
-![My Image](docker-netbeans-run-container-services.png)
-
-Log is shown in the &quot;`Output`&quot; window:
-
-![My Image](docker-netbeans-run-container-log.png)
-
-Right-click on the container, select &quot;`Show Log`&quot; to show the log generated by the container. The container can be paused and stopped from here as well.
-
-## Build an Image
-
-On the configured Docker Host, right-click and select &quot;`Build...`&quot; to build a new image:
-
-![My Image](docker-netbeans-build-image.png)
-
-Specify a directory where `Dockerfile` exists, give the image name:
-
-![My Image](docker-netbeans-build-image-option1.png)
-
-Click on &quot;`Next&gt;`&quot;, choose the options that matter:
-
-![My Image](docker-netbeans-build-image-option2.png)
-
-Click on &quot;`Finish`&quot; to build the image. The image is shown in the &quot;`Services`&quot; window:
-
-![My Image](docker-netbeans-build-image-services.png)
-
-
-## Docker and IntelliJ IDEA
-
-This chapter will show you basic Docker tooling with IntelliJ IDEA:
-
-- Pull Docker images
-- Run, stop, delete a Container
-- Build an Image
-
-## Install Docker Plugin in IDEA
-
-Go to &quot;`Preferences`&quot;, &quot;`Plugins`&quot;, &quot;`Install JetBrains plugin...`&quot;, search on &quot;`docker`&quot; and click on &quot;`Install`&quot;
-
-![My Image](docker-intellij-plugin-install.png)
-
-Restart IntelliJ IDEA to active plugin.
-
-Click on &quot;`Create New Project`&quot;, select &quot;`Java`&quot;, &quot;`Web Application`&quot;
-
-![My Image](docker-intellij-create-java-project.png)
-
-Click on &quot;`Next`&quot;, give the project a name &quot;`dockercon`&quot;, click on &quot;`Finish`&quot;. This will open up the project in IntelliJ window.
-
-Go to &quot;`Preferences`&quot;, &quot;`Clouds`&quot;, add a new deployment by clicking on &quot;`+`&quot;. Click on &quot;`Import credentials from Docker Machine`&quot;, &quot;`Detect`&quot;, and see a successful connection. You may have to check the IP address of your Docker Machine. Find the IP address of your Docker Machine as `docker-machine ip &lt;machine-name&gt;` and specify the correct IP address here.
-
-![My Image](docker-intellij-cloud-connection.png)
-
-Go to &quot;`View`&quot;, &quot;`Tool Windows`&quot;, &quot;`Docker Tooling Window`&quot;. Click on &quot;`Connect`&quot;&quot; to connect with Docker Machine. Make sure Docker Machine is running. 
-
-WARNING: IDEA does not work with &quot;`Docker for Mac`&quot; at this time. (ADD BUG #)
-
-![My Image](docker-intellij-tool-window.png)
-
-## Pull an Image
-
-Select top-level node with the name &quot;`Docker`&quot;, click on &quot;`Pull image`&quot;
-
-![My Image](docker-intellij-pull-image.png)
-
-Type an image name, such as `arungupta/couchbase`, and &quot;`OK`&quot;
-
-![My Image](docker-intellij-repository-name.png)
-
-Expand &quot;`Containers`&quot; and &quot;`Images`&quot; to see existing running containers and images.
-
-The specified image is now downloaded and shown as well.
-
-## Run a Container
-
-Select the downloaded image, click on &quot;`Create container`&quot;
-
-Select &quot;`After launch`&quot; and enter the URL as `http://192.168.99.100:8091`. Make sure to match the IP address of your Docker Machine.
-
-![My Image](docker-intellij-deployment-after-launch.png)
-
-In &quot;`Container`&quot; tab, add &quot;`Port bindings`&quot; for `8091:8091`
-
-![My Image](docker-intellij-container-ports.png)
-
-Click on &quot;`Run`&quot; to run the container.
-
-This will bring up the browser window and display the page http://192.168.99.100:8091 and looks like:
-
-![My Image](docker-intellij-run-container-browser.png)
-
-This image uses http://developer.couchbase.com/documentation/server/current/rest-api/rest-endpoints-all.html[Couchbase REST API] to configure the Couchbase server. 
-
-Right-click on the running container, select &quot;`Inspect`&quot; to see more details about the container.
-
-![My Image](docker-intellij-container-inspect.png)
-
-Click on &quot;`Stop container`&quot; to stop the container and &quot;`Delete container`&quot; to delete the container.
-
-## Build an Image
-
-- Refer to the instructions https://www.jetbrains.com/help/idea/2016.1/docker.html
-
-- Right-click on the project, create a new directory `docker-dir`
-- Artifact
-  - Click on top-right for &quot;`Project Structure`&quot;
-  -  select &quot;`Artifacts`&quot;
-  - change &quot;`Type:`&quot; to &quot;`Web Application: Archive`&quot;
-  - change the name to `dockercon`
-  - change `Output directory` to `docker-dir`
-- Create &quot;`Dockerfile`&quot; in this directory. Use the contents
-
-
-</code></pre><p>FROM jboss/wildfly</p>
-<p>ADD dockercon.war /opt/jboss/wildfly/standalone/deployments/</p>
-<pre><code>
-
-- &quot;`Run`&quot;, &quot;`Edit Configurations`&quot;, add new &quot;`Docker Deployment`&quot;
-  -  &quot;`Deployment`&quot; tab
-     - Change the name to `dockercon`
-     - Select &quot;`After launch`&quot;, change the URL to &quot;`http://192.168.99.100:18080/dockercon/index.jsp`&quot;
-     - In &quot;`Before launch`&quot;, add &quot;`Build Artifacts`&quot; and select the artifact
-   -  &quot;`Container`&quot; tab
-     -  Add &quot;`Port bindings`&quot; for &quot;`8080:18080`&quot;
-- View, Tool Windows, Docker, connect to it
-- Run the project
-
-# Docker and Eclipse
-
-This chapter will show you basic Docker tooling with Eclipse:
-
-- Pull/Push/Build Docker images
-- Run/Start/Stop/Kill Docker containers
-- Customize views
-
-Watch a quick video explaining the key steps in https://www.youtube.com/watch?v=XmhEZiS26os.
-
-## Install Docker Tooling in Eclipse
-
-Download http://www.eclipse.org/downloads/eclipse-packages/[Eclipse IDE for Java EE Developers] and install.
-
-Go to &quot;`Help`&quot; menu, &quot;`Install New Software...`&quot;.
-
-Select Eclipse update site for the release, search for Docker, select &quot;`Docker Tooling`&quot;.
-
-![My Image](docker-eclipse-update-site-selection.png)
-
-Click on &quot;`Next&gt;`&quot;, &quot;`Next&gt;`&quot;, accept the license agreement, click on &quot;`Finish`&quot; to start the installation.
-
-Restart Eclipse for the installation to complete.
-
-## Docker Perspective and View
-
-Go to &quot;`Window`&quot;, &quot;`Perspective`&quot;, &quot;`Open Perspective`&quot;, &quot;`Other...`&quot;, &quot;`Docker Tooling`&quot;.
-
-![My Image](docker-eclipse-docker-perspective.png)
-
-Click on &quot;`OK`&quot; to see the perspective.
-
-![My Image](docker-eclipse-docker-perspective-default-look.png)
-
-This has three views:
-
-- *Docker Explorer*: a tree view listing all connected Docker instances, with image and containers.
-- *Docker Images*: a table view listing containers for selected Docker connection.
-- *Docker Containers*: a table view listing containers for selected Docker connection
-
-Click on the text in Docker Explorer to create a new connection. If you are on Mac/Windows, you are likely using Docker for Mac/Windows or Docker Toolbox to setup Docker Host. Eclipse allows to configure Docker Engine using both Docker for Mac/Windows and Docker Toolbox.
-
-If you are using Docker for Mac/Windows, then the default values are shown:
-
-![My Image](docker-eclipse-docker-connection.png)
-
-Click on &quot;`Test Connection`&quot; to test the connection.
-
-![My Image](docker-eclipse-docker-connection-test.png)
-
-If you are using Toolbox, enter the values as shown:
-
-![My Image](docker-eclipse-docker-connection-toolbox.png)
-
-The exact value of TCP Connection can be found using `docker-machine ls` command. The path for authentication is the directory name where certificates for your Docker Machine, `couchbase` in this case, are stored.
-
-Click on &quot;`Test Connection`&quot; to make sure the connection is successfully configured.
-
-![My Image](docker-eclipse-docker-connection-test-toolbox.png)
-
-In either case, the configuration can be completed once the connection is tested. Click on &quot;`Finish`&quot; to complete the configuration.
-
-Docker Explorer is updated to show the connection.
-
-Containers and Images configured for the Docker Machine are shown in tabs. They can be expanded to see the list in Explorer itself.
-
-## Pull an Image
-
-Expand the connection to see &quot;`Containers`&quot; and &quot;`Images`&quot;.
-
-Right-click on &quot;`Images`&quot; and select &quot;`Pull...`&quot;.
-
-Type the image name and click on &quot;`Finish`&quot;.
-
-![My Image](docker-eclipse-pull-image.png)
-
-This image is now shown in Explorer and Docker Images tab.
-
-![My Image](docker-eclipse-pulled-image.png)
-
-Any existing images on the Docker Host will be shown here.
-
-## Run a Container
-
-Select an image, right-click on it, and click on &quot;`Run...`&quot;. It shows the options that can be configured for running the container. Some of them are:
-
-- Publish ports on Docker host interface (`-P` or `-p` in `docker run` command)
-- Keep STDIN open and allocate pseudo-TTY (`-it` on CLI)
-- Remove container after it exits (`--rm` on CLI)
-- Volume mapping (`-v` on CLI)
-- Environment variables (`-e` on CLI)
-
-Uncheck &quot;`Publish all exposed ports`&quot; box to map to corresponding ports.
-
-![My Image](docker-eclipse-run-container-config.png)
-
-Click on &quot;`Finish`&quot; to run the container.
-
-Right-click on the started container, select &quot;`Display Log`&quot; to show the log.
-
-![My Image](docker-eclipse-container-display-log.png)
-
-The container can be paused, stopped and killed from here as well.
-
-To see more details about the container, right-click on the container, select &quot;`Show In`&quot;, &quot;`Properties`&quot;.
-
-![My Image](docker-eclipse-container-properties.png)
-
-## Build an Image
-
-In Docker Images tab, click on the hammer icon on top right.
-
-Give the image name, specify an empty directory, click on &quot;`Edit Dockerfile`&quot; to edit the contents of Dockerfile
-
-![My Image](docker-eclipse-build-image.png)
-
-Click on &quot;`Save`&quot; and &quot;`Finish`&quot; to create the image.
-
-
-
+&lt; 
+* Curl_http_done: called premature == 0
+* Connection #0 to host localhost left intact
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;&lt;collection&gt;&lt;employee&gt;&lt;id&gt;1&lt;/id&gt;&lt;name&gt;Penny&lt;/name&gt;&lt;/employee&gt;&lt;employee&gt;&lt;id&gt;2&lt;/id&gt;&lt;name&gt;Sheldon&lt;/name&gt;&lt;/employee&gt;&lt;employee&gt;&lt;id&gt;3&lt;/id&gt;&lt;name&gt;Amy&lt;/name&gt;&lt;/employee&gt;&lt;employee&gt;&lt;id&gt;4&lt;/id&gt;&lt;name&gt;Leonard&lt;/name&gt;&lt;/employee&gt;&lt;employee&gt;&lt;id&gt;5&lt;/id&gt;&lt;name&gt;Bernadette&lt;/name&gt;&lt;/employee&gt;&lt;employee&gt;&lt;id&gt;6&lt;/id&gt;&lt;name&gt;Raj&lt;/name&gt;&lt;/employee&gt;&lt;employee&gt;&lt;id&gt;7&lt;/id&gt;&lt;name&gt;Howard&lt;/name&gt;&lt;/employee&gt;&lt;employee&gt;&lt;id&gt;8&lt;/id&gt;&lt;name&gt;Priya&lt;/name&gt;&lt;/employee&gt;&lt;/collection&gt;
+</code></pre><p>This shows all employees stored in the database.</p>
+<h2 id="stop-application">Stop application</h2>
+<p>If you only want to stop the application temporarily while keeping any networks that were created as part of this application, the recommended way is to set the amount of service replicas to 0.</p>
+<pre><code>docker service scale webapp_db=0 webapp_web=0
 </code></pre>
+<p>It shows the output:</p>
+<pre><code>webapp_db scaled to 0
+webapp_web scaled to 0
+Since --detach=false was not specified, tasks will be scaled in the background.
+In a future release, --detach=false will become the default.
+</code></pre><p>This is especially useful if the stack contains volumes and you want to keep the data. It allows you to simply start the stack again with setting the replicas to a number higher than 0.</p>
+<p>== Remove application completely</p>
+<p>Shutdown the application using <code>docker stack rm webapp</code>:</p>
+<pre><code>Removing service webapp_db
+Removing service webapp_web
+Removing network webapp_default
+</code></pre><p>This stops the container in each service and removes the services. It also deletes any networks that were created as part of this application.</p>
+<h2 id="docker-and-netbeans">Docker and NetBeans</h2>
+<p>This chapter will show you basic Docker tooling with NetBeans:</p>
+<ul>
+<li>Pull/Build Docker images</li>
+<li>Run/Start/Stop Docker containers</li>
+</ul>
+<p>NOTE: NetBeans only supports configuring Docker Engine running using Docker Toolbox. This means that if you are running Docker for Mac or Docker for Windows then NetBeans cannot be used.</p>
+<h2 id="configure-docker-host">Configure Docker Host</h2>
+<p>In &ldquo;<code>Services</code>&rdquo; window, right-click on &ldquo;<code>Docker</code>&rdquo;, click on &ldquo;<code>Add Docker...</code>&rdquo;</p>
+<p><img src="docker-netbeans-add-docker.png" alt="My Image"></p>
+<p>Specify Docker Machine coordinates, click on &ldquo;<code>Test Connection</code>&rdquo; to validate the connection:</p>
+<p><img src="docker-netbeans-add-docker-instance.png" alt="My Image"></p>
+<p>NOTE: No support for Docker for Mac/Windows, filed as <a href="https://netbeans.org/bugzilla/show_bug.cgi?id=262398%5B#262398%5D">https://netbeans.org/bugzilla/show_bug.cgi?id=262398[#262398]</a>.</p>
+<p>Click on &ldquo;<code>Finish</code>&rdquo; to see:</p>
+<p><img src="docker-netbeans-added-docker-instance.png" alt="My Image"></p>
+<p>Expand the connection to see &ldquo;<code>Images</code>&rdquo; and &ldquo;<code>Containers</code>&rdquo;.</p>
+<h2 id="pull-an-image">Pull an Image</h2>
+<p>Right-click on Docker node and select &ldquo;<code>Pull...</code>&rdquo;.</p>
+<p><img src="docker-netbeans-pull-image.png" alt="My Image"></p>
+<p>Type the image name to narrow down the search from Docker Store:</p>
+<p><img src="docker-netbeans-search-image.png" alt="My Image"></p>
+<p>Click on &ldquo;<code>Pull</code>&rdquo; to pull the image.</p>
+<p>Log is updated in the Output window:</p>
+<p><img src="docker-netbeans-pull-image-output.png" alt="My Image"></p>
+<p>This image is now shown in Services tab</p>
+<p><img src="docker-netbeans-pulled-image.png" alt="My Image"></p>
+<p>Any existing images on the Docker Host will be shown here as well.</p>
+<h2 id="run-a-container">Run a Container</h2>
+<p>Select an image, right-click on it, and click on &ldquo;<code>Run...</code>&rdquo;.</p>
+<p><img src="docker-netbeans-run-container.png" alt="My Image"></p>
+<p>This brings up a dialog that allows the options that can be configured for running the container. Some of them are:</p>
+<ul>
+<li>Container name</li>
+<li>Override the command</li>
+<li>Keep STDIN open and allocate pseudo-TTY (<code>-it</code> on CLI)</li>
+<li>Publish ports on Docker host interface (<code>-P</code> or <code>-p</code> in <code>docker run</code> command)</li>
+</ul>
+<p><img src="docker-netbeans-run-container-option1.png" alt="My Image"></p>
+<p>Click on &ldquo;<code>Next&gt;</code>&rdquo; to see the options to configure exposed ports. Click on &ldquo;<code>Add</code>&rdquo; to explicitly map host port &ldquo;<code>8091</code>&rdquo; to container port &ldquo;<code>8091</code>&rdquo;.</p>
+<p><img src="docker-netbeans-run-container-option2.png" alt="My Image"></p>
+<p>Click on &ldquo;<code>Finish</code>&rdquo; to run the container. &ldquo;<code>Services</code>&rdquo; window is updated as:</p>
+<p><img src="docker-netbeans-run-container-services.png" alt="My Image"></p>
+<p>Log is shown in the &ldquo;<code>Output</code>&rdquo; window:</p>
+<p><img src="docker-netbeans-run-container-log.png" alt="My Image"></p>
+<p>Right-click on the container, select &ldquo;<code>Show Log</code>&rdquo; to show the log generated by the container. The container can be paused and stopped from here as well.</p>
+<h2 id="build-an-image">Build an Image</h2>
+<p>On the configured Docker Host, right-click and select &ldquo;<code>Build...</code>&rdquo; to build a new image:</p>
+<p><img src="docker-netbeans-build-image.png" alt="My Image"></p>
+<p>Specify a directory where <code>Dockerfile</code> exists, give the image name:</p>
+<p><img src="docker-netbeans-build-image-option1.png" alt="My Image"></p>
+<p>Click on &ldquo;<code>Next&gt;</code>&rdquo;, choose the options that matter:</p>
+<p><img src="docker-netbeans-build-image-option2.png" alt="My Image"></p>
+<p>Click on &ldquo;<code>Finish</code>&rdquo; to build the image. The image is shown in the &ldquo;<code>Services</code>&rdquo; window:</p>
+<p><img src="docker-netbeans-build-image-services.png" alt="My Image"></p>
+<h2 id="docker-and-intellij-idea">Docker and IntelliJ IDEA</h2>
+<p>This chapter will show you basic Docker tooling with IntelliJ IDEA:</p>
+<ul>
+<li>Pull Docker images</li>
+<li>Run, stop, delete a Container</li>
+<li>Build an Image</li>
+</ul>
+<h2 id="install-docker-plugin-in-idea">Install Docker Plugin in IDEA</h2>
+<p>Go to &ldquo;<code>Preferences</code>&rdquo;, &ldquo;<code>Plugins</code>&rdquo;, &ldquo;<code>Install JetBrains plugin...</code>&rdquo;, search on &ldquo;<code>docker</code>&rdquo; and click on &ldquo;<code>Install</code>&rdquo;</p>
+<p><img src="docker-intellij-plugin-install.png" alt="My Image"></p>
+<p>Restart IntelliJ IDEA to active plugin.</p>
+<p>Click on &ldquo;<code>Create New Project</code>&rdquo;, select &ldquo;<code>Java</code>&rdquo;, &ldquo;<code>Web Application</code>&rdquo;</p>
+<p><img src="docker-intellij-create-java-project.png" alt="My Image"></p>
+<p>Click on &ldquo;<code>Next</code>&rdquo;, give the project a name &ldquo;<code>dockercon</code>&rdquo;, click on &ldquo;<code>Finish</code>&rdquo;. This will open up the project in IntelliJ window.</p>
+<p>Go to &ldquo;<code>Preferences</code>&rdquo;, &ldquo;<code>Clouds</code>&rdquo;, add a new deployment by clicking on &ldquo;<code>+</code>&rdquo;. Click on &ldquo;<code>Import credentials from Docker Machine</code>&rdquo;, &ldquo;<code>Detect</code>&rdquo;, and see a successful connection. You may have to check the IP address of your Docker Machine. Find the IP address of your Docker Machine as <code>docker-machine ip &lt;machine-name&gt;</code> and specify the correct IP address here.</p>
+<p><img src="docker-intellij-cloud-connection.png" alt="My Image"></p>
+<p>Go to &ldquo;<code>View</code>&rdquo;, &ldquo;<code>Tool Windows</code>&rdquo;, &ldquo;<code>Docker Tooling Window</code>&rdquo;. Click on &ldquo;<code>Connect</code>&rdquo;&rdquo; to connect with Docker Machine. Make sure Docker Machine is running.</p>
+<p>WARNING: IDEA does not work with &ldquo;<code>Docker for Mac</code>&rdquo; at this time. (ADD BUG #)</p>
+<p><img src="docker-intellij-tool-window.png" alt="My Image"></p>
+<h2 id="pull-an-image-1">Pull an Image</h2>
+<p>Select top-level node with the name &ldquo;<code>Docker</code>&rdquo;, click on &ldquo;<code>Pull image</code>&rdquo;</p>
+<p><img src="docker-intellij-pull-image.png" alt="My Image"></p>
+<p>Type an image name, such as <code>arungupta/couchbase</code>, and &ldquo;<code>OK</code>&rdquo;</p>
+<p><img src="docker-intellij-repository-name.png" alt="My Image"></p>
+<p>Expand &ldquo;<code>Containers</code>&rdquo; and &ldquo;<code>Images</code>&rdquo; to see existing running containers and images.</p>
+<p>The specified image is now downloaded and shown as well.</p>
+<h2 id="run-a-container-1">Run a Container</h2>
+<p>Select the downloaded image, click on &ldquo;<code>Create container</code>&rdquo;</p>
+<p>Select &ldquo;<code>After launch</code>&rdquo; and enter the URL as <code>http://192.168.99.100:8091</code>. Make sure to match the IP address of your Docker Machine.</p>
+<p><img src="docker-intellij-deployment-after-launch.png" alt="My Image"></p>
+<p>In &ldquo;<code>Container</code>&rdquo; tab, add &ldquo;<code>Port bindings</code>&rdquo; for <code>8091:8091</code></p>
+<p><img src="docker-intellij-container-ports.png" alt="My Image"></p>
+<p>Click on &ldquo;<code>Run</code>&rdquo; to run the container.</p>
+<p>This will bring up the browser window and display the page http://192.168.99.100:8091 and looks like:</p>
+<p><img src="docker-intellij-run-container-browser.png" alt="My Image"></p>
+<p>This image uses <a href="http://developer.couchbase.com/documentation/server/current/rest-api/rest-endpoints-all.html%5BCouchbase">http://developer.couchbase.com/documentation/server/current/rest-api/rest-endpoints-all.html[Couchbase</a> REST API] to configure the Couchbase server.</p>
+<p>Right-click on the running container, select &ldquo;<code>Inspect</code>&rdquo; to see more details about the container.</p>
+<p><img src="docker-intellij-container-inspect.png" alt="My Image"></p>
+<p>Click on &ldquo;<code>Stop container</code>&rdquo; to stop the container and &ldquo;<code>Delete container</code>&rdquo; to delete the container.</p>
+<h2 id="build-an-image-1">Build an Image</h2>
+<ul>
+<li>
+<p>Refer to the instructions <a href="https://www.jetbrains.com/help/idea/2016.1/docker.html">https://www.jetbrains.com/help/idea/2016.1/docker.html</a></p>
+</li>
+<li>
+<p>Right-click on the project, create a new directory <code>docker-dir</code></p>
+</li>
+<li>
+<p>Artifact</p>
+<ul>
+<li>Click on top-right for &ldquo;<code>Project Structure</code>&rdquo;</li>
+<li>select &ldquo;<code>Artifacts</code>&rdquo;</li>
+<li>change &ldquo;<code>Type:</code>&rdquo; to &ldquo;<code>Web Application: Archive</code>&rdquo;</li>
+<li>change the name to <code>dockercon</code></li>
+<li>change <code>Output directory</code> to <code>docker-dir</code></li>
+</ul>
+</li>
+<li>
+<p>Create &ldquo;<code>Dockerfile</code>&rdquo; in this directory. Use the contents</p>
+</li>
+</ul>
+<pre><code>FROM jboss/wildfly
+
+ADD dockercon.war /opt/jboss/wildfly/standalone/deployments/
+</code></pre><ul>
+<li>&ldquo;<code>Run</code>&rdquo;, &ldquo;<code>Edit Configurations</code>&rdquo;, add new &ldquo;<code>Docker Deployment</code>&rdquo;
+<ul>
+<li>&ldquo;<code>Deployment</code>&rdquo; tab
+<ul>
+<li>Change the name to <code>dockercon</code></li>
+<li>Select &ldquo;<code>After launch</code>&rdquo;, change the URL to &ldquo;<code>http://192.168.99.100:18080/dockercon/index.jsp</code>&rdquo;</li>
+<li>In &ldquo;<code>Before launch</code>&rdquo;, add &ldquo;<code>Build Artifacts</code>&rdquo; and select the artifact</li>
+</ul>
+</li>
+<li>&ldquo;<code>Container</code>&rdquo; tab</li>
+<li>Add &ldquo;<code>Port bindings</code>&rdquo; for &ldquo;<code>8080:18080</code>&rdquo;</li>
+</ul>
+</li>
+<li>View, Tool Windows, Docker, connect to it</li>
+<li>Run the project</li>
+</ul>
+<h1 id="docker-and-eclipse">Docker and Eclipse</h1>
+<p>This chapter will show you basic Docker tooling with Eclipse:</p>
+<ul>
+<li>Pull/Push/Build Docker images</li>
+<li>Run/Start/Stop/Kill Docker containers</li>
+<li>Customize views</li>
+</ul>
+<p>Watch a quick video explaining the key steps in <a href="https://www.youtube.com/watch?v=XmhEZiS26os">https://www.youtube.com/watch?v=XmhEZiS26os</a>.</p>
+<h2 id="install-docker-tooling-in-eclipse">Install Docker Tooling in Eclipse</h2>
+<p>Download <a href="http://www.eclipse.org/downloads/eclipse-packages/%5BEclipse">http://www.eclipse.org/downloads/eclipse-packages/[Eclipse</a> IDE for Java EE Developers] and install.</p>
+<p>Go to &ldquo;<code>Help</code>&rdquo; menu, &ldquo;<code>Install New Software...</code>&rdquo;.</p>
+<p>Select Eclipse update site for the release, search for Docker, select &ldquo;<code>Docker Tooling</code>&rdquo;.</p>
+<p><img src="docker-eclipse-update-site-selection.png" alt="My Image"></p>
+<p>Click on &ldquo;<code>Next&gt;</code>&rdquo;, &ldquo;<code>Next&gt;</code>&rdquo;, accept the license agreement, click on &ldquo;<code>Finish</code>&rdquo; to start the installation.</p>
+<p>Restart Eclipse for the installation to complete.</p>
+<h2 id="docker-perspective-and-view">Docker Perspective and View</h2>
+<p>Go to &ldquo;<code>Window</code>&rdquo;, &ldquo;<code>Perspective</code>&rdquo;, &ldquo;<code>Open Perspective</code>&rdquo;, &ldquo;<code>Other...</code>&rdquo;, &ldquo;<code>Docker Tooling</code>&rdquo;.</p>
+<p><img src="docker-eclipse-docker-perspective.png" alt="My Image"></p>
+<p>Click on &ldquo;<code>OK</code>&rdquo; to see the perspective.</p>
+<p><img src="docker-eclipse-docker-perspective-default-look.png" alt="My Image"></p>
+<p>This has three views:</p>
+<ul>
+<li><em>Docker Explorer</em>: a tree view listing all connected Docker instances, with image and containers.</li>
+<li><em>Docker Images</em>: a table view listing containers for selected Docker connection.</li>
+<li><em>Docker Containers</em>: a table view listing containers for selected Docker connection</li>
+</ul>
+<p>Click on the text in Docker Explorer to create a new connection. If you are on Mac/Windows, you are likely using Docker for Mac/Windows or Docker Toolbox to setup Docker Host. Eclipse allows to configure Docker Engine using both Docker for Mac/Windows and Docker Toolbox.</p>
+<p>If you are using Docker for Mac/Windows, then the default values are shown:</p>
+<p><img src="docker-eclipse-docker-connection.png" alt="My Image"></p>
+<p>Click on &ldquo;<code>Test Connection</code>&rdquo; to test the connection.</p>
+<p><img src="docker-eclipse-docker-connection-test.png" alt="My Image"></p>
+<p>If you are using Toolbox, enter the values as shown:</p>
+<p><img src="docker-eclipse-docker-connection-toolbox.png" alt="My Image"></p>
+<p>The exact value of TCP Connection can be found using <code>docker-machine ls</code> command. The path for authentication is the directory name where certificates for your Docker Machine, <code>couchbase</code> in this case, are stored.</p>
+<p>Click on &ldquo;<code>Test Connection</code>&rdquo; to make sure the connection is successfully configured.</p>
+<p><img src="docker-eclipse-docker-connection-test-toolbox.png" alt="My Image"></p>
+<p>In either case, the configuration can be completed once the connection is tested. Click on &ldquo;<code>Finish</code>&rdquo; to complete the configuration.</p>
+<p>Docker Explorer is updated to show the connection.</p>
+<p>Containers and Images configured for the Docker Machine are shown in tabs. They can be expanded to see the list in Explorer itself.</p>
+<h2 id="pull-an-image-2">Pull an Image</h2>
+<p>Expand the connection to see &ldquo;<code>Containers</code>&rdquo; and &ldquo;<code>Images</code>&rdquo;.</p>
+<p>Right-click on &ldquo;<code>Images</code>&rdquo; and select &ldquo;<code>Pull...</code>&rdquo;.</p>
+<p>Type the image name and click on &ldquo;<code>Finish</code>&rdquo;.</p>
+<p><img src="docker-eclipse-pull-image.png" alt="My Image"></p>
+<p>This image is now shown in Explorer and Docker Images tab.</p>
+<p><img src="docker-eclipse-pulled-image.png" alt="My Image"></p>
+<p>Any existing images on the Docker Host will be shown here.</p>
+<h2 id="run-a-container-2">Run a Container</h2>
+<p>Select an image, right-click on it, and click on &ldquo;<code>Run...</code>&rdquo;. It shows the options that can be configured for running the container. Some of them are:</p>
+<ul>
+<li>Publish ports on Docker host interface (<code>-P</code> or <code>-p</code> in <code>docker run</code> command)</li>
+<li>Keep STDIN open and allocate pseudo-TTY (<code>-it</code> on CLI)</li>
+<li>Remove container after it exits (<code>--rm</code> on CLI)</li>
+<li>Volume mapping (<code>-v</code> on CLI)</li>
+<li>Environment variables (<code>-e</code> on CLI)</li>
+</ul>
+<p>Uncheck &ldquo;<code>Publish all exposed ports</code>&rdquo; box to map to corresponding ports.</p>
+<p><img src="docker-eclipse-run-container-config.png" alt="My Image"></p>
+<p>Click on &ldquo;<code>Finish</code>&rdquo; to run the container.</p>
+<p>Right-click on the started container, select &ldquo;<code>Display Log</code>&rdquo; to show the log.</p>
+<p><img src="docker-eclipse-container-display-log.png" alt="My Image"></p>
+<p>The container can be paused, stopped and killed from here as well.</p>
+<p>To see more details about the container, right-click on the container, select &ldquo;<code>Show In</code>&rdquo;, &ldquo;<code>Properties</code>&rdquo;.</p>
+<p><img src="docker-eclipse-container-properties.png" alt="My Image"></p>
+<h2 id="build-an-image-2">Build an Image</h2>
+<p>In Docker Images tab, click on the hammer icon on top right.</p>
+<p>Give the image name, specify an empty directory, click on &ldquo;<code>Edit Dockerfile</code>&rdquo; to edit the contents of Dockerfile</p>
+<p><img src="docker-eclipse-build-image.png" alt="My Image"></p>
+<p>Click on &ldquo;<code>Save</code>&rdquo; and &ldquo;<code>Finish</code>&rdquo; to create the image.</p>
+
         <div class="section-index">
     
     
@@ -3237,7 +3033,7 @@ Click on &quot;`Save`&quot; and &quot;`Finish`&quot; to create the image.
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.26261: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/7a32eedbface83a12edf382c055d9d3ff8f5d836">Update _index.md (7a32eed)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.26261: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/f4194e371186c8c8f444a35f4d2ccecf9b46d638">Merge pull request #18 from mikesir87/patch-1 (f4194e3)</a>
 </div>
 </div>
 

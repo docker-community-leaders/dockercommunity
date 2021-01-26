@@ -711,6 +711,9 @@ if (!doNotTrack) {
         <li></li>
         <li><a href="#getting-started-with-docker-image">Getting Started with Docker Image</a></li>
         <li><a href="#running-hello-world-example">Running Hello World Example</a></li>
+        <li><a href="#working-with-docker-images">Working with Docker Images</a></li>
+        <li><a href="#building-your-first-alpine-docker-image-and-push-it-to-dockerhub">Building Your First Alpine Docker Image and Push it to DockerHub</a></li>
+        <li><a href="#test-your-knowledge---quiz1">Test Your Knowledge - Quiz1</a></li>
       </ul>
     </li>
   </ul>
@@ -917,7 +920,316 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
         }
     }
 ]
-</code></pre>
+</code></pre><h2 id="working-with-docker-images">Working with Docker Images</h2>
+<h3 id="tested-infrastructure-1">Tested Infrastructure</h3>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>
+  </tr>
+</table>
+<h3 id="pre-requisite-1">Pre-requisite</h3>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h3 id="listing-the-docker-images">Listing the Docker Images</h3>
+<pre><code>$ docker images
+</code></pre><pre><code>REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hello-world         latest              4ab4c602aa5e        6 weeks ago         1.84kB
+</code></pre><h3 id="show-all-images-default-hides-intermediate-images">Show all images (default hides intermediate images)</h3>
+<pre><code>docker images -a
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hello-world         latest              4ab4c602aa5e        6 weeks ago         1.84kB
+</code></pre><h3 id="list-images-by-name-and-tag">List images by name and tag</h3>
+<p>The docker images command takes an optional [REPOSITORY[:TAG]] argument that restricts the list to images that match the argument. If you specify REPOSITORY but no TAG, the docker images command lists all images in the given repository.</p>
+<p>To demo this, let us pull all various versions of alpine OS</p>
+<pre><code>docker pull alpine:3.6
+docker pull alpine:3.7
+docker pull alpine:3.8
+docker pull alpine:3.9
+</code></pre><pre><code>[node4] (local) root@192.168.0.20 ~
+$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+alpine              3.6                 43773d1dba76        7 days ago          4.03MB
+alpine              3.7                 6d1ef012b567        7 days ago          4.21MB
+alpine              3.8                 dac705114996        7 days ago          4.41MB
+alpine              3.9                 5cb3aa00f899        7 days ago          5.53MB
+</code></pre><pre><code>[node4] (local) root@192.168.0.20 ~
+$ docker images alpine:3.7
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+alpine              3.7                 6d1ef012b567        7 days ago          4.21MB
+</code></pre><h3 id="list-the-full-length-image-ids">List the full length image IDs</h3>
+<pre><code>$ docker images --no-trunc
+REPOSITORY          TAG                 IMAGE ID                                                                  CREATED
+     SIZE
+alpine              3.6                 sha256:43773d1dba76c4d537b494a8454558a41729b92aa2ad0feb23521c3e58cd0440   7 days ago
+     4.03MB
+alpine              3.7                 sha256:6d1ef012b5674ad8a127ecfa9b5e6f5178d171b90ee462846974177fd9bdd39f   7 days ago
+     4.21MB
+alpine              3.8                 sha256:dac7051149965716b0acdcab16380b5f4ab6f2a1565c86ed5f651e954d1e615c   7 days ago
+     4.41MB
+alpine              3.9                 sha256:5cb3aa00f89934411ffba5c063a9bc98ace875d8f92e77d0029543d9f2ef4ad0   7 days ago
+     5.53MB
+</code></pre><h3 id="listing-out-images-with-filter">Listing out images with filter</h3>
+<pre><code>$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              94e814e2efa8        3 days ago          88.9MB
+alpine              3.6                 43773d1dba76        7 days ago          4.03MB
+alpine              3.7                 6d1ef012b567        7 days ago          4.21MB
+alpine              3.8                 dac705114996        7 days ago          4.41MB
+alpine              3.9                 5cb3aa00f899        7 days ago          5.53MB
+</code></pre><p>If you want to filter out just alpine</p>
+<pre><code>$ docker images --filter=reference='alpine'
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+alpine              3.6                 43773d1dba76        7 days ago          4.03MB
+alpine              3.7                 6d1ef012b567        7 days ago          4.21MB
+alpine              3.8                 dac705114996        7 days ago          4.41MB
+alpine              3.9                 5cb3aa00f899        7 days ago          5.53MB
+</code></pre><h3 id="saving-images-and-containers-as-tar-files-for-sharing">Saving Images and Containers as Tar Files for Sharing</h3>
+<p>Imagine a scenario where you have built Docker images and containers that you would be interested to keep and share it with your other collaborators or colleagues. The below methods shall help you achieve it.</p>
+<p>Four basic Docker CLI comes into action:</p>
+<ul>
+<li>The <code>docker export</code> - Export a container’s filesystem as a tar archive</li>
+<li>The <code>docker import</code> - Import the contents from a tarball to create a filesystem image</li>
+<li>The <code>docker save</code> - Save one or more images to a tar archive (streamed to STDOUT by default)</li>
+<li>The <code>docker load</code> - Load an image from a tar archive or STDIN</li>
+</ul>
+<h3 id="tested-infrastructure-2">Tested Infrastructure</h3>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>
+  </tr>
+</table>
+<h3 id="pre-requisite-2">Pre-requisite</h3>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<h3 id="create-nginx-container">Create Nginx Container</h3>
+<pre><code>$ docker run -d -p 80:80 nginx
+Unable to find image 'nginx:latest' locally
+latest: Pulling from library/nginx
+a5a6f2f73cd8: Pull complete
+1ba02017c4b2: Pull complete
+33b176c904de: Pull complete
+Digest: sha256:5d32f60db294b5deb55d078cd4feb410ad88e6fe77500c87d3970eca97f54dba
+Status: Downloaded newer image for nginx:latest
+df2caf9283e84a15bb2321a17aabe84e3e0762ec82fc180e2a4c15fcf0f96588
+[node1] (local) root@192.168.0.33 ~
+</code></pre><h3 id="displaying-running-container">Displaying Running Container</h3>
+<pre><code>$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
+df2caf9283e8        nginx               &quot;nginx -g 'daemon of…&quot;   35 seconds ago      Up 34 seconds       0.0.0.0:80-&gt;80/tcp   vigorous_jang
+</code></pre><pre><code>$ docker export df2 &gt; nginx.tar
+</code></pre><p>You could commit this container as a new image  locally, but you could also use the Docker import command:</p>
+<pre><code>$ docker import - mynginx &lt; nginx.tar
+sha256:aaaed50d250a671042e8dc383c6e05012e245f5eaf555d10c40be63f6028ee7b
+</code></pre><pre><code>$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+mynginx             latest              aaaed50d250a        25 seconds ago      107MB
+nginx               latest              568c4670fa80        2 weeks ago         109MB
+</code></pre><p>If you wanted to share this image with one of your collaborators, you could upload the tar file on a web server and let your collaborator download it and use the import command on his Docker host.</p>
+<p>If you would rather deal with images that you have already committed, you can use the load and save commands:</p>
+<pre><code>$ docker save -o mynginx1.tar nginx
+</code></pre><pre><code>$ ls -l
+total 218756
+-rw-------    1 root     root     112844800 Dec 18 02:53 mynginx1.tar
+-rw-r--r--    1 root     root     111158784 Dec 18 02:50 nginx.tar
+</code></pre><pre><code>$ docker rmi mynginx
+Untagged: mynginx:latest
+Deleted: sha256:aaaed50d250a671042e8dc383c6e05012e245f5eaf555d10c40be63f6028ee7b
+Deleted: sha256:41135ad184eaac0f5c4f46e4768555738303d30ab161a7431d28a5ccf1778a0f
+</code></pre><p>Now delete all images and containers running and try to run the below command to load Docker image into your system:</p>
+<pre><code>$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+</code></pre><pre><code>$ docker load &lt; mynginx1.tar
+Loaded image: nginx:latest
+</code></pre><pre><code>[node1] (local) root@192.168.0.33 ~$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+nginx               latest              568c4670fa80        2 weeks ago         109MB
+[node1] (local) root@192.168.0.33 ~
+$
+</code></pre><h2 id="building-your-first-alpine-docker-image-and-push-it-to-dockerhub">Building Your First Alpine Docker Image and Push it to DockerHub</h2>
+<p>How to build Your First Alpine Docker Image and Push it to DockerHub</p>
+<h3 id="tested-infrastructure-3">Tested Infrastructure</h3>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Platform</b></th>
+    <th class="tg-yw4l"><b>Number of Instance</b></th>
+    <th class="tg-yw4l"><b>Reading Time</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b> Play with Docker</b></td>
+    <td class="tg-yw4l"><b>1</b></td>
+    <td class="tg-yw4l"><b>5 min</b></td>
+  </tr>
+</table>
+<h3 id="pre-requisite-3">Pre-requisite</h3>
+<ul>
+<li>Create an account with <a href="https://hub.docker.com">DockerHub</a></li>
+<li>Open <a href="https://labs.play-with-docker.com/">PWD</a> Platform on your browser</li>
+<li>Click on <strong>Add New Instance</strong> on the left side of the screen to bring up Alpine OS instance on the right side</li>
+</ul>
+<p>Under this tutorial we will see how to build our own first alpine based Docker Image.</p>
+<pre><code>$ docker run -dit alpine sh
+620e1bcb5ab6e84b75a7a5c35790a77691112e59830ea1d5d85244bc108578c9
+[node4] (local) root@192.168.0.20 ~
+</code></pre><pre><code>$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+620e1bcb5ab6        alpine              &quot;sh&quot;                3 seconds ago       Up 2 seconds                            keen_alba
+ttani
+</code></pre><pre><code>[node4] (local) root@192.168.0.20 ~
+$ docker attach 62
+/ #
+/ #
+/ # cat /etc/os-release
+NAME=&quot;Alpine Linux&quot;
+ID=alpine
+VERSION_ID=3.9.2
+PRETTY_NAME=&quot;Alpine Linux v3.9&quot;
+HOME_URL=&quot;https://alpinelinux.org/&quot;
+BUG_REPORT_URL=&quot;https://bugs.alpinelinux.org/&quot;
+/ #
+</code></pre><h3 id="updating-apk-packages">Updating APK Packages</h3>
+<pre><code>/ # apk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/community/x86_64/APKINDEX.tar.gz
+v3.9.2-21-g3dda2a36ce [http://dl-cdn.alpinelinux.org/alpine/v3.9/main]
+v3.9.2-19-gfdf726d41a [http://dl-cdn.alpinelinux.org/alpine/v3.9/community]
+OK: 9756 distinct packages available
+/ # ^
+</code></pre><pre><code>/ # apk add git
+(1/7) Installing ca-certificates (20190108-r0)
+(2/7) Installing nghttp2-libs (1.35.1-r0)
+(3/7) Installing libssh2 (1.8.0-r4)
+(4/7) Installing libcurl (7.64.0-r1)
+(5/7) Installing expat (2.2.6-r0)
+(6/7) Installing pcre2 (10.32-r1)
+(7/7) Installing git (2.20.1-r0)
+Executing busybox-1.29.3-r10.trigger
+Executing ca-certificates-20190108-r0.trigger
+OK: 20 MiB in 21 packages
+/ #
+</code></pre><h3 id="now-lets-come-out-of-it-by-ctrlpq-and-commit-the-changes">Now lets come out of it by Ctrl+P+Q and commit the changes</h3>
+<pre><code>$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+620e1bcb5ab6        alpine              &quot;sh&quot;                4 minutes ago       Up 4 minutes                            keen_alba
+ttani
+[node4] (local) root@192.168.0.20 ~
+$ docker commit -m &quot;Added GIT&quot; 620 ajeetraina/alpine-git
+sha256:9a8cd6c3bd8761013b2b932c58af2870f5637bfdf4227d7414073b0458ed0c54
+[node4] (local) root@192.168.0.20 ~
+$ docker images
+REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+ajeetraina/alpine-git   latest              9a8cd6c3bd87        11 seconds ago      31.2MB
+ubuntu                  latest              94e814e2efa8        3 days ago          88.9MB
+alpine                  3.6                 43773d1dba76        7 days ago          4.03MB
+alpine                  3.7                 6d1ef012b567        7 days ago          4.21MB
+alpine                  3.8                 dac705114996        7 days ago          4.41MB
+alpine                  3.9                 5cb3aa00f899        7 days ago          5.53MB
+alpine                  latest              5cb3aa00f899        7 days ago          5.53MB
+</code></pre><p>There you see a new image just created.</p>
+<h3 id="time-to-tag-the-image">Time to tag the image</h3>
+<pre><code>$ docker tag --help
+
+Usage:  docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+
+Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+[node4] (local) root@192.168.0.20 ~
+$ docker tag ajeetraina/alpine-git:latest ajeetraina/alpine-git:1.0
+</code></pre><pre><code>$ docker images
+REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+ajeetraina/alpine-git   1.0                 9a8cd6c3bd87        2 minutes ago       31.2MB
+ajeetraina/alpine-git   latest              9a8cd6c3bd87        2 minutes ago       31.2MB
+ubuntu                  latest              94e814e2efa8        3 days ago          88.9MB
+alpine                  3.6                 43773d1dba76        7 days ago          4.03MB
+alpine                  3.7                 6d1ef012b567        7 days ago          4.21MB
+alpine                  3.8                 dac705114996        7 days ago          4.41MB
+alpine                  3.9                 5cb3aa00f899        7 days ago          5.53MB
+alpine                  latest              5cb3aa00f899        7 days ago          5.53MB
+</code></pre><h3 id="pushing-it-to-dockerhub">Pushing it to DockerHub</h3>
+<pre><code>$ docker login
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker
+.com to create one.
+Username: ajeetraina
+Password:
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+[node4] (local) root@192.168.0.20 ~
+</code></pre><pre><code>$ docker push ajeetraina/alpine-git:1.0
+The push refers to repository [docker.io/ajeetraina/alpine-git]
+3846235f8c17: Pushed
+bcf2f368fe23: Mounted from library/alpine
+1.0: digest: sha256:85d50f702e930db9e5b958387e667b7e26923f4de340534085cea184adb8411e size: 740
+[node4] (local) root@192.168.0.20 ~
+</code></pre><h2 id="test-your-knowledge---quiz1">Test Your Knowledge - Quiz1</h2>
+<p>Test Your Knowledge</p>
+<table>
+<thead>
+<tr>
+<th align="left">S. No.</th>
+<th align="left">Question.</th>
+<th align="left">Response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left">What is difference between Docker Image and Docker Container?</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Where are all Docker images stored?</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Is DockerHub a public or private Docker registry?</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">What is the main role of Docker Engine?</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Can you run Alpine container without even pulling it?</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">What is the minimal size of Docker image you have built?</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">I have mix of Ubuntu and CentOS-based Docker images. How shall I filter it out?</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
         <div class="section-index">
     
     
@@ -1045,7 +1357,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.26261: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/28133f8b81e3d8a0ce3e4cd7c03ad95f93115169">Create _index.md (28133f8)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.26261: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/ff31eba66ae0b47dfb51a014dc603f7ab269c3c3">Update _index.md (ff31eba)</a>
 </div>
 </div>
 

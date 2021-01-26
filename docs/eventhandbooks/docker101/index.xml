@@ -438,5 +438,163 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
       </description>
     </item>
     
+    <item>
+      <title>Docs: Getting Started with Docker Image</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/docker101/gettingstarted/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/docker101/gettingstarted/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;getting-started-with-docker-image---1-hour&#34;&gt;Getting Started with Docker Image - 1 hour&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#running-hello-world-example&#34;&gt;Running Hello World Example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#working-with-docker-image&#34;&gt;Working with Docker Image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#saving-images-and-containers-as-tar-files-for-sharing&#34;&gt;Saving Images and Containers as Tar Files for Sharing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#building-your-first-alpine-docker-image-and-push-it-to-dockerhub&#34;&gt;Building Your First Alpine Docker Image and Push it to DockerHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#test-your-knowledge-quiz1&#34;&gt;Test Your Knowledge&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;getting-started-with-docker-image&#34;&gt;Getting Started with Docker Image&lt;/h2&gt;
+&lt;p&gt;Demonstrating Hello World Example&lt;/p&gt;
+&lt;h3 id=&#34;tested-infrastructure&#34;&gt;Tested Infrastructure&lt;/h3&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
+    &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Number of Instance&lt;/b&gt;&lt;/th&gt;
+    &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Reading Time&lt;/b&gt;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt; Play with Docker&lt;/b&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;1&lt;/b&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;pre-requisite&#34;&gt;Pre-requisite&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
+&lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;running-hello-world-example&#34;&gt;Running Hello World Example&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ docker run hello-world
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;images/helloworld.png&#34; alt=&#34;alt text&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;explanation&#34;&gt;Explanation&lt;/h3&gt;
+&lt;p&gt;This image is a prime example of using the scratch image effectively. See hello.c in &lt;a href=&#34;https://github.com/docker-library/hello-world&#34;&gt;https://github.com/docker-library/hello-world&lt;/a&gt; for the source code of the hello binary included in this image.&lt;/p&gt;
+&lt;p&gt;So what’s happened here? We’ve called the docker run command, which is responsible for launching containers.&lt;/p&gt;
+&lt;p&gt;The argument hello-world is the name of the image someone created on dockerhub for us. It will first search for &amp;ldquo;hello-world&amp;rdquo; image locally and then search in Dockerhub.&lt;/p&gt;
+&lt;p&gt;Once the image has been downloaded, Docker turns the image into a running container and executes it.&lt;/p&gt;
+&lt;h3 id=&#34;did-you-know&#34;&gt;Did you Know?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;The Hello World Docker Image is only 1.84 KB size.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;[node1] (local) root@192.168.0.18 ~
+$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hello-world         latest              4ab4c602aa5e        6 weeks ago         1.84kB
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;While running &lt;code&gt;docker ps&lt;/code&gt; command, it doesn&amp;rsquo;t display any running container. Reason - It gets executed once and exit immediately.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS
+      PORTS               NAMES
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;You can use &lt;code&gt;docker inspect &amp;lt;imagename&amp;gt;&lt;/code&gt; command to inspect about this particular Docker Image.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;$ docker inspect 4ab
+[
+    {
+        &amp;quot;Id&amp;quot;: &amp;quot;sha256:4ab4c602aa5eed5528a6620ff18a1dc4faef0e1ab3a5eddeddb410714478c67f&amp;quot;,
+        &amp;quot;RepoTags&amp;quot;: [
+            &amp;quot;hello-world:latest&amp;quot;
+        ],
+        &amp;quot;RepoDigests&amp;quot;: [
+            &amp;quot;hello-world@sha256:0add3ace90ecb4adbf7777e9aacf18357296e799f81cabc9fde470971e499788&amp;quot;
+        ],
+        &amp;quot;Parent&amp;quot;: &amp;quot;&amp;quot;,
+        &amp;quot;Comment&amp;quot;: &amp;quot;&amp;quot;,
+        &amp;quot;Created&amp;quot;: &amp;quot;2018-09-07T19:25:39.809797627Z&amp;quot;,
+        &amp;quot;Container&amp;quot;: &amp;quot;15c5544a385127276a51553acb81ed24a9429f9f61d6844db1fa34f46348e420&amp;quot;,
+        &amp;quot;ContainerConfig&amp;quot;: {
+            &amp;quot;Hostname&amp;quot;: &amp;quot;15c5544a3851&amp;quot;,
+            &amp;quot;Domainname&amp;quot;: &amp;quot;&amp;quot;,
+            &amp;quot;User&amp;quot;: &amp;quot;&amp;quot;,
+            &amp;quot;AttachStdin&amp;quot;: false,
+            &amp;quot;AttachStdout&amp;quot;: false,
+            &amp;quot;AttachStderr&amp;quot;: false,
+            &amp;quot;Tty&amp;quot;: false,
+            &amp;quot;OpenStdin&amp;quot;: false,
+            &amp;quot;StdinOnce&amp;quot;: false,
+            &amp;quot;Env&amp;quot;: [
+                &amp;quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&amp;quot;
+            ],
+            &amp;quot;Cmd&amp;quot;: [
+                &amp;quot;/bin/sh&amp;quot;,
+                &amp;quot;-c&amp;quot;,
+                &amp;quot;#(nop) &amp;quot;,
+                &amp;quot;CMD [\&amp;quot;/hello\&amp;quot;]&amp;quot;
+            ],
+            &amp;quot;ArgsEscaped&amp;quot;: true,
+            &amp;quot;Image&amp;quot;: &amp;quot;sha256:9a5813f1116c2426ead0a44bbec252bfc5c3d445402cc1442ce9194fc1397027&amp;quot;,
+            &amp;quot;Volumes&amp;quot;: null,
+            &amp;quot;WorkingDir&amp;quot;: &amp;quot;&amp;quot;,
+            &amp;quot;Entrypoint&amp;quot;: null,
+            &amp;quot;OnBuild&amp;quot;: null,
+            &amp;quot;Labels&amp;quot;: {}
+        },
+        &amp;quot;DockerVersion&amp;quot;: &amp;quot;17.06.2-ce&amp;quot;,
+        &amp;quot;Author&amp;quot;: &amp;quot;&amp;quot;,
+        &amp;quot;Config&amp;quot;: {
+            &amp;quot;Hostname&amp;quot;: &amp;quot;&amp;quot;,
+            &amp;quot;Domainname&amp;quot;: &amp;quot;&amp;quot;,
+            &amp;quot;User&amp;quot;: &amp;quot;&amp;quot;,
+            &amp;quot;AttachStdin&amp;quot;: false,
+            &amp;quot;AttachStdout&amp;quot;: false,
+            &amp;quot;AttachStderr&amp;quot;: false,
+            &amp;quot;Tty&amp;quot;: false,
+            &amp;quot;OpenStdin&amp;quot;: false,
+            &amp;quot;StdinOnce&amp;quot;: false,
+            &amp;quot;Env&amp;quot;: [
+                &amp;quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&amp;quot;
+            ],
+            &amp;quot;Cmd&amp;quot;: [
+                &amp;quot;/hello&amp;quot;
+            ],
+            &amp;quot;ArgsEscaped&amp;quot;: true,
+            &amp;quot;Image&amp;quot;: &amp;quot;sha256:9a5813f1116c2426ead0a44bbec252bfc5c3d445402cc1442ce9194fc1397027&amp;quot;,
+            &amp;quot;Volumes&amp;quot;: null,
+            &amp;quot;WorkingDir&amp;quot;: &amp;quot;&amp;quot;,
+            &amp;quot;Entrypoint&amp;quot;: null,
+            &amp;quot;OnBuild&amp;quot;: null,
+            &amp;quot;Labels&amp;quot;: null
+        },
+        &amp;quot;Architecture&amp;quot;: &amp;quot;amd64&amp;quot;,
+        &amp;quot;Os&amp;quot;: &amp;quot;linux&amp;quot;,
+        &amp;quot;Size&amp;quot;: 1840,
+        &amp;quot;VirtualSize&amp;quot;: 1840,
+        &amp;quot;GraphDriver&amp;quot;: {
+            &amp;quot;Data&amp;quot;: {
+                &amp;quot;MergedDir&amp;quot;: &amp;quot;/var/lib/docker/overlay2/e494ae30abc49ad403ef5c2a32bcb894629ea4da6d4d226fbca70d27ed9a74d8/merged&amp;quot;,
+                &amp;quot;UpperDir&amp;quot;: &amp;quot;/var/lib/docker/overlay2/e494ae30abc49ad403ef5c2a32bcb894629ea4da6d4d226fbca70d27ed9a74d8/diff&amp;quot;,
+                &amp;quot;WorkDir&amp;quot;: &amp;quot;/var/lib/docker/overlay2/e494ae30abc49ad403ef5c2a32bcb894629ea4da6d4d226fbca70d27ed9a74d8/work&amp;quot;
+            },
+            &amp;quot;Name&amp;quot;: &amp;quot;overlay2&amp;quot;
+        },
+        &amp;quot;RootFS&amp;quot;: {
+            &amp;quot;Type&amp;quot;: &amp;quot;layers&amp;quot;,
+            &amp;quot;Layers&amp;quot;: [
+                &amp;quot;sha256:428c97da766c4c13b19088a471de6b622b038f3ae8efa10ec5a37d6d31a2df0b&amp;quot;
+            ]
+        },
+        &amp;quot;Metadata&amp;quot;: {
+            &amp;quot;LastTagTime&amp;quot;: &amp;quot;0001-01-01T00:00:00Z&amp;quot;
+        }
+    }
+]
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
   </channel>
 </rss>

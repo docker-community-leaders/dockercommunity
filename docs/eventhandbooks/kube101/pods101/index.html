@@ -987,11 +987,10 @@ if (!doNotTrack) {
 <p>Containers in a Pod run on a “logical host”; they use the same network namespace (in other words, the same IP address and port space), and the same <a href="https://en.wikipedia.org/wiki/Inter-process_communication">IPC</a> namespace. They can also use shared volumes. These properties make it possible for these containers to efficiently communicate, ensuring data locality. Also, Pods enable you to manage several tightly coupled application containers as a single unit.</p>
 <p>So if an application needs several containers running on the same host, why not just make a single container with everything you need? Well first, you’re likely to violate the “one process per container” principle. This is important because with multiple processes in the same container it is harder to troubleshoot the container. That is because logs from different processes will be mixed together and it is harder manage the processes lifecycle. For example to take care of “zombie” processes when their parent process dies. Second, using several containers for an application is simpler, more transparent, and enables decoupling software dependencies. Also, more granular containers can be reused between teams.</p>
 <h2 id="pre-requisite">Pre-requisite:</h2>
-<pre><code><div id="my-panel" data-katacoda-ondemand="true" data-katacoda-port="30000" data-katacoda-env="minikube" data-katacoda-command="start.sh" data-katacoda-ui="panel"></div>
+<div id="my-panel" data-katacoda-ondemand="true" data-katacoda-port="30000" data-katacoda-env="minikube" data-katacoda-command="start.sh" data-katacoda-ui="panel"></div>
 <script src="https://katacoda.com/embed.js"></script>
 <button class="button" onclick="window.katacoda.init(); ">Launch Terminal</button>
 
-</code></pre>
 <h2 id="steps">Steps</h2>
 <pre><code>git clone https://github.com/collabnix/kubelabs
 cd kubelabs/pods101
@@ -1478,7 +1477,7 @@ Wed Jan  8 08:59:16 UTC 2020
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.27271: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/8b0f0f405ba36b10b5c6ad8a328cbbaea8b5e797">Create _index.md (8b0f0f4)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.27271: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/d319205d68cb8e161e65eee392c97ecbbc2005f1">Update _index.md (d319205)</a>
 </div>
 </div>
 

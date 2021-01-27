@@ -39,11 +39,10 @@
 &lt;p&gt;Containers in a Pod run on a “logical host”; they use the same network namespace (in other words, the same IP address and port space), and the same &lt;a href=&#34;https://en.wikipedia.org/wiki/Inter-process_communication&#34;&gt;IPC&lt;/a&gt; namespace. They can also use shared volumes. These properties make it possible for these containers to efficiently communicate, ensuring data locality. Also, Pods enable you to manage several tightly coupled application containers as a single unit.&lt;/p&gt;
 &lt;p&gt;So if an application needs several containers running on the same host, why not just make a single container with everything you need? Well first, you’re likely to violate the “one process per container” principle. This is important because with multiple processes in the same container it is harder to troubleshoot the container. That is because logs from different processes will be mixed together and it is harder manage the processes lifecycle. For example to take care of “zombie” processes when their parent process dies. Second, using several containers for an application is simpler, more transparent, and enables decoupling software dependencies. Also, more granular containers can be reused between teams.&lt;/p&gt;
 &lt;h2 id=&#34;pre-requisite&#34;&gt;Pre-requisite:&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&lt;div id=&#34;my-panel&#34; data-katacoda-ondemand=&#34;true&#34; data-katacoda-port=&#34;30000&#34; data-katacoda-env=&#34;minikube&#34; data-katacoda-command=&#34;start.sh&#34; data-katacoda-ui=&#34;panel&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;my-panel&#34; data-katacoda-ondemand=&#34;true&#34; data-katacoda-port=&#34;30000&#34; data-katacoda-env=&#34;minikube&#34; data-katacoda-command=&#34;start.sh&#34; data-katacoda-ui=&#34;panel&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;https://katacoda.com/embed.js&#34;&gt;&lt;/script&gt;
 &lt;button class=&#34;button&#34; onclick=&#34;window.katacoda.init(); &#34;&gt;Launch Terminal&lt;/button&gt;
 
-&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;steps&#34;&gt;Steps&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;git clone https://github.com/collabnix/kubelabs
 cd kubelabs/pods101

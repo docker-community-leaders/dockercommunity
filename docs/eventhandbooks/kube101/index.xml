@@ -14,6 +14,385 @@
     
     
     <item>
+      <title>Docs: Deploying Your First Nginx Pod</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/kube101/pods101/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/kube101/pods101/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;deploying-your-first-nginx-pod&#34;&gt;Deploying Your First Nginx Pod&lt;/h1&gt;
+&lt;h2 id=&#34;what-are-k8s-pods&#34;&gt;What are K8s Pods?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Kubernetes pods are the foundational unit for all higher Kubernetes objects.&lt;/li&gt;
+&lt;li&gt;A pod hosts one or more containers.&lt;/li&gt;
+&lt;li&gt;It can be created using either a command or a YAML/JSON file.&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;kubectl&lt;/code&gt; to create pods, view the running ones, modify their configuration, or terminate them. Kuberbetes will attempt to restart a failing pod by default.&lt;/li&gt;
+&lt;li&gt;If the pod fails to start indefinitely, we can use the &lt;code&gt;kubectl describe&lt;/code&gt; command to know what went wrong.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;why-does-kubernetes-use-a-pod-as-the-smallest-deployable-unit-and-not-a-single-container&#34;&gt;Why does Kubernetes use a Pod as the smallest deployable unit, and not a single container?&lt;/h2&gt;
+&lt;p&gt;While it would seem simpler to just deploy a single container directly, there are good reasons to add a layer of abstraction represented by the Pod. A container is an existing entity, which refers to a specific thing. That specific thing might be a Docker container, but it might also be a &lt;a href=&#34;https://coreos.com/rkt/&#34;&gt;rkt&lt;/a&gt; container, or a VM managed by Virtlet. Each of these has different requirements.&lt;/p&gt;
+&lt;p&gt;What’s more, to manage a container, Kubernetes needs additional information, such as a restart policy, which defines what to do with a container when it terminates, or a liveness probe, which defines an action to detect if a process in a container is still alive from the application’s perspective, such as a web server responding to HTTP requests.&lt;/p&gt;
+&lt;p&gt;Instead of overloading the existing “thing” with additional properties, Kubernetes architects have decided to use a new entity, the Pod, that logically contains (wraps) one or more containers that should be managed as a single entity.&lt;/p&gt;
+&lt;h2 id=&#34;why-does-kubernetes-allow-more-than-one-container-in-a-pod&#34;&gt;Why does Kubernetes allow more than one container in a Pod?&lt;/h2&gt;
+&lt;p&gt;Containers in a Pod run on a “logical host”; they use the same network namespace (in other words, the same IP address and port space), and the same &lt;a href=&#34;https://en.wikipedia.org/wiki/Inter-process_communication&#34;&gt;IPC&lt;/a&gt; namespace. They can also use shared volumes. These properties make it possible for these containers to efficiently communicate, ensuring data locality. Also, Pods enable you to manage several tightly coupled application containers as a single unit.&lt;/p&gt;
+&lt;p&gt;So if an application needs several containers running on the same host, why not just make a single container with everything you need? Well first, you’re likely to violate the “one process per container” principle. This is important because with multiple processes in the same container it is harder to troubleshoot the container. That is because logs from different processes will be mixed together and it is harder manage the processes lifecycle. For example to take care of “zombie” processes when their parent process dies. Second, using several containers for an application is simpler, more transparent, and enables decoupling software dependencies. Also, more granular containers can be reused between teams.&lt;/p&gt;
+&lt;h2 id=&#34;pre-requisite&#34;&gt;Pre-requisite:&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&lt;div id=&#34;my-panel&#34; data-katacoda-ondemand=&#34;true&#34; data-katacoda-port=&#34;30000&#34; data-katacoda-env=&#34;minikube&#34; data-katacoda-command=&#34;start.sh&#34; data-katacoda-ui=&#34;panel&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://katacoda.com/embed.js&#34;&gt;&lt;/script&gt;
+&lt;button class=&#34;button&#34; onclick=&#34;window.katacoda.init(); &#34;&gt;Launch Terminal&lt;/button&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;steps&#34;&gt;Steps&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/collabnix/kubelabs
+cd kubelabs/pods101
+kubectl apply -f pods01.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;viewing-your-pods&#34;&gt;Viewing Your Pods&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;kubectl get pods
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;which-node-is-this-pod-running-on&#34;&gt;Which Node Is This Pod Running On?&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;kubectl get pods -o wide
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ kubectl describe po webserver
+Name:               webserver
+Namespace:          default
+Priority:           0
+PriorityClassName:  &amp;lt;none&amp;gt;
+Node:               gke-standard-cluster-1-default-pool-78257330-5hs8/10.128.0.3
+Start Time:         Thu, 28 Nov 2019 13:02:19 +0530
+Labels:             &amp;lt;none&amp;gt;
+Annotations:        kubectl.kubernetes.io/last-applied-configuration:
+                      {&amp;quot;apiVersion&amp;quot;:&amp;quot;v1&amp;quot;,&amp;quot;kind&amp;quot;:&amp;quot;Pod&amp;quot;,&amp;quot;metadata&amp;quot;:{&amp;quot;annotations&amp;quot;:{},&amp;quot;name&amp;quot;:&amp;quot;webserver&amp;quot;,&amp;quot;namespace&amp;quot;:&amp;quot;default&amp;quot;},&amp;quot;spec&amp;quot;:{&amp;quot;containers&amp;quot;:[{&amp;quot;image&amp;quot;:&amp;quot;ngi...
+                    kubernetes.io/limit-ranger: LimitRanger plugin set: cpu request for container webserver
+Status:             Running
+IP:                 10.8.0.3
+Containers:
+  webserver:
+    Container ID:   docker://ff06c3e6877724ec706485374936ac6163aff10822246a40093eb82b9113189c
+    Image:          nginx:latest
+    Image ID:       docker-pullable://nginx@sha256:189cce606b29fb2a33ebc2fcecfa8e33b0b99740da4737133cdbcee92f3aba0a
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Thu, 28 Nov 2019 13:02:25 +0530
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:        100m
+    Environment:  &amp;lt;none&amp;gt;
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-mpxxg (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  default-token-mpxxg:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-mpxxg
+    Optional:    false
+QoS Class:       Burstable
+Node-Selectors:  &amp;lt;none&amp;gt;
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age    From                                                        Message
+  ----    ------     ----   ----                                                        -------
+  Normal  Scheduled  2m54s  default-scheduler                                           Successfully assigned default/webserver to gke-standard-cluster-1-default-pool-78257330-5hs8
+  Normal  Pulling    2m53s  kubelet, gke-standard-cluster-1-default-pool-78257330-5hs8  pulling image &amp;quot;nginx:latest&amp;quot;
+  Normal  Pulled     2m50s  kubelet, gke-standard-cluster-1-default-pool-78257330-5hs8  Successfully pulled image &amp;quot;nginx:latest&amp;quot;
+  Normal  Created    2m48s  kubelet, gke-standard-cluster-1-default-pool-78257330-5hs8  Created container
+  Normal  Started    2m48s  kubelet, gke-standard-cluster-1-default-pool-78257330-5hs8  Started container
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;output-in-json&#34;&gt;Output in JSON&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl get pods -o json
+{
+    &amp;quot;apiVersion&amp;quot;: &amp;quot;v1&amp;quot;,
+    &amp;quot;items&amp;quot;: [
+        {
+            &amp;quot;apiVersion&amp;quot;: &amp;quot;v1&amp;quot;,
+            &amp;quot;kind&amp;quot;: &amp;quot;Pod&amp;quot;,
+            &amp;quot;metadata&amp;quot;: {
+                &amp;quot;annotations&amp;quot;: {
+                    &amp;quot;kubectl.kubernetes.io/last-applied-configuration&amp;quot;: &amp;quot;{\&amp;quot;apiVersion\&amp;quot;:\&amp;quot;v1\&amp;quot;,\&amp;quot;kind\&amp;quot;:\&amp;quot;Pod\&amp;quot;,\&amp;quot;metadata\&amp;quot;:{\&amp;quot;annotations\&amp;quot;:{},\&amp;quot;name\&amp;quot;:\&amp;quot;webserver\&amp;quot;,\&amp;quot;namespace\&amp;quot;:\&amp;quot;default\&amp;quot;},\&amp;quot;spec\&amp;quot;:{\&amp;quot;con
+tainers\&amp;quot;:[{\&amp;quot;image\&amp;quot;:\&amp;quot;nginx:latest\&amp;quot;,\&amp;quot;name\&amp;quot;:\&amp;quot;webserver\&amp;quot;,\&amp;quot;ports\&amp;quot;:[{\&amp;quot;containerPort\&amp;quot;:80}]}]}}\n&amp;quot;,
+                    &amp;quot;kubernetes.io/limit-ranger&amp;quot;: &amp;quot;LimitRanger plugin set: cpu request for container webserver&amp;quot;
+                },
+                &amp;quot;creationTimestamp&amp;quot;: &amp;quot;2019-11-28T08:48:28Z&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;webserver&amp;quot;,
+                &amp;quot;namespace&amp;quot;: &amp;quot;default&amp;quot;,
+                &amp;quot;resourceVersion&amp;quot;: &amp;quot;20080&amp;quot;,
+                &amp;quot;selfLink&amp;quot;: &amp;quot;/api/v1/namespaces/default/pods/webserver&amp;quot;,
+                &amp;quot;uid&amp;quot;: &amp;quot;d8e0b56b-11bb-11ea-a1bf-42010a800006&amp;quot;
+            },
+            &amp;quot;spec&amp;quot;: {
+                &amp;quot;containers&amp;quot;: [
+                    {
+                        &amp;quot;image&amp;quot;: &amp;quot;nginx:latest&amp;quot;,
+                        &amp;quot;imagePullPolicy&amp;quot;: &amp;quot;Always&amp;quot;,
+                        &amp;quot;name&amp;quot;: &amp;quot;webserver&amp;quot;,
+                        &amp;quot;ports&amp;quot;: [
+                            {
+                                &amp;quot;containerPort&amp;quot;: 80,
+                                &amp;quot;protocol&amp;quot;: &amp;quot;TCP&amp;quot;
+                            }
+                        ],
+                        &amp;quot;resources&amp;quot;: {
+                            &amp;quot;requests&amp;quot;: {
+                                &amp;quot;cpu&amp;quot;: &amp;quot;100m&amp;quot;
+                            }
+                        },
+                        &amp;quot;terminationMessagePath&amp;quot;: &amp;quot;/dev/termination-log&amp;quot;,
+                        &amp;quot;terminationMessagePolicy&amp;quot;: &amp;quot;File&amp;quot;,
+             
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;executing-commands-against-pods&#34;&gt;Executing Commands Against Pods&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl exec -it webserver -- /bin/bash
+root@webserver:/#
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;root@webserver:/# cat /etc/os-release
+PRETTY_NAME=&amp;quot;Debian GNU/Linux 10 (buster)&amp;quot;
+NAME=&amp;quot;Debian GNU/Linux&amp;quot;
+VERSION_ID=&amp;quot;10&amp;quot;
+VERSION=&amp;quot;10 (buster)&amp;quot;
+VERSION_CODENAME=buster
+ID=debian
+HOME_URL=&amp;quot;https://www.debian.org/&amp;quot;
+SUPPORT_URL=&amp;quot;https://www.debian.org/support&amp;quot;
+BUG_REPORT_URL=&amp;quot;https://bugs.debian.org/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Please exit from the shell (&lt;code&gt;/bin/bash&lt;/code&gt;) session.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;root@webserver:/# exit
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;deleting-the-pod&#34;&gt;Deleting the Pod&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl delete -f pods01.yaml
+pod &amp;quot;webserver&amp;quot; deleted
+
+$ kubectl get po -o wide
+No resources found.
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;get-logs-of-pod&#34;&gt;Get logs of Pod&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl logs webserver
+
+/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+10-listen-on-ipv6-by-default.sh: Getting the checksum of /etc/nginx/conf.d/default.conf
+10-listen-on-ipv6-by-default.sh: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+/docker-entrypoint.sh: Configuration complete; ready for start up
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;ading-a-2nd-container-to-a-pod&#34;&gt;Ading a 2nd container to a Pod&lt;/h1&gt;
+&lt;p&gt;In the microservices architecture, each module should live in its own space and communicate with other modules following a set of rules. But, sometimes we need to deviate a little from this principle. Suppose you have an Nginx web server running and we need to analyze its web logs in real-time. The logs we need to parse are obtained from GET requests to the web server. The developers created a log watcher application that will do this job and they built a container for it. In typical conditions, you’d have a pod for Nginx and another for the log watcher. However, we need to eliminate any network latency so that the watcher can analyze logs the moment they are available. A solution for this is to place both containers on the same pod.&lt;/p&gt;
+&lt;p&gt;Having both containers on the same pod allows them to communicate through the loopback interface (&lt;code&gt;ifconfig lo&lt;/code&gt;) as if they were two processes running on the same host. They also share the same storage volume.&lt;/p&gt;
+&lt;p&gt;Let us see  how a pod can host more than one container. Let’s take a look to the &lt;a href=&#34;pods02.yaml&#34;&gt;&lt;code&gt;pods02.yaml&lt;/code&gt;&lt;/a&gt; file. It contains the following lines:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apiVersion: v1
+kind: Pod
+metadata:
+  name: webserver
+spec:
+  containers:
+  - name: webserver
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+  - name: webwatcher
+    image: afakharany/watcher:latest
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Run the following command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl apply -f pods02.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ kubectl get po -o wide
+NAME        READY   STATUS              RESTARTS   AGE   IP       NODE                                                NOMINATED NODE   READINESS GATES
+webserver   0/2     ContainerCreating   0          13s   &amp;lt;none&amp;gt;   gke-standard-cluster-1-default-pool-78257330-5hs8   &amp;lt;none&amp;gt;           &amp;lt;none&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ kubectl get po,svc,deploy
+NAME            READY   STATUS    RESTARTS   AGE
+pod/webserver   2/2     Running   0          3m6s
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.12.0.1    &amp;lt;none&amp;gt;        443/TCP   107m
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ kubectl get po -o wide
+NAME        READY   STATUS    RESTARTS   AGE     IP         NODE                                                NOMINATED NODE   READINESS GATES
+webserver   2/2     Running   0          3m37s   10.8.0.5   gke-standard-cluster-1-default-pool-78257330-5hs8   &amp;lt;none&amp;gt;           &amp;lt;none&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;how-to-verify-2-containers-are-running-inside-a-pod&#34;&gt;How to verify 2 containers are running inside a Pod?&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl describe po
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;Containers:
+  webserver:
+    Container ID:   docker://0564fcb88f7c329610e7da24cba9de6555c0183814cf517e55d2816c6539b829
+    Image:          nginx:latest
+    Image ID:       docker-pullable://nginx@sha256:36b77d8bb27ffca25c7f6f53cadd059aca2747d46fb6ef34064e31727325784e
+    Port:           80/TCP
+    State:          Running
+      Started:      Wed, 08 Jan 2020 13:21:57 +0530
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:        100m
+    Environment:  &amp;lt;none&amp;gt;
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-xhgmm (ro)
+  webwatcher:
+    Container ID:   docker://4cebbb220f7f9695f4d6492509e58152ba661f3ab8f4b5d0a7adec6c61bdde26
+    Image:          afakharany/watcher:latest
+    Image ID:       docker-pullable://afakharany/watcher@sha256:43d1b12bb4ce6e549e85447678a28a8e7b9d4fc398938a6f3e57d2908a9b7d80
+    Port:           &amp;lt;none&amp;gt;
+    State:          Running
+      Started:      Wed, 08 Jan 2020 13:22:26 +0530
+    Ready:          True
+    Restart Count:  0
+    Requests:
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Since we have two containers in a pod, we will need to use the &lt;code&gt;-c&lt;/code&gt; option with &lt;code&gt;kubectl&lt;/code&gt; when we need to address a specific container. For example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl exec -it webserver -c webwatcher -- /bin/bash
+
+root@webserver:/# cat /etc/hosts
+# Kubernetes-managed hosts file.
+127.0.0.1       localhost
+::1     localhost ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+fe00::0 ip6-mcastprefix
+fe00::1 ip6-allnodes
+fe00::2 ip6-allrouters
+10.8.0.5        webserver
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Please exit from the shell (&lt;code&gt;/bin/bash&lt;/code&gt;) session.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;root@webserver:/# exit
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;cleaning-up&#34;&gt;Cleaning up&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;kubectl delete -f pods02.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;example-of-multi-container-pod&#34;&gt;Example of Multi-Container Pod&lt;/h1&gt;
+&lt;p&gt;Let&amp;rsquo;s talk about communication between containers in a Pod. Having multiple containers in a single Pod makes it relatively straightforward for them to communicate with each other. They can do this using several different methods.&lt;/p&gt;
+&lt;h2 id=&#34;use-cases-for-multi-container-pods&#34;&gt;Use Cases for Multi-Container Pods&lt;/h2&gt;
+&lt;p&gt;The primary purpose of a multi-container Pod is to support co-located, co-managed helper processes for a primary application. There are some general patterns for using helper processes in Pods:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Sidecar containers&lt;/em&gt; help the main container. Some examples include log or data change watchers, monitoring adapters, and so on. A log watcher, for example, can be built once by a different team and reused across different applications. Another example of a sidecar container is a file or data loader that generates data for the main container.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Proxies, bridges, and adapters&lt;/em&gt; connect the main container with the external world. For example, Apache HTTP server or nginx can serve static files. It can also act as a reverse proxy to a web application in the main container to log and limit HTTP requests.
+Another example is a helper container that re-routes requests from the main container to the external world. This makes it possible for the main container to connect to the localhost to access, for example, an external database, but without any service discovery.&lt;/p&gt;
+&lt;h2 id=&#34;shared-volumes-in-a-kubernetes-pod&#34;&gt;Shared volumes in a Kubernetes Pod&lt;/h2&gt;
+&lt;p&gt;In Kubernetes, you can use a shared Kubernetes Volume as a simple and efficient way to share data between containers in a Pod. For most cases, it is sufficient to use a directory on the host that is shared with all containers within a Pod.&lt;/p&gt;
+&lt;p&gt;Kubernetes Volumes enables data to survive container restarts, but these volumes have the same lifetime as the Pod. That means that the volume (and the data it holds) exists exactly as long as that Pod exists. If that Pod is deleted for any reason, even if an identical replacement is created, the shared Volume is also destroyed and created anew.&lt;/p&gt;
+&lt;p&gt;A standard use case for a multi-container Pod with a shared Volume is when one container writes logs or other files to the shared directory, and the other container reads from the shared directory. For example, we can create a Pod like so (&lt;a href=&#34;pods03.yaml&#34;&gt;pods03.yaml&lt;/a&gt;):&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apiVersion: v1
+kind: Pod
+metadata:
+  name: mc1
+spec:
+  volumes:
+  - name: html
+    emptyDir: {}
+  containers:
+  - name: 1st
+    image: nginx
+    volumeMounts:
+    - name: html
+      mountPath: /usr/share/nginx/html
+  - name: 2nd
+    image: debian
+    volumeMounts:
+    - name: html
+      mountPath: /html
+    command: [&amp;quot;/bin/sh&amp;quot;, &amp;quot;-c&amp;quot;]
+    args:
+      - while true; do
+          date &amp;gt;&amp;gt; /html/index.html;
+          sleep 1;
+        done
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In this file (&lt;code&gt;pods03.yaml&lt;/code&gt;) a volume named &lt;code&gt;html&lt;/code&gt; has been defined. Its type is &lt;code&gt;emptyDir&lt;/code&gt;, which means that the volume is first created when a Pod is assigned to a node, and exists as long as that Pod is running on that node. As the name says, it is initially empty. The &lt;code&gt;1st&lt;/code&gt; container runs nginx server and has the shared volume mounted to the directory &lt;code&gt;/usr/share/nginx/html&lt;/code&gt;. The &lt;code&gt;2nd&lt;/code&gt; container uses the Debian image and has the shared volume mounted to the directory &lt;code&gt;/html&lt;/code&gt;. Every second, the &lt;code&gt;2nd&lt;/code&gt; container adds the current date and time into the &lt;code&gt;index.html&lt;/code&gt; file, which is located in the shared volume. When the user makes an HTTP request to the Pod, the Nginx server reads this file and transfers it back to the user in response to the request.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/collabnix/kubelabs/master/pods101/multicontainerpod.png&#34; alt=&#34;Image&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;kubectl apply -f pods03.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[Captains-Bay]🚩 &amp;gt;  kubectl get po,svc
+NAME      READY     STATUS    RESTARTS   AGE
+po/mc1    2/2       Running   0          11s
+
+NAME             TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)   AGE
+svc/kubernetes   ClusterIP   10.15.240.1   &amp;lt;none&amp;gt;        443/TCP   1h
+[Captains-Bay]🚩 &amp;gt;  kubectl describe po mc1
+Name:         mc1
+Namespace:    default
+Node:         gke-k8s-lab1-default-pool-fd9ef5ad-pc18/10.140.0.16
+Start Time:   Wed, 08 Jan 2020 14:29:08 +0530
+Labels:       &amp;lt;none&amp;gt;
+Annotations:  kubectl.kubernetes.io/last-applied-configuration={&amp;quot;apiVersion&amp;quot;:&amp;quot;v1&amp;quot;,&amp;quot;kind&amp;quot;:&amp;quot;Pod&amp;quot;,&amp;quot;metadata&amp;quot;:{&amp;quot;annotations&amp;quot;:{},&amp;quot;name&amp;quot;:&amp;quot;mc1&amp;quot;,&amp;quot;namespace&amp;quot;:&amp;quot;default&amp;quot;},&amp;quot;spec&amp;quot;:{&amp;quot;containers&amp;quot;:[{&amp;quot;image&amp;quot;:&amp;quot;nginx&amp;quot;,&amp;quot;name&amp;quot;:&amp;quot;1st&amp;quot;,&amp;quot;v...
+              kubernetes.io/limit-ranger=LimitRanger plugin set: cpu request for container 1st; cpu request for container 2nd
+Status:       Running
+IP:           10.12.2.6
+Containers:
+  1st:
+    Container ID:   docker://b08eb646f90f981cd36c605bf8fead3ca62178c7863598fd4558cb026ed067dd
+    Image:          nginx
+    Image ID:       docker-pullable://nginx@sha256:36b77d8bb27ffca25c7f6f53cadd059aca2747d46fb6ef34064e31727325784e
+    Port:           &amp;lt;none&amp;gt;
+    State:          Running
+      Started:      Wed, 08 Jan 2020 14:29:09 +0530
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:        100m
+    Environment:  &amp;lt;none&amp;gt;
+    Mounts:
+      /usr/share/nginx/html from html (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-xhgmm (ro)
+  2nd:
+    Container ID:  docker://63180b4128d477810d6062342f4b8e499de684ffd69ad245c29118e1661eafcb
+    Image:         debian
+    Image ID:      docker-pullable://debian@sha256:c99ed5d068d4f7ff36c7a6f31810defebecca3a92267fefbe0e0cf2d9639115a
+    Port:          &amp;lt;none&amp;gt;
+    Command:
+      /bin/sh
+      -c
+    Args:
+      while true; do date &amp;gt;&amp;gt; /html/index.html; sleep 1; done
+    State:          Running
+      Started:      Wed, 08 Jan 2020 14:29:14 +0530
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:        100m
+    Environment:  &amp;lt;none&amp;gt;
+    Mounts:
+      /html from html (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-xhgmm (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  html:
+    Type:    EmptyDir (a temporary directory that shares a pod&#39;s lifetime)
+    Medium:  
+  default-token-xhgmm:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-xhgmm
+    Optional:    false
+QoS Class:       Burstable
+Node-Selectors:  &amp;lt;none&amp;gt;
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age   From                                              Message
+  ----    ------     ----  ----                                              -------
+  Normal  Scheduled  18s   default-scheduler                                 Successfully assigned default/mc1 to gke-k8s-lab1-default-pool-fd9ef5ad-pc18
+  Normal  Pulling    17s   kubelet, gke-k8s-lab1-default-pool-fd9ef5ad-pc18  pulling image &amp;quot;nginx&amp;quot;
+  Normal  Pulled     17s   kubelet, gke-k8s-lab1-default-pool-fd9ef5ad-pc18  Successfully pulled image &amp;quot;nginx&amp;quot;
+  Normal  Created    17s   kubelet, gke-k8s-lab1-default-pool-fd9ef5ad-pc18  Created container
+  Normal  Started    17s   kubelet, gke-k8s-lab1-default-pool-fd9ef5ad-pc18  Started container
+  Normal  Pulling    17s   kubelet, gke-k8s-lab1-default-pool-fd9ef5ad-pc18  pulling image &amp;quot;debian&amp;quot;
+  Normal  Pulled     13s   kubelet, gke-k8s-lab1-default-pool-fd9ef5ad-pc18  Successfully pulled image &amp;quot;debian&amp;quot;
+  Normal  Created    12s   kubelet, gke-k8s-lab1-default-pool-fd9ef5ad-pc18  Created container
+  Normal  Started    12s   kubelet, gke-k8s-lab1-default-pool-fd9ef5ad-pc18  Started container
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ kubectl exec mc1 -c 1st -- /bin/cat /usr/share/nginx/html/index.html
+...
+Wed Jan  8 08:59:14 UTC 2020
+Wed Jan  8 08:59:15 UTC 2020
+Wed Jan  8 08:59:16 UTC 2020
+ 
+$ kubectl exec mc1 -c 2nd -- /bin/cat /html/index.html
+...
+Wed Jan  8 08:59:14 UTC 2020
+Wed Jan  8 08:59:15 UTC 2020
+Wed Jan  8 08:59:16 UTC 2020
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;cleaning-up-1&#34;&gt;Cleaning Up&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;kubectl delete -f pods03.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;contributor&#34;&gt;Contributor&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/ajeetsraina&#34;&gt;Ajeet S Raina&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;reviewers&#34;&gt;Reviewers&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/vnyagarwal&#34;&gt;vinay agarwal&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://collabnix.github.io/kubelabs/replicaset101/index.html#how-does-replicaset-manage-pods&#34;&gt;Next &amp;raquo;&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Checklists</title>
       <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/kube101/checklists/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

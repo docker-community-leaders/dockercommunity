@@ -452,7 +452,7 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
 &lt;li&gt;&lt;a href=&#34;#working-with-docker-image&#34;&gt;Working with Docker Image&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#saving-images-and-containers-as-tar-files-for-sharing&#34;&gt;Saving Images and Containers as Tar Files for Sharing&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#building-your-first-alpine-docker-image-and-push-it-to-dockerhub&#34;&gt;Building Your First Alpine Docker Image and Push it to DockerHub&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#test-your-knowledge--quiz1&#34;&gt;Test Your Knowledge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#test-your-knowledge&#34;&gt;Test Your Knowledge&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;getting-started-with-docker-image&#34;&gt;Getting Started with Docker Image&lt;/h2&gt;
 &lt;p&gt;Demonstrating Hello World Example&lt;/p&gt;
@@ -852,8 +852,7 @@ The push refers to repository [docker.io/ajeetraina/alpine-git]
 bcf2f368fe23: Mounted from library/alpine
 1.0: digest: sha256:85d50f702e930db9e5b958387e667b7e26923f4de340534085cea184adb8411e size: 740
 [node4] (local) root@192.168.0.20 ~
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;test-your-knowledge---quiz1&#34;&gt;Test Your Knowledge - Quiz1&lt;/h2&gt;
-&lt;p&gt;Test Your Knowledge&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;test-your-knowledge&#34;&gt;Test Your Knowledge&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;

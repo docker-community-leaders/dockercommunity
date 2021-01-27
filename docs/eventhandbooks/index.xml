@@ -2198,8 +2198,9 @@ ADD dockercon.war /opt/jboss/wildfly/standalone/deployments/
       <description>
         
         
-        &lt;h2 id=&#34;what-is-this-handbook-for&#34;&gt;What is this handbook for?&lt;/h2&gt;
+        &lt;h2&gt; &lt;details&gt;&lt;summary&gt;   What is this handbook for? &lt;/h2&gt; &lt;/summary&gt;
 &lt;p&gt;This is a community leader handbook to run &amp;ldquo;Dockerizing Your Application for Go&amp;rdquo; workshop. This will cover every aspect of conducting workshop starting from setting up an event page till the completion of the successful workshop.&lt;/p&gt;
+&lt;/details&gt;
 &lt;h3 id=&#34;features-of-this-workshop&#34;&gt;Features of this workshop&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Audience : 5 to 100&lt;/li&gt;

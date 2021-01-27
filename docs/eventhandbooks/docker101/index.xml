@@ -2659,7 +2659,7 @@ hello-world                          latest              f2a91732366c        2 m
 &lt;li&gt;&lt;a href=&#34;#list_networks&#34;&gt;Step 2 - List networks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#inspect&#34;&gt;Step 3 - Inspect a network&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#list_drivers&#34;&gt;Step 4 - List network driver plugins&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#test-your-knowledge-quiz4&#34;&gt;Test Your Knowledge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#test-your-knowledge&#34;&gt;Test Your Knowledge&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
 &lt;p&gt;You will need all of the following to complete this lab:&lt;/p&gt;
@@ -2907,6 +2907,7 @@ b747d43fa277   nginx               &amp;quot;nginx -g &#39;daemon off&amp;quot; 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; The port mapping is actually port address translation (PAT).&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h2 id=&#34;test-your-knowledge&#34;&gt;Test Your Knowledge&lt;/h2&gt;
 
       </description>
     </item>

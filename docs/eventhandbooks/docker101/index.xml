@@ -1131,7 +1131,7 @@ bcf2f368fe23: Mounted from library/alpine
         
         &lt;h2 id=&#34;getting-started-with-dockerfile---3-hours&#34;&gt;Getting Started with Dockerfile - 3 hours&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#what-is-dockerfile&#34;&gt;What is a Dockerfile?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-is-a-dockerfile&#34;&gt;What is a Dockerfile?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#understanding-image-layering-concept-with-dockerfile&#34;&gt;Understanding Layering Concept with Dockerfile&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Creating Docker Image
 &lt;ul&gt;

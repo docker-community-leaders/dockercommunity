@@ -920,7 +920,7 @@ bcf2f368fe23: Mounted from library/alpine
 &lt;li&gt;&lt;a href=&#34;#managing-docker-containers&#34;&gt;Managing Docker Containers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#test-your-knowledge-quiz1&#34;&gt;Test Your Knowledge&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;working-with-docker-images&#34;&gt;Working with Docker Images&lt;/h2&gt;
+&lt;h2 id=&#34;accessing-the-container-shell&#34;&gt;Accessing the Container Shell&lt;/h2&gt;
 &lt;h3 id=&#34;tested-infrastructure&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
@@ -934,66 +934,189 @@ bcf2f368fe23: Mounted from library/alpine
     &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;pre-requisite&#34;&gt;Pre-requisite&lt;/h3&gt;
+&lt;h2 id=&#34;pre-requisite&#34;&gt;Pre-requisite&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
 &lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;listing-the-docker-images&#34;&gt;Listing the Docker Images&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;$ docker images
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-hello-world         latest              4ab4c602aa5e        6 weeks ago         1.84kB
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;show-all-images-default-hides-intermediate-images&#34;&gt;Show all images (default hides intermediate images)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;docker images -a
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-hello-world         latest              4ab4c602aa5e        6 weeks ago         1.84kB
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;list-images-by-name-and-tag&#34;&gt;List images by name and tag&lt;/h3&gt;
-&lt;p&gt;The docker images command takes an optional [REPOSITORY[:TAG]] argument that restricts the list to images that match the argument. If you specify REPOSITORY but no TAG, the docker images command lists all images in the given repository.&lt;/p&gt;
-&lt;p&gt;To demo this, let us pull all various versions of alpine OS&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;docker pull alpine:3.6
-docker pull alpine:3.7
-docker pull alpine:3.8
-docker pull alpine:3.9
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[node4] (local) root@192.168.0.20 ~
-$ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-alpine              3.6                 43773d1dba76        7 days ago          4.03MB
-alpine              3.7                 6d1ef012b567        7 days ago          4.21MB
-alpine              3.8                 dac705114996        7 days ago          4.41MB
-alpine              3.9                 5cb3aa00f899        7 days ago          5.53MB
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[node4] (local) root@192.168.0.20 ~
-$ docker images alpine:3.7
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-alpine              3.7                 6d1ef012b567        7 days ago          4.21MB
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;list-the-full-length-image-ids&#34;&gt;List the full length image IDs&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;$ docker images --no-trunc
-REPOSITORY          TAG                 IMAGE ID                                                                  CREATED
-     SIZE
-alpine              3.6                 sha256:43773d1dba76c4d537b494a8454558a41729b92aa2ad0feb23521c3e58cd0440   7 days ago
-     4.03MB
-alpine              3.7                 sha256:6d1ef012b5674ad8a127ecfa9b5e6f5178d171b90ee462846974177fd9bdd39f   7 days ago
-     4.21MB
-alpine              3.8                 sha256:dac7051149965716b0acdcab16380b5f4ab6f2a1565c86ed5f651e954d1e615c   7 days ago
-     4.41MB
-alpine              3.9                 sha256:5cb3aa00f89934411ffba5c063a9bc98ace875d8f92e77d0029543d9f2ef4ad0   7 days ago
-     5.53MB
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;listing-out-images-with-filter&#34;&gt;Listing out images with filter&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;$ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-ubuntu              latest              94e814e2efa8        3 days ago          88.9MB
-alpine              3.6                 43773d1dba76        7 days ago          4.03MB
-alpine              3.7                 6d1ef012b567        7 days ago          4.21MB
-alpine              3.8                 dac705114996        7 days ago          4.41MB
-alpine              3.9                 5cb3aa00f899        7 days ago          5.53MB
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you want to filter out just alpine&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ docker images --filter=reference=&#39;alpine&#39;
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-alpine              3.6                 43773d1dba76        7 days ago          4.03MB
-alpine              3.7                 6d1ef012b567        7 days ago          4.21MB
-alpine              3.8                 dac705114996        7 days ago          4.41MB
-alpine              3.9                 5cb3aa00f899        7 days ago          5.53MB
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;create-ubuntu-container&#34;&gt;Create Ubuntu Container&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;docker run -dit ubuntu 
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;accessing-the-container-shell-1&#34;&gt;Accessing the container shell&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;docker exec -t &amp;lt;container-id&amp;gt; bash
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;accesssing-the-container-shell&#34;&gt;Accesssing the container shell&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;docker attach &amp;lt;container-id&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;running-a-command-inside-running-container&#34;&gt;Running a command inside running Container&lt;/h2&gt;
+&lt;h3 id=&#34;tested-infrastructure-1&#34;&gt;Tested Infrastructure&lt;/h3&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
+    &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Number of Instance&lt;/b&gt;&lt;/th&gt;
+    &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Reading Time&lt;/b&gt;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt; Play with Docker&lt;/b&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;1&lt;/b&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;pre-requisite-1&#34;&gt;Pre-requisite&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
+&lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;create-ubuntu-container-1&#34;&gt;Create Ubuntu Container&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;docker run -dit ubuntu
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;opening-up-the-bash-shell&#34;&gt;Opening up the bash shell&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;docker exec -t &amp;lt;container-id&amp;gt; bash
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;managing-docker-containers&#34;&gt;Managing Docker containers&lt;/h2&gt;
+&lt;h3 id=&#34;tested-infrastructure-2&#34;&gt;Tested Infrastructure&lt;/h3&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Platform&lt;/b&gt;&lt;/th&gt;
+    &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Number of Instance&lt;/b&gt;&lt;/th&gt;
+    &lt;th class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;Reading Time&lt;/b&gt;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt; Play with Docker&lt;/b&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;1&lt;/b&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-yw4l&#34;&gt;&lt;b&gt;5 min&lt;/b&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;pre-requisite-2&#34;&gt;Pre-requisite&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Create an account with &lt;a href=&#34;https://hub.docker.com&#34;&gt;DockerHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Open &lt;a href=&#34;https://labs.play-with-docker.com/&#34;&gt;PWD&lt;/a&gt; Platform on your browser&lt;/li&gt;
+&lt;li&gt;Click on &lt;strong&gt;Add New Instance&lt;/strong&gt; on the left side of the screen to bring up Alpine OS instance on the right side&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;preparations&#34;&gt;Preparations&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Clean your docker host using the commands (in bash):&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ docker rm -f $(docker ps -a -q)
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;instructions&#34;&gt;Instructions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Run the following containers from the dockerhub:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ docker run -d -p 5000:5000 --name app1 selaworkshops/python-app:1.0
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ docker run -d -p 5001:5001 -e &amp;quot;port=5001&amp;quot; --name app2 selaworkshops/python-app:2.0
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Ensure the containers are running:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ docker ps
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Stop the first container:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ docker stop app1
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Kill the second container:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ docker kill app2
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Display running containers:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ docker ps
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Show all the containers (includind non running containers):&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ docker ps -a
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Let&amp;rsquo;s start both containers again:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ docker start app1 app2
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Restart the second container:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ docker restart app2
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Display the docker host information with:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ docker info
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Show the running processes in the first container using:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ docker top app1
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Retrieve the history of the second container:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ docker history selaworkshops/python-app:2.0
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Inspect the second container image:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ docker inspect selaworkshops/python-app:2.0
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Inspect the first container and look for the internal ip:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ docker inspect app1
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;quot;Networks&amp;quot;: {
+                &amp;quot;bridge&amp;quot;: {
+                    &amp;quot;IPAMConfig&amp;quot;: null,
+                    &amp;quot;Links&amp;quot;: null,
+                    &amp;quot;Aliases&amp;quot;: null,
+                    &amp;quot;NetworkID&amp;quot;: &amp;quot;822cb66790c6358d9decab874916120f3bdeff7193a4375c94ca54d50832303d&amp;quot;,
+                    &amp;quot;EndpointID&amp;quot;: &amp;quot;9aa96dc29be08eddc6d8f429ebecd2285c064fda288681a3611812413cbdfc1f&amp;quot;,
+                    &amp;quot;Gateway&amp;quot;: &amp;quot;172.17.0.1&amp;quot;,
+                    &amp;quot;IPAddress&amp;quot;: &amp;quot;172.17.0.3&amp;quot;,
+                    &amp;quot;IPPrefixLen&amp;quot;: 16,
+                    &amp;quot;IPv6Gateway&amp;quot;: &amp;quot;&amp;quot;,
+                    &amp;quot;GlobalIPv6Address&amp;quot;: &amp;quot;&amp;quot;,
+                    &amp;quot;GlobalIPv6PrefixLen&amp;quot;: 0,
+                    &amp;quot;MacAddress&amp;quot;: &amp;quot;02:42:ac:11:00:03&amp;quot;,
+                    &amp;quot;DriverOpts&amp;quot;: null
+                }
+            }
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Show the logs of the second container using the flag &amp;ndash;follow:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ docker logs --follow app2
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Browse to the application and see the containers logs from the terminal:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;http://localhost:5001
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Stop to tracking logs:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ CTRL + C
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;test-your-knowledge---quiz2&#34;&gt;Test Your Knowledge - Quiz2&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S. No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Question.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Response&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;What are different ways to access container shell?&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;How to run a command inside a Docker container&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Is it possible to stop overall Docker containers in a single shot?&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;How do you remove all dangling images in Docker?&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;How do you access services ports under Docker?&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
       </description>
     </item>
     

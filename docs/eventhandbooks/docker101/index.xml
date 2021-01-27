@@ -591,7 +591,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
         }
     }
 ]
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;working-with-docker-images&#34;&gt;Working with Docker Images&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;working-with-docker-image&#34;&gt;Working with Docker Image&lt;/h2&gt;
 &lt;h3 id=&#34;tested-infrastructure-1&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
@@ -2468,10 +2468,10 @@ $
         
         &lt;h2 id=&#34;creating-private-docker-registry---30-min&#34;&gt;Creating Private Docker Registry - 30 min&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../../../beginners/docker-registry/README.md&#34;&gt;Building a Private Docker Registry&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../../../beginners/docker-registry/quiz4/README.md&#34;&gt;Test Your Knowledge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#building-a-private-docker-registry&#34;&gt;Building a Private Docker Registry&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;test-your-knowledge-quiz4&#34;&gt;Test Your Knowledge&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;creating-a-private-local-docker-registry-using-play-with-docker&#34;&gt;Creating a Private Local Docker Registry using Play with Docker&lt;/h2&gt;
+&lt;h2 id=&#34;building-a-private-docker-registry&#34;&gt;Building a Private Docker Registry&lt;/h2&gt;
 &lt;h3 id=&#34;tested-infrastructure&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
@@ -2640,7 +2640,7 @@ REPOSITORY                           TAG                 IMAGE ID            CRE
 registry                             2                   d1fd7d86a825        4 weeks ago         33.3MB
 registry.collabnix.com/alpine        3.6             da653cee0545        2 months ago        100MB
 hello-world                          latest              f2a91732366c        2 months ago     
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;test-your-knowledge---quiz3&#34;&gt;Test Your Knowledge - Quiz3&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;test-your-knowledge---quiz4&#34;&gt;Test Your Knowledge - Quiz4&lt;/h3&gt;
 
       </description>
     </item>

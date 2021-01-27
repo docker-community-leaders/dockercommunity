@@ -875,55 +875,7 @@ if (!doNotTrack) {
 	<h1>Docker for Intermediate</h1>
         <div class="lead">Docker for Intermediate Users</div>
 	
-	<h2 id="docker-handbook-for-intermediate">Docker Handbook for Intermediate</h2>
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="highlight">
-    <div class="copy-code-icon" style="text-align:right">
-    <a href="https://%25!s%28%3cnil%3e%29/master/content/en/examples/dockerfile/Dockerfile.add" download="dockerfile/Dockerfile.add"><code>dockerfile/Dockerfile.add</code>
-    </a>
-    <img src="https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg" style="max-height:24px; cursor: pointer" onclick="copyCode('dockerfiledockerfileadd')" title="Copy dockerfile/Dockerfile.add to clipboard">
-    </img>
-    </div>
-    <div class="includecode" id="dockerfiledockerfileadd">
-    <pre><code class="language-add" data-lang="add">FROM alpine:3.5
-RUN apk update
-ADD http://www.vlsitechnology.org/pharosc_8.4.tar.gz .
-</code></pre>
-    </div>
-</div>
-
-
-<p>render to</p>
-<ul class="nav nav-tabs" id="tab_with_code" role="tablist"><li class="nav-item"><a data-toggle="tab" class="nav-link active" href="#tab_with_code-0" role="tab" aria-controls="tab_with_code-0" aria-selected="true">Tab 1</a></li>
-	  
-		<li class="nav-item"><a data-toggle="tab" class="nav-link" href="#tab_with_code-1" role="tab" aria-controls="tab_with_code-1">Tab 2</a></li></ul>
-<div class="tab-content" id="tab_with_code"><div id="tab_with_code-0" class="tab-pane show active" role="tabpanel" aria-labelledby="tab_with_code-0">
-
-<p><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
-<span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;This is tab 1.&#34;</span>
-</code></pre></div></div>
-  <div id="tab_with_code-1" class="tab-pane" role="tabpanel" aria-labelledby="tab_with_code-1">
-
-<p><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
-<span style="color:#000">println</span> <span style="color:#4e9a06">&#34;This is tab 2.&#34;</span>
-</code></pre></div></div></div>
-
-
+	
         <div class="section-index">
     
     
@@ -1061,7 +1013,7 @@ ADD http://www.vlsitechnology.org/pharosc_8.4.tar.gz .
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.27271: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/5c8151aec876ecf1c00a8af28c34ce03ad5e9e56">Create _index.md (5c8151a)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.27271: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/7710cc5327b1e55570fed7ccd232f79834b52c43">Update _index.md (7710cc5)</a>
 </div>
 </div>
 
@@ -1155,44 +1107,7 @@ ADD http://www.vlsitechnology.org/pharosc_8.4.tar.gz .
 <script src="../../../js/main.min.3f977db73b73c3ce452881894e84f9a709331842c2820a135e9829c6c4c76134.js" integrity="sha256-P5d9tztzw85FKIGJToT5pwkzGELCggoTXpgpxsTHYTQ=" crossorigin="anonymous"></script>
 
 
-<script async src="../../../js/sweetalert-2.1.2.min.js"></script>
-<script type="text/javascript">
-function copyCode(elem){
-  if (document.getElementById(elem)) {
-    
-    var targetId = "_hiddenCopyText_";
-    
-    target = document.getElementById(targetId);
-    if (!target) {
-      var target = document.createElement("textarea");
-      target.style.position = "absolute";
-      target.style.left = "-9999px";
-      target.style.top = "0";
-      target.id = targetId;
-      document.body.appendChild(target);
-    }
-    target.value = document.getElementById(elem).innerText;
-    
-    target.select();
 
-    
-    var succeed;
-    try {
-        succeed = document.execCommand("copy");
-    } catch(e) {
-        swal("Oh, no…","Sorry, your browser doesn't support copying this example to your clipboard.");
-        succeed = false;
-    }
-    if (succeed) {
-      swal("Copied to clipboard: ",elem);
-      return succeed;
-    } else {
-      swal("Oops!", elem + " not found when trying to copy code");
-      return false;
-    }
-  }
-}
-</script>
 
 <script type="text/javascript" async
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">

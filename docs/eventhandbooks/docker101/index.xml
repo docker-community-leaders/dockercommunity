@@ -452,7 +452,7 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
 &lt;li&gt;&lt;a href=&#34;#working-with-docker-image&#34;&gt;Working with Docker Image&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#saving-images-and-containers-as-tar-files-for-sharing&#34;&gt;Saving Images and Containers as Tar Files for Sharing&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#building-your-first-alpine-docker-image-and-push-it-to-dockerhub&#34;&gt;Building Your First Alpine Docker Image and Push it to DockerHub&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#test-your-knowledge-quiz1&#34;&gt;Test Your Knowledge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#test-your-knowledge--quiz1&#34;&gt;Test Your Knowledge&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;getting-started-with-docker-image&#34;&gt;Getting Started with Docker Image&lt;/h2&gt;
 &lt;p&gt;Demonstrating Hello World Example&lt;/p&gt;
@@ -591,7 +591,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
         }
     }
 ]
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;working-with-docker-images&#34;&gt;Working with Docker Images&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;working-with-docker-image&#34;&gt;Working with Docker Image&lt;/h2&gt;
 &lt;h3 id=&#34;tested-infrastructure-1&#34;&gt;Tested Infrastructure&lt;/h3&gt;
 &lt;table class=&#34;tg&#34;&gt;
   &lt;tr&gt;
@@ -2640,7 +2640,7 @@ REPOSITORY                           TAG                 IMAGE ID            CRE
 registry                             2                   d1fd7d86a825        4 weeks ago         33.3MB
 registry.collabnix.com/alpine        3.6             da653cee0545        2 months ago        100MB
 hello-world                          latest              f2a91732366c        2 months ago     
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;test-your-knowledge---quiz3&#34;&gt;Test Your Knowledge - Quiz3&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;test-your-knowledge---quiz4&#34;&gt;Test Your Knowledge - Quiz4&lt;/h3&gt;
 
       </description>
     </item>

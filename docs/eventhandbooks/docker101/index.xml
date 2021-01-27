@@ -1131,9 +1131,9 @@ bcf2f368fe23: Mounted from library/alpine
         
         &lt;h2 id=&#34;getting-started-with-dockerfile---3-hours&#34;&gt;Getting Started with Dockerfile - 3 hours&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#lab-1-create-an-image-with-git-installed&#34;&gt;What is a Dockerfile?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../../../beginners/dockerfile/layering-dockerfile/README.md&#34;&gt;Understanding Layering Concept with Dockerfile&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Creating Docker Image with
+&lt;li&gt;&lt;a href=&#34;#what-is-dockerfile&#34;&gt;What is a Dockerfile?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#understanding-image-layering-concept-with-dockerfile&#34;&gt;Understanding Layering Concept with Dockerfile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Creating Docker Image
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#lab-1-create-an-image-with-git-installed&#34;&gt;Installing GIT&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#lab-2-create-an-image-with-add-instruction&#34;&gt;ADD instruction&lt;/a&gt;&lt;/li&gt;
@@ -1163,7 +1163,7 @@ bcf2f368fe23: Mounted from library/alpine
 &lt;li&gt;Execution of these instructions takes place on a base image.&lt;/li&gt;
 &lt;li&gt;On building the Dockerfile, the successive actions form a new image from the base parent image.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;understanding-image-layering-concept-with-dockerfile&#34;&gt;Understanding Image Layering Concept with Dockerfile&lt;/h3&gt;
+&lt;h2 id=&#34;understanding-image-layering-concept-with-dockerfile&#34;&gt;Understanding Image Layering Concept with Dockerfile&lt;/h2&gt;
 &lt;p&gt;Docker container is a runnable instance of an image, which is actually made by writing a readable/writable layer on top of some read-only layers.&lt;/p&gt;
 &lt;p&gt;The parent image used to create another image from a Dockerfile is read-only. When we execute instructions on this parent image, new layers keep adding up.
 These layers are created when we run docker build command.&lt;/p&gt;
@@ -1279,7 +1279,7 @@ RUN chmod 600 /hello/hello/hello.txt
     }
 ]
 
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;do-you-want-to-visualize-layers-of-docker-image&#34;&gt;Do you want to visualize layers of Docker Image?&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;visualizing-layers-of-docker-image&#34;&gt;Visualizing layers of Docker Image&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock  wagoodman/dive testimage
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[● Layers]───────────────────────────────────────────────────────────────────────────── [Current Layer Contents]───────────────────────────────────────────────────────────────
 Cmp   Size  Command                                                                     Permission     UID:GID       Size  Filetree

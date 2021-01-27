@@ -860,6 +860,7 @@ if (!doNotTrack) {
       <ul>
         <li><a href="#getting-started-with-dockerfile---3-hours">Getting Started with Dockerfile - 3 hours</a></li>
         <li><a href="#what-is-a-dockerfile">What is a Dockerfile?</a></li>
+        <li><a href="#understanding-image-layering-concept-with-dockerfile">Understanding Image Layering Concept with Dockerfile</a></li>
         <li><a href="#lab-1-create-an-image-with-git-installed">Lab #1: Create an image with GIT installed</a></li>
         <li><a href="#lab-2-create-an-image-with-add-instruction">Lab #2: Create an image with ADD instruction</a></li>
         <li><a href="#lab-3-create-an-image-with-copy-instruction">Lab #3: Create an image with COPY instruction</a></li>
@@ -946,9 +947,9 @@ if (!doNotTrack) {
 	
 	<h2 id="getting-started-with-dockerfile---3-hours">Getting Started with Dockerfile - 3 hours</h2>
 <ul>
-<li><a href="#lab-1-create-an-image-with-git-installed">What is a Dockerfile?</a></li>
-<li><a href="../../../../beginners/dockerfile/layering-dockerfile/README.md">Understanding Layering Concept with Dockerfile</a></li>
-<li>Creating Docker Image with
+<li><a href="#what-is-dockerfile">What is a Dockerfile?</a></li>
+<li><a href="#understanding-image-layering-concept-with-dockerfile">Understanding Layering Concept with Dockerfile</a></li>
+<li>Creating Docker Image
 <ul>
 <li><a href="#lab-1-create-an-image-with-git-installed">Installing GIT</a>)</li>
 <li><a href="#lab-2-create-an-image-with-add-instruction">ADD instruction</a></li>
@@ -978,7 +979,7 @@ if (!doNotTrack) {
 <li>Execution of these instructions takes place on a base image.</li>
 <li>On building the Dockerfile, the successive actions form a new image from the base parent image.</li>
 </ul>
-<h3 id="understanding-image-layering-concept-with-dockerfile">Understanding Image Layering Concept with Dockerfile</h3>
+<h2 id="understanding-image-layering-concept-with-dockerfile">Understanding Image Layering Concept with Dockerfile</h2>
 <p>Docker container is a runnable instance of an image, which is actually made by writing a readable/writable layer on top of some read-only layers.</p>
 <p>The parent image used to create another image from a Dockerfile is read-only. When we execute instructions on this parent image, new layers keep adding up.
 These layers are created when we run docker build command.</p>
@@ -1094,7 +1095,7 @@ RUN chmod 600 /hello/hello/hello.txt
     }
 ]
 
-</code></pre><h3 id="do-you-want-to-visualize-layers-of-docker-image">Do you want to visualize layers of Docker Image?</h3>
+</code></pre><h3 id="visualizing-layers-of-docker-image">Visualizing layers of Docker Image</h3>
 <pre><code>docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock  wagoodman/dive testimage
 </code></pre><pre><code>[● Layers]───────────────────────────────────────────────────────────────────────────── [Current Layer Contents]───────────────────────────────────────────────────────────────
 Cmp   Size  Command                                                                     Permission     UID:GID       Size  Filetree
@@ -2408,7 +2409,7 @@ $
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.27271: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/89d420bf3e7cd16f93fd2182fd5843f1132fd8c9">Update _index.md (89d420b)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.27271: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/7e4870e42b525df9346d3be6c3227f1863e2d330">Update _index.md (7e4870e)</a>
 </div>
 </div>
 

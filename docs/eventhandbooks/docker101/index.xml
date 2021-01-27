@@ -1135,7 +1135,7 @@ bcf2f368fe23: Mounted from library/alpine
 &lt;li&gt;&lt;a href=&#34;#understanding-image-layering-concept-with-dockerfile&#34;&gt;Understanding Layering Concept with Dockerfile&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Creating Docker Image
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#lab-1-create-an-image-with-git-installed&#34;&gt;Installing GIT&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#lab-1-create-an-image-with-git-installed&#34;&gt;Installing GIT&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#lab-2-create-an-image-with-add-instruction&#34;&gt;ADD instruction&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#lab-3-create-an-image-with-copy-instruction&#34;&gt;COPY instruction&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#lab-4-create-an-image-with-cmd-instruction-ENTRYPOINT.md&#34;&gt;CMD instruction&lt;/a&gt;&lt;/li&gt;

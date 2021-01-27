@@ -821,5 +821,468 @@ Wed Jan  8 08:59:16 UTC 2020
       </description>
     </item>
     
+    <item>
+      <title>Docs: Deploying Your First Nginx Deployment</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/kube101/deployment101/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/kube101/deployment101/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;deployment-101&#34;&gt;Deployment 101&lt;/h1&gt;
+&lt;p&gt;We looked at ReplicaSets earlier. However, ReplicaSet have one major drawback:
+once you select the pods that are managed by a ReplicaSet, you cannot change their pod templates.&lt;/p&gt;
+&lt;p&gt;For example, if you are using a ReplicaSet to deploy four pods with NodeJS running and you want to change the NodeJS image to a newer version, you need to delete the ReplicaSet and recreate it. Restarting the pods causes downtime till the images are available and the pods are running again.&lt;/p&gt;
+&lt;p&gt;A Deployment resource uses a ReplicaSet to manage the pods. However, it handles updating them in a controlled way.
+Let’s dig deeper into Deployment Controllers and patterns.&lt;/p&gt;
+&lt;h2 id=&#34;step-1-creating-your-first-deployment&#34;&gt;Step #1. Creating Your First Deployment&lt;/h2&gt;
+&lt;p&gt;The following Deployment definition deploys four pods with nginx as their hosted application:
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;highlight&#34;&gt;
+    &lt;div class=&#34;copy-code-icon&#34; style=&#34;text-align:right&#34;&gt;
+    &lt;a href=&#34;https://%25!s%28%3cnil%3e%29/master/content/en/examples//k8s/deployment101/nginx-dep.yaml&#34; download=&#34;/k8s/deployment101/nginx-dep.yaml&#34;&gt;&lt;code&gt;/k8s/deployment101/nginx-dep.yaml&lt;/code&gt;
+    &lt;/a&gt;
+    &lt;img src=&#34;https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg&#34; style=&#34;max-height:24px; cursor: pointer&#34; onclick=&#34;copyCode(&#39;k8sdeployment101nginx-depyaml&#39;)&#34; title=&#34;Copy /k8s/deployment101/nginx-dep.yaml to clipboard&#34;&gt;
+    &lt;/img&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;includecode&#34; id=&#34;k8sdeployment101nginx-depyaml&#34;&gt;
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiVersion&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;apps/v1&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;kind&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;Deployment&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;metadata&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;nginx-deployment&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;spec&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;selector&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;matchLabels&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;app&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;nginx&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;replicas&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;template&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;metadata&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;labels&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;app&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;nginx&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;spec&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;containers&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;nginx&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;image&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;nginx&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1.7.9&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ports&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;containerPort&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;80&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl create -f nginx-dep.yaml
+deployment.apps/nginx-deployment created
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;checking-the-list-of-application-deployment&#34;&gt;Checking the list of application deployment&lt;/h3&gt;
+&lt;p&gt;To list your deployments use the get deployments command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl get deployments
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-deployment   2/2     2            2           63s
+
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ kubectl describe deploy
+Name:                   nginx-deployment
+Namespace:              default
+CreationTimestamp:      Mon, 30 Dec 2019 07:10:33 +0000
+Labels:                 &amp;lt;none&amp;gt;
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=nginx
+Replicas:               2 desired | 2 updated | 2 total | 0 available | 2 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=nginx
+  Containers:
+   nginx:
+    Image:        nginx:1.7.9
+    Port:         80/TCP
+    Host Port:    0/TCP
+    Environment:  &amp;lt;none&amp;gt;
+    Mounts:       &amp;lt;none&amp;gt;
+  Volumes:        &amp;lt;none&amp;gt;
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      False   MinimumReplicasUnavailable
+  Progressing    True    ReplicaSetUpdated
+OldReplicaSets:  &amp;lt;none&amp;gt;
+NewReplicaSet:   nginx-deployment-6dd86d77d (2/2 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  90s   deployment-controller  Scaled up replica set nginx-deployment-6dd86d77d to 2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;We should have 1 Pod. If not, run the command again. This shows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;The DESIRED state is showing the configured number of replicas
+The CURRENT state show how many replicas are running now
+The UP-TO-DATE is the number of replicas that were updated to match the desired (configured) state
+The AVAILABLE state shows how many replicas are actually AVAILABLE to the users
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl get deployments
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-deployment   2/2     2            2           2m57s
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ kubectl get po
+NAME                               READY   STATUS    RESTARTS   AGE
+nginx-deployment-6dd86d77d-84fwp   1/1     Running   0          3m44s
+nginx-deployment-6dd86d77d-xnrqp   1/1     Running   0          3m44s
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;step-2-scale-updown-application-deployment&#34;&gt;Step #2. Scale up/down application deployment&lt;/h2&gt;
+&lt;p&gt;Now let’s scale the Deployment to 4 replicas. We are going to use the kubectl scale command,
+followed by the deployment type, name and desired number of instances:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl scale deployments/nginx-deployment --replicas=4
+deployment.extensions/nginx-deployment scaled
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The change was applied, and we have 4 instances of the application available. Next,
+let’s check if the number of Pods changed:&lt;/p&gt;
+&lt;p&gt;Now There should be 4 pods running in the cluster&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl get deployments
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-deployment   4/4     4            4           4m
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There are 4 Pods now, with different IP addresses. The change was registered in the Deployment events log. To check that, use the describe command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl describe deployments/nginx-deployment
+Name:                   nginx-deployment
+Namespace:              default
+CreationTimestamp:      Sat, 30 Nov 2019 20:04:34 +0530
+Labels:                 &amp;lt;none&amp;gt;
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=nginx
+Replicas:               4 desired | 4 updated | 4 total | 4 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=nginx
+  Containers:
+   nginx:
+    Image:        nginx:1.7.9
+    Port:         80/TCP
+    Host Port:    0/TCP
+    Environment:  &amp;lt;none&amp;gt;
+    Mounts:       &amp;lt;none&amp;gt;
+  Volumes:        &amp;lt;none&amp;gt;
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Progressing    True    NewReplicaSetAvailable
+  Available      True    MinimumReplicasAvailable
+OldReplicaSets:  &amp;lt;none&amp;gt;
+NewReplicaSet:   nginx-deployment-6dd86d77d (4/4 replicas created)
+Events:
+  Type    Reason             Age    From                   Message
+  ----    ------             ----   ----                   -------
+  Normal  ScalingReplicaSet  6m12s  deployment-controller  Scaled up replica set nginx-deployment-6dd86d77d to 2
+  Normal  ScalingReplicaSet  3m6s   deployment-controller  Scaled up replica set nginx-deployment-6dd86d77d to 4
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ kubectl get pods -o wide
+NAME                               READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+nginx-deployment-6dd86d77d-b4v7k   1/1     Running   0          4m32s   10.1.0.237   docker-desktop   &amp;lt;none&amp;gt;           &amp;lt;none&amp;gt;
+nginx-deployment-6dd86d77d-bnc5m   1/1     Running   0          4m32s   10.1.0.236   docker-desktop   &amp;lt;none&amp;gt;           &amp;lt;none&amp;gt;
+nginx-deployment-6dd86d77d-bs6jr   1/1     Running   0          86s     10.1.0.239   docker-desktop   &amp;lt;none&amp;gt;           &amp;lt;none&amp;gt;
+nginx-deployment-6dd86d77d-wbdzv   1/1     Running   0          86s     10.1.0.238   docker-desktop   &amp;lt;none&amp;gt;           &amp;lt;none&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can also view in the output of this command that there are 4 replicas now.&lt;/p&gt;
+&lt;h3 id=&#34;scaling-the-service-to-2-replicas&#34;&gt;Scaling the service to 2 Replicas&lt;/h3&gt;
+&lt;p&gt;To scale down the Service to 2 replicas, run again the scale command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl scale deployments/nginx-deployment --replicas=2
+deployment.extensions/nginx-deployment scaled
+$ kubectl get deployments
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-deployment   2/2     2            2           7m23s
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;step-3-perform-rolling-updates-to-application-deployment&#34;&gt;Step #3. Perform rolling updates to application deployment&lt;/h2&gt;
+&lt;p&gt;So far, everything our Deployment did is no different than a typical ReplicaSet. The real power of a Deployment lies in its ability to update the pod templates without causing application outage.&lt;/p&gt;
+&lt;p&gt;Let’s say that you have finished testing the nginx 1.7.9 , and you are ready to use it in production. The current pods are using the older nginx version . The following command changes the deployment pod template to use the new image:&lt;/p&gt;
+&lt;p&gt;To update the image of the application to new version, use the set image command,
+followed by the deployment name and the new image version:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl get deployments
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-deployment   2/2     2            2           7m23s
+$ kubectl describe pods
+Name:               nginx-deployment-6dd86d77d-b4v7k
+Namespace:          default
+Priority:           0
+PriorityClassName:  &amp;lt;none&amp;gt;
+Node:               docker-desktop/192.168.65.3
+Start Time:         Sat, 30 Nov 2019 20:04:34 +0530
+Labels:             app=nginx
+                    pod-template-hash=6dd86d77d
+Annotations:        &amp;lt;none&amp;gt;
+Status:             Running
+IP:                 10.1.0.237
+Controlled By:      ReplicaSet/nginx-deployment-6dd86d77d
+Containers:
+  nginx:
+    Container ID:   docker://2c739cf9fe4dac53a4cc5c6097207da0c5edc2183f1f36f9f3e5c7057f85da43
+    Image:          nginx:1.7.9
+    Image ID:       docker-pullable://nginx@sha256:e3456c851a152494c3e4ff5fcc26f240206abac0c9d794affb40e0714846c451
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Sat, 30 Nov 2019 20:05:28 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    &amp;lt;none&amp;gt;
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ds5tg (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-ds5tg:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ds5tg
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  &amp;lt;none&amp;gt;
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age    From                     Message
+  ----    ------     ----   ----                     -------
+  Normal  Scheduled  10m    default-scheduler        Successfully assigned default/nginx-deployment-6dd86d77d-b4v7k to docker-desktop
+  Normal  Pulling    10m    kubelet, docker-desktop  Pulling image &amp;quot;nginx:1.7.9&amp;quot;
+  Normal  Pulled     9m17s  kubelet, docker-desktop  Successfully pulled image &amp;quot;nginx:1.7.9&amp;quot;
+  Normal  Created    9m17s  kubelet, docker-desktop  Created container nginx
+  Normal  Started    9m17s  kubelet, docker-desktop  Started container nginx
+
+
+Name:               nginx-deployment-6dd86d77d-bnc5m
+Namespace:          default
+Priority:           0
+PriorityClassName:  &amp;lt;none&amp;gt;
+Node:               docker-desktop/192.168.65.3
+Start Time:         Sat, 30 Nov 2019 20:04:34 +0530
+Labels:             app=nginx
+                    pod-template-hash=6dd86d77d
+Annotations:        &amp;lt;none&amp;gt;
+Status:             Running
+IP:                 10.1.0.236
+Controlled By:      ReplicaSet/nginx-deployment-6dd86d77d
+Containers:
+  nginx:
+    Container ID:   docker://12ab35cbf4fdf78997b106b5eb27135f2fc37c890e723fee44ac820ba1b1fd75
+    Image:          nginx:1.7.9
+    Image ID:       docker-pullable://nginx@sha256:e3456c851a152494c3e4ff5fcc26f240206abac0c9d794affb40e0714846c451
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Sat, 30 Nov 2019 20:05:23 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    &amp;lt;none&amp;gt;
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ds5tg (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-ds5tg:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ds5tg
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  &amp;lt;none&amp;gt;
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age    From                     Message
+  ----    ------     ----   ----                     -------
+  Normal  Scheduled  10m    default-scheduler        Successfully assigned default/nginx-deployment-6dd86d77d-bnc5m to docker-desktop
+  Normal  Pulling    10m    kubelet, docker-desktop  Pulling image &amp;quot;nginx:1.7.9&amp;quot;
+  Normal  Pulled     9m22s  kubelet, docker-desktop  Successfully pulled image &amp;quot;nginx:1.7.9&amp;quot;
+  Normal  Created    9m22s  kubelet, docker-desktop  Created container nginx
+  Normal  Started    9m22s  kubelet, docker-desktop  Started container nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The command notified the Deployment to use a different image for your app and initiated a rolling update. Check the status of the new Pods, and view the old one terminating with the get pods command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl set image  deployments/nginx-deployment nginx=nginx:1.9.1
+deployment.extensions/nginx-deployment image updated
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;checking-description-of-pod-again&#34;&gt;Checking description of pod again&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl describe pods
+Name:               nginx-deployment-6dd86d77d-b4v7k
+Namespace:          default
+Priority:           0
+PriorityClassName:  &amp;lt;none&amp;gt;
+Node:               docker-desktop/192.168.65.3
+Start Time:         Sat, 30 Nov 2019 20:04:34 +0530
+Labels:             app=nginx
+                    pod-template-hash=6dd86d77d
+Annotations:        &amp;lt;none&amp;gt;
+Status:             Running
+IP:                 10.1.0.237
+Controlled By:      ReplicaSet/nginx-deployment-6dd86d77d
+Containers:
+  nginx:
+    Container ID:   docker://2c739cf9fe4dac53a4cc5c6097207da0c5edc2183f1f36f9f3e5c7057f85da43
+    Image:          nginx:1.7.9
+    Image ID:       docker-pullable://nginx@sha256:e3456c851a152494c3e4ff5fcc26f240206abac0c9d794affb40e0714846c451
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Sat, 30 Nov 2019 20:05:28 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    &amp;lt;none&amp;gt;
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ds5tg (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-ds5tg:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ds5tg
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  &amp;lt;none&amp;gt;
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age   From                     Message
+  ----    ------     ----  ----                     -------
+  Normal  Scheduled  16m   default-scheduler        Successfully assigned default/nginx-deployment-6dd86d77d-b4v7k to docker-desktop
+  Normal  Pulling    16m   kubelet, docker-desktop  Pulling image &amp;quot;nginx:1.7.9&amp;quot;
+  Normal  Pulled     15m   kubelet, docker-desktop  Successfully pulled image &amp;quot;nginx:1.7.9&amp;quot;
+  Normal  Created    15m   kubelet, docker-desktop  Created container nginx
+  Normal  Started    15m   kubelet, docker-desktop  Started container nginx
+
+
+Name:               nginx-deployment-6dd86d77d-bnc5m
+Namespace:          default
+Priority:           0
+PriorityClassName:  &amp;lt;none&amp;gt;
+Node:               docker-desktop/192.168.65.3
+Start Time:         Sat, 30 Nov 2019 20:04:34 +0530
+Labels:             app=nginx
+                    pod-template-hash=6dd86d77d
+Annotations:        &amp;lt;none&amp;gt;
+Status:             Running
+IP:                 10.1.0.236
+Controlled By:      ReplicaSet/nginx-deployment-6dd86d77d
+Containers:
+  nginx:
+    Container ID:   docker://12ab35cbf4fdf78997b106b5eb27135f2fc37c890e723fee44ac820ba1b1fd75
+    Image:          nginx:1.7.9
+    Image ID:       docker-pullable://nginx@sha256:e3456c851a152494c3e4ff5fcc26f240206abac0c9d794affb40e0714846c451
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Sat, 30 Nov 2019 20:05:23 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    &amp;lt;none&amp;gt;
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ds5tg (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-ds5tg:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ds5tg
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  &amp;lt;none&amp;gt;
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age   From                     Message
+  ----    ------     ----  ----                     -------
+  Normal  Scheduled  16m   default-scheduler        Successfully assigned default/nginx-deployment-6dd86d77d-bnc5m to docker-desktop
+  Normal  Pulling    16m   kubelet, docker-desktop  Pulling image &amp;quot;nginx:1.7.9&amp;quot;
+  Normal  Pulled     15m   kubelet, docker-desktop  Successfully pulled image &amp;quot;nginx:1.7.9&amp;quot;
+  Normal  Created    15m   kubelet, docker-desktop  Created container nginx
+  Normal  Started    15m   kubelet, docker-desktop  Started container nginx
+
+
+Name:               nginx-deployment-784b7cc96d-kxc68
+Namespace:          default
+Priority:           0
+PriorityClassName:  &amp;lt;none&amp;gt;
+Node:               docker-desktop/192.168.65.3
+Start Time:         Sat, 30 Nov 2019 20:20:04 +0530
+Labels:             app=nginx
+                    pod-template-hash=784b7cc96d
+Annotations:        &amp;lt;none&amp;gt;
+Status:             Pending
+IP:                 
+Controlled By:      ReplicaSet/nginx-deployment-784b7cc96d
+Containers:
+  nginx:
+    Container ID:   
+    Image:          nginx:1.9.1
+    Image ID:       
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:    &amp;lt;none&amp;gt;
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ds5tg (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-ds5tg:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ds5tg
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  &amp;lt;none&amp;gt;
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age   From                     Message
+  ----    ------     ----  ----                     -------
+  Normal  Scheduled  36s   default-scheduler        Successfully assigned default/nginx-deployment-784b7cc96d-kxc68 to docker-desktop
+  Normal  Pulling    35s   kubelet, docker-desktop  Pulling image &amp;quot;nginx:1.9.1&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;step-4-rollback-updates-to-application-deployment&#34;&gt;Step #4. Rollback updates to application deployment&lt;/h2&gt;
+&lt;p&gt;The rollout command reverted the deployment to the previous known state. Updates are versioned and you can revert to any previously know state of a Deployment. List again the Pods:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl rollout undo deployments/nginx-deployment
+deployment.extensions/nginx-deployment rolled back
+
+$ kubectl rollout status deployments/nginx-deployment 
+deployment &amp;quot;nginx-deployment&amp;quot; successfully rolled out
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After the rollout succeeds, you may want to get the Deployment.&lt;/p&gt;
+&lt;p&gt;The output shows the update progress until all the pods use the new container image.&lt;/p&gt;
+&lt;p&gt;The algorithm that Kubernetes Deployments use when deciding how to roll updates is to keep at least 25% of the pods running. Accordingly, it doesn’t kill old pods unless a sufficient number of new ones are up. In the same sense, it does not create new pods until enough pods are no longer running. Through this algorithm, the application is always available during updates.&lt;/p&gt;
+&lt;p&gt;You can use the following command to determine the update strategy that the Deployment is using:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl describe deployments | grep Strategy
+StrategyType:           RollingUpdate
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;step-5-cleanup&#34;&gt;Step #5. Cleanup&lt;/h2&gt;
+&lt;p&gt;Finally you can clean up the resources you created in your cluster:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl delete service nginx-deployment
+$ kubectl delete deployment nginx-deployment
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
   </channel>
 </rss>

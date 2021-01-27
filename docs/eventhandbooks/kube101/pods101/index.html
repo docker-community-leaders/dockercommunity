@@ -990,9 +990,53 @@ if (!doNotTrack) {
 <button class="button" onclick="window.katacoda.init(); ">Launch Terminal</button>
 
 <h2 id="steps">Steps</h2>
-<pre><code>git clone https://github.com/collabnix/kubelabs
-cd kubelabs/pods101
-kubectl apply -f pods01.yaml
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="highlight">
+    <div class="copy-code-icon" style="text-align:right">
+    <a href="https://%25!s%28%3cnil%3e%29/master/content/en/examples//k8s/Pods101/pods01.yaml" download="/k8s/Pods101/pods01.yaml"><code>/k8s/Pods101/pods01.yaml</code>
+    </a>
+    <img src="https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg" style="max-height:24px; cursor: pointer" onclick="copyCode('k8spods101pods01yaml')" title="Copy /k8s/Pods101/pods01.yaml to clipboard">
+    </img>
+    </div>
+    <div class="includecode" id="k8spods101pods01yaml">
+    <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">apiVersion: v1      # apiVersion</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>this<span style="color:#f8f8f8;text-decoration:underline"> </span>is<span style="color:#f8f8f8;text-decoration:underline"> </span>the<span style="color:#f8f8f8;text-decoration:underline"> </span>version<span style="color:#f8f8f8;text-decoration:underline"> </span>of<span style="color:#f8f8f8;text-decoration:underline"> </span>the<span style="color:#f8f8f8;text-decoration:underline"> </span>API<span style="color:#f8f8f8;text-decoration:underline"> </span>used<span style="color:#f8f8f8;text-decoration:underline"> </span>by<span style="color:#f8f8f8;text-decoration:underline"> </span>the<span style="color:#f8f8f8;text-decoration:underline"> </span>cluster.<span style="color:#f8f8f8;text-decoration:underline"> 
+</span><span style="color:#f8f8f8;text-decoration:underline">                    </span><span style="color:#8f5902;font-style:italic"># With new versions of Kubernetes being released, new functionality is introduced and, hence, new API versions may be defined. </span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">                    </span><span style="color:#8f5902;font-style:italic"># For the pod object, we use API version v1.</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">kind</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>Pod<span style="color:#f8f8f8;text-decoration:underline">           
+</span><span style="color:#f8f8f8;text-decoration:underline">                    
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">metadata:           # Metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>here<span style="color:#f8f8f8;text-decoration:underline"> </span>we<span style="color:#f8f8f8;text-decoration:underline"> </span>can<span style="color:#f8f8f8;text-decoration:underline"> </span>define<span style="color:#f8f8f8;text-decoration:underline"> </span>data<span style="color:#f8f8f8;text-decoration:underline"> </span>about<span style="color:#f8f8f8;text-decoration:underline"> </span>the<span style="color:#f8f8f8;text-decoration:underline"> </span>object<span style="color:#f8f8f8;text-decoration:underline"> </span>we<span style="color:#f8f8f8;text-decoration:underline"> </span>are<span style="color:#f8f8f8;text-decoration:underline"> </span>about<span style="color:#f8f8f8;text-decoration:underline"> </span>to<span style="color:#f8f8f8;text-decoration:underline"> </span>create.<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>webserver<span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#8f5902;font-style:italic"># In this example, we only provide the name of the pod. But you can provide other details like the namespace.</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">spec</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#8f5902;font-style:italic">#The spec part defines the characteristics that a given Kubernetes object should have. </span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">                    </span><span style="color:#8f5902;font-style:italic"># It is the cluster’s responsibility to update the status of the object to always match the desired configuration. </span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">                    </span><span style="color:#8f5902;font-style:italic"># In our example, the spec instructs that this object (the pod) should have one container with some attributes.</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">containers</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>webserver<span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#8f5902;font-style:italic"># The name that this container will have.</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>nginx<span style="color:#000;font-weight:bold">:</span>latest<span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic"># The image on which it is based.</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ports</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">               </span><span style="color:#8f5902;font-style:italic"># The port(s) that will be open.</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span>- <span style="color:#204a87;font-weight:bold">containerPort</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">80</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    
+</span></code></pre></div>
+    </div>
+</div>
+
+
+<pre><code>kubectl apply -f pods01.yaml
 </code></pre><h2 id="viewing-your-pods">Viewing Your Pods</h2>
 <pre><code>kubectl get pods
 </code></pre><h2 id="which-node-is-this-pod-running-on">Which Node Is This Pod Running On?</h2>
@@ -1139,6 +1183,47 @@ spec:
   - name: webwatcher
     image: afakharany/watcher:latest
 </code></pre><p>Run the following command:</p>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="highlight">
+    <div class="copy-code-icon" style="text-align:right">
+    <a href="https://%25!s%28%3cnil%3e%29/master/content/en/examples//k8s/Pods101/pods02.yaml" download="/k8s/Pods101/pods02.yaml"><code>/k8s/Pods101/pods02.yaml</code>
+    </a>
+    <img src="https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg" style="max-height:24px; cursor: pointer" onclick="copyCode('k8spods101pods02yaml')" title="Copy /k8s/Pods101/pods02.yaml to clipboard">
+    </img>
+    </div>
+    <div class="includecode" id="k8spods101pods02yaml">
+    <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">apiVersion</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>v1<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">kind</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>Pod<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>webserver<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">spec</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">containers</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>webserver<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>nginx<span style="color:#000;font-weight:bold">:</span>latest<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ports</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span>- <span style="color:#204a87;font-weight:bold">containerPort</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">80</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>webwatcher<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>afakharany/watcher<span style="color:#000;font-weight:bold">:</span>latest<span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div>
+    </div>
+</div>
+
+
 <pre><code>$ kubectl apply -f pods02.yaml
 </code></pre><pre><code>$ kubectl get po -o wide
 NAME        READY   STATUS              RESTARTS   AGE   IP       NODE                                                NOMINATED NODE   READINESS GATES
@@ -1205,6 +1290,60 @@ Another example is a helper container that re-routes requests from the main cont
 <p>In Kubernetes, you can use a shared Kubernetes Volume as a simple and efficient way to share data between containers in a Pod. For most cases, it is sufficient to use a directory on the host that is shared with all containers within a Pod.</p>
 <p>Kubernetes Volumes enables data to survive container restarts, but these volumes have the same lifetime as the Pod. That means that the volume (and the data it holds) exists exactly as long as that Pod exists. If that Pod is deleted for any reason, even if an identical replacement is created, the shared Volume is also destroyed and created anew.</p>
 <p>A standard use case for a multi-container Pod with a shared Volume is when one container writes logs or other files to the shared directory, and the other container reads from the shared directory. For example, we can create a Pod like so (<a href="pods03.yaml">pods03.yaml</a>):</p>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="highlight">
+    <div class="copy-code-icon" style="text-align:right">
+    <a href="https://%25!s%28%3cnil%3e%29/master/content/en/examples//k8s/Pods101/pods03.yaml" download="/k8s/Pods101/pods03.yaml"><code>/k8s/Pods101/pods03.yaml</code>
+    </a>
+    <img src="https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg" style="max-height:24px; cursor: pointer" onclick="copyCode('k8spods101pods03yaml')" title="Copy /k8s/Pods101/pods03.yaml to clipboard">
+    </img>
+    </div>
+    <div class="includecode" id="k8spods101pods03yaml">
+    <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">apiVersion</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>v1<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">kind</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>Pod<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>mc1<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">spec</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">volumes</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>html<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">emptyDir</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>{}<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">containers</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>1st<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>nginx<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">volumeMounts</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>html<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">mountPath</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>/usr/share/nginx/html<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>2nd<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>debian<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">volumeMounts</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>html<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">mountPath</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>/html<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">command</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;/bin/sh&#34;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;-c&#34;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">args</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- while<span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">true</span>;<span style="color:#f8f8f8;text-decoration:underline"> </span>do<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">          </span>date<span style="color:#f8f8f8;text-decoration:underline"> </span>&gt;&gt;<span style="color:#f8f8f8;text-decoration:underline"> </span>/html/index.html;<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">          </span>sleep<span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1</span>;<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span>done<span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div>
+    </div>
+</div>
+
+
 <pre><code>apiVersion: v1
 kind: Pod
 metadata:
@@ -1328,8 +1467,7 @@ Wed Jan  8 08:59:15 UTC 2020
 Wed Jan  8 08:59:16 UTC 2020
 </code></pre><h2 id="cleaning-up-1">Cleaning Up</h2>
 <pre><code>kubectl delete -f pods03.yaml
-</code></pre><p><a href="https://collabnix.github.io/kubelabs/replicaset101/index.html#how-does-replicaset-manage-pods">Next &raquo;</a></p>
-
+</code></pre>
         <div class="section-index">
     
     
@@ -1471,7 +1609,7 @@ Wed Jan  8 08:59:16 UTC 2020
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.27271: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/0d51f6b1242237195183ae1ab1d669c0c27f27b1">Update _index.md (0d51f6b)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.27271: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/dde7ada9a15db8c5099fefe28e14fffeaf9ea091">Update _index.md (dde7ada)</a>
 </div>
 </div>
 
@@ -1565,7 +1703,44 @@ Wed Jan  8 08:59:16 UTC 2020
 <script src="../../../../js/main.min.3f977db73b73c3ce452881894e84f9a709331842c2820a135e9829c6c4c76134.js" integrity="sha256-P5d9tztzw85FKIGJToT5pwkzGELCggoTXpgpxsTHYTQ=" crossorigin="anonymous"></script>
 
 
+<script async src="../../../../js/sweetalert-2.1.2.min.js"></script>
+<script type="text/javascript">
+function copyCode(elem){
+  if (document.getElementById(elem)) {
+    
+    var targetId = "_hiddenCopyText_";
+    
+    target = document.getElementById(targetId);
+    if (!target) {
+      var target = document.createElement("textarea");
+      target.style.position = "absolute";
+      target.style.left = "-9999px";
+      target.style.top = "0";
+      target.id = targetId;
+      document.body.appendChild(target);
+    }
+    target.value = document.getElementById(elem).innerText;
+    
+    target.select();
 
+    
+    var succeed;
+    try {
+        succeed = document.execCommand("copy");
+    } catch(e) {
+        swal("Oh, no…","Sorry, your browser doesn't support copying this example to your clipboard.");
+        succeed = false;
+    }
+    if (succeed) {
+      swal("Copied to clipboard: ",elem);
+      return succeed;
+    } else {
+      swal("Oops!", elem + " not found when trying to copy code");
+      return false;
+    }
+  }
+}
+</script>
 
 <script type="text/javascript" async
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">

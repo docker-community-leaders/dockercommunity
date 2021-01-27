@@ -2654,28 +2654,13 @@ hello-world                          latest              f2a91732366c        2 m
       <description>
         
         
-        &lt;h2 id=&#34;docker-networking---1-hour&#34;&gt;Docker Networking - 1 hour&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#using-docker-network/README.md&#34;&gt;The docker network Command&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#step-2-list-networks&#34;&gt;Lab #1: Listing the Networks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#step-3-inspect-a-network&#34;&gt;Lab #2: Inspecting a Network&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#step-4-list-network-driver-plugins&#34;&gt;Lab #3: List network driver plugins&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#A2-bridge-networking.md&#34;&gt;Lab #4: Docker Bridge Networking&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#step-1-the-default-bridge-network&#34;&gt;Lab #5: Basics of Docker Bridge Networking&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;step-2-connect-a-container&#34;&gt;Lab #6: Connect a Docker container to bridge network&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#step-3-test-network-connectivity&#34;&gt;Lab #7: Test Network Connectivity&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#step-4-configure-nat-for-external-connectivity&#34;&gt;Lab #8: Configure NAT for external connectivity&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#test-your-knowledge-quiz4&#34;&gt;Test Your Knowledge&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;using-docker-network&#34;&gt;Using Docker Network&lt;/h2&gt;
+        &lt;h2 id=&#34;using-docker-network---1-hour&#34;&gt;Using Docker Network - 1 hour&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#docker_network&#34;&gt;Step 1 - The &lt;code&gt;docker network&lt;/code&gt; command&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#list_networks&#34;&gt;Step 2 - List networks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#inspect&#34;&gt;Step 3 - Inspect a network&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#list_drivers&#34;&gt;Step 4 - List network driver plugins&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#test-your-knowledge-quiz4&#34;&gt;Test Your Knowledge&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
 &lt;p&gt;You will need all of the following to complete this lab:&lt;/p&gt;

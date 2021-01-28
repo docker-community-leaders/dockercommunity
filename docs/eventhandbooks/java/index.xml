@@ -26,7 +26,7 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Step No.&lt;/th&gt;
 &lt;th align=&#34;left&#34;&gt;Name of Objectives&lt;/th&gt;
 &lt;th align=&#34;left&#34;&gt;Status&lt;/th&gt;
 &lt;/tr&gt;
@@ -58,7 +58,7 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Step No.&lt;/th&gt;
 &lt;th align=&#34;left&#34;&gt;Name of Objectives&lt;/th&gt;
 &lt;th align=&#34;left&#34;&gt;Status&lt;/th&gt;
 &lt;/tr&gt;
@@ -75,7 +75,7 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Step No.&lt;/th&gt;
 &lt;th align=&#34;left&#34;&gt;Name of Objectives&lt;/th&gt;
 &lt;th align=&#34;left&#34;&gt;Status&lt;/th&gt;
 &lt;/tr&gt;

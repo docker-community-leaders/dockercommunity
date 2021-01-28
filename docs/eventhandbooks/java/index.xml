@@ -2189,7 +2189,8 @@ ADD dockercon.war /opt/jboss/wildfly/standalone/deployments/
       <description>
         
         
-        &lt;ul&gt;
+        &lt;h2 id=&#34;docker--eclipse&#34;&gt;Docker &amp;amp; Eclipse&lt;/h2&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#install-docker-tooling-in-eclipse&#34;&gt;Install Docker Tooling in Eclipse&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#docker-perspective-and-view&#34;&gt;Docker Perspective and View&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#pull-an-image&#34;&gt;Pull an Image&lt;/a&gt;&lt;/li&gt;

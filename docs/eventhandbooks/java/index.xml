@@ -14,268 +14,6 @@
     
     
     <item>
-      <title>Docs: Multi-Container Application using Docker Compose</title>
-      <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/compose/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/compose/</guid>
-      <description>
-        
-        
-        &lt;h1 id=&#34;multi-container-application-using-docker-compose&#34;&gt;Multi-Container Application using Docker Compose&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#what-is-docker-compose&#34;&gt;What is Docker Compose&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#configuration-file&#34;&gt;Configuration file&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#start-application&#34;&gt;Start application&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#verify-application&#34;&gt;Verify application&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#shutdown-application&#34;&gt;Shutdown application&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;what-is-docker-compose&#34;&gt;What is Docker Compose&lt;/h2&gt;
-&lt;p&gt;Docker Compose is a tool for defining and running complex applications with Docker. With Compose, you define a multi-container application in a single file, then spin your application up in a single command which does everything that needs to be done to get it running.&lt;/p&gt;
-&lt;p&gt;An application using Docker containers will typically consist of multiple containers. With Docker Compose, there is no need to write shell scripts to start your containers. All the containers are defined in a configuration file using &lt;em&gt;services&lt;/em&gt;, and then &lt;code&gt;docker-compose&lt;/code&gt; script is used to start, stop, and restart the application and all the services in that application, and all the containers within that service. The complete list of commands is:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;Command&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Purpose&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;build&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Build or rebuild services&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;help&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Get help on a command&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;kill&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Kill containers&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;logs&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;View output from containers&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;port&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Print the public port for a port binding&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;ps&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;List containers&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;pull&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Pulls service images&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;restart&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Restart services&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;rm&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Remove stopped containers&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;run&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Run a one-off command&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;scale&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Set number of containers for a service&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;start&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Start services&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;stop&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Stop services&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;up&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Create and start containers&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;`migrate-to-labels  Recreate containers to add labels|&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;====&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;The application used in this section is a Java EE application talking to a database. The application publishes a REST endpoint that can be invoked using `curl. It is deployed using &lt;a href=&#34;http://wildfly-swarm.io/%5BWildFly&#34;&gt;http://wildfly-swarm.io/[WildFly&lt;/a&gt; Swarm] that communicates to MySQL database.&lt;/p&gt;
-&lt;p&gt;WildFly Swarm and MySQL will be running in two separate containers, and thus making this a multi-container application.&lt;/p&gt;
-&lt;h2 id=&#34;configuration-file&#34;&gt;Configuration file&lt;/h2&gt;
-&lt;p&gt;The entry point to Docker Compose is a Compose file, usually called &lt;code&gt;docker-compose.yml&lt;/code&gt;. Create a new directory &lt;code&gt;javaee&lt;/code&gt;. In that directory, create a new file &lt;code&gt;docker-compose.yml&lt;/code&gt; in it. Use the following contents:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;version: &#39;3.3&#39;
-services:
-  db:
-    container_name: db
-    image: mysql:8
-    environment:
-      MYSQL_DATABASE: employees
-      MYSQL_USER: mysql
-      MYSQL_PASSWORD: mysql
-      MYSQL_ROOT_PASSWORD: supersecret
-    ports:
-      - 3306:3306
-  web:
-    image: arungupta/docker-javaee:dockerconeu17
-    ports:
-      - 8080:8080
-      - 9990:9990
-    depends_on:
-      - db
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In this Compose file:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Two services in this Compose are defined by the name &lt;code&gt;db&lt;/code&gt; and &lt;code&gt;web&lt;/code&gt; attributes&lt;/li&gt;
-&lt;li&gt;Image name for each service defined using &lt;code&gt;image&lt;/code&gt; attribute&lt;/li&gt;
-&lt;li&gt;The &lt;code&gt;mysql:8&lt;/code&gt; image starts the MySQL server.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;environment&lt;/code&gt; attribute defines environment variables to initialize MySQL server.
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;MYSQL_DATABASE&lt;/code&gt; allows you to specify the name of a database to be created on image startup.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;MYSQL_USER&lt;/code&gt; and &lt;code&gt;MYSQL_PASSWORD&lt;/code&gt; are used in conjunction to create a new user and to set that user&amp;rsquo;s password. This user will be granted superuser permissions for the database specified by the &lt;code&gt;MYSQL_DATABASE&lt;/code&gt; variable.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;MYSQL_ROOT_PASSWORD&lt;/code&gt; is mandatory and specifies the password that will be set for the MySQL root superuser account.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Java EE application uses the &lt;code&gt;db&lt;/code&gt; service as specified in the &lt;code&gt;connection-url&lt;/code&gt; as specified at &lt;a href=&#34;https://github.com/arun-gupta/docker-javaee/blob/master/employees/src/main/resources/project-defaults.yml/&#34;&gt;https://github.com/arun-gupta/docker-javaee/blob/master/employees/src/main/resources/project-defaults.yml/&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;The &lt;code&gt;arungupta/docker-javaee:dockerconeu17&lt;/code&gt; image starts WildFly Swarm application server. It consists of the Java EE application built from &lt;a href=&#34;https://github.com/arun-gupta/docker-javaee&#34;&gt;https://github.com/arun-gupta/docker-javaee&lt;/a&gt;. Clone that project if you want to build your own image.&lt;/li&gt;
-&lt;li&gt;Port forwarding is achieved using &lt;code&gt;ports&lt;/code&gt; attribute.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;depends_on&lt;/code&gt; attribute allows to express dependency between services. In this case, MySQL will be started before WildFly. Application-level health check are still user&amp;rsquo;s responsibility.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;start-application&#34;&gt;Start application&lt;/h2&gt;
-&lt;p&gt;All services in the application can be started, in detached mode, by giving the command:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;docker-compose up -d
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;An alternate Compose file name can be specified using &lt;code&gt;-f&lt;/code&gt; option.&lt;/p&gt;
-&lt;p&gt;An alternate directory where the compose file exists can be specified using &lt;code&gt;-p&lt;/code&gt; option.&lt;/p&gt;
-&lt;p&gt;This shows the output as:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;docker-compose up -d
-Creating network &amp;quot;javaee_default&amp;quot; with the default driver
-Creating db ... 
-Creating db ... done
-Creating javaee_web_1 ... 
-Creating javaee_web_1 ... done
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The output may differ slightly if the images are downloaded as well.&lt;/p&gt;
-&lt;p&gt;Started services can be verified using the command &lt;code&gt;docker-compose ps&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    Name                  Command               State                       Ports                     
-------------------------------------------------------------------------------------------------------
-db             docker-entrypoint.sh mysqld      Up      0.0.0.0:3306-&amp;gt;3306/tcp                        
-javaee_web_1   /bin/sh -c java -jar /opt/ ...   Up      0.0.0.0:8080-&amp;gt;8080/tcp, 0.0.0.0:9990-&amp;gt;9990/tcp
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This provides a consolidated view of all the services, and containers within each of them.&lt;/p&gt;
-&lt;p&gt;Alternatively, the containers in this application, and any additional containers running on this Docker host can be verified by using the usual &lt;code&gt;docker container ls&lt;/code&gt; command:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    Name                  Command               State                       Ports                     
-------------------------------------------------------------------------------------------------------
-db             docker-entrypoint.sh mysqld      Up      0.0.0.0:3306-&amp;gt;3306/tcp                        
-javaee_web_1   /bin/sh -c java -jar /opt/ ...   Up      0.0.0.0:8080-&amp;gt;8080/tcp, 0.0.0.0:9990-&amp;gt;9990/tcp
-javaee $ docker container ls
-CONTAINER ID        IMAGE                                   COMMAND                  CREATED             STATUS              PORTS                                            NAMES
-e862a5eb9484        arungupta/docker-javaee:dockerconeu17   &amp;quot;/bin/sh -c &#39;java ...&amp;quot;   38 seconds ago      Up 36 seconds       0.0.0.0:8080-&amp;gt;8080/tcp, 0.0.0.0:9990-&amp;gt;9990/tcp   javaee_web_1
-08792c20c066        mysql:8                                 &amp;quot;docker-entrypoint...&amp;quot;   39 seconds ago      Up 37 seconds       0.0.0.0:3306-&amp;gt;3306/tcp                           db
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Service logs can be seen using &lt;code&gt;docker-compose logs&lt;/code&gt; command, and looks like:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Attaching to dockerjavaee_web_1, db
-web_1  | 23:54:21,584 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
-web_1  | 23:54:21,688 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: WildFly Core 2.0.10.Final &amp;quot;Kenny&amp;quot; starting
-web_1  | 2017-10-06 23:54:22,687 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 20) WFLYIO001: Worker &#39;default&#39; has auto-configured to 8 core threads with 64 task threads based on your 4 available processors
-
-. . .
-
-web_1  | 2017-10-06 23:54:23,259 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-3) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
-web_1  | 2017-10-06 23:54:24,962 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Core 2.0.10.Final &amp;quot;Kenny&amp;quot; started in 3406ms - Started 112 of 124 services (21 services are lazy, passive or on-demand)
-web_1  | 2017-10-06 23:54:25,020 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0006: Undertow HTTP listener default listening on 0.0.0.0:8080
-web_1  | 2017-10-06 23:54:26,146 INFO  [org.wildfly.swarm.runtime.deployer] (main) deploying docker-javaee.war
-web_1  | 2017-10-06 23:54:26,169 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0027: Starting deployment of &amp;quot;docker-javaee.war&amp;quot; (runtime-name: &amp;quot;docker-javaee.war&amp;quot;)
-web_1  | 2017-10-06 23:54:27,748 INFO  [org.jboss.as.jpa] (MSC service thread 1-2) WFLYJPA0002: Read persistence.xml for MyPU
-web_1  | 2017-10-06 23:54:27,887 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-7) WFLYSRV0018: Deployment &amp;quot;deployment.docker-javaee.war&amp;quot; is using a private module (&amp;quot;org.jboss.jts:main&amp;quot;) which may be changed or removed in future versions without notice.
-
-. . .
-
-web_1  | 2017-10-06 23:54:29,128 INFO  [stdout] (ServerService Thread Pool -- 4) Hibernate: create table EMPLOYEE_SCHEMA (id integer not null, name varchar(40), primary key (id))
-web_1  | 2017-10-06 23:54:29,132 INFO  [stdout] (ServerService Thread Pool -- 4) Hibernate: INSERT INTO EMPLOYEE_SCHEMA(ID, NAME) VALUES (1, &#39;Penny&#39;)
-web_1  | 2017-10-06 23:54:29,133 INFO  [stdout] (ServerService Thread Pool -- 4) Hibernate: INSERT INTO EMPLOYEE_SCHEMA(ID, NAME) VALUES (2, &#39;Sheldon&#39;)
-web_1  | 2017-10-06 23:54:29,133 INFO  [stdout] (ServerService Thread Pool -- 4) Hibernate: INSERT INTO EMPLOYEE_SCHEMA(ID, NAME) VALUES (3, &#39;Amy&#39;)
-web_1  | 2017-10-06 23:54:29,133 INFO  [stdout] (ServerService Thread Pool -- 4) Hibernate: INSERT INTO EMPLOYEE_SCHEMA(ID, NAME) VALUES (4, &#39;Leonard&#39;)
-
-. . .
-
-web_1  | 2017-10-06 23:54:30,050 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 4) WFLYUT0021: Registered web context: /
-web_1  | 2017-10-06 23:54:30,518 INFO  [org.jboss.as.server] (main) WFLYSRV0010: Deployed &amp;quot;docker-javaee.war&amp;quot; (runtime-name : &amp;quot;docker-javaee.war&amp;quot;)
-web_1  | 2017-10-06 23:56:01,766 INFO  [stdout] (default task-1) Hibernate: select employee0_.id as id1_0_, employee0_.name as name2_0_ from EMPLOYEE_SCHEMA employee0_
-db     | Initializing database
-
-. . .
-
-db     | 
-db     | 
-db     | MySQL init process done. Ready for start up.
-db     | 
-
-. . .
-
-db     | 2017-10-06T23:54:29.434423Z 0 [Note] /usr/sbin/mysqld: ready for connections. Version: &#39;8.0.3-rc-log&#39;  socket: &#39;/var/run/mysqld/mysqld.sock&#39;  port: 3306  MySQL Community Server (GPL)
-db     | 2017-10-06T23:54:30.281973Z 0 [Note] InnoDB: Buffer pool(s) load completed at 171006 23:54:30
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;depends_on&lt;/code&gt; attribute in the Compose definition file ensures the container start up order. But application-level start up needs to be ensured by the applications running inside container. In our case, this can be achieved by WildFly Swarm using &lt;code&gt;swarm.datasources.data-sources.KEY.stale-connection-checker-class-name&lt;/code&gt; as defined at &lt;a href=&#34;https://reference.wildfly-swarm.io/fractions/datasources.html&#34;&gt;https://reference.wildfly-swarm.io/fractions/datasources.html&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;verify-application&#34;&gt;Verify application&lt;/h2&gt;
-&lt;p&gt;Now that the WildFly Swarm and MySQL have been configured, let&amp;rsquo;s access the application. You need to specify IP address of the host where WildFly is running (&lt;code&gt;localhost&lt;/code&gt; in our case).&lt;/p&gt;
-&lt;p&gt;The endpoint can be accessed in this case as:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;curl -v http://localhost:8080/resources/employees
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The output is shown as:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;curl -v http://localhost:8080/resources/employees
-*   Trying ::1...
-* TCP_NODELAY set
-* Connected to localhost (::1) port 8080 (#0)
-&amp;gt; GET /resources/employees HTTP/1.1
-&amp;gt; Host: localhost:8080
-&amp;gt; User-Agent: curl/7.51.0
-&amp;gt; Accept: */*
-&amp;gt; 
-&amp;lt; HTTP/1.1 200 OK
-&amp;lt; Connection: keep-alive
-&amp;lt; Content-Type: application/xml
-&amp;lt; Content-Length: 478
-&amp;lt; Date: Sat, 07 Oct 2017 00:05:41 GMT
-&amp;lt; 
-* Curl_http_done: called premature == 0
-* Connection #0 to host localhost left intact
-&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;yes&amp;quot;?&amp;gt;&amp;lt;collection&amp;gt;&amp;lt;employee&amp;gt;&amp;lt;id&amp;gt;1&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Penny&amp;lt;/name&amp;gt;&amp;lt;/employee&amp;gt;&amp;lt;employee&amp;gt;&amp;lt;id&amp;gt;2&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Sheldon&amp;lt;/name&amp;gt;&amp;lt;/employee&amp;gt;&amp;lt;employee&amp;gt;&amp;lt;id&amp;gt;3&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Amy&amp;lt;/name&amp;gt;&amp;lt;/employee&amp;gt;&amp;lt;employee&amp;gt;&amp;lt;id&amp;gt;4&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Leonard&amp;lt;/name&amp;gt;&amp;lt;/employee&amp;gt;&amp;lt;employee&amp;gt;&amp;lt;id&amp;gt;5&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Bernadette&amp;lt;/name&amp;gt;&amp;lt;/employee&amp;gt;&amp;lt;employee&amp;gt;&amp;lt;id&amp;gt;6&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Raj&amp;lt;/name&amp;gt;&amp;lt;/employee&amp;gt;&amp;lt;employee&amp;gt;&amp;lt;id&amp;gt;7&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Howard&amp;lt;/name&amp;gt;&amp;lt;/employee&amp;gt;&amp;lt;employee&amp;gt;&amp;lt;id&amp;gt;8&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Priya&amp;lt;/name&amp;gt;&amp;lt;/employee&amp;gt;&amp;lt;/collection&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This shows the result from querying the database.&lt;/p&gt;
-&lt;p&gt;A single resource can be obtained:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;curl -v http://localhost:8080/resources/employees/1
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It shows the output:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;curl -v http://localhost:8080/resources/employees/1
-*   Trying ::1...
-* TCP_NODELAY set
-* Connected to localhost (::1) port 8080 (#0)
-&amp;gt; GET /resources/employees/1 HTTP/1.1
-&amp;gt; Host: localhost:8080
-&amp;gt; User-Agent: curl/7.51.0
-&amp;gt; Accept: */*
-&amp;gt; 
-&amp;lt; HTTP/1.1 200 OK
-&amp;lt; Connection: keep-alive
-&amp;lt; Content-Type: application/xml
-&amp;lt; Content-Length: 104
-&amp;lt; Date: Sat, 07 Oct 2017 00:06:33 GMT
-&amp;lt; 
-* Curl_http_done: called premature == 0
-* Connection #0 to host localhost left intact
-&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;yes&amp;quot;?&amp;gt;&amp;lt;employee&amp;gt;&amp;lt;id&amp;gt;1&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Penny&amp;lt;/name&amp;gt;&amp;lt;/employee&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;shutdown-application&#34;&gt;Shutdown application&lt;/h2&gt;
-&lt;p&gt;Shutdown the application using &lt;code&gt;docker-compose down&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Stopping javaee_web_1 ... done
-Stopping db           ... done
-Removing javaee_web_1 ... done
-Removing db           ... done
-Removing network javaee_default
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This stops the container in each service and removes all the services. It also deletes any networks that were created as part of this application.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
       <title>Docs: Deploy Application using Docker Swarm Mode</title>
       <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/swarm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2009,6 +1747,268 @@ Alpine Linux was used instead of Debian Slim.&lt;/p&gt;
 &lt;p&gt;A realistic application will depend on more JDK modules but it&amp;rsquo;s still possible
 to significantly reduce the Java runtime to only the required modules (for
 example many applications will not require Corba or RMI nor the compiler tools).&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Multi-Container Application using Docker Compose</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/compose/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/compose/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;multi-container-application-using-docker-compose&#34;&gt;Multi-Container Application using Docker Compose&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#what-is-docker-compose&#34;&gt;What is Docker Compose&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#configuration-file&#34;&gt;Configuration file&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#start-application&#34;&gt;Start application&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#verify-application&#34;&gt;Verify application&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#shutdown-application&#34;&gt;Shutdown application&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-is-docker-compose&#34;&gt;What is Docker Compose&lt;/h2&gt;
+&lt;p&gt;Docker Compose is a tool for defining and running complex applications with Docker. With Compose, you define a multi-container application in a single file, then spin your application up in a single command which does everything that needs to be done to get it running.&lt;/p&gt;
+&lt;p&gt;An application using Docker containers will typically consist of multiple containers. With Docker Compose, there is no need to write shell scripts to start your containers. All the containers are defined in a configuration file using &lt;em&gt;services&lt;/em&gt;, and then &lt;code&gt;docker-compose&lt;/code&gt; script is used to start, stop, and restart the application and all the services in that application, and all the containers within that service. The complete list of commands is:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Command&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Purpose&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;build&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Build or rebuild services&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;help&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Get help on a command&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;kill&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Kill containers&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;logs&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;View output from containers&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;port&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Print the public port for a port binding&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;ps&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;List containers&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;pull&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Pulls service images&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;restart&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Restart services&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;rm&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Remove stopped containers&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;run&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Run a one-off command&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;scale&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Set number of containers for a service&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;start&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Start services&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;stop&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Stop services&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;up&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Create and start containers&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;`migrate-to-labels  Recreate containers to add labels|&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;====&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The application used in this section is a Java EE application talking to a database. The application publishes a REST endpoint that can be invoked using `curl. It is deployed using &lt;a href=&#34;http://wildfly-swarm.io/%5BWildFly&#34;&gt;http://wildfly-swarm.io/[WildFly&lt;/a&gt; Swarm] that communicates to MySQL database.&lt;/p&gt;
+&lt;p&gt;WildFly Swarm and MySQL will be running in two separate containers, and thus making this a multi-container application.&lt;/p&gt;
+&lt;h2 id=&#34;configuration-file&#34;&gt;Configuration file&lt;/h2&gt;
+&lt;p&gt;The entry point to Docker Compose is a Compose file, usually called &lt;code&gt;docker-compose.yml&lt;/code&gt;. Create a new directory &lt;code&gt;javaee&lt;/code&gt;. In that directory, create a new file &lt;code&gt;docker-compose.yml&lt;/code&gt; in it. Use the following contents:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;version: &#39;3.3&#39;
+services:
+  db:
+    container_name: db
+    image: mysql:8
+    environment:
+      MYSQL_DATABASE: employees
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: mysql
+      MYSQL_ROOT_PASSWORD: supersecret
+    ports:
+      - 3306:3306
+  web:
+    image: arungupta/docker-javaee:dockerconeu17
+    ports:
+      - 8080:8080
+      - 9990:9990
+    depends_on:
+      - db
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In this Compose file:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Two services in this Compose are defined by the name &lt;code&gt;db&lt;/code&gt; and &lt;code&gt;web&lt;/code&gt; attributes&lt;/li&gt;
+&lt;li&gt;Image name for each service defined using &lt;code&gt;image&lt;/code&gt; attribute&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;mysql:8&lt;/code&gt; image starts the MySQL server.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;environment&lt;/code&gt; attribute defines environment variables to initialize MySQL server.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;MYSQL_DATABASE&lt;/code&gt; allows you to specify the name of a database to be created on image startup.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;MYSQL_USER&lt;/code&gt; and &lt;code&gt;MYSQL_PASSWORD&lt;/code&gt; are used in conjunction to create a new user and to set that user&amp;rsquo;s password. This user will be granted superuser permissions for the database specified by the &lt;code&gt;MYSQL_DATABASE&lt;/code&gt; variable.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;MYSQL_ROOT_PASSWORD&lt;/code&gt; is mandatory and specifies the password that will be set for the MySQL root superuser account.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Java EE application uses the &lt;code&gt;db&lt;/code&gt; service as specified in the &lt;code&gt;connection-url&lt;/code&gt; as specified at &lt;a href=&#34;https://github.com/arun-gupta/docker-javaee/blob/master/employees/src/main/resources/project-defaults.yml/&#34;&gt;https://github.com/arun-gupta/docker-javaee/blob/master/employees/src/main/resources/project-defaults.yml/&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;arungupta/docker-javaee:dockerconeu17&lt;/code&gt; image starts WildFly Swarm application server. It consists of the Java EE application built from &lt;a href=&#34;https://github.com/arun-gupta/docker-javaee&#34;&gt;https://github.com/arun-gupta/docker-javaee&lt;/a&gt;. Clone that project if you want to build your own image.&lt;/li&gt;
+&lt;li&gt;Port forwarding is achieved using &lt;code&gt;ports&lt;/code&gt; attribute.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;depends_on&lt;/code&gt; attribute allows to express dependency between services. In this case, MySQL will be started before WildFly. Application-level health check are still user&amp;rsquo;s responsibility.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;start-application&#34;&gt;Start application&lt;/h2&gt;
+&lt;p&gt;All services in the application can be started, in detached mode, by giving the command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker-compose up -d
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;An alternate Compose file name can be specified using &lt;code&gt;-f&lt;/code&gt; option.&lt;/p&gt;
+&lt;p&gt;An alternate directory where the compose file exists can be specified using &lt;code&gt;-p&lt;/code&gt; option.&lt;/p&gt;
+&lt;p&gt;This shows the output as:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker-compose up -d
+Creating network &amp;quot;javaee_default&amp;quot; with the default driver
+Creating db ... 
+Creating db ... done
+Creating javaee_web_1 ... 
+Creating javaee_web_1 ... done
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The output may differ slightly if the images are downloaded as well.&lt;/p&gt;
+&lt;p&gt;Started services can be verified using the command &lt;code&gt;docker-compose ps&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    Name                  Command               State                       Ports                     
+------------------------------------------------------------------------------------------------------
+db             docker-entrypoint.sh mysqld      Up      0.0.0.0:3306-&amp;gt;3306/tcp                        
+javaee_web_1   /bin/sh -c java -jar /opt/ ...   Up      0.0.0.0:8080-&amp;gt;8080/tcp, 0.0.0.0:9990-&amp;gt;9990/tcp
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This provides a consolidated view of all the services, and containers within each of them.&lt;/p&gt;
+&lt;p&gt;Alternatively, the containers in this application, and any additional containers running on this Docker host can be verified by using the usual &lt;code&gt;docker container ls&lt;/code&gt; command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    Name                  Command               State                       Ports                     
+------------------------------------------------------------------------------------------------------
+db             docker-entrypoint.sh mysqld      Up      0.0.0.0:3306-&amp;gt;3306/tcp                        
+javaee_web_1   /bin/sh -c java -jar /opt/ ...   Up      0.0.0.0:8080-&amp;gt;8080/tcp, 0.0.0.0:9990-&amp;gt;9990/tcp
+javaee $ docker container ls
+CONTAINER ID        IMAGE                                   COMMAND                  CREATED             STATUS              PORTS                                            NAMES
+e862a5eb9484        arungupta/docker-javaee:dockerconeu17   &amp;quot;/bin/sh -c &#39;java ...&amp;quot;   38 seconds ago      Up 36 seconds       0.0.0.0:8080-&amp;gt;8080/tcp, 0.0.0.0:9990-&amp;gt;9990/tcp   javaee_web_1
+08792c20c066        mysql:8                                 &amp;quot;docker-entrypoint...&amp;quot;   39 seconds ago      Up 37 seconds       0.0.0.0:3306-&amp;gt;3306/tcp                           db
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Service logs can be seen using &lt;code&gt;docker-compose logs&lt;/code&gt; command, and looks like:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Attaching to dockerjavaee_web_1, db
+web_1  | 23:54:21,584 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+web_1  | 23:54:21,688 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: WildFly Core 2.0.10.Final &amp;quot;Kenny&amp;quot; starting
+web_1  | 2017-10-06 23:54:22,687 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 20) WFLYIO001: Worker &#39;default&#39; has auto-configured to 8 core threads with 64 task threads based on your 4 available processors
+
+. . .
+
+web_1  | 2017-10-06 23:54:23,259 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-3) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+web_1  | 2017-10-06 23:54:24,962 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Core 2.0.10.Final &amp;quot;Kenny&amp;quot; started in 3406ms - Started 112 of 124 services (21 services are lazy, passive or on-demand)
+web_1  | 2017-10-06 23:54:25,020 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0006: Undertow HTTP listener default listening on 0.0.0.0:8080
+web_1  | 2017-10-06 23:54:26,146 INFO  [org.wildfly.swarm.runtime.deployer] (main) deploying docker-javaee.war
+web_1  | 2017-10-06 23:54:26,169 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0027: Starting deployment of &amp;quot;docker-javaee.war&amp;quot; (runtime-name: &amp;quot;docker-javaee.war&amp;quot;)
+web_1  | 2017-10-06 23:54:27,748 INFO  [org.jboss.as.jpa] (MSC service thread 1-2) WFLYJPA0002: Read persistence.xml for MyPU
+web_1  | 2017-10-06 23:54:27,887 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-7) WFLYSRV0018: Deployment &amp;quot;deployment.docker-javaee.war&amp;quot; is using a private module (&amp;quot;org.jboss.jts:main&amp;quot;) which may be changed or removed in future versions without notice.
+
+. . .
+
+web_1  | 2017-10-06 23:54:29,128 INFO  [stdout] (ServerService Thread Pool -- 4) Hibernate: create table EMPLOYEE_SCHEMA (id integer not null, name varchar(40), primary key (id))
+web_1  | 2017-10-06 23:54:29,132 INFO  [stdout] (ServerService Thread Pool -- 4) Hibernate: INSERT INTO EMPLOYEE_SCHEMA(ID, NAME) VALUES (1, &#39;Penny&#39;)
+web_1  | 2017-10-06 23:54:29,133 INFO  [stdout] (ServerService Thread Pool -- 4) Hibernate: INSERT INTO EMPLOYEE_SCHEMA(ID, NAME) VALUES (2, &#39;Sheldon&#39;)
+web_1  | 2017-10-06 23:54:29,133 INFO  [stdout] (ServerService Thread Pool -- 4) Hibernate: INSERT INTO EMPLOYEE_SCHEMA(ID, NAME) VALUES (3, &#39;Amy&#39;)
+web_1  | 2017-10-06 23:54:29,133 INFO  [stdout] (ServerService Thread Pool -- 4) Hibernate: INSERT INTO EMPLOYEE_SCHEMA(ID, NAME) VALUES (4, &#39;Leonard&#39;)
+
+. . .
+
+web_1  | 2017-10-06 23:54:30,050 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 4) WFLYUT0021: Registered web context: /
+web_1  | 2017-10-06 23:54:30,518 INFO  [org.jboss.as.server] (main) WFLYSRV0010: Deployed &amp;quot;docker-javaee.war&amp;quot; (runtime-name : &amp;quot;docker-javaee.war&amp;quot;)
+web_1  | 2017-10-06 23:56:01,766 INFO  [stdout] (default task-1) Hibernate: select employee0_.id as id1_0_, employee0_.name as name2_0_ from EMPLOYEE_SCHEMA employee0_
+db     | Initializing database
+
+. . .
+
+db     | 
+db     | 
+db     | MySQL init process done. Ready for start up.
+db     | 
+
+. . .
+
+db     | 2017-10-06T23:54:29.434423Z 0 [Note] /usr/sbin/mysqld: ready for connections. Version: &#39;8.0.3-rc-log&#39;  socket: &#39;/var/run/mysqld/mysqld.sock&#39;  port: 3306  MySQL Community Server (GPL)
+db     | 2017-10-06T23:54:30.281973Z 0 [Note] InnoDB: Buffer pool(s) load completed at 171006 23:54:30
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;depends_on&lt;/code&gt; attribute in the Compose definition file ensures the container start up order. But application-level start up needs to be ensured by the applications running inside container. In our case, this can be achieved by WildFly Swarm using &lt;code&gt;swarm.datasources.data-sources.KEY.stale-connection-checker-class-name&lt;/code&gt; as defined at &lt;a href=&#34;https://reference.wildfly-swarm.io/fractions/datasources.html&#34;&gt;https://reference.wildfly-swarm.io/fractions/datasources.html&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;verify-application&#34;&gt;Verify application&lt;/h2&gt;
+&lt;p&gt;Now that the WildFly Swarm and MySQL have been configured, let&amp;rsquo;s access the application. You need to specify IP address of the host where WildFly is running (&lt;code&gt;localhost&lt;/code&gt; in our case).&lt;/p&gt;
+&lt;p&gt;The endpoint can be accessed in this case as:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl -v http://localhost:8080/resources/employees
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The output is shown as:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl -v http://localhost:8080/resources/employees
+*   Trying ::1...
+* TCP_NODELAY set
+* Connected to localhost (::1) port 8080 (#0)
+&amp;gt; GET /resources/employees HTTP/1.1
+&amp;gt; Host: localhost:8080
+&amp;gt; User-Agent: curl/7.51.0
+&amp;gt; Accept: */*
+&amp;gt; 
+&amp;lt; HTTP/1.1 200 OK
+&amp;lt; Connection: keep-alive
+&amp;lt; Content-Type: application/xml
+&amp;lt; Content-Length: 478
+&amp;lt; Date: Sat, 07 Oct 2017 00:05:41 GMT
+&amp;lt; 
+* Curl_http_done: called premature == 0
+* Connection #0 to host localhost left intact
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;yes&amp;quot;?&amp;gt;&amp;lt;collection&amp;gt;&amp;lt;employee&amp;gt;&amp;lt;id&amp;gt;1&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Penny&amp;lt;/name&amp;gt;&amp;lt;/employee&amp;gt;&amp;lt;employee&amp;gt;&amp;lt;id&amp;gt;2&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Sheldon&amp;lt;/name&amp;gt;&amp;lt;/employee&amp;gt;&amp;lt;employee&amp;gt;&amp;lt;id&amp;gt;3&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Amy&amp;lt;/name&amp;gt;&amp;lt;/employee&amp;gt;&amp;lt;employee&amp;gt;&amp;lt;id&amp;gt;4&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Leonard&amp;lt;/name&amp;gt;&amp;lt;/employee&amp;gt;&amp;lt;employee&amp;gt;&amp;lt;id&amp;gt;5&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Bernadette&amp;lt;/name&amp;gt;&amp;lt;/employee&amp;gt;&amp;lt;employee&amp;gt;&amp;lt;id&amp;gt;6&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Raj&amp;lt;/name&amp;gt;&amp;lt;/employee&amp;gt;&amp;lt;employee&amp;gt;&amp;lt;id&amp;gt;7&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Howard&amp;lt;/name&amp;gt;&amp;lt;/employee&amp;gt;&amp;lt;employee&amp;gt;&amp;lt;id&amp;gt;8&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Priya&amp;lt;/name&amp;gt;&amp;lt;/employee&amp;gt;&amp;lt;/collection&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This shows the result from querying the database.&lt;/p&gt;
+&lt;p&gt;A single resource can be obtained:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl -v http://localhost:8080/resources/employees/1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It shows the output:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl -v http://localhost:8080/resources/employees/1
+*   Trying ::1...
+* TCP_NODELAY set
+* Connected to localhost (::1) port 8080 (#0)
+&amp;gt; GET /resources/employees/1 HTTP/1.1
+&amp;gt; Host: localhost:8080
+&amp;gt; User-Agent: curl/7.51.0
+&amp;gt; Accept: */*
+&amp;gt; 
+&amp;lt; HTTP/1.1 200 OK
+&amp;lt; Connection: keep-alive
+&amp;lt; Content-Type: application/xml
+&amp;lt; Content-Length: 104
+&amp;lt; Date: Sat, 07 Oct 2017 00:06:33 GMT
+&amp;lt; 
+* Curl_http_done: called premature == 0
+* Connection #0 to host localhost left intact
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;yes&amp;quot;?&amp;gt;&amp;lt;employee&amp;gt;&amp;lt;id&amp;gt;1&amp;lt;/id&amp;gt;&amp;lt;name&amp;gt;Penny&amp;lt;/name&amp;gt;&amp;lt;/employee&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;shutdown-application&#34;&gt;Shutdown application&lt;/h2&gt;
+&lt;p&gt;Shutdown the application using &lt;code&gt;docker-compose down&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Stopping javaee_web_1 ... done
+Stopping db           ... done
+Removing javaee_web_1 ... done
+Removing db           ... done
+Removing network javaee_default
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This stops the container in each service and removes all the services. It also deletes any networks that were created as part of this application.&lt;/p&gt;
 
       </description>
     </item>

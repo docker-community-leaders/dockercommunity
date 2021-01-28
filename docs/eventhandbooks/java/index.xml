@@ -2084,14 +2084,13 @@ Removing network webapp_default
       <description>
         
         
-        &lt;h2 id=&#34;docker-and-intellij-idea&#34;&gt;Docker and IntelliJ IDEA&lt;/h2&gt;
-&lt;ul&gt;
+        &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#install-docker-plugin-in-idea&#34;&gt;Install Docker Plugin in IDEA&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#pull-an-image&#34;&gt;Pull an Image&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#run-a-container&#34;&gt;Run a Container&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#build-an-image&#34;&gt;Build an Image&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;docker-and-intellij-idea-1&#34;&gt;Docker and IntelliJ IDEA&lt;/h2&gt;
+&lt;h2 id=&#34;docker-and-intellij-idea&#34;&gt;Docker and IntelliJ IDEA&lt;/h2&gt;
 &lt;p&gt;This chapter will show you basic Docker tooling with IntelliJ IDEA:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Pull Docker images&lt;/li&gt;

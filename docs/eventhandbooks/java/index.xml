@@ -1441,8 +1441,7 @@ example many applications will not require Corba or RMI nor the compiler tools).
       <description>
         
         
-        &lt;h1 id=&#34;multi-container-application-using-docker-compose&#34;&gt;Multi-Container Application using Docker Compose&lt;/h1&gt;
-&lt;ul&gt;
+        &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#what-is-docker-compose&#34;&gt;What is Docker Compose&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#configuration-file&#34;&gt;Configuration file&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#start-application&#34;&gt;Start application&lt;/a&gt;&lt;/li&gt;

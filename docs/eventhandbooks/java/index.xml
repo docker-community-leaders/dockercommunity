@@ -13,5 +13,641 @@
       
     
     
+    <item>
+      <title>Docs: Checklists</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/checklists/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/checklists/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;checklists&#34;&gt;Checklists&lt;/h2&gt;
+&lt;h2 id=&#34;before-the-workshop&#34;&gt;Before the workshop&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Name of Objectives&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;#getting-familiar-with-bevy-virtual&#34;&gt;Getting Familiar with Bevy Virtual&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;#planning-an-event-agenda&#34;&gt;Planning an Event Agenda&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;#setting-up-event-registration-page&#34;&gt;Setting up Event Registration Page&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;#sending-confirmation-email-for-workshop&#34;&gt;Sending confirmation email for workshop&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;during-the-workshop&#34;&gt;During the workshop&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Name of Objectives&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;#conducting-attendee-survey&#34;&gt;Conducting Attendee Survey&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;after-the-workshop&#34;&gt;After the workshop&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Name of Objectives&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;6&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;#post-event-followup&#34;&gt;Post-Event FollowUp&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;7&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;#community-leader-survey&#34;&gt;Community Leader Survey&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;8&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;#attendee-survey&#34;&gt;Attendee Survey&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;getting-familiar-with-bevy-virtual&#34;&gt;Getting Familiar with Bevy Virtual&lt;/h2&gt;
+&lt;p&gt;Docker community leaders uses Bevy (&lt;a href=&#34;https://events.docker.com&#34;&gt;https://events.docker.com&lt;/a&gt;) tool to conduct virtual Meetup events. Bevy is the tool that provides the MOST features to your Community, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;2 way integration with Meetup.com (create your event in Bevy and it posts to your meetup page and RSVPs from your event on meetup sync with your Bevy events.docker.com page).
+Note: The RSVP limits you set in Bevy do not translate to meetup. The best way to handle this is to keep a watchful eye on both platforms or communicate that seats are first come first serve.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ability to check in guests.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mobile App&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RSVP as Guest&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Forms / Surveys&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Automatic Emails (customizable)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It&amp;rsquo;s important for all community leaders to be familiar with this tool to conduct virtual events successfully.&lt;/p&gt;
+&lt;h3 id=&#34;events---analytics&#34;&gt;Events |  Analytics&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.bevylabs.com/article/344-create-a-new-event&#34;&gt;Create a new event&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.bevylabs.com/article/428-virtual-event-type&#34;&gt;Virtual Event Type&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.bevylabs.com/article/389-manage-chapter-members&#34;&gt;Manage chapter members&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;bevy-virtual&#34;&gt;Bevy Virtual&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.bevylabs.com/article/457-using-bevy-virtual&#34;&gt;Using Bevy Virtual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.bevylabs.com/article/496-test-event-in-bevy-virtual&#34;&gt;How to create a test event in Bevy Virtual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.bevylabs.com/article/470-record-in-bevy-virtual&#34;&gt;Record in Bevy Virtual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.bevylabs.com/article/492-screensharing-in-bevy-virtual&#34;&gt;Screensharing in Bevy Virtual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.bevylabs.com/article/495-breakout-rooms&#34;&gt;Breakout Rooms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.bevylabs.com/article/519-chat-features&#34;&gt;Chat, DM&amp;rsquo;s &amp;amp; Features&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;planning-an-event-agenda&#34;&gt;Planning an Event Agenda&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Your event must be posted on your &lt;a href=&#34;https://events.docker.com/chapters/&#34;&gt;city’s Chapter page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Try to create event 1 month before the event&lt;/li&gt;
+&lt;li&gt;If you are unsure of how to use your chapter page &lt;a href=&#34;https://drive.google.com/file/d/1ld54sqzTTBMiygUzsjRD7B10XzWozbMl/view?usp=sharing&#34;&gt;please watch this video&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;If you are having issues with your page, do not have a page or need admin permissions please contact William over Docker community Slack or send email to william.quiviger(AT)docker.com&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;setting-up-event-registration-page&#34;&gt;Setting up Event Registration Page&lt;/h2&gt;
+&lt;p&gt;Every Community leader is expected to set up event registration page. While building an event registration page, ensure that the below list of information are captured:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title of the workshop&lt;/li&gt;
+&lt;li&gt;Date of the workshop&lt;/li&gt;
+&lt;li&gt;Short Description of the workshop&lt;/li&gt;
+&lt;li&gt;Format of the workshop(whether it will be LIVE or recorded)&lt;/li&gt;
+&lt;li&gt;Level of the audience(Beginners/Intermediate/Advanced)&lt;/li&gt;
+&lt;li&gt;Name of the speakers&lt;/li&gt;
+&lt;li&gt;A Form which ask users to supply:
+&lt;ul&gt;
+&lt;li&gt;First Name&lt;/li&gt;
+&lt;li&gt;Last Name&lt;/li&gt;
+&lt;li&gt;Email Address&lt;/li&gt;
+&lt;li&gt;Company Name&lt;/li&gt;
+&lt;li&gt;Job Function&lt;/li&gt;
+&lt;li&gt;Country&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sending-confirmation-email-for-workshop&#34;&gt;Sending confirmation email for workshop&lt;/h2&gt;
+&lt;p&gt;Once the user register for the event, Community Leaders need to ensure that the interested users should receive a confirmation email.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A Thank you message for registering for this event&lt;/li&gt;
+&lt;li&gt;Ensure that the registered user should be able to add the events date to their calendar&lt;/li&gt;
+&lt;li&gt;The email should carry workshop title and date of the workshop&lt;/li&gt;
+&lt;li&gt;Gentle reminder as the date of workshop come closer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sample-confirmation-email-for-the-workshop&#34;&gt;Sample Confirmation email for the workshop&lt;/h3&gt;
+&lt;h2 id=&#34;post-event-followup&#34;&gt;Post-Event Followup&lt;/h2&gt;
+&lt;h3 id=&#34;1--send-a-thank-you-email&#34;&gt;#1  Send a Thank You email&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Name of Objectives&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;“Thank you for attending” post on the social media channels&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&amp;ldquo;Thank you&amp;rdquo; email to all those who registered and attended the event&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Share the pics you took during the event and share it on social media(LinkedIn, Twitter, Facebook Public Docker Group etc&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Send thanks email to sponsor/vendors if this workshop is part of the Meetup event.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Thank core team and volunteers who helped you with the workshop&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;2-post-event-review&#34;&gt;#2 Post-event Review&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Name of Objectives&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Sit down with your team for a debrief session where you discuss how the event went&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Consider inviting at least some of the volunteers.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Evaluate whether the event was a success according to whatever goals you’ve set&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Have an open discussion about what worked well and what could be done better the next time around.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Sit down with your team for a debrief session where you discuss how the event went&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;3-ask-for-feedback&#34;&gt;#3 Ask for feedback&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Name of Objectives&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;While the event is still fresh in everyone’s mind, get their feedback about it.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Be straightforward. Collect input is to send out an email link to a survey that people can fill out online.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Pick the one you like. If you can, add an incentive (free tickets to your next events, chance to win a gift card, and the like.).&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Having everyone fill out the same survey makes it easy to compare their input and spot trends and areas that need improvement.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;4--follow-up-on-social-media&#34;&gt;#4  Follow up on social media&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Name of Objectives&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Online chatter about your event won’t immediately quiet down after the event is over.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Follow the conversation and jump in where it make sense to chip in with your input, thank the guests, or answer questions.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Engaging in post-event social media chatter and keeping the buzz going will also help you build audience for your next event.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Online chatter about your event won’t immediately quiet down after the event is over.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;5-start-planning-your-next-event&#34;&gt;#5 Start planning your next event&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Name of Objectives&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Start putting all of that to good use and begin jotting down ideas for your next fantastic event&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Recommended Agenda</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/agenda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/agenda/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;recommended-agenda&#34;&gt;Recommended Agenda&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Timing&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Welcome&lt;/td&gt;
+&lt;td&gt;8:45 AM to 9:00 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#setting-up-infrastructure---30-min&#34;&gt;Setting up Infrastructure&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;9:00 AM to 9:30 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#basics-of-docker---30-min&#34;&gt;Basics of Docker&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;9:30 AM to 10:30 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#building-and-running-a-docker-container---1-hour&#34;&gt;Building a Docker Image&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;10:30 AM to 11:30 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Coffee/Tea Break&lt;/td&gt;
+&lt;td&gt;11:30 AM to 11:45 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#multi-container-application-using-docker-compose---1-hour&#34;&gt;Multi-container Application using Docker Compose&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;11:45 AM to 1:00 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Lunch&lt;/td&gt;
+&lt;td&gt;1:00 PM to 2:00 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#deploy-application-using-docker-swarm-mode---1-hour&#34;&gt;Deploy Application using Docker Swarm Mode&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;2:00 PM to 2:30 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#docker--netbeans--1-hour&#34;&gt;Docker &amp;amp; Netbeans&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;2:30 PM to 3:30 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Coffee/Tea Break&lt;/td&gt;
+&lt;td&gt;3:30 PM to 3:45 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#docker-and-intellij-idea---1-hour&#34;&gt;Docker &amp;amp; IntelliJ&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;3:45 PM to 4:45 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Pre-requisite</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/prerequisite/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/prerequisite/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;pre-requisite&#34;&gt;Pre-requisite:&lt;/h2&gt;
+&lt;h3 id=&#34;setting-up-infrastructuresetting-up-infrastructure---30-min&#34;&gt;&lt;a href=&#34;#setting-up-infrastructure&#34;&gt;Setting up Infrastructure&lt;/a&gt; - 30 min&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#setup-a-docker-environment&#34;&gt;Setup a Docker Environment&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;setup-a-docker-environment&#34;&gt;Setup a Docker Environment&lt;/h2&gt;
+&lt;p&gt;This section describes the hardware and software needed for this workshop, and how to configure them.
+This workshop is designed for a BYOL (Bring Your Own Laptop) style hands-on-lab.&lt;/p&gt;
+&lt;h3 id=&#34;hardware--software&#34;&gt;Hardware &amp;amp; Software&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Memory: At least 4 GB+, strongly preferred 8 GB&lt;/li&gt;
+&lt;li&gt;Operating System: Mac OS X (10.15.7+), Windows 10 Pro+ 64-bit, Ubuntu 20.04+, CentOS 7/8+.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;NOTE&lt;/em&gt;: An older version of the operating system may be used.
+The installation instructions would differ slightly in that case and are explained in the next section.&lt;/p&gt;
+&lt;h3 id=&#34;install-docker&#34;&gt;Install Docker&lt;/h3&gt;
+&lt;p&gt;Docker runs natively on Mac, Windows and Linux.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;OS Environment&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Link to Follow&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;MacOS&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.docker.com/products/docker-desktop&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Windows&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.docker.com/products/docker-desktop&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Linux&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://hub.docker.com/search?q=&amp;amp;type=edition&amp;amp;offering=community&amp;amp;operating_system=linux&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Most of the labs tutorials have been tested on Docker Desktop for Mac.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;NOTE&lt;/em&gt;: Docker requires a fairly recent operating system version.&lt;/p&gt;
+&lt;h3 id=&#34;download-images&#34;&gt;Download Images&lt;/h3&gt;
+&lt;p&gt;This tutorial uses a few Docker images and software.
+Let&amp;rsquo;s download them before we start the tutorial.&lt;/p&gt;
+&lt;p&gt;Download the file from &lt;a href=&#34;https://raw.githubusercontent.com/docker/labs/master/developer-tools/java/scripts/docker-compose-pull-images.yml&#34;&gt;docker-compose-pull-images.yml&lt;/a&gt; and use the following command to pull the required images:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl -O https://raw.githubusercontent.com/docker/labs/master/developer-tools/java/scripts/docker-compose-pull-images.yml
+docker-compose -f docker-compose-pull-images.yml pull --parallel
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;NOTE&lt;/em&gt;: For Linux, &lt;code&gt;docker-compose&lt;/code&gt; and &lt;code&gt;docker&lt;/code&gt; commands need &lt;code&gt;sudo&lt;/code&gt; access.
+So prefix all commands with &lt;code&gt;sudo&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;other-software&#34;&gt;Other Software&lt;/h3&gt;
+&lt;p&gt;The software in this section is specific to certain parts of the workshop.
+Install them only if you plan to attempt them.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Name of Software&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Link to Follow&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Git&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://git-scm.com&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;Download and install Java IDE of your choice:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Name of Software&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Link to Follow&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NetBeans 12.2 &lt;code&gt;Java SE&lt;/code&gt; version&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://netbeans.apache.org/download/index.html&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;IntelliJ IDEA Community or Ultimate&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.jetbrains.com/idea/download/#section=mac&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Eclipse IDE for Java EE Developers&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.eclipse.org/downloads/packages/&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Apache Maven 3.6.3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://maven.apache.org/download.cgi&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;JDK 15 for Linux x64&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://download.java.net/java/GA/jdk15.0.1/51f4f36ad4ef43e39d0dfdbaf6549e32/9/GPL/openjdk-15.0.1_linux-x64_bin.tar.gz&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Long Page Title</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/basics-of-docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/basics-of-docker/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;basics-of-dockerbasics-of-docker---30-min&#34;&gt;&lt;a href=&#34;#basics-of-docker&#34;&gt;Basics of Docker&lt;/a&gt; - 30 min&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#main-components-of-docker-system&#34;&gt;Main Components of Docker System&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#test-your-knowledge&#34;&gt;Test Your Knowledge&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;basics-of-docker&#34;&gt;Basics of Docker&lt;/h2&gt;
+&lt;p&gt;This section introduces the basic terminology of Docker.&lt;/p&gt;
+&lt;p&gt;Docker is a platform for developers and sysadmins to build, ship, and run applications. Docker lets you quickly assemble applications from components and eliminates the friction that can come when shipping code. Docker lets you test and deploy your code into production as fast as possible.&lt;/p&gt;
+&lt;p&gt;Docker simplifies software delivery by making it easy to build and share images that contain your application’s entire environment, or &lt;em&gt;application operating system&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;what-does-it-mean-by-an-application-operating-system-&#34;&gt;What does it mean by an application operating system ?&lt;/h2&gt;
+&lt;p&gt;Your application typically requires specific versions for your operating system, application server, JDK, and database server, may require to tune the configuration files, and similarly multiple other dependencies. The application may need binding to specific ports and certain amount of memory. The components and configuration together required to run your application is what is referred to as application operating system.&lt;/p&gt;
+&lt;p&gt;You can certainly provide an installation script that will download and install these components. Docker simplifies this process by allowing to create an image that contains your application and infrastructure together, managed as one component. These images are then used to create Docker containers which run on the container virtualization platform, provided by Docker.&lt;/p&gt;
+&lt;h2 id=&#34;main-components-of-docker-system&#34;&gt;Main Components of Docker System&lt;/h2&gt;
+&lt;p&gt;Docker has three main components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Images are the &lt;em&gt;build component&lt;/em&gt; of Docker and are the read-only templates defining an application operating system.&lt;/li&gt;
+&lt;li&gt;Containers are the &lt;em&gt;run component&lt;/em&gt; of Docker and created from images. Containers can be run, started, stopped, moved, and deleted.&lt;/li&gt;
+&lt;li&gt;Images are stored, shared, and managed in a registry and are the &lt;em&gt;distribution component&lt;/em&gt; of Docker.&lt;/li&gt;
+&lt;li&gt;DockerHub is a publicly available registry and is available at &lt;a href=&#34;http://hub.docker.com&#34;&gt;http://hub.docker.com&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In order for these three components to work together, the &lt;em&gt;Docker Daemon&lt;/em&gt; (or Docker Engine) runs on a host machine and does the heavy lifting of building, running, and distributing Docker containers. In addition, the &lt;em&gt;Client&lt;/em&gt; is a Docker binary which accepts commands from the user and communicates back and forth with the Engine.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;docker-architecture.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The Client communicates with the Engine that is either co-located on the same host or on a different host. Client uses the &lt;code&gt;pull&lt;/code&gt; command to request the Engine to pull an image from the registry. The Engine then downloads the image from Docker Store, or whichever registry is configured. Multiple images can be downloaded from the registry and installed on the Engine. Client uses the &lt;code&gt;run&lt;/code&gt; run the container.&lt;/p&gt;
+&lt;h2 id=&#34;docker-image&#34;&gt;Docker Image&lt;/h2&gt;
+&lt;p&gt;We&amp;rsquo;ve already seen that Docker images are read-only templates from which Docker containers are launched. Each image consists of a series of layers. Docker makes use of union file systems to combine these layers into a single image. Union file systems allow files and directories of separate file systems, known as branches, to be transparently overlaid, forming a single coherent file system.&lt;/p&gt;
+&lt;p&gt;One of the reasons Docker is so lightweight is because of these layers. When you change a Docker image—for example, update an application to a new version— a new layer gets built. Thus, rather than replacing the whole image or entirely rebuilding, as you may do with a virtual machine, only that layer is added or updated. Now you don&amp;rsquo;t need to distribute a whole new image, just the update, making distributing Docker images faster and simpler.&lt;/p&gt;
+&lt;p&gt;Every image starts from a base image, for example &lt;code&gt;ubuntu&lt;/code&gt;, a base Ubuntu image, or &lt;code&gt;fedora&lt;/code&gt;, a base Fedora image. You can also use images of your own as the basis for a new image, for example if you have a base Apache image you could use this as the base of all your web application images.&lt;/p&gt;
+&lt;p&gt;NOTE: By default, Docker obtains these base images from Docker Store.&lt;/p&gt;
+&lt;p&gt;Docker images are then built from these base images using a simple, descriptive set of steps we call instructions. Each instruction creates a new layer in our image. Instructions include actions like:&lt;/p&gt;
+&lt;p&gt;. Run a command
+. Add a file or directory
+. Create an environment variable
+. Run a process when launching a container&lt;/p&gt;
+&lt;p&gt;These instructions are stored in a file called a Dockerfile. Docker reads this Dockerfile when you request a build of an image, executes the instructions, and returns a final image.&lt;/p&gt;
+&lt;h2 id=&#34;docker-container&#34;&gt;Docker Container&lt;/h2&gt;
+&lt;p&gt;A container consists of an operating system, user-added files, and meta-data. As we&amp;rsquo;ve seen, each container is built from an image. That image tells Docker what the container holds, what process to run when the container is launched, and a variety of other configuration data. The Docker image is read-only. When Docker runs a container from an image, it adds a read-write layer on top of the image (using a union file system as we saw earlier) in which your application can then run.&lt;/p&gt;
+&lt;h2 id=&#34;docker-engine&#34;&gt;Docker Engine&lt;/h2&gt;
+&lt;p&gt;Docker Host is created as part of installing Docker on your machine. Once your Docker host has been created, it then allows you to manage images and containers. For example, the image can be downloaded and containers can be started, stopped and restarted.&lt;/p&gt;
+&lt;h3 id=&#34;docker-client&#34;&gt;Docker Client&lt;/h3&gt;
+&lt;p&gt;The client communicates with the Docker Host and let&amp;rsquo;s you work with images and containers.&lt;/p&gt;
+&lt;p&gt;Check if your client is working using the following command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker -v
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It shows the output:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Docker version 20.10.2, build 2291f61
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;NOTE: The exact version may differ based upon how recently the installation was performed.&lt;/p&gt;
+&lt;p&gt;The exact version of Client and Server can be seen using &lt;code&gt;docker version&lt;/code&gt; command. This shows the output as:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; docker version
+Client: Docker Engine - Community
+ Cloud integration: 1.0.7
+ Version:           20.10.2
+ API version:       1.41
+ Go version:        go1.13.15
+ Git commit:        2291f61
+ Built:             Mon Dec 28 16:12:42 2020
+ OS/Arch:           darwin/amd64
+ Context:           default
+ Experimental:      true
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          20.10.2
+  API version:      1.41 (minimum version 1.12)
+  Go version:       go1.13.15
+  Git commit:       8891c58
+  Built:            Mon Dec 28 16:15:28 2020
+  OS/Arch:          linux/amd64
+  Experimental:     true
+ containerd:
+  Version:          1.4.3
+  GitCommit:        269548fa27e0089a8b8278fc4fc781d7f65a939b
+ runc:
+  Version:          1.0.0-rc92
+  GitCommit:        ff819c7e9184c13b7c2607fe6c30ae19403a7aff
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+ajeetraina@Ajeets-MacBook-Pro realtime-sensor-jetson % 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The complete set of commands can be seen using &lt;code&gt;docker --help&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;test-your-knowledge&#34;&gt;Test Your Knowledge&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S. No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Question.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Response&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;What is difference between Docker Image and Docker Container?&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Where are all Docker images stored?&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Is DockerHub a public or private Docker registry?&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;What is the main role of Docker Engine?&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

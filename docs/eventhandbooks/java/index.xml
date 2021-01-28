@@ -22,8 +22,7 @@
       <description>
         
         
-        &lt;h2 id=&#34;checklists&#34;&gt;Checklists&lt;/h2&gt;
-&lt;h2 id=&#34;before-the-workshop&#34;&gt;Before the workshop&lt;/h2&gt;
+        &lt;h2 id=&#34;before-the-workshop&#34;&gt;Before the workshop&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -2189,8 +2188,7 @@ ADD dockercon.war /opt/jboss/wildfly/standalone/deployments/
       <description>
         
         
-        &lt;h2 id=&#34;docker--eclipse&#34;&gt;Docker &amp;amp; Eclipse&lt;/h2&gt;
-&lt;ul&gt;
+        &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#install-docker-tooling-in-eclipse&#34;&gt;Install Docker Tooling in Eclipse&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#docker-perspective-and-view&#34;&gt;Docker Perspective and View&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#pull-an-image&#34;&gt;Pull an Image&lt;/a&gt;&lt;/li&gt;

@@ -655,8 +655,7 @@ ajeetraina@Ajeets-MacBook-Pro realtime-sensor-jetson %
       <description>
         
         
-        &lt;h1 id=&#34;building-and-running-a-docker-container&#34;&gt;Building and Running a Docker Container&lt;/h1&gt;
-&lt;ul&gt;
+        &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#build-a-docker-image&#34;&gt;Build a Docker Image&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#run-a-docker-container&#34;&gt;Running a Docker Container&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#run-a-JAVA11-Docker-Container&#34;&gt;Running a JAVA 11 Docker Container&lt;/a&gt;&lt;/li&gt;

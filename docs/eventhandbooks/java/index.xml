@@ -2182,5 +2182,95 @@ Removing network webapp_default
       </description>
     </item>
     
+    <item>
+      <title>Docs: Docker &amp; Eclipse</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/eclipse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/eclipse/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;docker--eclipse&#34;&gt;Docker &amp;amp; Eclipse&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#install-docker-tooling-in-eclipse&#34;&gt;Install Docker Tooling in Eclipse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#docker-perspective-and-view&#34;&gt;Docker Perspective and View&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pull-an-image&#34;&gt;Pull an Image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#run-a-container&#34;&gt;Run a Container&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#build-an-image&#34;&gt;Build an Image&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;docker-and-eclipse&#34;&gt;Docker and Eclipse&lt;/h1&gt;
+&lt;p&gt;This chapter will show you basic Docker tooling with Eclipse:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pull/Push/Build Docker images&lt;/li&gt;
+&lt;li&gt;Run/Start/Stop/Kill Docker containers&lt;/li&gt;
+&lt;li&gt;Customize views&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Watch a quick video explaining the key steps in &lt;a href=&#34;https://www.youtube.com/watch?v=XmhEZiS26os&#34;&gt;https://www.youtube.com/watch?v=XmhEZiS26os&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;install-docker-tooling-in-eclipse&#34;&gt;Install Docker Tooling in Eclipse&lt;/h2&gt;
+&lt;p&gt;Download &lt;a href=&#34;http://www.eclipse.org/downloads/eclipse-packages/%5BEclipse&#34;&gt;http://www.eclipse.org/downloads/eclipse-packages/[Eclipse&lt;/a&gt; IDE for Java EE Developers] and install.&lt;/p&gt;
+&lt;p&gt;Go to &amp;ldquo;&lt;code&gt;Help&lt;/code&gt;&amp;rdquo; menu, &amp;ldquo;&lt;code&gt;Install New Software...&lt;/code&gt;&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Select Eclipse update site for the release, search for Docker, select &amp;ldquo;&lt;code&gt;Docker Tooling&lt;/code&gt;&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;docker-eclipse-update-site-selection.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Click on &amp;ldquo;&lt;code&gt;Next&amp;gt;&lt;/code&gt;&amp;rdquo;, &amp;ldquo;&lt;code&gt;Next&amp;gt;&lt;/code&gt;&amp;rdquo;, accept the license agreement, click on &amp;ldquo;&lt;code&gt;Finish&lt;/code&gt;&amp;rdquo; to start the installation.&lt;/p&gt;
+&lt;p&gt;Restart Eclipse for the installation to complete.&lt;/p&gt;
+&lt;h2 id=&#34;docker-perspective-and-view&#34;&gt;Docker Perspective and View&lt;/h2&gt;
+&lt;p&gt;Go to &amp;ldquo;&lt;code&gt;Window&lt;/code&gt;&amp;rdquo;, &amp;ldquo;&lt;code&gt;Perspective&lt;/code&gt;&amp;rdquo;, &amp;ldquo;&lt;code&gt;Open Perspective&lt;/code&gt;&amp;rdquo;, &amp;ldquo;&lt;code&gt;Other...&lt;/code&gt;&amp;rdquo;, &amp;ldquo;&lt;code&gt;Docker Tooling&lt;/code&gt;&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;docker-eclipse-docker-perspective.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Click on &amp;ldquo;&lt;code&gt;OK&lt;/code&gt;&amp;rdquo; to see the perspective.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;docker-eclipse-docker-perspective-default-look.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This has three views:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Docker Explorer&lt;/em&gt;: a tree view listing all connected Docker instances, with image and containers.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Docker Images&lt;/em&gt;: a table view listing containers for selected Docker connection.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Docker Containers&lt;/em&gt;: a table view listing containers for selected Docker connection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Click on the text in Docker Explorer to create a new connection. If you are on Mac/Windows, you are likely using Docker for Mac/Windows or Docker Toolbox to setup Docker Host. Eclipse allows to configure Docker Engine using both Docker for Mac/Windows and Docker Toolbox.&lt;/p&gt;
+&lt;p&gt;If you are using Docker for Mac/Windows, then the default values are shown:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;docker-eclipse-docker-connection.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Click on &amp;ldquo;&lt;code&gt;Test Connection&lt;/code&gt;&amp;rdquo; to test the connection.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;docker-eclipse-docker-connection-test.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;If you are using Toolbox, enter the values as shown:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;docker-eclipse-docker-connection-toolbox.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The exact value of TCP Connection can be found using &lt;code&gt;docker-machine ls&lt;/code&gt; command. The path for authentication is the directory name where certificates for your Docker Machine, &lt;code&gt;couchbase&lt;/code&gt; in this case, are stored.&lt;/p&gt;
+&lt;p&gt;Click on &amp;ldquo;&lt;code&gt;Test Connection&lt;/code&gt;&amp;rdquo; to make sure the connection is successfully configured.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;docker-eclipse-docker-connection-test-toolbox.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In either case, the configuration can be completed once the connection is tested. Click on &amp;ldquo;&lt;code&gt;Finish&lt;/code&gt;&amp;rdquo; to complete the configuration.&lt;/p&gt;
+&lt;p&gt;Docker Explorer is updated to show the connection.&lt;/p&gt;
+&lt;p&gt;Containers and Images configured for the Docker Machine are shown in tabs. They can be expanded to see the list in Explorer itself.&lt;/p&gt;
+&lt;h2 id=&#34;pull-an-image&#34;&gt;Pull an Image&lt;/h2&gt;
+&lt;p&gt;Expand the connection to see &amp;ldquo;&lt;code&gt;Containers&lt;/code&gt;&amp;rdquo; and &amp;ldquo;&lt;code&gt;Images&lt;/code&gt;&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Right-click on &amp;ldquo;&lt;code&gt;Images&lt;/code&gt;&amp;rdquo; and select &amp;ldquo;&lt;code&gt;Pull...&lt;/code&gt;&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Type the image name and click on &amp;ldquo;&lt;code&gt;Finish&lt;/code&gt;&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;docker-eclipse-pull-image.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This image is now shown in Explorer and Docker Images tab.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;docker-eclipse-pulled-image.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Any existing images on the Docker Host will be shown here.&lt;/p&gt;
+&lt;h2 id=&#34;run-a-container&#34;&gt;Run a Container&lt;/h2&gt;
+&lt;p&gt;Select an image, right-click on it, and click on &amp;ldquo;&lt;code&gt;Run...&lt;/code&gt;&amp;rdquo;. It shows the options that can be configured for running the container. Some of them are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Publish ports on Docker host interface (&lt;code&gt;-P&lt;/code&gt; or &lt;code&gt;-p&lt;/code&gt; in &lt;code&gt;docker run&lt;/code&gt; command)&lt;/li&gt;
+&lt;li&gt;Keep STDIN open and allocate pseudo-TTY (&lt;code&gt;-it&lt;/code&gt; on CLI)&lt;/li&gt;
+&lt;li&gt;Remove container after it exits (&lt;code&gt;--rm&lt;/code&gt; on CLI)&lt;/li&gt;
+&lt;li&gt;Volume mapping (&lt;code&gt;-v&lt;/code&gt; on CLI)&lt;/li&gt;
+&lt;li&gt;Environment variables (&lt;code&gt;-e&lt;/code&gt; on CLI)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Uncheck &amp;ldquo;&lt;code&gt;Publish all exposed ports&lt;/code&gt;&amp;rdquo; box to map to corresponding ports.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;docker-eclipse-run-container-config.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Click on &amp;ldquo;&lt;code&gt;Finish&lt;/code&gt;&amp;rdquo; to run the container.&lt;/p&gt;
+&lt;p&gt;Right-click on the started container, select &amp;ldquo;&lt;code&gt;Display Log&lt;/code&gt;&amp;rdquo; to show the log.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;docker-eclipse-container-display-log.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The container can be paused, stopped and killed from here as well.&lt;/p&gt;
+&lt;p&gt;To see more details about the container, right-click on the container, select &amp;ldquo;&lt;code&gt;Show In&lt;/code&gt;&amp;rdquo;, &amp;ldquo;&lt;code&gt;Properties&lt;/code&gt;&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;docker-eclipse-container-properties.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;build-an-image&#34;&gt;Build an Image&lt;/h2&gt;
+&lt;p&gt;In Docker Images tab, click on the hammer icon on top right.&lt;/p&gt;
+&lt;p&gt;Give the image name, specify an empty directory, click on &amp;ldquo;&lt;code&gt;Edit Dockerfile&lt;/code&gt;&amp;rdquo; to edit the contents of Dockerfile&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;docker-eclipse-build-image.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Click on &amp;ldquo;&lt;code&gt;Save&lt;/code&gt;&amp;rdquo; and &amp;ldquo;&lt;code&gt;Finish&lt;/code&gt;&amp;rdquo; to create the image.&lt;/p&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

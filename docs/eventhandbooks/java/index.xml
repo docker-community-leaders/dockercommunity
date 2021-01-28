@@ -1702,8 +1702,7 @@ Removing network javaee_default
       <description>
         
         
-        &lt;p&gt;Deploy Application using Docker Swarm Mode]&lt;/p&gt;
-&lt;ul&gt;
+        &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#initialize-swarm&#34;&gt;Initialize Swarm&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#multi-container-application&#34;&gt;Multi-container application&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#verify-service-and-containers-in-application&#34;&gt;Verify service and containers in application&lt;/a&gt;&lt;/li&gt;
@@ -2190,8 +2189,7 @@ ADD dockercon.war /opt/jboss/wildfly/standalone/deployments/
       <description>
         
         
-        &lt;h2 id=&#34;docker--eclipse&#34;&gt;Docker &amp;amp; Eclipse&lt;/h2&gt;
-&lt;ul&gt;
+        &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#install-docker-tooling-in-eclipse&#34;&gt;Install Docker Tooling in Eclipse&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#docker-perspective-and-view&#34;&gt;Docker Perspective and View&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#pull-an-image&#34;&gt;Pull an Image&lt;/a&gt;&lt;/li&gt;

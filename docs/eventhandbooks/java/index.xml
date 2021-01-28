@@ -409,8 +409,7 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
       <description>
         
         
-        &lt;h2 id=&#34;pre-requisite&#34;&gt;Pre-requisite:&lt;/h2&gt;
-&lt;h3 id=&#34;setting-up-infrastructuresetting-up-infrastructure---30-min&#34;&gt;&lt;a href=&#34;#setting-up-infrastructure&#34;&gt;Setting up Infrastructure&lt;/a&gt; - 30 min&lt;/h3&gt;
+        &lt;h3 id=&#34;setting-up-infrastructuresetting-up-infrastructure---30-min&#34;&gt;&lt;a href=&#34;#setting-up-infrastructure&#34;&gt;Setting up Infrastructure&lt;/a&gt; - 30 min&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#setup-a-docker-environment&#34;&gt;Setup a Docker Environment&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

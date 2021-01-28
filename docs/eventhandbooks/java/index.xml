@@ -335,6 +335,74 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
     </item>
     
     <item>
+      <title>Docs: Recommended Agenda</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/agenda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/agenda/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;recommended-agenda&#34;&gt;Recommended Agenda&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Timing&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Welcome&lt;/td&gt;
+&lt;td&gt;8:45 AM to 9:00 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#setting-up-infrastructure---30-min&#34;&gt;Setting up Infrastructure&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;9:00 AM to 9:30 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#basics-of-docker---30-min&#34;&gt;Basics of Docker&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;9:30 AM to 10:30 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#building-and-running-a-docker-container---1-hour&#34;&gt;Building a Docker Image&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;10:30 AM to 11:30 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Coffee/Tea Break&lt;/td&gt;
+&lt;td&gt;11:30 AM to 11:45 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#multi-container-application-using-docker-compose---1-hour&#34;&gt;Multi-container Application using Docker Compose&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;11:45 AM to 1:00 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Lunch&lt;/td&gt;
+&lt;td&gt;1:00 PM to 2:00 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#deploy-application-using-docker-swarm-mode---1-hour&#34;&gt;Deploy Application using Docker Swarm Mode&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;2:00 PM to 2:30 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#docker--netbeans--1-hour&#34;&gt;Docker &amp;amp; Netbeans&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;2:30 PM to 3:30 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Coffee/Tea Break&lt;/td&gt;
+&lt;td&gt;3:30 PM to 3:45 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;#docker-and-intellij-idea---1-hour&#34;&gt;Docker &amp;amp; IntelliJ&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;3:45 PM to 4:45 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Pre-requisite</title>
       <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/prerequisite/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2200,74 +2268,6 @@ ADD dockercon.war /opt/jboss/wildfly/standalone/deployments/
 &lt;p&gt;Give the image name, specify an empty directory, click on &amp;ldquo;&lt;code&gt;Edit Dockerfile&lt;/code&gt;&amp;rdquo; to edit the contents of Dockerfile&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;docker-eclipse-build-image.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Click on &amp;ldquo;&lt;code&gt;Save&lt;/code&gt;&amp;rdquo; and &amp;ldquo;&lt;code&gt;Finish&lt;/code&gt;&amp;rdquo; to create the image.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Recommended Agenda</title>
-      <link>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/agenda/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/agenda/</guid>
-      <description>
-        
-        
-        &lt;h2 id=&#34;recommended-agenda&#34;&gt;Recommended Agenda&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Timing&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Welcome&lt;/td&gt;
-&lt;td&gt;8:45 AM to 9:00 AM&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;#setting-up-infrastructure---30-min&#34;&gt;Setting up Infrastructure&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;9:00 AM to 9:30 AM&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;#basics-of-docker---30-min&#34;&gt;Basics of Docker&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;9:30 AM to 10:30 AM&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;#building-and-running-a-docker-container---1-hour&#34;&gt;Building a Docker Image&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;10:30 AM to 11:30 AM&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Coffee/Tea Break&lt;/td&gt;
-&lt;td&gt;11:30 AM to 11:45 AM&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;#multi-container-application-using-docker-compose---1-hour&#34;&gt;Multi-container Application using Docker Compose&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;11:45 AM to 1:00 PM&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Lunch&lt;/td&gt;
-&lt;td&gt;1:00 PM to 2:00 PM&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;#deploy-application-using-docker-swarm-mode---1-hour&#34;&gt;Deploy Application using Docker Swarm Mode&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;2:00 PM to 2:30 PM&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;#docker--netbeans--1-hour&#34;&gt;Docker &amp;amp; Netbeans&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;2:30 PM to 3:30 PM&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Coffee/Tea Break&lt;/td&gt;
-&lt;td&gt;3:30 PM to 3:45 PM&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;#docker-and-intellij-idea---1-hour&#34;&gt;Docker &amp;amp; IntelliJ&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;3:45 PM to 4:45 PM&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
 
       </description>
     </item>

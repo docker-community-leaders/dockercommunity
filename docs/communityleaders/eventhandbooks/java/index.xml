@@ -760,21 +760,28 @@ helloworld          latest              e61f88f3a0f7        5 minutes ago       
 ubuntu              latest              2d696327ab2e        4 days ago          122MB
 busybox             latest              54511612f1c4        9 days ago          1.13MB
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;helloworld:2&lt;/code&gt; is the format that allows to specify the image name and assign a tag/version to it separated by &lt;code&gt;:&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;create-your-first-image-using-java&#34;&gt;Create your first image using Java&lt;/h2&gt;
-&lt;h3 id=&#34;create-a-simple-java-application&#34;&gt;Create a simple Java application&lt;/h3&gt;
-&lt;p&gt;Please Note: If you are running OpenJDK 9, &lt;code&gt;mvn package&lt;/code&gt; may fail with&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project helloworld: Compilation failure: Compilation failure:
-[ERROR] Source option 1.5 is no longer supported. Use 1.6 or later.
-[ERROR] Target option 1.5 is no longer supported. Use 1.6 or later.
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;because support for Java 5 &lt;a href=&#34;http://openjdk.java.net/jeps/182%5Bwas&#34;&gt;http://openjdk.java.net/jeps/182[was&lt;/a&gt; dropped in JDK9].&lt;/p&gt;
-&lt;p&gt;You can add&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  &amp;lt;properties&amp;gt;
-    &amp;lt;maven.compiler.source&amp;gt;1.6&amp;lt;/maven.compiler.source&amp;gt;
-    &amp;lt;maven.compiler.target&amp;gt;1.6&amp;lt;/maven.compiler.target&amp;gt;
-  &amp;lt;/properties&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;to the generated &lt;code&gt;pom.xml&lt;/code&gt; to target 1.6 instead. See also the link:chapters/ch03-build-image-java-9.adoc[Build a Docker Image for Java 9] chapter.&lt;/p&gt;
-&lt;h2 id=&#34;create-a-new-java-project&#34;&gt;Create a new Java project:&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;mvn archetype:generate -DgroupId=org.examples.java -DartifactId=helloworld -DinteractiveMode=false
+&lt;h2 id=&#34;create-a-simple-java-application&#34;&gt;Create a simple Java application&lt;/h2&gt;
+&lt;h3 id=&#34;create-a-new-java-project&#34;&gt;Create a new Java project:&lt;/h3&gt;
+&lt;p&gt;Ensure that you have maven package installed in your system&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;brew install maven
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;mvn archetype:generate -DgroupId=org.examples.java -DartifactId=helloworld -DinteractiveMode=false
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Wait for 40 seconds till you get the below results:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/1.0/maven-archetype-quickstart-1.0.jar (4.3 kB at 17 kB/s)
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-quickstart:1.0
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: basedir, Value: /Users/ajeetraina/dockercommunity/jdk15
+[INFO] Parameter: package, Value: org.examples.java
+[INFO] Parameter: groupId, Value: org.examples.java
+[INFO] Parameter: artifactId, Value: helloworld
+[INFO] Parameter: packageName, Value: org.examples.java
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] project created from Old (1.x) Archetype in dir: /Users/ajeetraina/dockercommunity/jdk15/helloworld
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:11 min
+[INFO] Finished at: 2021-01-30T03:18:41+05:30
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;build-the-project&#34;&gt;Build the project:&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;cd helloworld
 mvn package

@@ -1256,8 +1256,7 @@ if (!doNotTrack) {
         <li><a href="#create-your-first-image">Create your first image</a></li>
         <li><a href="#build-the-image-using-the-command">Build the image using the command:</a></li>
         <li><a href="#list-the-images-available-using-docker-image-ls">List the images available using <code>docker image ls</code>:</a></li>
-        <li><a href="#create-your-first-image-using-java">Create your first image using Java</a></li>
-        <li><a href="#create-a-new-java-project">Create a new Java project:</a></li>
+        <li><a href="#create-a-simple-java-application">Create a simple Java application</a></li>
         <li><a href="#build-the-project">Build the project:</a></li>
         <li><a href="#run-the-java-class">Run the Java class:</a></li>
         <li><a href="#java-docker-image">Java Docker image</a></li>
@@ -1466,21 +1465,28 @@ helloworld          latest              e61f88f3a0f7        5 minutes ago       
 ubuntu              latest              2d696327ab2e        4 days ago          122MB
 busybox             latest              54511612f1c4        9 days ago          1.13MB
 </code></pre><p><code>helloworld:2</code> is the format that allows to specify the image name and assign a tag/version to it separated by <code>:</code>.</p>
-<h2 id="create-your-first-image-using-java">Create your first image using Java</h2>
-<h3 id="create-a-simple-java-application">Create a simple Java application</h3>
-<p>Please Note: If you are running OpenJDK 9, <code>mvn package</code> may fail with</p>
-<pre><code>[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project helloworld: Compilation failure: Compilation failure:
-[ERROR] Source option 1.5 is no longer supported. Use 1.6 or later.
-[ERROR] Target option 1.5 is no longer supported. Use 1.6 or later.
-</code></pre><p>because support for Java 5 <a href="http://openjdk.java.net/jeps/182%5Bwas">http://openjdk.java.net/jeps/182[was</a> dropped in JDK9].</p>
-<p>You can add</p>
-<pre><code>  &lt;properties&gt;
-    &lt;maven.compiler.source&gt;1.6&lt;/maven.compiler.source&gt;
-    &lt;maven.compiler.target&gt;1.6&lt;/maven.compiler.target&gt;
-  &lt;/properties&gt;
-</code></pre><p>to the generated <code>pom.xml</code> to target 1.6 instead. See also the link:chapters/ch03-build-image-java-9.adoc[Build a Docker Image for Java 9] chapter.</p>
-<h2 id="create-a-new-java-project">Create a new Java project:</h2>
-<pre><code>mvn archetype:generate -DgroupId=org.examples.java -DartifactId=helloworld -DinteractiveMode=false
+<h2 id="create-a-simple-java-application">Create a simple Java application</h2>
+<h3 id="create-a-new-java-project">Create a new Java project:</h3>
+<p>Ensure that you have maven package installed in your system</p>
+<pre><code>brew install maven
+</code></pre><pre><code>mvn archetype:generate -DgroupId=org.examples.java -DartifactId=helloworld -DinteractiveMode=false
+</code></pre><p>Wait for 40 seconds till you get the below results:</p>
+<pre><code>Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/1.0/maven-archetype-quickstart-1.0.jar (4.3 kB at 17 kB/s)
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-quickstart:1.0
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: basedir, Value: /Users/ajeetraina/dockercommunity/jdk15
+[INFO] Parameter: package, Value: org.examples.java
+[INFO] Parameter: groupId, Value: org.examples.java
+[INFO] Parameter: artifactId, Value: helloworld
+[INFO] Parameter: packageName, Value: org.examples.java
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] project created from Old (1.x) Archetype in dir: /Users/ajeetraina/dockercommunity/jdk15/helloworld
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:11 min
+[INFO] Finished at: 2021-01-30T03:18:41+05:30
 </code></pre><h2 id="build-the-project">Build the project:</h2>
 <pre><code>cd helloworld
 mvn package
@@ -2269,7 +2275,7 @@ crafted to produce a minimal running OS image.</p>
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.30301: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/7eacf90cca4eb06bf236de8ede76c3a0763bc8da">Update _index.md (7eacf90)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.30301: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/5bfc040db047b7a6508f41f180b029666500a9e4">Update _index.md (5bfc040)</a>
 </div>
 </div>
 

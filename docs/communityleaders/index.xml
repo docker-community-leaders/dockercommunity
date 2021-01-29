@@ -42,15 +42,150 @@
     </item>
     
     <item>
-      <title>Docs: NewsFeed</title>
-      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/change-me/</link>
+      <title>Docs: Event Handbooks</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/change-me/</guid>
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/</guid>
       <description>
         
         
-        &lt;h2 id=&#34;community-leaderss-newsfeed&#34;&gt;Community Leaders&amp;rsquo;s NewsFeed&lt;/h2&gt;
+        
+&lt;!-- Hero section --&gt;
+
+
+
+&lt;section id=&#34;pageContent&#34;&gt;
+  &lt;div class=&#34;container&#34;&gt;
+    &lt;div class=&#34;card-deck&#34;&gt;
+      &lt;div class=&#34;card border-primary-dark&#34;&gt;
+        &lt;img
+          src=&#34;../../docs/images/logos/docker101.png&#34;
+		  class=&#34;card-img-top&#34;
+		  draggable=&#34;false&#34;
+          style=&#34;padding: 2rem;&#34;
+          alt=&#34;Captains Logo&#34;
+        /&gt;
+        &lt;div class=&#34;card-body bg-primary-dark&#34;&gt;
+          &lt;h5 class=&#34;card-title text-white section-head&#34;&gt;
+		&lt;center&gt;
+		&lt;a target=&#34;_blank&#34; rel=&#34;noopener&#34; href=&#34;https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/docker101/&#34;&gt;Docker for Beginners  &lt;/a&gt;	  
+&lt;/center&gt; &lt;/h5&gt;
+          &lt;p class=&#34;card-text text-white&#34;&gt;
+           
+         &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;card border-primary-dark&#34;&gt;
+        &lt;img
+          src=&#34;../../docs/images/logos/docker201.png&#34;
+		  class=&#34;card-img-top&#34;
+		  draggable=&#34;false&#34;
+          style=&#34;padding: 2rem;&#34;
+          alt=&#34;Comunity Leaders&#34;
+        /&gt;
+        &lt;div class=&#34;card-body bg-primary-dark&#34;&gt;
+          &lt;h5 class=&#34;card-title text-white section-head&#34;&gt;
+	&lt;center&gt;
+	&lt;a target=&#34;_blank&#34; rel=&#34;noopener&#34; href=&#34;ef=&#34;https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/docker201/&#34;&gt; Docker for Intermediate Users &lt;/a&gt;	  
+          &lt;/center&gt;
+          &lt;/h5&gt;
+          &lt;p class=&#34;card-text text-white&#34;&gt;
+         
+         &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;card border-primary-dark&#34;&gt;
+        &lt;img
+          src=&#34;../../docs/images/logos/docker301.png&#34;
+		  class=&#34;card-img-top&#34;
+		  draggable=&#34;false&#34;
+          style=&#34;padding: 2rem;&#34;
+          alt=&#34;Contribute&#34;
+        /&gt;
+        &lt;div class=&#34;card-body bg-primary-dark&#34;&gt;
+          &lt;h5 class=&#34;card-title text-white section-head&#34;&gt; 
+		
+       &lt;center&gt;
+	&lt;a target=&#34;_blank&#34; rel=&#34;noopener&#34; href=&#34;&#34;&gt; Docker for Advanced Users &lt;/a&gt;	  
+          &lt;/center&gt;
+	&lt;/h5&gt;
+          &lt;p class=&#34;card-text text-white&#34;&gt;
+     
+         &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;br /&gt;
+    &lt;div class=&#34;card-deck&#34;&gt;
+      &lt;div class=&#34;card border-primary-dark&#34;&gt;
+        &lt;img
+          src=&#34;../../docs/images/logos/docker-java.png&#34;
+		  class=&#34;card-img-top&#34;
+		  draggable=&#34;false&#34;
+          style=&#34;padding: 2rem;&#34;
+          alt=&#34;Communicate and Share&#34;
+        /&gt;
+        &lt;div class=&#34;card-body bg-primary-dark&#34;&gt;
+		&lt;h5 class=&#34;card-title text-white section-head&#34;&gt; 
+	&lt;center&gt;
+	&lt;a target=&#34;_blank&#34; rel=&#34;noopener&#34; href=&#34;https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/java/&#34;&gt; Docker for Java Developers &lt;/a&gt;	  
+          &lt;/center&gt;
+		
+		&lt;/h5&gt;
+          &lt;p class=&#34;card-text text-white&#34;&gt;
+	    
+
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;card border-primary-dark&#34;&gt;
+        &lt;img
+          src=&#34;../../docs/images/logos/docker-nodes.png&#34;
+		  class=&#34;card-img-top&#34;
+		  draggable=&#34;false&#34;
+          style=&#34;padding: 2rem;&#34;
+          alt=&#34;Community Events&#34;
+        /&gt;
+        &lt;div class=&#34;card-body bg-primary-dark&#34;&gt;
+          &lt;h5 class=&#34;card-title text-white section-head&#34;&gt;
+	&lt;center&gt;
+	&lt;a target=&#34;_blank&#34; rel=&#34;noopener&#34; href=&#34;https://events.docker.com/chapters/&#34;&gt; Docker for Nodejs Developers &lt;/a&gt;	  
+          &lt;/center&gt;	  
+		 &lt;/h5&gt;
+          &lt;p class=&#34;card-text text-white&#34;&gt;
+            
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;card border-primary-dark&#34;&gt;
+        &lt;img
+          src=&#34;../../docs/images/logos/docker-golang.png&#34;
+		  class=&#34;card-img-top&#34;
+		  draggable=&#34;false&#34;
+          style=&#34;padding: 2rem;&#34;
+          alt=&#34;People Icon&#34;
+        /&gt;
+        &lt;div class=&#34; card-body bg-primary-dark&#34;&gt;
+          &lt;h5 class=&#34;card-title text-white section-head&#34;&gt;
+		  &lt;center&gt;
+	&lt;a target=&#34;_blank&#34; rel=&#34;noopener&#34; href=&#34;https://docker-community-leaders.github.io/dockercommunity/docs/eventhandbooks/go/&#34;&gt; Docker for Golang Developers   &lt;/a&gt;	  
+          &lt;/center&gt;
+		  
+		  
+		  &lt;/h5&gt;
+          &lt;p class=&#34;card-text text-white&#34;&gt;
+           
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;br /&gt;
+    &lt;!-- For future editors: If you are adding cards not in multiples of 3, wrap them in a &#39;card-columns&#39; div 
+						instead of card-deck. It will look more pleasing to the eye. --&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
 
       </description>
     </item>

@@ -1,0 +1,1885 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> – Kubernetes</title>
+    <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/</link>
+    <description>Recent content in Kubernetes on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Checklists</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/checklists/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/checklists/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;checklists&#34;&gt;Checklists&lt;/h2&gt;
+&lt;h2 id=&#34;before-the-workshop&#34;&gt;Before the workshop&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Name of Objectives&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;#getting-familiar-with-bevy-virtual&#34;&gt;Getting Familiar with Bevy Virtual&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;#planning-an-event-agenda&#34;&gt;Planning an Event Agenda&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;#setting-up-event-registration-page&#34;&gt;Setting up Event Registration Page&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;#sending-confirmation-email-for-workshop&#34;&gt;Sending confirmation email for workshop&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;during-the-workshop&#34;&gt;During the workshop&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Name of Objectives&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;#conducting-attendee-survey&#34;&gt;Conducting Attendee Survey&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;after-the-workshop&#34;&gt;After the workshop&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Name of Objectives&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;6&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;#post-event-followup&#34;&gt;Post-Event FollowUp&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;7&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;#community-leader-survey&#34;&gt;Community Leader Survey&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;8&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;#attendee-survey&#34;&gt;Attendee Survey&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;getting-familiar-with-bevy-virtual&#34;&gt;Getting Familiar with Bevy Virtual&lt;/h2&gt;
+&lt;p&gt;Docker community leaders uses Bevy (&lt;a href=&#34;https://events.docker.com&#34;&gt;https://events.docker.com&lt;/a&gt;) tool to conduct virtual Meetup events. Bevy is the tool that provides the MOST features to your Community, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;2 way integration with Meetup.com (create your event in Bevy and it posts to your meetup page and RSVPs from your event on meetup sync with your Bevy events.docker.com page).
+Note: The RSVP limits you set in Bevy do not translate to meetup. The best way to handle this is to keep a watchful eye on both platforms or communicate that seats are first come first serve.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ability to check in guests.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mobile App&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RSVP as Guest&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Forms / Surveys&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Automatic Emails (customizable)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It&amp;rsquo;s important for all community leaders to be familiar with this tool to conduct virtual events successfully.&lt;/p&gt;
+&lt;h3 id=&#34;events---analytics&#34;&gt;Events |  Analytics&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.bevylabs.com/article/344-create-a-new-event&#34;&gt;Create a new event&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.bevylabs.com/article/428-virtual-event-type&#34;&gt;Virtual Event Type&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.bevylabs.com/article/389-manage-chapter-members&#34;&gt;Manage chapter members&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;bevy-virtual&#34;&gt;Bevy Virtual&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.bevylabs.com/article/457-using-bevy-virtual&#34;&gt;Using Bevy Virtual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.bevylabs.com/article/496-test-event-in-bevy-virtual&#34;&gt;How to create a test event in Bevy Virtual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.bevylabs.com/article/470-record-in-bevy-virtual&#34;&gt;Record in Bevy Virtual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.bevylabs.com/article/492-screensharing-in-bevy-virtual&#34;&gt;Screensharing in Bevy Virtual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.bevylabs.com/article/495-breakout-rooms&#34;&gt;Breakout Rooms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.bevylabs.com/article/519-chat-features&#34;&gt;Chat, DM&amp;rsquo;s &amp;amp; Features&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;planning-an-event-agenda&#34;&gt;Planning an Event Agenda&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Your event must be posted on your &lt;a href=&#34;https://events.docker.com/chapters/&#34;&gt;city’s Chapter page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Try to create event 1 month before the event&lt;/li&gt;
+&lt;li&gt;If you are unsure of how to use your chapter page &lt;a href=&#34;https://drive.google.com/file/d/1ld54sqzTTBMiygUzsjRD7B10XzWozbMl/view?usp=sharing&#34;&gt;please watch this video&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;If you are having issues with your page, do not have a page or need admin permissions please contact William over Docker community Slack or send email to william.quiviger(AT)docker.com&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;setting-up-event-registration-page&#34;&gt;Setting up Event Registration Page&lt;/h2&gt;
+&lt;p&gt;Every Community leader is expected to set up event registration page. While building an event registration page, ensure that the below list of information are captured:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title of the workshop&lt;/li&gt;
+&lt;li&gt;Date of the workshop&lt;/li&gt;
+&lt;li&gt;Short Description of the workshop&lt;/li&gt;
+&lt;li&gt;Format of the workshop(whether it will be LIVE or recorded)&lt;/li&gt;
+&lt;li&gt;Level of the audience(Beginners/Intermediate/Advanced)&lt;/li&gt;
+&lt;li&gt;Name of the speakers&lt;/li&gt;
+&lt;li&gt;A Form which ask users to supply:
+&lt;ul&gt;
+&lt;li&gt;First Name&lt;/li&gt;
+&lt;li&gt;Last Name&lt;/li&gt;
+&lt;li&gt;Email Address&lt;/li&gt;
+&lt;li&gt;Company Name&lt;/li&gt;
+&lt;li&gt;Job Function&lt;/li&gt;
+&lt;li&gt;Country&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sending-confirmation-email-for-workshop&#34;&gt;Sending confirmation email for workshop&lt;/h2&gt;
+&lt;p&gt;Once the user register for the event, Community Leaders need to ensure that the interested users should receive a confirmation email.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A Thank you message for registering for this event&lt;/li&gt;
+&lt;li&gt;Ensure that the registered user should be able to add the events date to their calendar&lt;/li&gt;
+&lt;li&gt;The email should carry workshop title and date of the workshop&lt;/li&gt;
+&lt;li&gt;Gentle reminder as the date of workshop come closer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sample-confirmation-email-for-the-workshop&#34;&gt;Sample Confirmation email for the workshop&lt;/h3&gt;
+&lt;h2 id=&#34;post-event-followup&#34;&gt;Post-Event Followup&lt;/h2&gt;
+&lt;h3 id=&#34;1--send-a-thank-you-email&#34;&gt;#1  Send a Thank You email&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Name of Objectives&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;“Thank you for attending” post on the social media channels&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&amp;ldquo;Thank you&amp;rdquo; email to all those who registered and attended the event&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Share the pics you took during the event and share it on social media(LinkedIn, Twitter, Facebook Public Docker Group etc&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Send thanks email to sponsor/vendors if this workshop is part of the Meetup event.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Thank core team and volunteers who helped you with the workshop&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;2-post-event-review&#34;&gt;#2 Post-event Review&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Name of Objectives&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Sit down with your team for a debrief session where you discuss how the event went&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Consider inviting at least some of the volunteers.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Evaluate whether the event was a success according to whatever goals you’ve set&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Have an open discussion about what worked well and what could be done better the next time around.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Sit down with your team for a debrief session where you discuss how the event went&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;3-ask-for-feedback&#34;&gt;#3 Ask for feedback&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Name of Objectives&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;While the event is still fresh in everyone’s mind, get their feedback about it.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Be straightforward. Collect input is to send out an email link to a survey that people can fill out online.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Pick the one you like. If you can, add an incentive (free tickets to your next events, chance to win a gift card, and the like.).&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Having everyone fill out the same survey makes it easy to compare their input and spot trends and areas that need improvement.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;4--follow-up-on-social-media&#34;&gt;#4  Follow up on social media&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Name of Objectives&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Online chatter about your event won’t immediately quiet down after the event is over.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Follow the conversation and jump in where it make sense to chip in with your input, thank the guests, or answer questions.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Engaging in post-event social media chatter and keeping the buzz going will also help you build audience for your next event.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Online chatter about your event won’t immediately quiet down after the event is over.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;5-start-planning-your-next-event&#34;&gt;#5 Start planning your next event&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Name of Objectives&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Start putting all of that to good use and begin jotting down ideas for your next fantastic event&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;☑️&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Deploying Your First Nginx Pod</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/pods101/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/pods101/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;deploying-your-first-nginx-pod&#34;&gt;Deploying Your First Nginx Pod&lt;/h1&gt;
+&lt;h2 id=&#34;what-are-k8s-pods&#34;&gt;What are K8s Pods?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Kubernetes pods are the foundational unit for all higher Kubernetes objects.&lt;/li&gt;
+&lt;li&gt;A pod hosts one or more containers.&lt;/li&gt;
+&lt;li&gt;It can be created using either a command or a YAML/JSON file.&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;kubectl&lt;/code&gt; to create pods, view the running ones, modify their configuration, or terminate them. Kuberbetes will attempt to restart a failing pod by default.&lt;/li&gt;
+&lt;li&gt;If the pod fails to start indefinitely, we can use the &lt;code&gt;kubectl describe&lt;/code&gt; command to know what went wrong.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;why-does-kubernetes-use-a-pod-as-the-smallest-deployable-unit-and-not-a-single-container&#34;&gt;Why does Kubernetes use a Pod as the smallest deployable unit, and not a single container?&lt;/h2&gt;
+&lt;p&gt;While it would seem simpler to just deploy a single container directly, there are good reasons to add a layer of abstraction represented by the Pod. A container is an existing entity, which refers to a specific thing. That specific thing might be a Docker container, but it might also be a &lt;a href=&#34;https://coreos.com/rkt/&#34;&gt;rkt&lt;/a&gt; container, or a VM managed by Virtlet. Each of these has different requirements.&lt;/p&gt;
+&lt;p&gt;What’s more, to manage a container, Kubernetes needs additional information, such as a restart policy, which defines what to do with a container when it terminates, or a liveness probe, which defines an action to detect if a process in a container is still alive from the application’s perspective, such as a web server responding to HTTP requests.&lt;/p&gt;
+&lt;p&gt;Instead of overloading the existing “thing” with additional properties, Kubernetes architects have decided to use a new entity, the Pod, that logically contains (wraps) one or more containers that should be managed as a single entity.&lt;/p&gt;
+&lt;h2 id=&#34;why-does-kubernetes-allow-more-than-one-container-in-a-pod&#34;&gt;Why does Kubernetes allow more than one container in a Pod?&lt;/h2&gt;
+&lt;p&gt;Containers in a Pod run on a “logical host”; they use the same network namespace (in other words, the same IP address and port space), and the same &lt;a href=&#34;https://en.wikipedia.org/wiki/Inter-process_communication&#34;&gt;IPC&lt;/a&gt; namespace. They can also use shared volumes. These properties make it possible for these containers to efficiently communicate, ensuring data locality. Also, Pods enable you to manage several tightly coupled application containers as a single unit.&lt;/p&gt;
+&lt;p&gt;So if an application needs several containers running on the same host, why not just make a single container with everything you need? Well first, you’re likely to violate the “one process per container” principle. This is important because with multiple processes in the same container it is harder to troubleshoot the container. That is because logs from different processes will be mixed together and it is harder manage the processes lifecycle. For example to take care of “zombie” processes when their parent process dies. Second, using several containers for an application is simpler, more transparent, and enables decoupling software dependencies. Also, more granular containers can be reused between teams.&lt;/p&gt;
+&lt;h2 id=&#34;pre-requisite&#34;&gt;Pre-requisite:&lt;/h2&gt;
+&lt;div id=&#34;my-panel&#34; data-katacoda-ondemand=&#34;true&#34; data-katacoda-port=&#34;30000&#34; data-katacoda-env=&#34;minikube&#34; data-katacoda-command=&#34;start.sh&#34; data-katacoda-ui=&#34;panel&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://katacoda.com/embed.js&#34;&gt;&lt;/script&gt;
+&lt;button class=&#34;button&#34; onclick=&#34;window.katacoda.init(); &#34;&gt;Launch Terminal&lt;/button&gt;
+
+&lt;h2 id=&#34;steps&#34;&gt;Steps&lt;/h2&gt;
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;highlight&#34;&gt;
+    &lt;div class=&#34;copy-code-icon&#34; style=&#34;text-align:right&#34;&gt;
+    &lt;a href=&#34;https://%25!s%28%3cnil%3e%29/master/content/en/examples//k8s/Pods101/pods01.yaml&#34; download=&#34;/k8s/Pods101/pods01.yaml&#34;&gt;&lt;code&gt;/k8s/Pods101/pods01.yaml&lt;/code&gt;
+    &lt;/a&gt;
+    &lt;img src=&#34;https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg&#34; style=&#34;max-height:24px; cursor: pointer&#34; onclick=&#34;copyCode(&#39;k8spods101pods01yaml&#39;)&#34; title=&#34;Copy /k8s/Pods101/pods01.yaml to clipboard&#34;&gt;
+    &lt;/img&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;includecode&#34; id=&#34;k8spods101pods01yaml&#34;&gt;
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiVersion: v1      # apiVersion&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;this&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;is&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;the&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;version&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;of&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;the&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;API&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;used&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;by&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;the&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;cluster.&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; 
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;                    &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# With new versions of Kubernetes being released, new functionality is introduced and, hence, new API versions may be defined. &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;                    &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# For the pod object, we use API version v1.&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;kind&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;Pod&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;           
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;                    
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;metadata:           # Metadata&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;here&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;we&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;can&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;define&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;data&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;about&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;the&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;object&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;we&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;are&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;about&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;to&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;create.&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;webserver&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;   &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# In this example, we only provide the name of the pod. But you can provide other details like the namespace.&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;spec&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;               &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#The spec part defines the characteristics that a given Kubernetes object should have. &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;                    &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# It is the cluster’s responsibility to update the status of the object to always match the desired configuration. &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;                    &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# In our example, the spec instructs that this object (the pod) should have one container with some attributes.&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;containers&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;webserver&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# The name that this container will have.&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;image&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;nginx&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;latest&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# The image on which it is based.&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ports&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;               &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# The port(s) that will be open.&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;containerPort&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;80&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;pre&gt;&lt;code&gt;kubectl apply -f pods01.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;viewing-your-pods&#34;&gt;Viewing Your Pods&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;kubectl get pods
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;which-node-is-this-pod-running-on&#34;&gt;Which Node Is This Pod Running On?&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;kubectl get pods -o wide
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ kubectl describe po webserver
+Name:               webserver
+Namespace:          default
+Priority:           0
+PriorityClassName:  &amp;lt;none&amp;gt;
+Node:               gke-standard-cluster-1-default-pool-78257330-5hs8/10.128.0.3
+Start Time:         Thu, 28 Nov 2019 13:02:19 +0530
+Labels:             &amp;lt;none&amp;gt;
+Annotations:        kubectl.kubernetes.io/last-applied-configuration:
+                      {&amp;quot;apiVersion&amp;quot;:&amp;quot;v1&amp;quot;,&amp;quot;kind&amp;quot;:&amp;quot;Pod&amp;quot;,&amp;quot;metadata&amp;quot;:{&amp;quot;annotations&amp;quot;:{},&amp;quot;name&amp;quot;:&amp;quot;webserver&amp;quot;,&amp;quot;namespace&amp;quot;:&amp;quot;default&amp;quot;},&amp;quot;spec&amp;quot;:{&amp;quot;containers&amp;quot;:[{&amp;quot;image&amp;quot;:&amp;quot;ngi...
+                    kubernetes.io/limit-ranger: LimitRanger plugin set: cpu request for container webserver
+Status:             Running
+IP:                 10.8.0.3
+Containers:
+  webserver:
+    Container ID:   docker://ff06c3e6877724ec706485374936ac6163aff10822246a40093eb82b9113189c
+    Image:          nginx:latest
+    Image ID:       docker-pullable://nginx@sha256:189cce606b29fb2a33ebc2fcecfa8e33b0b99740da4737133cdbcee92f3aba0a
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Thu, 28 Nov 2019 13:02:25 +0530
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:        100m
+    Environment:  &amp;lt;none&amp;gt;
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-mpxxg (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  default-token-mpxxg:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-mpxxg
+    Optional:    false
+QoS Class:       Burstable
+Node-Selectors:  &amp;lt;none&amp;gt;
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age    From                                                        Message
+  ----    ------     ----   ----                                                        -------
+  Normal  Scheduled  2m54s  default-scheduler                                           Successfully assigned default/webserver to gke-standard-cluster-1-default-pool-78257330-5hs8
+  Normal  Pulling    2m53s  kubelet, gke-standard-cluster-1-default-pool-78257330-5hs8  pulling image &amp;quot;nginx:latest&amp;quot;
+  Normal  Pulled     2m50s  kubelet, gke-standard-cluster-1-default-pool-78257330-5hs8  Successfully pulled image &amp;quot;nginx:latest&amp;quot;
+  Normal  Created    2m48s  kubelet, gke-standard-cluster-1-default-pool-78257330-5hs8  Created container
+  Normal  Started    2m48s  kubelet, gke-standard-cluster-1-default-pool-78257330-5hs8  Started container
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;output-in-json&#34;&gt;Output in JSON&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl get pods -o json
+{
+    &amp;quot;apiVersion&amp;quot;: &amp;quot;v1&amp;quot;,
+    &amp;quot;items&amp;quot;: [
+        {
+            &amp;quot;apiVersion&amp;quot;: &amp;quot;v1&amp;quot;,
+            &amp;quot;kind&amp;quot;: &amp;quot;Pod&amp;quot;,
+            &amp;quot;metadata&amp;quot;: {
+                &amp;quot;annotations&amp;quot;: {
+                    &amp;quot;kubectl.kubernetes.io/last-applied-configuration&amp;quot;: &amp;quot;{\&amp;quot;apiVersion\&amp;quot;:\&amp;quot;v1\&amp;quot;,\&amp;quot;kind\&amp;quot;:\&amp;quot;Pod\&amp;quot;,\&amp;quot;metadata\&amp;quot;:{\&amp;quot;annotations\&amp;quot;:{},\&amp;quot;name\&amp;quot;:\&amp;quot;webserver\&amp;quot;,\&amp;quot;namespace\&amp;quot;:\&amp;quot;default\&amp;quot;},\&amp;quot;spec\&amp;quot;:{\&amp;quot;con
+tainers\&amp;quot;:[{\&amp;quot;image\&amp;quot;:\&amp;quot;nginx:latest\&amp;quot;,\&amp;quot;name\&amp;quot;:\&amp;quot;webserver\&amp;quot;,\&amp;quot;ports\&amp;quot;:[{\&amp;quot;containerPort\&amp;quot;:80}]}]}}\n&amp;quot;,
+                    &amp;quot;kubernetes.io/limit-ranger&amp;quot;: &amp;quot;LimitRanger plugin set: cpu request for container webserver&amp;quot;
+                },
+                &amp;quot;creationTimestamp&amp;quot;: &amp;quot;2019-11-28T08:48:28Z&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;webserver&amp;quot;,
+                &amp;quot;namespace&amp;quot;: &amp;quot;default&amp;quot;,
+                &amp;quot;resourceVersion&amp;quot;: &amp;quot;20080&amp;quot;,
+                &amp;quot;selfLink&amp;quot;: &amp;quot;/api/v1/namespaces/default/pods/webserver&amp;quot;,
+                &amp;quot;uid&amp;quot;: &amp;quot;d8e0b56b-11bb-11ea-a1bf-42010a800006&amp;quot;
+            },
+            &amp;quot;spec&amp;quot;: {
+                &amp;quot;containers&amp;quot;: [
+                    {
+                        &amp;quot;image&amp;quot;: &amp;quot;nginx:latest&amp;quot;,
+                        &amp;quot;imagePullPolicy&amp;quot;: &amp;quot;Always&amp;quot;,
+                        &amp;quot;name&amp;quot;: &amp;quot;webserver&amp;quot;,
+                        &amp;quot;ports&amp;quot;: [
+                            {
+                                &amp;quot;containerPort&amp;quot;: 80,
+                                &amp;quot;protocol&amp;quot;: &amp;quot;TCP&amp;quot;
+                            }
+                        ],
+                        &amp;quot;resources&amp;quot;: {
+                            &amp;quot;requests&amp;quot;: {
+                                &amp;quot;cpu&amp;quot;: &amp;quot;100m&amp;quot;
+                            }
+                        },
+                        &amp;quot;terminationMessagePath&amp;quot;: &amp;quot;/dev/termination-log&amp;quot;,
+                        &amp;quot;terminationMessagePolicy&amp;quot;: &amp;quot;File&amp;quot;,
+             
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;executing-commands-against-pods&#34;&gt;Executing Commands Against Pods&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl exec -it webserver -- /bin/bash
+root@webserver:/#
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;root@webserver:/# cat /etc/os-release
+PRETTY_NAME=&amp;quot;Debian GNU/Linux 10 (buster)&amp;quot;
+NAME=&amp;quot;Debian GNU/Linux&amp;quot;
+VERSION_ID=&amp;quot;10&amp;quot;
+VERSION=&amp;quot;10 (buster)&amp;quot;
+VERSION_CODENAME=buster
+ID=debian
+HOME_URL=&amp;quot;https://www.debian.org/&amp;quot;
+SUPPORT_URL=&amp;quot;https://www.debian.org/support&amp;quot;
+BUG_REPORT_URL=&amp;quot;https://bugs.debian.org/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Please exit from the shell (&lt;code&gt;/bin/bash&lt;/code&gt;) session.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;root@webserver:/# exit
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;deleting-the-pod&#34;&gt;Deleting the Pod&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl delete -f pods01.yaml
+pod &amp;quot;webserver&amp;quot; deleted
+
+$ kubectl get po -o wide
+No resources found.
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;get-logs-of-pod&#34;&gt;Get logs of Pod&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl logs webserver
+
+/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+10-listen-on-ipv6-by-default.sh: Getting the checksum of /etc/nginx/conf.d/default.conf
+10-listen-on-ipv6-by-default.sh: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+/docker-entrypoint.sh: Configuration complete; ready for start up
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;ading-a-2nd-container-to-a-pod&#34;&gt;Ading a 2nd container to a Pod&lt;/h1&gt;
+&lt;p&gt;In the microservices architecture, each module should live in its own space and communicate with other modules following a set of rules. But, sometimes we need to deviate a little from this principle. Suppose you have an Nginx web server running and we need to analyze its web logs in real-time. The logs we need to parse are obtained from GET requests to the web server. The developers created a log watcher application that will do this job and they built a container for it. In typical conditions, you’d have a pod for Nginx and another for the log watcher. However, we need to eliminate any network latency so that the watcher can analyze logs the moment they are available. A solution for this is to place both containers on the same pod.&lt;/p&gt;
+&lt;p&gt;Having both containers on the same pod allows them to communicate through the loopback interface (&lt;code&gt;ifconfig lo&lt;/code&gt;) as if they were two processes running on the same host. They also share the same storage volume.&lt;/p&gt;
+&lt;p&gt;Let us see  how a pod can host more than one container. Let’s take a look to the &lt;a href=&#34;pods02.yaml&#34;&gt;&lt;code&gt;pods02.yaml&lt;/code&gt;&lt;/a&gt; file. It contains the following lines:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apiVersion: v1
+kind: Pod
+metadata:
+  name: webserver
+spec:
+  containers:
+  - name: webserver
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+  - name: webwatcher
+    image: afakharany/watcher:latest
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Run the following command:&lt;/p&gt;
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;highlight&#34;&gt;
+    &lt;div class=&#34;copy-code-icon&#34; style=&#34;text-align:right&#34;&gt;
+    &lt;a href=&#34;https://%25!s%28%3cnil%3e%29/master/content/en/examples//k8s/Pods101/pods02.yaml&#34; download=&#34;/k8s/Pods101/pods02.yaml&#34;&gt;&lt;code&gt;/k8s/Pods101/pods02.yaml&lt;/code&gt;
+    &lt;/a&gt;
+    &lt;img src=&#34;https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg&#34; style=&#34;max-height:24px; cursor: pointer&#34; onclick=&#34;copyCode(&#39;k8spods101pods02yaml&#39;)&#34; title=&#34;Copy /k8s/Pods101/pods02.yaml to clipboard&#34;&gt;
+    &lt;/img&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;includecode&#34; id=&#34;k8spods101pods02yaml&#34;&gt;
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiVersion&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;v1&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;kind&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;Pod&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;metadata&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;webserver&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;spec&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;containers&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;webserver&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;image&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;nginx&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;latest&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ports&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;containerPort&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;80&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;webwatcher&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;image&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;afakharany/watcher&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;latest&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;pre&gt;&lt;code&gt;$ kubectl apply -f pods02.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ kubectl get po -o wide
+NAME        READY   STATUS              RESTARTS   AGE   IP       NODE                                                NOMINATED NODE   READINESS GATES
+webserver   0/2     ContainerCreating   0          13s   &amp;lt;none&amp;gt;   gke-standard-cluster-1-default-pool-78257330-5hs8   &amp;lt;none&amp;gt;           &amp;lt;none&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ kubectl get po,svc,deploy
+NAME            READY   STATUS    RESTARTS   AGE
+pod/webserver   2/2     Running   0          3m6s
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.12.0.1    &amp;lt;none&amp;gt;        443/TCP   107m
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ kubectl get po -o wide
+NAME        READY   STATUS    RESTARTS   AGE     IP         NODE                                                NOMINATED NODE   READINESS GATES
+webserver   2/2     Running   0          3m37s   10.8.0.5   gke-standard-cluster-1-default-pool-78257330-5hs8   &amp;lt;none&amp;gt;           &amp;lt;none&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;how-to-verify-2-containers-are-running-inside-a-pod&#34;&gt;How to verify 2 containers are running inside a Pod?&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl describe po
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;Containers:
+  webserver:
+    Container ID:   docker://0564fcb88f7c329610e7da24cba9de6555c0183814cf517e55d2816c6539b829
+    Image:          nginx:latest
+    Image ID:       docker-pullable://nginx@sha256:36b77d8bb27ffca25c7f6f53cadd059aca2747d46fb6ef34064e31727325784e
+    Port:           80/TCP
+    State:          Running
+      Started:      Wed, 08 Jan 2020 13:21:57 +0530
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:        100m
+    Environment:  &amp;lt;none&amp;gt;
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-xhgmm (ro)
+  webwatcher:
+    Container ID:   docker://4cebbb220f7f9695f4d6492509e58152ba661f3ab8f4b5d0a7adec6c61bdde26
+    Image:          afakharany/watcher:latest
+    Image ID:       docker-pullable://afakharany/watcher@sha256:43d1b12bb4ce6e549e85447678a28a8e7b9d4fc398938a6f3e57d2908a9b7d80
+    Port:           &amp;lt;none&amp;gt;
+    State:          Running
+      Started:      Wed, 08 Jan 2020 13:22:26 +0530
+    Ready:          True
+    Restart Count:  0
+    Requests:
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Since we have two containers in a pod, we will need to use the &lt;code&gt;-c&lt;/code&gt; option with &lt;code&gt;kubectl&lt;/code&gt; when we need to address a specific container. For example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl exec -it webserver -c webwatcher -- /bin/bash
+
+root@webserver:/# cat /etc/hosts
+# Kubernetes-managed hosts file.
+127.0.0.1       localhost
+::1     localhost ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+fe00::0 ip6-mcastprefix
+fe00::1 ip6-allnodes
+fe00::2 ip6-allrouters
+10.8.0.5        webserver
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Please exit from the shell (&lt;code&gt;/bin/bash&lt;/code&gt;) session.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;root@webserver:/# exit
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;cleaning-up&#34;&gt;Cleaning up&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;kubectl delete -f pods02.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;example-of-multi-container-pod&#34;&gt;Example of Multi-Container Pod&lt;/h1&gt;
+&lt;p&gt;Let&amp;rsquo;s talk about communication between containers in a Pod. Having multiple containers in a single Pod makes it relatively straightforward for them to communicate with each other. They can do this using several different methods.&lt;/p&gt;
+&lt;h2 id=&#34;use-cases-for-multi-container-pods&#34;&gt;Use Cases for Multi-Container Pods&lt;/h2&gt;
+&lt;p&gt;The primary purpose of a multi-container Pod is to support co-located, co-managed helper processes for a primary application. There are some general patterns for using helper processes in Pods:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Sidecar containers&lt;/em&gt; help the main container. Some examples include log or data change watchers, monitoring adapters, and so on. A log watcher, for example, can be built once by a different team and reused across different applications. Another example of a sidecar container is a file or data loader that generates data for the main container.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Proxies, bridges, and adapters&lt;/em&gt; connect the main container with the external world. For example, Apache HTTP server or nginx can serve static files. It can also act as a reverse proxy to a web application in the main container to log and limit HTTP requests.
+Another example is a helper container that re-routes requests from the main container to the external world. This makes it possible for the main container to connect to the localhost to access, for example, an external database, but without any service discovery.&lt;/p&gt;
+&lt;h2 id=&#34;shared-volumes-in-a-kubernetes-pod&#34;&gt;Shared volumes in a Kubernetes Pod&lt;/h2&gt;
+&lt;p&gt;In Kubernetes, you can use a shared Kubernetes Volume as a simple and efficient way to share data between containers in a Pod. For most cases, it is sufficient to use a directory on the host that is shared with all containers within a Pod.&lt;/p&gt;
+&lt;p&gt;Kubernetes Volumes enables data to survive container restarts, but these volumes have the same lifetime as the Pod. That means that the volume (and the data it holds) exists exactly as long as that Pod exists. If that Pod is deleted for any reason, even if an identical replacement is created, the shared Volume is also destroyed and created anew.&lt;/p&gt;
+&lt;p&gt;A standard use case for a multi-container Pod with a shared Volume is when one container writes logs or other files to the shared directory, and the other container reads from the shared directory. For example, we can create a Pod like so (&lt;a href=&#34;pods03.yaml&#34;&gt;pods03.yaml&lt;/a&gt;):&lt;/p&gt;
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;highlight&#34;&gt;
+    &lt;div class=&#34;copy-code-icon&#34; style=&#34;text-align:right&#34;&gt;
+    &lt;a href=&#34;https://%25!s%28%3cnil%3e%29/master/content/en/examples//k8s/Pods101/pods03.yaml&#34; download=&#34;/k8s/Pods101/pods03.yaml&#34;&gt;&lt;code&gt;/k8s/Pods101/pods03.yaml&lt;/code&gt;
+    &lt;/a&gt;
+    &lt;img src=&#34;https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg&#34; style=&#34;max-height:24px; cursor: pointer&#34; onclick=&#34;copyCode(&#39;k8spods101pods03yaml&#39;)&#34; title=&#34;Copy /k8s/Pods101/pods03.yaml to clipboard&#34;&gt;
+    &lt;/img&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;includecode&#34; id=&#34;k8spods101pods03yaml&#34;&gt;
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiVersion&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;v1&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;kind&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;Pod&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;metadata&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;mc1&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;spec&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;volumes&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;html&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;emptyDir&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;{}&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;containers&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;1st&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;image&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;nginx&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;volumeMounts&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;html&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;mountPath&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;/usr/share/nginx/html&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;2nd&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;image&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;debian&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;volumeMounts&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;html&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;mountPath&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;/html&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;command&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;/bin/sh&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;-c&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;args&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- while&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;do&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;          &lt;/span&gt;date&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&amp;gt;&amp;gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;/html/index.html;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;          &lt;/span&gt;sleep&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;done&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;In this file (&lt;code&gt;pods03.yaml&lt;/code&gt;) a volume named &lt;code&gt;html&lt;/code&gt; has been defined. Its type is &lt;code&gt;emptyDir&lt;/code&gt;, which means that the volume is first created when a Pod is assigned to a node, and exists as long as that Pod is running on that node. As the name says, it is initially empty. The &lt;code&gt;1st&lt;/code&gt; container runs nginx server and has the shared volume mounted to the directory &lt;code&gt;/usr/share/nginx/html&lt;/code&gt;. The &lt;code&gt;2nd&lt;/code&gt; container uses the Debian image and has the shared volume mounted to the directory &lt;code&gt;/html&lt;/code&gt;. Every second, the &lt;code&gt;2nd&lt;/code&gt; container adds the current date and time into the &lt;code&gt;index.html&lt;/code&gt; file, which is located in the shared volume. When the user makes an HTTP request to the Pod, the Nginx server reads this file and transfers it back to the user in response to the request.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/collabnix/kubelabs/master/pods101/multicontainerpod.png&#34; alt=&#34;Image&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;kubectl apply -f pods03.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[Captains-Bay]🚩 &amp;gt;  kubectl get po,svc
+NAME      READY     STATUS    RESTARTS   AGE
+po/mc1    2/2       Running   0          11s
+
+NAME             TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)   AGE
+svc/kubernetes   ClusterIP   10.15.240.1   &amp;lt;none&amp;gt;        443/TCP   1h
+[Captains-Bay]🚩 &amp;gt;  kubectl describe po mc1
+Name:         mc1
+Namespace:    default
+Node:         gke-k8s-lab1-default-pool-fd9ef5ad-pc18/10.140.0.16
+Start Time:   Wed, 08 Jan 2020 14:29:08 +0530
+Labels:       &amp;lt;none&amp;gt;
+Annotations:  kubectl.kubernetes.io/last-applied-configuration={&amp;quot;apiVersion&amp;quot;:&amp;quot;v1&amp;quot;,&amp;quot;kind&amp;quot;:&amp;quot;Pod&amp;quot;,&amp;quot;metadata&amp;quot;:{&amp;quot;annotations&amp;quot;:{},&amp;quot;name&amp;quot;:&amp;quot;mc1&amp;quot;,&amp;quot;namespace&amp;quot;:&amp;quot;default&amp;quot;},&amp;quot;spec&amp;quot;:{&amp;quot;containers&amp;quot;:[{&amp;quot;image&amp;quot;:&amp;quot;nginx&amp;quot;,&amp;quot;name&amp;quot;:&amp;quot;1st&amp;quot;,&amp;quot;v...
+              kubernetes.io/limit-ranger=LimitRanger plugin set: cpu request for container 1st; cpu request for container 2nd
+Status:       Running
+IP:           10.12.2.6
+Containers:
+  1st:
+    Container ID:   docker://b08eb646f90f981cd36c605bf8fead3ca62178c7863598fd4558cb026ed067dd
+    Image:          nginx
+    Image ID:       docker-pullable://nginx@sha256:36b77d8bb27ffca25c7f6f53cadd059aca2747d46fb6ef34064e31727325784e
+    Port:           &amp;lt;none&amp;gt;
+    State:          Running
+      Started:      Wed, 08 Jan 2020 14:29:09 +0530
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:        100m
+    Environment:  &amp;lt;none&amp;gt;
+    Mounts:
+      /usr/share/nginx/html from html (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-xhgmm (ro)
+  2nd:
+    Container ID:  docker://63180b4128d477810d6062342f4b8e499de684ffd69ad245c29118e1661eafcb
+    Image:         debian
+    Image ID:      docker-pullable://debian@sha256:c99ed5d068d4f7ff36c7a6f31810defebecca3a92267fefbe0e0cf2d9639115a
+    Port:          &amp;lt;none&amp;gt;
+    Command:
+      /bin/sh
+      -c
+    Args:
+      while true; do date &amp;gt;&amp;gt; /html/index.html; sleep 1; done
+    State:          Running
+      Started:      Wed, 08 Jan 2020 14:29:14 +0530
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:        100m
+    Environment:  &amp;lt;none&amp;gt;
+    Mounts:
+      /html from html (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-xhgmm (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  html:
+    Type:    EmptyDir (a temporary directory that shares a pod&#39;s lifetime)
+    Medium:  
+  default-token-xhgmm:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-xhgmm
+    Optional:    false
+QoS Class:       Burstable
+Node-Selectors:  &amp;lt;none&amp;gt;
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age   From                                              Message
+  ----    ------     ----  ----                                              -------
+  Normal  Scheduled  18s   default-scheduler                                 Successfully assigned default/mc1 to gke-k8s-lab1-default-pool-fd9ef5ad-pc18
+  Normal  Pulling    17s   kubelet, gke-k8s-lab1-default-pool-fd9ef5ad-pc18  pulling image &amp;quot;nginx&amp;quot;
+  Normal  Pulled     17s   kubelet, gke-k8s-lab1-default-pool-fd9ef5ad-pc18  Successfully pulled image &amp;quot;nginx&amp;quot;
+  Normal  Created    17s   kubelet, gke-k8s-lab1-default-pool-fd9ef5ad-pc18  Created container
+  Normal  Started    17s   kubelet, gke-k8s-lab1-default-pool-fd9ef5ad-pc18  Started container
+  Normal  Pulling    17s   kubelet, gke-k8s-lab1-default-pool-fd9ef5ad-pc18  pulling image &amp;quot;debian&amp;quot;
+  Normal  Pulled     13s   kubelet, gke-k8s-lab1-default-pool-fd9ef5ad-pc18  Successfully pulled image &amp;quot;debian&amp;quot;
+  Normal  Created    12s   kubelet, gke-k8s-lab1-default-pool-fd9ef5ad-pc18  Created container
+  Normal  Started    12s   kubelet, gke-k8s-lab1-default-pool-fd9ef5ad-pc18  Started container
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ kubectl exec mc1 -c 1st -- /bin/cat /usr/share/nginx/html/index.html
+...
+Wed Jan  8 08:59:14 UTC 2020
+Wed Jan  8 08:59:15 UTC 2020
+Wed Jan  8 08:59:16 UTC 2020
+ 
+$ kubectl exec mc1 -c 2nd -- /bin/cat /html/index.html
+...
+Wed Jan  8 08:59:14 UTC 2020
+Wed Jan  8 08:59:15 UTC 2020
+Wed Jan  8 08:59:16 UTC 2020
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;cleaning-up-1&#34;&gt;Cleaning Up&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;kubectl delete -f pods03.yaml
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Deploying Your First Kubernetes Service</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/service101/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/service101/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;what-are-kubernetes-services&#34;&gt;What are Kubernetes Services?&lt;/h1&gt;
+&lt;p&gt;Say, you have pods running nginx in a flat, cluster wide, address space. In theory, you could talk to these pods directly, but what happens when a node dies? The pods die with it, and the Deployment will create new ones, with different IPs. This is the problem a Service solves.&lt;/p&gt;
+&lt;p&gt;Kubernetes Pods are mortal. They are born and when they die, they are not resurrected. If you use a Deployment to run your app, it can create and destroy Pods dynamically. Each Pod gets its own IP address, however in a Deployment, the set of Pods running in one moment in time could be different from the set of Pods running that application a moment later.&lt;/p&gt;
+&lt;p&gt;This leads to a problem: if some set of Pods (call them “backends”) provides functionality to other Pods (call them “frontends”) inside your cluster, how do the frontends find out and keep track of which IP address to connect to, so that the frontend can use the backend part of the workload?&lt;/p&gt;
+&lt;p&gt;Enter Services&lt;/p&gt;
+&lt;p&gt;A Kubernetes Service is an abstraction which defines a logical set of Pods running somewhere in your cluster, that all provide the same functionality. When created, each Service is assigned a unique IP address (also called clusterIP). This address is tied to the lifespan of the Service, and will not change while the Service is alive. Pods can be configured to talk to the Service, and know that communication to the Service will be automatically load-balanced out to some pod that is a member of the Service.&lt;/p&gt;
+&lt;h2 id=&#34;deploying--a-kubernetes-service&#34;&gt;Deploying  a Kubernetes Service&lt;/h2&gt;
+&lt;p&gt;Like all other Kubernetes objects, a Service can be defined using a YAML or JSON file that contains the necessary definitions (they can also be created using just the command line, but this is not the recommended practice). Let’s create a NodeJS service definition. It may look like the following:&lt;/p&gt;
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;highlight&#34;&gt;
+    &lt;div class=&#34;copy-code-icon&#34; style=&#34;text-align:right&#34;&gt;
+    &lt;a href=&#34;https://%25!s%28%3cnil%3e%29/master/content/en/examples//k8s/service101/nginx-svc.yaml&#34; download=&#34;/k8s/service101/nginx-svc.yaml&#34;&gt;&lt;code&gt;/k8s/service101/nginx-svc.yaml&lt;/code&gt;
+    &lt;/a&gt;
+    &lt;img src=&#34;https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg&#34; style=&#34;max-height:24px; cursor: pointer&#34; onclick=&#34;copyCode(&#39;k8sservice101nginx-svcyaml&#39;)&#34; title=&#34;Copy /k8s/service101/nginx-svc.yaml to clipboard&#34;&gt;
+    &lt;/img&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;includecode&#34; id=&#34;k8sservice101nginx-svcyaml&#34;&gt;
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiVersion&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;v1&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;kind&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;Service&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;metadata&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;my-nginx&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;labels&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;run&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;my-nginx&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;spec&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ports&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;port&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;80&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;protocol&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;TCP&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;selector&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;run&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;my-nginx&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;pre&gt;&lt;code&gt;$ kubectl apply -f nginx-svc.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This specification will create a Service which targets TCP port 80 on any Pod with the run: my-nginx label, and expose it on an abstracted Service port (targetPort: is the port the container accepts traffic on, port: is the abstracted Service port, which can be any port other pods use to access the Service). View Service API object to see the list of supported fields in service definition. Check your Service&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl get svc my-nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As mentioned previously, a Service is backed by a group of Pods. These Pods are exposed through endpoints. The Service’s selector will be evaluated continuously and the results will be POSTed to an Endpoints object also named my-nginx. When a Pod dies, it is automatically removed from the endpoints, and new Pods matching the Service’s selector will automatically get added to the endpoints. Check the endpoints, and note that the IPs are the same as the Pods created in the first step:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl describe svc my-nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You should now be able to curl the nginx Service on &lt;CLUSTER-IP&gt;:&lt;PORT&gt; from any node in your cluster. Note that the Service IP is completely virtual, it never hits the wire. If you’re curious about how this works you can read more about the service proxy.&lt;/p&gt;
+&lt;h2 id=&#34;accessing-the-service&#34;&gt;Accessing the Service&lt;/h2&gt;
+&lt;p&gt;Kubernetes supports 2 primary modes of finding a Service - environment variables and DNS&lt;/p&gt;
+&lt;h3 id=&#34;environment-variables&#34;&gt;Environment Variables&lt;/h3&gt;
+&lt;p&gt;When a Pod runs on a Node, the kubelet adds a set of environment variables for each active Service. This introduces an ordering problem. To see why, inspect the environment of your running nginx Pods (your Pod name will be different):&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl exec my-nginx-3800858182-jr4a2 -- printenv | grep SERVICE
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;KUBERNETES_SERVICE_HOST=10.0.0.1
+KUBERNETES_SERVICE_PORT=443
+KUBERNETES_SERVICE_PORT_HTTPS=443
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Note there’s no mention of your Service. This is because you created the replicas before the Service. Another disadvantage of doing this is that the scheduler might put both Pods on the same machine, which will take your entire Service down if it dies. We can do this the right way by killing the 2 Pods and waiting for the Deployment to recreate them. This time around the Service exists before the replicas. This will give you scheduler-level Service spreading of your Pods (provided all your nodes have equal capacity), as well as the right environment variables:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl scale deployment my-nginx --replicas=0; kubectl scale deployment my-nginx --replicas=2;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ kubectl get pods -l run=my-nginx -o wide
+NAME                        READY     STATUS    RESTARTS   AGE     IP            NODE
+my-nginx-3800858182-e9ihh   1/1       Running   0          5s      10.244.2.7    kubernetes-minion-ljyd
+my-nginx-3800858182-j4rm4   1/1       Running   0          5s      10.244.3.8    kubernetes-minion-905m
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You may notice that the pods have different names, since they are killed and recreated.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl exec my-nginx-3800858182-e9ihh -- printenv | grep SERVICE
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;KUBERNETES_SERVICE_PORT=443
+MY_NGINX_SERVICE_HOST=10.0.162.149
+KUBERNETES_SERVICE_HOST=10.0.0.1
+MY_NGINX_SERVICE_PORT=80
+KUBERNETES_SERVICE_PORT_HTTPS=443
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;dns&#34;&gt;DNS&lt;/h3&gt;
+&lt;p&gt;Kubernetes offers a DNS cluster addon Service that automatically assigns dns names to other Services. You can check if it’s running on your cluster:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl get services kube-dns --namespace=kube-system
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;NAME       TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)         AGE
+kube-dns   ClusterIP   10.0.0.10    &amp;lt;none&amp;gt;        53/UDP,53/TCP   8m
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The rest of this section will assume you have a Service with a long lived IP (my-nginx), and a DNS server that has assigned a name to that IP. Here we use the CoreDNS cluster addon (application name kube-dns), so you can talk to the Service from any pod in your cluster using standard methods (e.g. gethostbyname()). If CoreDNS isn’t running, you can enable it referring to the CoreDNS README or Installing CoreDNS. Let’s run another curl application to test this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl run curl --image=radial/busyboxplus:curl -i --tty
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;Waiting for pod default/curl-131556218-9fnch to be running, status is Pending, pod ready: false
+Hit enter for command prompt
+Then, hit enter and run nslookup my-nginx:
+
+$ nslookup my-nginx
+Server:    10.0.0.10
+Address 1: 10.0.0.10
+
+Name:      my-nginx
+Address 1: 10.0.162.149
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;exposing-the-service&#34;&gt;Exposing the Service&lt;/h2&gt;
+&lt;p&gt;For some parts of your applications you may want to expose a Service onto an external IP address. Kubernetes supports two ways of doing this: NodePorts and LoadBalancers. The Service created in the last section already used NodePort, so your nginx HTTPS replica is ready to serve traffic on the internet if your node has a public IP.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl get svc my-nginx -o yaml | grep nodePort -C 5
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;uid: 07191fb3-f61a-11e5-8ae5-42010af00002
+spec:
+  clusterIP: 10.0.162.149
+  ports:
+  - name: http
+    nodePort: 31704
+    port: 8080
+    protocol: TCP
+    targetPort: 80
+  - name: https
+    nodePort: 32453
+    port: 443
+    protocol: TCP
+    targetPort: 443
+  selector:
+    run: my-nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ kubectl get nodes -o yaml | grep ExternalIP -C 1
+    - address: 104.197.41.11
+      type: ExternalIP
+    allocatable:
+--
+    - address: 23.251.152.56
+      type: ExternalIP
+    allocatable:
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ curl https://&amp;lt;EXTERNAL-IP&amp;gt;:&amp;lt;NODE-PORT&amp;gt; -k
+...
+&amp;lt;h1&amp;gt;Welcome to nginx!&amp;lt;/h1&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Let’s now recreate the Service to use a cloud load balancer, just change the Type of my-nginx Service from NodePort to LoadBalancer:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl edit svc my-nginx
+kubectl get svc my-nginx
+NAME       TYPE        CLUSTER-IP     EXTERNAL-IP        PORT(S)               AGE
+my-nginx   ClusterIP   10.0.162.149   162.222.184.144    80/TCP,81/TCP,82/TCP  21s
+curl https://&amp;lt;EXTERNAL-IP&amp;gt; -k
+...
+&amp;lt;title&amp;gt;Welcome to nginx!&amp;lt;/title&amp;gt;
+The IP address in the EXTERNAL-IP column is the one that is available on the public internet. The CLUSTER-IP is only available inside your cluster/private cloud network.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Note that on AWS, type LoadBalancer creates an ELB, which uses a (long) hostname, not an IP. It’s too long to fit in the standard kubectl get svc output, in fact, so you’ll need to do kubectl describe service my-nginx to see it. You’ll see something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl describe service my-nginx
+...
+LoadBalancer Ingress:   a320587ffd19711e5a37606cf4a74574-1142138393.us-east-1.elb.amazonaws.com
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;service-exposing-more-than-one-port&#34;&gt;Service Exposing More Than One Port&lt;/h2&gt;
+&lt;p&gt;Kubernetes Services allow you to define more than one port per service definition. Let’s see how a web server service definition file may look like:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apiVersion: v1
+kind: Service
+metadata:
+  name: webserver
+spec:
+ selector:
+   app: web
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+  - name: https
+    port: 443
+    targetPort: 443
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Notice that if you are defining more than one port in a service, you must provide a name for each port so that they are recognizable.&lt;/p&gt;
+&lt;h2 id=&#34;kubernetes-service-without-pods&#34;&gt;Kubernetes Service Without Pods?&lt;/h2&gt;
+&lt;p&gt;While the traditional use of a Kubernetes Service is to abstract one or more pods behind a layer, services can do more than that. Consider the following use cases where services do not work on pods:&lt;/p&gt;
+&lt;p&gt;You need to access an API outside your cluster (examples: weather, stocks, currency rates).
+You have a service in another Kubernetes cluster that you need to contact.
+You need to shift some of your infrastructure components to Kubernetes. But, since you’re still evaluating the technology, you need it to communicate with some backend applications that are still outside the cluster.
+You have another service in another namespace that you need to reach.
+The common thing here is that the service will not be pointing to pods. It’ll be communicating with other resources inside or outside your cluster. Let’s create a service definition that will route traffic to an external IP address:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apiVersion: v1
+kind: Service
+metadata:
+  name: webserver
+spec:
+ selector:
+   app: web
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+  - name: https
+    port: 443
+    targetPort: 443
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Here, we have a service that connects to an external NodeJS backend on port 3000. But, this definition does not have pod selectors. It doesn’t even have the external IP address of the backend! So, how will the service route traffic then?&lt;/p&gt;
+&lt;p&gt;Normally, a service uses an Endpoint object behind the scenes to map to the IP addresses of the pods that match its selector.&lt;/p&gt;
+&lt;h2 id=&#34;service-discovery&#34;&gt;Service Discovery&lt;/h2&gt;
+&lt;p&gt;Let’s revisit our web application example. You are writing the configuration files for Nginx and you need to specify an IP address or URL to which web server shall route backend requests. For demonstration purposes, here’s a sample Nginx configuration snippet for proxying requests:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;server {
+  listen 80;
+
+  server_name myapp.example.com;
+
+  location /api {
+      proxy_pass http://??/;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The proxy_pass part here must point to the service’s IP address or DNS name to be able to reach one of the NodeJS pods. In Kubernetes, there are two ways to discover services: (1) environment variables, or (2) DNS. let’s talk about each one of them in a bit of detail.&lt;/p&gt;
+&lt;h2 id=&#34;connectivity-methods&#34;&gt;Connectivity Methods&lt;/h2&gt;
+&lt;p&gt;If you reached that far, you are able to contact your services by name. Whether you’re using environment variables or you’ve deployed a DNS, you get the service name resolved to an IP address. Now you want to be serious about it and make it accessible from outside your cluster? There are three ways to do that:&lt;/p&gt;
+&lt;h3 id=&#34;clusterip&#34;&gt;CLusterIP&lt;/h3&gt;
+&lt;p&gt;The ClusterIP is the default service type. Kubernetes will assign an internal IP address to your service. This IP address is reachable only from inside the cluster. You can - optionally - set this IP in the service definition file. Think of the case when you have a DNS record that you don’t want to change and you want the name to resolve to the same IP address. You can do this by defining the clusterIP part of the service definition as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apiVersion: v1
+kind: Service
+metadata:
+  name: external-backend
+spec:
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
+  clusterIP: 10.96.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;However, you cannot just add any IP address. It must be within the service-cluster-ip-range, which is a range of IP addresses assigned to the service by the Kubernetes API server. You can get this range through a simple kubectl command as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl cluster-info dump | grep service-cluster-ip-range
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can also set the clusterIP to none, effectively creating a Headless Service.&lt;/p&gt;
+&lt;h2 id=&#34;headless-service-in-kubernetes&#34;&gt;Headless Service In Kubernetes?&lt;/h2&gt;
+&lt;p&gt;As mentioned, the default behavior of Kubernetes is to assign an internal IP address to the service. Through this IP address, the service will proxy and load-balance the requests to the pods behind. If we explicitly set this IP address (clusterIP) to none, this is like telling Kubernetes “I don’t need load balancing or proxying, just connect me to the first available pod”.&lt;/p&gt;
+&lt;p&gt;Let’s consider a common use case. If you host, for example, MongoDB on a single pod, you will need a service definition on top of it to take care of the pod being restarted and acquiring a new IP address. But you don’t need any load balancing or routing. You only need the service to patch the request to the backend pod. Hence, the name: headless: a service that does have an IP.&lt;/p&gt;
+&lt;p&gt;But, what if a headless service was created and was managing more than one pod? In this case, any query to the service’s DNS name will return a list of all the pods managed by this service. The request will accept the first IP address returned. Obviously, this is not the best load-balancing algorithm if at all. The bottom line here, use a headless service when you need a single pod.&lt;/p&gt;
+&lt;h3 id=&#34;nodeport&#34;&gt;NodePort&lt;/h3&gt;
+&lt;p&gt;This is one of the service types that are used when you want to enable external connectivity to your service. If you’re having four Nginx pods, the NodePort service type is going to use the IP address of any node in the cluster combined with a specific port to route traffic to those pods. The following graph will demonstrate the idea:&lt;/p&gt;
+&lt;p&gt;You can use the IP address of any node, the service will receive the request and route it to one of the pods.&lt;/p&gt;
+&lt;p&gt;A service definition file for a service of type NodePort may look like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      nodePort: 30000
+      targetPort: 80
+  selector:
+    app: web
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Manually allocating a port to the service is optional. If left undefined, Kubernetes will automatically assign one. It must be in the range of 30000-32767. If you are going to choose it, ensure that the port was not already used by another service. Otherwise, Kubernetes will report that the API transaction has failed.&lt;/p&gt;
+&lt;p&gt;Notice that you must always anticipate the event of a node going down and its IP address becomes no longer reachable. The best practice here is to place a load balancer above your nodes.&lt;/p&gt;
+&lt;h3 id=&#34;loadbalancer&#34;&gt;LoadBalancer&lt;/h3&gt;
+&lt;p&gt;his service type works when you are using a cloud provider to host your Kubernetes cluster. When you choose LoadBalancer as the service type, the cluster will contact the cloud provider and create a load balancer. Traffic arriving at this load balancer will be forwarded to the backend pods. The specifics of this process is dependent on how each provider implements its load balancing technology.&lt;/p&gt;
+&lt;p&gt;Different cloud providers handle load balancer provisioning differently. For example, some providers allow you to assign an IP address to the component, while others choose to assign short-lived addresses that constantly change. Kubernetes was designed to be highly portable. You can add loadBalancerIP to the service definition file. If the provider supports it, it will be implemented. Otherwise, it will be ignored. Let’s have a sample service definition that uses LoadBalancer as its type:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+spec:
+  type: LoadBalancer
+  loadBalancerIP: 78.11.24.19
+  selector:
+    app: web
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;One of the main differences between the LoadBalancer and the NodePort service types is that in the latter you get to choose your own load balancing layer. You are not bound to the cloud provider’s implementation&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Deploying Your First Nginx Deployment</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/deployment101/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/deployment101/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;deployment-101&#34;&gt;Deployment 101&lt;/h1&gt;
+&lt;p&gt;We looked at ReplicaSets earlier. However, ReplicaSet have one major drawback:
+once you select the pods that are managed by a ReplicaSet, you cannot change their pod templates.&lt;/p&gt;
+&lt;p&gt;For example, if you are using a ReplicaSet to deploy four pods with NodeJS running and you want to change the NodeJS image to a newer version, you need to delete the ReplicaSet and recreate it. Restarting the pods causes downtime till the images are available and the pods are running again.&lt;/p&gt;
+&lt;p&gt;A Deployment resource uses a ReplicaSet to manage the pods. However, it handles updating them in a controlled way.
+Let’s dig deeper into Deployment Controllers and patterns.&lt;/p&gt;
+&lt;h2 id=&#34;step-1-creating-your-first-deployment&#34;&gt;Step #1. Creating Your First Deployment&lt;/h2&gt;
+&lt;p&gt;The following Deployment definition deploys four pods with nginx as their hosted application:
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;highlight&#34;&gt;
+    &lt;div class=&#34;copy-code-icon&#34; style=&#34;text-align:right&#34;&gt;
+    &lt;a href=&#34;https://%25!s%28%3cnil%3e%29/master/content/en/examples//k8s/deployment101/nginx-dep.yaml&#34; download=&#34;/k8s/deployment101/nginx-dep.yaml&#34;&gt;&lt;code&gt;/k8s/deployment101/nginx-dep.yaml&lt;/code&gt;
+    &lt;/a&gt;
+    &lt;img src=&#34;https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg&#34; style=&#34;max-height:24px; cursor: pointer&#34; onclick=&#34;copyCode(&#39;k8sdeployment101nginx-depyaml&#39;)&#34; title=&#34;Copy /k8s/deployment101/nginx-dep.yaml to clipboard&#34;&gt;
+    &lt;/img&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;includecode&#34; id=&#34;k8sdeployment101nginx-depyaml&#34;&gt;
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiVersion&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;apps/v1&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;kind&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;Deployment&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;metadata&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;nginx-deployment&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;spec&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;selector&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;matchLabels&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;app&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;nginx&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;replicas&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;template&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;metadata&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;labels&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;app&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;nginx&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;spec&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;containers&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;nginx&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;image&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;nginx&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1.7.9&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ports&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;containerPort&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;80&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl create -f nginx-dep.yaml
+deployment.apps/nginx-deployment created
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;checking-the-list-of-application-deployment&#34;&gt;Checking the list of application deployment&lt;/h3&gt;
+&lt;p&gt;To list your deployments use the get deployments command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl get deployments
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-deployment   2/2     2            2           63s
+
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ kubectl describe deploy
+Name:                   nginx-deployment
+Namespace:              default
+CreationTimestamp:      Mon, 30 Dec 2019 07:10:33 +0000
+Labels:                 &amp;lt;none&amp;gt;
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=nginx
+Replicas:               2 desired | 2 updated | 2 total | 0 available | 2 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=nginx
+  Containers:
+   nginx:
+    Image:        nginx:1.7.9
+    Port:         80/TCP
+    Host Port:    0/TCP
+    Environment:  &amp;lt;none&amp;gt;
+    Mounts:       &amp;lt;none&amp;gt;
+  Volumes:        &amp;lt;none&amp;gt;
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      False   MinimumReplicasUnavailable
+  Progressing    True    ReplicaSetUpdated
+OldReplicaSets:  &amp;lt;none&amp;gt;
+NewReplicaSet:   nginx-deployment-6dd86d77d (2/2 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  90s   deployment-controller  Scaled up replica set nginx-deployment-6dd86d77d to 2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;We should have 1 Pod. If not, run the command again. This shows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;The DESIRED state is showing the configured number of replicas
+The CURRENT state show how many replicas are running now
+The UP-TO-DATE is the number of replicas that were updated to match the desired (configured) state
+The AVAILABLE state shows how many replicas are actually AVAILABLE to the users
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl get deployments
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-deployment   2/2     2            2           2m57s
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ kubectl get po
+NAME                               READY   STATUS    RESTARTS   AGE
+nginx-deployment-6dd86d77d-84fwp   1/1     Running   0          3m44s
+nginx-deployment-6dd86d77d-xnrqp   1/1     Running   0          3m44s
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;step-2-scale-updown-application-deployment&#34;&gt;Step #2. Scale up/down application deployment&lt;/h2&gt;
+&lt;p&gt;Now let’s scale the Deployment to 4 replicas. We are going to use the kubectl scale command,
+followed by the deployment type, name and desired number of instances:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl scale deployments/nginx-deployment --replicas=4
+deployment.extensions/nginx-deployment scaled
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The change was applied, and we have 4 instances of the application available. Next,
+let’s check if the number of Pods changed:&lt;/p&gt;
+&lt;p&gt;Now There should be 4 pods running in the cluster&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl get deployments
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-deployment   4/4     4            4           4m
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There are 4 Pods now, with different IP addresses. The change was registered in the Deployment events log. To check that, use the describe command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl describe deployments/nginx-deployment
+Name:                   nginx-deployment
+Namespace:              default
+CreationTimestamp:      Sat, 30 Nov 2019 20:04:34 +0530
+Labels:                 &amp;lt;none&amp;gt;
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=nginx
+Replicas:               4 desired | 4 updated | 4 total | 4 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=nginx
+  Containers:
+   nginx:
+    Image:        nginx:1.7.9
+    Port:         80/TCP
+    Host Port:    0/TCP
+    Environment:  &amp;lt;none&amp;gt;
+    Mounts:       &amp;lt;none&amp;gt;
+  Volumes:        &amp;lt;none&amp;gt;
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Progressing    True    NewReplicaSetAvailable
+  Available      True    MinimumReplicasAvailable
+OldReplicaSets:  &amp;lt;none&amp;gt;
+NewReplicaSet:   nginx-deployment-6dd86d77d (4/4 replicas created)
+Events:
+  Type    Reason             Age    From                   Message
+  ----    ------             ----   ----                   -------
+  Normal  ScalingReplicaSet  6m12s  deployment-controller  Scaled up replica set nginx-deployment-6dd86d77d to 2
+  Normal  ScalingReplicaSet  3m6s   deployment-controller  Scaled up replica set nginx-deployment-6dd86d77d to 4
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ kubectl get pods -o wide
+NAME                               READY   STATUS    RESTARTS   AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+nginx-deployment-6dd86d77d-b4v7k   1/1     Running   0          4m32s   10.1.0.237   docker-desktop   &amp;lt;none&amp;gt;           &amp;lt;none&amp;gt;
+nginx-deployment-6dd86d77d-bnc5m   1/1     Running   0          4m32s   10.1.0.236   docker-desktop   &amp;lt;none&amp;gt;           &amp;lt;none&amp;gt;
+nginx-deployment-6dd86d77d-bs6jr   1/1     Running   0          86s     10.1.0.239   docker-desktop   &amp;lt;none&amp;gt;           &amp;lt;none&amp;gt;
+nginx-deployment-6dd86d77d-wbdzv   1/1     Running   0          86s     10.1.0.238   docker-desktop   &amp;lt;none&amp;gt;           &amp;lt;none&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can also view in the output of this command that there are 4 replicas now.&lt;/p&gt;
+&lt;h3 id=&#34;scaling-the-service-to-2-replicas&#34;&gt;Scaling the service to 2 Replicas&lt;/h3&gt;
+&lt;p&gt;To scale down the Service to 2 replicas, run again the scale command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl scale deployments/nginx-deployment --replicas=2
+deployment.extensions/nginx-deployment scaled
+$ kubectl get deployments
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-deployment   2/2     2            2           7m23s
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;step-3-perform-rolling-updates-to-application-deployment&#34;&gt;Step #3. Perform rolling updates to application deployment&lt;/h2&gt;
+&lt;p&gt;So far, everything our Deployment did is no different than a typical ReplicaSet. The real power of a Deployment lies in its ability to update the pod templates without causing application outage.&lt;/p&gt;
+&lt;p&gt;Let’s say that you have finished testing the nginx 1.7.9 , and you are ready to use it in production. The current pods are using the older nginx version . The following command changes the deployment pod template to use the new image:&lt;/p&gt;
+&lt;p&gt;To update the image of the application to new version, use the set image command,
+followed by the deployment name and the new image version:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl get deployments
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-deployment   2/2     2            2           7m23s
+$ kubectl describe pods
+Name:               nginx-deployment-6dd86d77d-b4v7k
+Namespace:          default
+Priority:           0
+PriorityClassName:  &amp;lt;none&amp;gt;
+Node:               docker-desktop/192.168.65.3
+Start Time:         Sat, 30 Nov 2019 20:04:34 +0530
+Labels:             app=nginx
+                    pod-template-hash=6dd86d77d
+Annotations:        &amp;lt;none&amp;gt;
+Status:             Running
+IP:                 10.1.0.237
+Controlled By:      ReplicaSet/nginx-deployment-6dd86d77d
+Containers:
+  nginx:
+    Container ID:   docker://2c739cf9fe4dac53a4cc5c6097207da0c5edc2183f1f36f9f3e5c7057f85da43
+    Image:          nginx:1.7.9
+    Image ID:       docker-pullable://nginx@sha256:e3456c851a152494c3e4ff5fcc26f240206abac0c9d794affb40e0714846c451
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Sat, 30 Nov 2019 20:05:28 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    &amp;lt;none&amp;gt;
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ds5tg (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-ds5tg:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ds5tg
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  &amp;lt;none&amp;gt;
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age    From                     Message
+  ----    ------     ----   ----                     -------
+  Normal  Scheduled  10m    default-scheduler        Successfully assigned default/nginx-deployment-6dd86d77d-b4v7k to docker-desktop
+  Normal  Pulling    10m    kubelet, docker-desktop  Pulling image &amp;quot;nginx:1.7.9&amp;quot;
+  Normal  Pulled     9m17s  kubelet, docker-desktop  Successfully pulled image &amp;quot;nginx:1.7.9&amp;quot;
+  Normal  Created    9m17s  kubelet, docker-desktop  Created container nginx
+  Normal  Started    9m17s  kubelet, docker-desktop  Started container nginx
+
+
+Name:               nginx-deployment-6dd86d77d-bnc5m
+Namespace:          default
+Priority:           0
+PriorityClassName:  &amp;lt;none&amp;gt;
+Node:               docker-desktop/192.168.65.3
+Start Time:         Sat, 30 Nov 2019 20:04:34 +0530
+Labels:             app=nginx
+                    pod-template-hash=6dd86d77d
+Annotations:        &amp;lt;none&amp;gt;
+Status:             Running
+IP:                 10.1.0.236
+Controlled By:      ReplicaSet/nginx-deployment-6dd86d77d
+Containers:
+  nginx:
+    Container ID:   docker://12ab35cbf4fdf78997b106b5eb27135f2fc37c890e723fee44ac820ba1b1fd75
+    Image:          nginx:1.7.9
+    Image ID:       docker-pullable://nginx@sha256:e3456c851a152494c3e4ff5fcc26f240206abac0c9d794affb40e0714846c451
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Sat, 30 Nov 2019 20:05:23 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    &amp;lt;none&amp;gt;
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ds5tg (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-ds5tg:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ds5tg
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  &amp;lt;none&amp;gt;
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age    From                     Message
+  ----    ------     ----   ----                     -------
+  Normal  Scheduled  10m    default-scheduler        Successfully assigned default/nginx-deployment-6dd86d77d-bnc5m to docker-desktop
+  Normal  Pulling    10m    kubelet, docker-desktop  Pulling image &amp;quot;nginx:1.7.9&amp;quot;
+  Normal  Pulled     9m22s  kubelet, docker-desktop  Successfully pulled image &amp;quot;nginx:1.7.9&amp;quot;
+  Normal  Created    9m22s  kubelet, docker-desktop  Created container nginx
+  Normal  Started    9m22s  kubelet, docker-desktop  Started container nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The command notified the Deployment to use a different image for your app and initiated a rolling update. Check the status of the new Pods, and view the old one terminating with the get pods command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl set image  deployments/nginx-deployment nginx=nginx:1.9.1
+deployment.extensions/nginx-deployment image updated
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;checking-description-of-pod-again&#34;&gt;Checking description of pod again&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl describe pods
+Name:               nginx-deployment-6dd86d77d-b4v7k
+Namespace:          default
+Priority:           0
+PriorityClassName:  &amp;lt;none&amp;gt;
+Node:               docker-desktop/192.168.65.3
+Start Time:         Sat, 30 Nov 2019 20:04:34 +0530
+Labels:             app=nginx
+                    pod-template-hash=6dd86d77d
+Annotations:        &amp;lt;none&amp;gt;
+Status:             Running
+IP:                 10.1.0.237
+Controlled By:      ReplicaSet/nginx-deployment-6dd86d77d
+Containers:
+  nginx:
+    Container ID:   docker://2c739cf9fe4dac53a4cc5c6097207da0c5edc2183f1f36f9f3e5c7057f85da43
+    Image:          nginx:1.7.9
+    Image ID:       docker-pullable://nginx@sha256:e3456c851a152494c3e4ff5fcc26f240206abac0c9d794affb40e0714846c451
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Sat, 30 Nov 2019 20:05:28 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    &amp;lt;none&amp;gt;
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ds5tg (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-ds5tg:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ds5tg
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  &amp;lt;none&amp;gt;
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age   From                     Message
+  ----    ------     ----  ----                     -------
+  Normal  Scheduled  16m   default-scheduler        Successfully assigned default/nginx-deployment-6dd86d77d-b4v7k to docker-desktop
+  Normal  Pulling    16m   kubelet, docker-desktop  Pulling image &amp;quot;nginx:1.7.9&amp;quot;
+  Normal  Pulled     15m   kubelet, docker-desktop  Successfully pulled image &amp;quot;nginx:1.7.9&amp;quot;
+  Normal  Created    15m   kubelet, docker-desktop  Created container nginx
+  Normal  Started    15m   kubelet, docker-desktop  Started container nginx
+
+
+Name:               nginx-deployment-6dd86d77d-bnc5m
+Namespace:          default
+Priority:           0
+PriorityClassName:  &amp;lt;none&amp;gt;
+Node:               docker-desktop/192.168.65.3
+Start Time:         Sat, 30 Nov 2019 20:04:34 +0530
+Labels:             app=nginx
+                    pod-template-hash=6dd86d77d
+Annotations:        &amp;lt;none&amp;gt;
+Status:             Running
+IP:                 10.1.0.236
+Controlled By:      ReplicaSet/nginx-deployment-6dd86d77d
+Containers:
+  nginx:
+    Container ID:   docker://12ab35cbf4fdf78997b106b5eb27135f2fc37c890e723fee44ac820ba1b1fd75
+    Image:          nginx:1.7.9
+    Image ID:       docker-pullable://nginx@sha256:e3456c851a152494c3e4ff5fcc26f240206abac0c9d794affb40e0714846c451
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Sat, 30 Nov 2019 20:05:23 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    &amp;lt;none&amp;gt;
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ds5tg (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-ds5tg:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ds5tg
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  &amp;lt;none&amp;gt;
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age   From                     Message
+  ----    ------     ----  ----                     -------
+  Normal  Scheduled  16m   default-scheduler        Successfully assigned default/nginx-deployment-6dd86d77d-bnc5m to docker-desktop
+  Normal  Pulling    16m   kubelet, docker-desktop  Pulling image &amp;quot;nginx:1.7.9&amp;quot;
+  Normal  Pulled     15m   kubelet, docker-desktop  Successfully pulled image &amp;quot;nginx:1.7.9&amp;quot;
+  Normal  Created    15m   kubelet, docker-desktop  Created container nginx
+  Normal  Started    15m   kubelet, docker-desktop  Started container nginx
+
+
+Name:               nginx-deployment-784b7cc96d-kxc68
+Namespace:          default
+Priority:           0
+PriorityClassName:  &amp;lt;none&amp;gt;
+Node:               docker-desktop/192.168.65.3
+Start Time:         Sat, 30 Nov 2019 20:20:04 +0530
+Labels:             app=nginx
+                    pod-template-hash=784b7cc96d
+Annotations:        &amp;lt;none&amp;gt;
+Status:             Pending
+IP:                 
+Controlled By:      ReplicaSet/nginx-deployment-784b7cc96d
+Containers:
+  nginx:
+    Container ID:   
+    Image:          nginx:1.9.1
+    Image ID:       
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:    &amp;lt;none&amp;gt;
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ds5tg (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  default-token-ds5tg:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ds5tg
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  &amp;lt;none&amp;gt;
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age   From                     Message
+  ----    ------     ----  ----                     -------
+  Normal  Scheduled  36s   default-scheduler        Successfully assigned default/nginx-deployment-784b7cc96d-kxc68 to docker-desktop
+  Normal  Pulling    35s   kubelet, docker-desktop  Pulling image &amp;quot;nginx:1.9.1&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;step-4-rollback-updates-to-application-deployment&#34;&gt;Step #4. Rollback updates to application deployment&lt;/h2&gt;
+&lt;p&gt;The rollout command reverted the deployment to the previous known state. Updates are versioned and you can revert to any previously know state of a Deployment. List again the Pods:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl rollout undo deployments/nginx-deployment
+deployment.extensions/nginx-deployment rolled back
+
+$ kubectl rollout status deployments/nginx-deployment 
+deployment &amp;quot;nginx-deployment&amp;quot; successfully rolled out
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After the rollout succeeds, you may want to get the Deployment.&lt;/p&gt;
+&lt;p&gt;The output shows the update progress until all the pods use the new container image.&lt;/p&gt;
+&lt;p&gt;The algorithm that Kubernetes Deployments use when deciding how to roll updates is to keep at least 25% of the pods running. Accordingly, it doesn’t kill old pods unless a sufficient number of new ones are up. In the same sense, it does not create new pods until enough pods are no longer running. Through this algorithm, the application is always available during updates.&lt;/p&gt;
+&lt;p&gt;You can use the following command to determine the update strategy that the Deployment is using:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl describe deployments | grep Strategy
+StrategyType:           RollingUpdate
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;step-5-cleanup&#34;&gt;Step #5. Cleanup&lt;/h2&gt;
+&lt;p&gt;Finally you can clean up the resources you created in your cluster:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl delete service nginx-deployment
+$ kubectl delete deployment nginx-deployment
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Deploying Your First Nginx ReplicaSet</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/replicaset101/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/replicaset101/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;kubernetes-replicaset&#34;&gt;Kubernetes ReplicaSet&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;ReplicaSets are Kubernetes controllers that are used to maintain the number and running state of pods.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It uses labels to select pods that it should be managing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A pod must labeled with a matching label to the ReplicaSet selector, and it must not be already owned by another controller so that the ReplicaSet can acquire it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pods can be isolated from a ReplicaSet by simply changing their labels so that they no longer match the ReplicaSet’s selector.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ReplicaSets can be deleted with or without deleting their dependent pods.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You can easily control the number of replicas (pods) the ReplicaSet should maintain through the command line or by directly editing the ReplicaSet configuration on the fly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You can also configure the ReplicaSet to autoscale based on the amount of CPU load the node is experiencing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You may have read about ReplicationControllers in older Kubernetes documentation, articles or books. ReplicaSets are the successors of ReplicationControllers. They are recommended to be used instead of ReplicationControllers as they provide more features.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A Kubernetes pod serves as a deployment unit for the cluster.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It may contain one or more containers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;However, containers (and accordingly, pods) are short-lived entities.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A container hosting a PHP application, for example may experience an unhandled code exception causing the process to fail, effectively
+crashing the container. Of course, the perfect solution for such a case is to refactor the code to properly handle exceptions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;But, till that happens we need to keep the application running and the business going. In other words, we need to restart the pod
+whenever it fails.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In parallel, developers are monitoring, investigating and fixing any errors that make it crash.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;At some point, a new version of the pod is deployed, monitored and maintained. It’s an ongoing process that is part of the DevOps practice.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Another requirement is to keep a predefined number of pods running. If more pods are up, the additional ones are terminated.
+Similarly, of one or more pods failed, new pods are activated until the desired count is reached.&lt;/p&gt;
+&lt;p&gt;A Kubernetes ReplicaSet resource was designed to address both of those requirements.
+It creates and maintains a specific number of similar pods (replicas).&lt;/p&gt;
+&lt;p&gt;Under this lab, we’ll discuss how we can define a ReplicaSet and what are the different options that can be used for fine-tuning it.&lt;/p&gt;
+&lt;h2 id=&#34;how-does-replicaset-manage-pods&#34;&gt;How Does ReplicaSet Manage Pods?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;In order for a ReplicaSet to work, it needs to know which pods it will manage so that it can restart the failing ones or kill the unneeded.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It also requires to understand how to create new pods from scratch in case it needs to spawn new ones.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A ReplicaSet uses labels to match the pods that it will manage. It also needs to check whether the target pod is already managed by another controller (like a Deployment or another ReplicaSet). So, for example if we need our ReplicaSet to manage all pods with the label role=webserver, the controller will search for any pod with that label. It will also examine the ownerReferences field of the pod’s metadata to determine whether or not this pod is already owned by another controller. If it isn’t, the ReplicaSet will start controlling it. Subsequently, the ownerReferences field of the target pods will be updated to reflect the new owner’s data.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To be able to create new pods if necessary, the ReplicaSet definition includes a template part containing the definition for new pods.&lt;/p&gt;
+&lt;h2 id=&#34;creating-your-first-replicaset&#34;&gt;Creating Your First ReplicaSet&lt;/h2&gt;
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;highlight&#34;&gt;
+    &lt;div class=&#34;copy-code-icon&#34; style=&#34;text-align:right&#34;&gt;
+    &lt;a href=&#34;https://%25!s%28%3cnil%3e%29/master/content/en/examples//k8s/replicaset101/nginx_replicaset.yaml&#34; download=&#34;/k8s/replicaset101/nginx_replicaset.yaml&#34;&gt;&lt;code&gt;/k8s/replicaset101/nginx_replicaset.yaml&lt;/code&gt;
+    &lt;/a&gt;
+    &lt;img src=&#34;https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg&#34; style=&#34;max-height:24px; cursor: pointer&#34; onclick=&#34;copyCode(&#39;k8sreplicaset101nginx_replicasetyaml&#39;)&#34; title=&#34;Copy /k8s/replicaset101/nginx_replicaset.yaml to clipboard&#34;&gt;
+    &lt;/img&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;includecode&#34; id=&#34;k8sreplicaset101nginx_replicasetyaml&#34;&gt;
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiVersion&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;apps/v1&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;kind&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;ReplicaSet&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;metadata&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;web&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;labels&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;env&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;dev&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;role&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;web&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;spec&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;replicas&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;selector&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;matchLabels&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;role&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;web&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;template&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;metadata&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;labels&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;role&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;web&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;spec&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;containers&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;testnginx&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;image&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;nginx&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;pre&gt;&lt;code&gt;$ kubectl apply -f nginx_replicaset.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ kubectl get rs
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;NAME   DESIRED   CURRENT   READY   AGE
+web	4     	4     	4   	2m
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;a-peep-into-the-replicaset-definition-file&#34;&gt;A Peep into the ReplicaSet definition file&lt;/h2&gt;
+&lt;p&gt;Let’s examine the definition file that was used to create our ReplicaSet:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The apiVersion for this object is currently app/v1&lt;/li&gt;
+&lt;li&gt;The kind of this object is ReplicaSet&lt;/li&gt;
+&lt;li&gt;In the metadata part, we define the name by which we can refer to this ReplicaSet. We also define a number of labels through which we can identify it.&lt;/li&gt;
+&lt;li&gt;The spec part is mandatory in the ReplicaSet object. It defines:&lt;/li&gt;
+&lt;li&gt;The number of replicas this controller should maintain. It default to 1 if it was not specified.&lt;/li&gt;
+&lt;li&gt;The selection criteria by which the ReplicaSet will choose its pods. Be careful not to use a label that is already in use by another controller. Otherwise, another ReplicaSet may acquire the pod(s) first. Also notice that the labels defined in the pod template (spec.template.metadata.label) cannot be different than those defined in the matchLabels part (spec.selector).&lt;/li&gt;
+&lt;li&gt;The pod template is used to create (or recreate) new pods. It has its own metadata, and spec where the containers are specified. You can refer to our article for more information about pods.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;is-our-replicaset-the-owner-of-those-pods&#34;&gt;Is Our ReplicaSet the Owner of Those Pods?&lt;/h2&gt;
+&lt;p&gt;OK, so we do have four pods running, and our ReplicaSet reports that it is controlling four pods. In a busier environment, you may want to verify that a particular pod is actually managed by this ReplicaSet and not by another controller. By simply querying the pod, you can get this info:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl get pods web-6n9cj -o yaml | grep -A 5 owner
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The first part of the command will get all the pod information, which may be too verbose. Using grep with the -A flag (it takes a number and prints that number of lines after the match) will get us the required information as in the example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ownerReferences:
+  - apiVersion: apps/v1
+	blockOwnerDeletion: true
+	controller: true
+	kind: ReplicaSet
+	name: web
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;removing-a-pod-from-a-replicaset&#34;&gt;Removing a Pod From a ReplicaSet&lt;/h2&gt;
+&lt;p&gt;You can remove (not delete) a pod that is managed by a ReplicaSet by simply changing its label. Let’s isolate one of the pods created in our previous example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl edit pods web-44cjb
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then, once the YAML file is opened, change the pod label to be role=isolated or anything different than role=web. In a few moments, run kubectl get pods. You will notice that we have five pods now. That’s because the ReplicaSet dutifully created a new pod to reach the desired number of four pods. The isolated one is still running, but it is no longer managed by the ReplicaSet.&lt;/p&gt;
+&lt;h2 id=&#34;scaling-the-replicas-to-5&#34;&gt;Scaling the Replicas to 5&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl scale --replicas=5 -f nginx_replicaset.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;scaling-and-autoscaling-replicasets&#34;&gt;Scaling and Autoscaling ReplicaSets&lt;/h2&gt;
+&lt;p&gt;You can easily change the number of pods a particular ReplicaSet manages in one of two ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Edit the controllers configuration by using kubectl edit rs ReplicaSet_name and change the replicas count up or down as you desire.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use kubectl directly. For example, kubectl scale &amp;ndash;replicas=2 rs/web. Here, I’m scaling down the ReplicaSet used in the article’s example to manage two pods instead of four. The ReplicaSet will get rid of two pods to maintain the desired count. If you followed the previous section, you may find that the number of running pods is three instead of two; as we isolated one of the pods so it is no longer managed by our ReplicaSet.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl autoscale rs web --max=5
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will use the Horizontal Pod Autoscaler (HPA) with the ReplicaSet to increase the number of pods when the CPU load gets higher, but it should not exceed five pods. When the load decreases, it cannot have less than the number of pods specified before (two in our example).&lt;/p&gt;
+&lt;h2 id=&#34;best-practices&#34;&gt;Best Practices&lt;/h2&gt;
+&lt;p&gt;The recommended practice is to always use the ReplicaSet’s template for creating and managing pods. However, because of the way ReplicaSets work, if you create a bare pod (not owned by any controller) with a label that matches the ReplicaSet selector, the controller will automatically adopt it. This has a number of undesirable consequences. Let’s have a quick lab to demonstrate them.&lt;/p&gt;
+&lt;p&gt;Deploy a pod by using a definition file like the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apiVersion: v1
+kind: Pod
+metadata:
+  name: orphan
+  labels:
+	role: web
+spec:
+  containers:
+  - name: orphan
+	image: httpd
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It looks a lot like the other pods, but it is using Apache (httpd) instead of Nginx for an image. Using kubectl, we can apply this definition like:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl apply -f orphan.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Give it a few moments for the image to get pulled and the container is spawned then run kubectl get pods. You should see an output that looks like the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;NAME    	READY   STATUS    	RESTARTS   AGE
+orphan  	0/1 	Terminating   0      	1m
+web-6n9cj   1/1 	Running   	0      	25m
+web-7kqbm   1/1 	Running   	0      	25m
+web-9src7   1/1 	Running   	0      	25m
+web-fvxzf   1/1 	Running   	0      	25m
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The pod is being terminated by the ReplicaSet because, by adopting it, the controller has more pods than it was configured to handle. So, it is killing the excess one.&lt;/p&gt;
+&lt;p&gt;Another scenario where the ReplicaSet won’t terminate the bare pod is that the latter gets created before the ReplicaSet does. To demonstrate this case, let’s destroy our ReplicaSet:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl delete -f nginx_replicaset.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now, let’s create it again (our orphan pod is still running):&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl apply -f nginx_replicaset.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Let’s have a look at our pods status by running kubectl get pods. The output should resemble the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;orphan  	1/1 	Running   0      	29s
+web-44cjb   1/1 	Running   0      	12s
+web-hcr9j   1/1 	Running   0      	12s
+web-kc4r9   1/1 	Running   0      	12s
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The situation now is that we’re having three pods running Nginx, and one pod running Apache (the httpd image). As far as the ReplicaSet is concerned, it is handling four pods (the desired number), and their labels match its selector. But what if the Apache pod went down?&lt;/p&gt;
+&lt;p&gt;Let’s do just that:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl delete pods orphan
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now, let’s see how the ReplicaSet responded to this event:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl get pods
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The output should be something like:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;NAME    	READY   STATUS          	RESTARTS   AGE
+web-44cjb   1/1 	Running         	0      	24s
+web-5kjwx   0/1 	ContainerCreating   0      	3s
+web-hcr9j   1/1 	Running         	0      	24s
+web-kc4r9   1/1 	Running         	0      	24s
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The ReplicaSet is doing what is was programmed to: creating a new pod to reach the desired state using the template that was added in its definition. Obviously, it is creating a new Nginx container instead of the Apache one that was deleted.&lt;/p&gt;
+&lt;p&gt;So, although the ReplicaSet is supposed to maintain the state of the pods it manages, it failed to respawn the Apache web server. It replaced it with an Nginx one.&lt;/p&gt;
+&lt;p&gt;The bottom line: you should never create a pod with a label that matches the selector of a controller unless its template matches the pod definition. The more-encouraged procedure is to always use a controller like a ReplicaSet or, even better, a Deployment to create and maintain your pods.&lt;/p&gt;
+&lt;h2 id=&#34;deleting-replicaset&#34;&gt;Deleting Replicaset&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl delete rs ReplicaSet_name
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Alternatively, you can also use the file that was used to create the resource (and possibly, other resource definitions as well) to delete all the resources defined in the file as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl delete -f definition_file.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The above commands will delete the ReplicaSet and all the pods that it manges. But sometimes you may want to just delete the ReplicaSet resource, keeping the pods unowned (orphaned). Maybe you want to manually delete the pods and you don’t want the ReplicaSet to restart them. This can be done using the following command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ kubectl delete rs ReplicaSet_name --cascade=false
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you run kubectl get rs now you should see that there are no ReplicaSets there. Yet if you run kubectl get pods, you should see all the pods that were managed by the destroyed ReplicaSet still running.&lt;/p&gt;
+&lt;p&gt;The only way to get those pods managed by a ReplicaSet again is to create this ReplicaSet with the same selector and pod template as the previous one. If you need a different pod template, you should consider using a Deployment instead, which will handle replacing pods in a controlled way.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: </title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/ingress101/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/ingress101/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;what-is-an-ingress&#34;&gt;What is an Ingress?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;In Kubernetes, an Ingress is an object that allows access to your Kubernetes services from outside the Kubernetes cluster. You configure access by creating a collection of rules that define which inbound connections reach which services.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;This lets you consolidate your routing rules into a single resource. For example, you might want to send requests to example.com/api/v1/ to an api-v1 service, and requests to example.com/api/v2/ to the api-v2 service. With an Ingress, you can easily set this up without creating a bunch of LoadBalancers or exposing each service on the Node.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;kubernetes-ingress-vs-loadbalancer-vs-nodeport&#34;&gt;Kubernetes Ingress vs LoadBalancer vs NodePort&lt;/h3&gt;
+&lt;p&gt;These options all do the same thing. They let you expose a service to external network requests.
+They let you send a request from outside the Kubernetes cluster to a service inside the cluster.&lt;/p&gt;
+&lt;h3 id=&#34;nodeport&#34;&gt;NodePort&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/collabnix/kubelabs/master/Ingress101/nodeport.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;NodePort is a configuration setting you declare in a service’s YAML. Set the service spec’s type to NodePort. Then, Kubernetes will allocate a specific port on each Node to that service, and any request to your cluster on that port gets forwarded to the service.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;This is cool and easy, it’s just not super robust. You don’t know what port your service is going to be allocated, and the port might get re-allocated at some point.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;loadbalancer&#34;&gt;LoadBalancer&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/collabnix/kubelabs/master/Ingress101/loadbalancer.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;You can set a service to be of type LoadBalancer the same way you’d set NodePort— specify the type property in the service’s YAML. There needs to be some external load balancer functionality in the cluster, typically implemented by a cloud provider.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;This is typically heavily dependent on the cloud provider—GKE creates a Network Load Balancer with an IP address that you can use to access your service.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Every time you want to expose a service to the outside world, you have to create a new LoadBalancer and get an IP address.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ingress&#34;&gt;Ingress&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/collabnix/kubelabs/master/Ingress101/ingress.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;NodePort and LoadBalancer let you expose a service by specifying that value in the service’s type. Ingress, on the other hand, is a completely independent resource to your service. You declare, create and destroy it separately to your services.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;This makes it decoupled and isolated from the services you want to expose. It also helps you to consolidate routing rules into one place.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The one downside is that you need to configure an Ingress Controller for your cluster. But that’s pretty easy—in this example, we’ll use the Nginx Ingress Controller.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;how-to-use-nginx-ingress-controller&#34;&gt;How to Use Nginx Ingress Controller&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Start by creating the “mandatory” resources for Nginx Ingress in your cluster.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Then, enable the ingress add-on for Minikube&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;minikube addons enable ingress
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Or, if you’re using Docker for Mac to run Kubernetes instead of Minikube.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/provider/cloud-generic.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Check that it’s all set up correctly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;kubectl get pods --all-namespaces -l app=ingress-nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;creating-a-kubernetes-ingress&#34;&gt;Creating a Kubernetes Ingress&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;First, let’s create two services to demonstrate how the Ingress routes our request. We’ll run two web applications that output a slightly different response.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/collabnix/kubelabs
+cd ingress101
+$ kubectl apply -f apple.yaml
+$ kubectl apply -f banana.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Create the Ingress in the cluster&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;kubectl create -f ingress.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Perfect! Let’s check that it’s working. If you’re using Minikube, you might need to replace localhost with minikube IP.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ curl -kL http://localhost/apple
+apple
+
+$ curl -kL http://localhost/banana
+banana
+
+$ curl -kL http://localhost/notfound
+default backend - 404
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;ingress-controllers-and-ingress-resources&#34;&gt;Ingress Controllers and Ingress Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Kubernetes supports a high level abstraction called Ingress, which allows simple host or URL based HTTP routing. An ingress is a core concept (in beta) of Kubernetes, but is always implemented by a third party proxy. These implementations are known as ingress controllers. An ingress controller is responsible for reading the Ingress Resource information and processing that data accordingly. Different ingress controllers have extended the specification in different ways to support additional use cases.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ingress is tightly integrated into Kubernetes, meaning that your existing workflows around kubectl will likely extend nicely to managing ingress. Note that an ingress controller typically doesn’t eliminate the need for an external load balancer — the ingress controller simply adds an additional layer of routing and control behind the load balancer.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;contributors&#34;&gt;Contributors&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/BiradarSangam&#34;&gt;Sangam Biradar&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2210,9 +2210,8 @@ ADD dockercon.war /opt/jboss/wildfly/standalone/deployments/
 &lt;li&gt;Run/Start/Stop/Kill Docker containers&lt;/li&gt;
 &lt;li&gt;Customize views&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Watch a quick video explaining the key steps in &lt;a href=&#34;https://www.youtube.com/watch?v=XmhEZiS26os&#34;&gt;https://www.youtube.com/watch?v=XmhEZiS26os&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;install-docker-tooling-in-eclipse&#34;&gt;Install Docker Tooling in Eclipse&lt;/h2&gt;
-&lt;p&gt;Download &lt;a href=&#34;http://www.eclipse.org/downloads/eclipse-packages/%5BEclipse&#34;&gt;http://www.eclipse.org/downloads/eclipse-packages/[Eclipse&lt;/a&gt; IDE for Java EE Developers] and install.&lt;/p&gt;
+&lt;p&gt;Downlaod &lt;a href=&#34;https://www.eclipse.org/downloads/packages/&#34;&gt;Eclipse for Java Developer&lt;/a&gt; and Install.&lt;/p&gt;
 &lt;p&gt;Go to &amp;ldquo;&lt;code&gt;Help&lt;/code&gt;&amp;rdquo; menu, &amp;ldquo;&lt;code&gt;Install New Software...&lt;/code&gt;&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;Select Eclipse update site for the release, search for Docker, select &amp;ldquo;&lt;code&gt;Docker Tooling&lt;/code&gt;&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;docker-eclipse-update-site-selection.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;

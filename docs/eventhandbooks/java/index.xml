@@ -1423,7 +1423,7 @@ alpine                  3.6                 7328f6f8b418        3 months ago    
 Alpine Linux was used instead of Debian Slim.&lt;/p&gt;
 &lt;p&gt;A realistic application will depend on more JDK modules but it&amp;rsquo;s still possible
 to significantly reduce the Java runtime to only the required modules (for
-example many applications will not require Corba or RMI nor the compiler tools).&lt;/p&gt;
+example many applications will not require Corba or RMI nor the compiler tools)&lt;/p&gt;
 
       </description>
     </item>

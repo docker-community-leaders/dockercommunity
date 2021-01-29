@@ -658,7 +658,7 @@ ajeetraina@Ajeets-MacBook-Pro realtime-sensor-jetson %
         &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#build-a-docker-image&#34;&gt;Build a Docker Image&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#run-a-docker-container&#34;&gt;Running a Docker Container&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;##build-a-docker-image-with-jdk-15&#34;&gt;Build and Run a Docker Container with JDK 15&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#build-and-run-a-docker-container-with-jdk-15&#34;&gt;Build and Run a Docker Container with JDK 15&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;build-a-docker-image&#34;&gt;Build a Docker Image&lt;/h2&gt;
 &lt;p&gt;This section explains how to create a Docker image.&lt;/p&gt;

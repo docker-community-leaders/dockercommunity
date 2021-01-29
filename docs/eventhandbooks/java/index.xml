@@ -785,7 +785,18 @@ mvn package
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Let&amp;rsquo;s package this application as a Docker image.&lt;/p&gt;
 &lt;h2 id=&#34;java-docker-image&#34;&gt;Java Docker image&lt;/h2&gt;
 &lt;p&gt;Run the OpenJDK container in an interactive manner:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;docker container run -it openjdk
+&lt;pre&gt;&lt;code&gt;$ docker container run -it openjdk 
+Unable to find image &#39;openjdk:latest&#39; locally
+latest: Pulling from library/openjdk
+a73adebe9317: Pull complete 
+8b73bcd34cfe: Pull complete 
+1227243b28c4: Pull complete 
+Digest: sha256:7ada0d840136690ac1099ce3172fb02787bbed83462597e0e2c9472a0a63dea5
+Status: Downloaded newer image for openjdk:latest
+Jan 29, 2021 12:24:47 PM java.util.prefs.FileSystemPreferences$1 run
+INFO: Created user preferences directory.
+|  Welcome to JShell -- Version 15.0.2
+|  For an introduction type: /help intro
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will open a terminal in the container. Check the version of Java:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;root@8d0af9da5258:/# java -version
 openjdk version &amp;quot;1.8.0_141&amp;quot;

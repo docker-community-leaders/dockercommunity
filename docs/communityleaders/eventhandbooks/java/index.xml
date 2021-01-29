@@ -1279,10 +1279,8 @@ $1 ==&amp;gt; 96
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Notice that the Java process is honoring memory constraints (see the &lt;code&gt;--memory&lt;/code&gt;
 of &lt;code&gt;docker container run&lt;/code&gt;) and will not allocate memory beyond that specified for the
 container.&lt;/p&gt;
-&lt;p&gt;Note: the support for CPU sets and memory constraints have also been backported
-to JDK 8 release 8u131 and above.&lt;/p&gt;
 &lt;p&gt;Type &lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;D&lt;/code&gt; to exit out of &lt;code&gt;jshell&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;To list all the Java modules distributed with JDK 9 run the following command:&lt;/p&gt;
+&lt;p&gt;To list all the Java modules distributed with JDK 15 run the following command:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;docker container run -m=200M -it --rm jdk-9-debian-slim java --list-modules
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will show an output:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt; docker container run -m=200M -it --rm jdk-15-debian-slim java --list-modules
@@ -1324,41 +1322,78 @@ jdk.jstatd@15.0.2
 &lt;p&gt;Instead of &lt;code&gt;debian&lt;/code&gt; as the base image it is possible to use Alpine Linux
 with an early access build of JDK 15 that is compatible with the muslc library
 shipped with Alpine Linux.&lt;/p&gt;
-&lt;p&gt;Create a new text file &lt;code&gt;jdk-9-alpine.Dockerfile&lt;/code&gt;.
+&lt;p&gt;Create a new text file &lt;code&gt;jdk-15-alpine.Dockerfile&lt;/code&gt;.
 Use the following contents:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# A JDK 15 with Alpine Linux
-FROM alpine:3.6
-# Add the musl-based JDK 15 distribution
-RUN mkdir /opt
-# Download from http://jdk.java.net/9/
-# ADD http://download.java.net/java/jdk9-alpine/archive/181/binaries/jdk-9-ea+181_linux-x64-musl_bin.tar.gz
-ADD jdk-9-ea+181_linux-x64-musl_bin.tar.gz /opt
-# Set up env variables
-ENV JAVA_HOME=/opt/jdk-9
-ENV PATH=$PATH:$JAVA_HOME/bin
-CMD [&amp;quot;jshell&amp;quot;, &amp;quot;-J-XX:+UnlockExperimentalVMOptions&amp;quot;, \
-               &amp;quot;-J-XX:+UseCGroupMemoryLimitForHeap&amp;quot;, \
-               &amp;quot;-R-XX:+UnlockExperimentalVMOptions&amp;quot;, \
-               &amp;quot;-R-XX:+UseCGroupMemoryLimitForHeap&amp;quot;]
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This image uses &lt;code&gt;alpine&lt;/code&gt; 3.6 as the base image and installs the OpenJDK build
-of JDK for Alpine Linux x64 (see the link:ch01-setup.adoc[Setup Environments]
-chapter for how to download this into the current directory).&lt;/p&gt;
+FROM alpine:3.12
+
+RUN apk add --no-cache java-cacerts
+
+ENV JAVA_HOME /opt/openjdk-16
+ENV PATH $JAVA_HOME/bin:$PATH
+
+# https://jdk.java.net/
+# &amp;gt;
+# &amp;gt; Java Development Kit builds, from Oracle
+# &amp;gt;
+ENV JAVA_VERSION 16-ea+32
+# &amp;quot;For Alpine Linux, builds are produced on a reduced schedule and may not be in sync with the other platforms.&amp;quot;
+
+RUN set -eux; \
+	\
+	arch=&amp;quot;$(apk --print-arch)&amp;quot;; \
+# this &amp;quot;case&amp;quot; statement is generated via &amp;quot;update.sh&amp;quot;
+	case &amp;quot;$arch&amp;quot; in \
+# amd64
+		x86_64) \
+			downloadUrl=https://download.java.net/java/early_access/alpine/32/binaries/openjdk-16-ea+32_linux-x64-musl_bin.tar.gz; \
+			downloadSha256=f9ec3071fdea08ca5be7b149d6c2f2689814e3ee86ee15b7981f5eed76280985; \
+			;; \
+# fallback
+		*) echo &amp;gt;&amp;amp;2 &amp;quot;error: unsupported architecture: &#39;$arch&#39;&amp;quot;; exit 1 ;; \
+	esac; \
+	\
+	wget -O openjdk.tgz &amp;quot;$downloadUrl&amp;quot;; \
+	echo &amp;quot;$downloadSha256 *openjdk.tgz&amp;quot; | sha256sum -c -; \
+	\
+	mkdir -p &amp;quot;$JAVA_HOME&amp;quot;; \
+	tar --extract \
+		--file openjdk.tgz \
+		--directory &amp;quot;$JAVA_HOME&amp;quot; \
+		--strip-components 1 \
+		--no-same-owner \
+	; \
+	rm openjdk.tgz; \
+	\
+# see &amp;quot;java-cacerts&amp;quot; package installed above (which maintains &amp;quot;/etc/ssl/certs/java/cacerts&amp;quot; for us)
+	rm -rf &amp;quot;$JAVA_HOME/lib/security/cacerts&amp;quot;; \
+	ln -sT /etc/ssl/certs/java/cacerts &amp;quot;$JAVA_HOME/lib/security/cacerts&amp;quot;; \
+	\
+# https://github.com/docker-library/openjdk/issues/212#issuecomment-420979840
+# https://openjdk.java.net/jeps/341
+	java -Xshare:dump; \
+	\
+# basic smoke test
+	fileEncoding=&amp;quot;$(echo &#39;System.out.println(System.getProperty(&amp;quot;file.encoding&amp;quot;))&#39; | jshell -s -)&amp;quot;; [ &amp;quot;$fileEncoding&amp;quot; = &#39;UTF-8&#39; ]; rm -rf ~/.java; \
+	javac --version; \
+	java --version
+
+# &amp;quot;jshell&amp;quot; is an interactive REPL for Java (see https://en.wikipedia.org/wiki/JShell)
+CMD [&amp;quot;jshell&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This image uses &lt;code&gt;alpine&lt;/code&gt; 3.12 as the base image and installs the OpenJDK build
+of JDK for Alpine Linux x64.&lt;/p&gt;
 &lt;p&gt;The image is configured in the same manner as for the &lt;code&gt;debian&lt;/code&gt;-based image.&lt;/p&gt;
 &lt;h2 id=&#34;build-the-image-using-the-command-2&#34;&gt;Build the image using the command:&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;docker image build -t jdk-9-alpine -f jdk-9-alpine.Dockerfile .
+&lt;pre&gt;&lt;code&gt;docker image build -t jdk-15-alpine -f jdk-15-alpine.Dockerfile .
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;list-the-images-available-using-docker-image-ls-2&#34;&gt;List the images available using &lt;code&gt;docker image ls&lt;/code&gt;:&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
-jdk-9-debian-slim       latest              023f6999d94a        4 hours ago         400MB
-jdk-9-alpine            latest              f5a57382f240        4 hours ago         356MB
+jdk-15-debian-slim      latest              0b9c1935cd20        9 hours ago         669MB
+jdk-15-alpine           latest              5d4557f836aa        6 minutes ago       324MB
 debian                  stable-slim         d30525fb4ed2        4 days ago          55.3MB
 alpine                  3.6                 7328f6f8b418        3 months ago        3.97MB
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Notice the difference in image sizes.  Alpine Linux by design has been carefully
-crafted to produce a minimal running OS image. A cost of such a design is
-an alternative standard library &lt;a href=&#34;https://www.musl-libc.org/%5Bmusl&#34;&gt;https://www.musl-libc.org/[musl&lt;/a&gt; libc] that is
-not compatible with the C standard library (libc).  As a result the JDK requires
-modifications to run on Alpine Linux.  Such modifications have been proposed
-by the OpenJDK &lt;a href=&#34;http://openjdk.java.net/projects/portola/%5BPortola&#34;&gt;http://openjdk.java.net/projects/portola/[Portola&lt;/a&gt; Project].&lt;/p&gt;
-&lt;h2 id=&#34;create-a-docker-image-using-jdk-9-and-a-java-application&#34;&gt;Create a Docker Image using JDK 9 and a Java application&lt;/h2&gt;
+crafted to produce a minimal running OS image.&lt;/p&gt;
+&lt;h2 id=&#34;create-a-docker-image-using-jdk-15-and-a-java-application&#34;&gt;Create a Docker Image using JDK 15 and a Java application&lt;/h2&gt;
 &lt;p&gt;Clone the GitHib project &lt;a href=&#34;https://github.com/PaulSandoz/helloworld-java-9&#34;&gt;https://github.com/PaulSandoz/helloworld-java-9&lt;/a&gt; that
 contains a simple Java 9-based project:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;git clone https://github.com/PaulSandoz/helloworld-java-9.git

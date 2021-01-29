@@ -1290,7 +1290,7 @@ if (!doNotTrack) {
         <li><a href="#create-a-docker-image-using-jdk-15-and-alpine-linux">Create a Docker Image using JDK 15 and Alpine Linux</a></li>
         <li><a href="#build-the-image-using-the-command-2">Build the image using the command:</a></li>
         <li><a href="#list-the-images-available-using-docker-image-ls-2">List the images available using <code>docker image ls</code>:</a></li>
-        <li><a href="#create-a-docker-image-using-jdk-9-and-a-java-application">Create a Docker Image using JDK 9 and a Java application</a></li>
+        <li><a href="#create-a-docker-image-using-jdk-15-and-a-java-application">Create a Docker Image using JDK 15 and a Java application</a></li>
         <li><a href="#list-the-images-available-using-docker-image-ls-3">List the images available using <code>docker image ls</code>:</a></li>
         <li><a href="#reduce-the-size-of-a-docker-image-using-jdk-9-and-a-java-application">Reduce the size of a Docker Image using JDK 9 and a Java application</a></li>
         <li><a href="#list-the-images-available-using-docker-image-ls-4">List the images available using <code>docker image ls</code>:</a></li>
@@ -1989,10 +1989,8 @@ $1 ==&gt; 96
 </code></pre><p>Notice that the Java process is honoring memory constraints (see the <code>--memory</code>
 of <code>docker container run</code>) and will not allocate memory beyond that specified for the
 container.</p>
-<p>Note: the support for CPU sets and memory constraints have also been backported
-to JDK 8 release 8u131 and above.</p>
 <p>Type <code>Ctrl</code> + <code>D</code> to exit out of <code>jshell</code>.</p>
-<p>To list all the Java modules distributed with JDK 9 run the following command:</p>
+<p>To list all the Java modules distributed with JDK 15 run the following command:</p>
 <pre><code>docker container run -m=200M -it --rm jdk-9-debian-slim java --list-modules
 </code></pre><p>This will show an output:</p>
 <pre><code> docker container run -m=200M -it --rm jdk-15-debian-slim java --list-modules
@@ -2034,41 +2032,78 @@ jdk.jstatd@15.0.2
 <p>Instead of <code>debian</code> as the base image it is possible to use Alpine Linux
 with an early access build of JDK 15 that is compatible with the muslc library
 shipped with Alpine Linux.</p>
-<p>Create a new text file <code>jdk-9-alpine.Dockerfile</code>.
+<p>Create a new text file <code>jdk-15-alpine.Dockerfile</code>.
 Use the following contents:</p>
 <pre><code># A JDK 15 with Alpine Linux
-FROM alpine:3.6
-# Add the musl-based JDK 15 distribution
-RUN mkdir /opt
-# Download from http://jdk.java.net/9/
-# ADD http://download.java.net/java/jdk9-alpine/archive/181/binaries/jdk-9-ea+181_linux-x64-musl_bin.tar.gz
-ADD jdk-9-ea+181_linux-x64-musl_bin.tar.gz /opt
-# Set up env variables
-ENV JAVA_HOME=/opt/jdk-9
-ENV PATH=$PATH:$JAVA_HOME/bin
-CMD [&quot;jshell&quot;, &quot;-J-XX:+UnlockExperimentalVMOptions&quot;, \
-               &quot;-J-XX:+UseCGroupMemoryLimitForHeap&quot;, \
-               &quot;-R-XX:+UnlockExperimentalVMOptions&quot;, \
-               &quot;-R-XX:+UseCGroupMemoryLimitForHeap&quot;]
-</code></pre><p>This image uses <code>alpine</code> 3.6 as the base image and installs the OpenJDK build
-of JDK for Alpine Linux x64 (see the link:ch01-setup.adoc[Setup Environments]
-chapter for how to download this into the current directory).</p>
+FROM alpine:3.12
+
+RUN apk add --no-cache java-cacerts
+
+ENV JAVA_HOME /opt/openjdk-16
+ENV PATH $JAVA_HOME/bin:$PATH
+
+# https://jdk.java.net/
+# &gt;
+# &gt; Java Development Kit builds, from Oracle
+# &gt;
+ENV JAVA_VERSION 16-ea+32
+# &quot;For Alpine Linux, builds are produced on a reduced schedule and may not be in sync with the other platforms.&quot;
+
+RUN set -eux; \
+	\
+	arch=&quot;$(apk --print-arch)&quot;; \
+# this &quot;case&quot; statement is generated via &quot;update.sh&quot;
+	case &quot;$arch&quot; in \
+# amd64
+		x86_64) \
+			downloadUrl=https://download.java.net/java/early_access/alpine/32/binaries/openjdk-16-ea+32_linux-x64-musl_bin.tar.gz; \
+			downloadSha256=f9ec3071fdea08ca5be7b149d6c2f2689814e3ee86ee15b7981f5eed76280985; \
+			;; \
+# fallback
+		*) echo &gt;&amp;2 &quot;error: unsupported architecture: '$arch'&quot;; exit 1 ;; \
+	esac; \
+	\
+	wget -O openjdk.tgz &quot;$downloadUrl&quot;; \
+	echo &quot;$downloadSha256 *openjdk.tgz&quot; | sha256sum -c -; \
+	\
+	mkdir -p &quot;$JAVA_HOME&quot;; \
+	tar --extract \
+		--file openjdk.tgz \
+		--directory &quot;$JAVA_HOME&quot; \
+		--strip-components 1 \
+		--no-same-owner \
+	; \
+	rm openjdk.tgz; \
+	\
+# see &quot;java-cacerts&quot; package installed above (which maintains &quot;/etc/ssl/certs/java/cacerts&quot; for us)
+	rm -rf &quot;$JAVA_HOME/lib/security/cacerts&quot;; \
+	ln -sT /etc/ssl/certs/java/cacerts &quot;$JAVA_HOME/lib/security/cacerts&quot;; \
+	\
+# https://github.com/docker-library/openjdk/issues/212#issuecomment-420979840
+# https://openjdk.java.net/jeps/341
+	java -Xshare:dump; \
+	\
+# basic smoke test
+	fileEncoding=&quot;$(echo 'System.out.println(System.getProperty(&quot;file.encoding&quot;))' | jshell -s -)&quot;; [ &quot;$fileEncoding&quot; = 'UTF-8' ]; rm -rf ~/.java; \
+	javac --version; \
+	java --version
+
+# &quot;jshell&quot; is an interactive REPL for Java (see https://en.wikipedia.org/wiki/JShell)
+CMD [&quot;jshell&quot;]
+</code></pre><p>This image uses <code>alpine</code> 3.12 as the base image and installs the OpenJDK build
+of JDK for Alpine Linux x64.</p>
 <p>The image is configured in the same manner as for the <code>debian</code>-based image.</p>
 <h2 id="build-the-image-using-the-command-2">Build the image using the command:</h2>
-<pre><code>docker image build -t jdk-9-alpine -f jdk-9-alpine.Dockerfile .
+<pre><code>docker image build -t jdk-15-alpine -f jdk-15-alpine.Dockerfile .
 </code></pre><h2 id="list-the-images-available-using-docker-image-ls-2">List the images available using <code>docker image ls</code>:</h2>
 <pre><code>REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
-jdk-9-debian-slim       latest              023f6999d94a        4 hours ago         400MB
-jdk-9-alpine            latest              f5a57382f240        4 hours ago         356MB
+jdk-15-debian-slim      latest              0b9c1935cd20        9 hours ago         669MB
+jdk-15-alpine           latest              5d4557f836aa        6 minutes ago       324MB
 debian                  stable-slim         d30525fb4ed2        4 days ago          55.3MB
 alpine                  3.6                 7328f6f8b418        3 months ago        3.97MB
 </code></pre><p>Notice the difference in image sizes.  Alpine Linux by design has been carefully
-crafted to produce a minimal running OS image. A cost of such a design is
-an alternative standard library <a href="https://www.musl-libc.org/%5Bmusl">https://www.musl-libc.org/[musl</a> libc] that is
-not compatible with the C standard library (libc).  As a result the JDK requires
-modifications to run on Alpine Linux.  Such modifications have been proposed
-by the OpenJDK <a href="http://openjdk.java.net/projects/portola/%5BPortola">http://openjdk.java.net/projects/portola/[Portola</a> Project].</p>
-<h2 id="create-a-docker-image-using-jdk-9-and-a-java-application">Create a Docker Image using JDK 9 and a Java application</h2>
+crafted to produce a minimal running OS image.</p>
+<h2 id="create-a-docker-image-using-jdk-15-and-a-java-application">Create a Docker Image using JDK 15 and a Java application</h2>
 <p>Clone the GitHib project <a href="https://github.com/PaulSandoz/helloworld-java-9">https://github.com/PaulSandoz/helloworld-java-9</a> that
 contains a simple Java 9-based project:</p>
 <pre><code>git clone https://github.com/PaulSandoz/helloworld-java-9.git
@@ -2345,7 +2380,7 @@ example many applications will not require Corba or RMI nor the compiler tools)<
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.30301: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/0e4f5814d92eb48a2d4d3291291042053fa11c22">Update hugo.yml (0e4f581)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.30301: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/151174a0b46f90e5124b693dfd7139b0ada4fa4b">Update _index.md (151174a)</a>
 </div>
 </div>
 

@@ -1215,8 +1215,8 @@ if (!doNotTrack) {
         <li><a href="#remove-containers-meeting-a-regular-expression">Remove containers meeting a regular expression</a></li>
         <li><a href="#remove-all-containers-without-any-criteria">Remove all containers, without any criteria</a></li>
         <li><a href="#additional-ways-to-find-port-mapping">Additional ways to find port mapping</a></li>
-        <li><a href="#build-and-run-a-docker-image-with-jdk-15">Build and Run a Docker Image with JDK 15</a></li>
-        <li><a href="#create-a-docker-image-using-jdk-9">Create a Docker Image using JDK 9</a></li>
+        <li><a href="#build-and-run-a-docker-container-with-jdk-15">Build and Run a Docker Container with JDK 15</a></li>
+        <li><a href="#create-a-docker-image-using-jdk-15">Create a Docker Image using JDK 15</a></li>
         <li><a href="#build-the-image-using-the-command-1">Build the image using the command:</a></li>
         <li><a href="#list-the-images-available-using-docker-image-ls-1">List the images available using <code>docker image ls</code>:</a></li>
         <li><a href="#run-the-container-using-the-command">Run the container using the command:</a></li>
@@ -1766,26 +1766,27 @@ docker container rm &lt;NAME&gt;
 <pre><code>8080/tcp -&gt; 0.0.0.0:8080
 </code></pre><p>Port mapping can be also be found using <code>docker inspect</code> command:</p>
 <pre><code>docker container inspect --format='{{(index (index .NetworkSettings.Ports &quot;8080/tcp&quot;) 0).HostPort}}' &lt;CONTAINER ID&gt;
-</code></pre><h2 id="build-and-run-a-docker-image-with-jdk-15">Build and Run a Docker Image with JDK 15</h2>
-<p>This chapter explains how to create a Docker image with JDK 9.</p>
-<p>The link:ch03-build-image.adoc[prior chapter] explained how, in general, to build a Docker image with Java.
-This chapter expands on this topic and focuses on JDK 9 features.</p>
-<h2 id="create-a-docker-image-using-jdk-9">Create a Docker Image using JDK 9</h2>
+</code></pre><h2 id="build-and-run-a-docker-container-with-jdk-15">Build and Run a Docker Container with JDK 15</h2>
+<p>This chapter explains how to create a Docker image with JDK 15.</p>
+<p>This chapter expands on this topic and focuses on JDK 9 features.</p>
+<h2 id="create-a-docker-image-using-jdk-15">Create a Docker Image using JDK 15</h2>
 <p>Create a new directory, for example <code>docker-jdk9</code>.</p>
-<p>In that directory, create a new text file <code>jdk-9-debian-slim.Dockerfile</code>.
+<p>In that directory, create a new text file <code>jdk-15-debian-slim.Dockerfile</code>.
 Use the following contents:</p>
-<pre><code># A JDK 9 with Debian slim
+<pre><code># A JDK 15 with Debian slim
 FROM debian:stable-slim
-# Download from http://jdk.java.net/9/
-# ADD http://download.java.net/java/GA/jdk9/9/binaries/openjdk-9_linux-x64_bin.tar.gz /opt
-ADD openjdk-9_linux-x64_bin.tar.gz /opt
+# Download from http://jdk.java.net/15/
+# ADD http://download.java.net/java/GA/jdk15/15/binaries/openjdk-15_linux-x64_bin.tar.gz /opt
+ADD https://download.java.net/java/GA/jdk15.0.2/0d1cfde4252546c6931946de8db48ee2/7/GPL/openjdk-15.0.2_linux-x64_bin.tar.gz /opt
+# ADD openjdk-15_linux-x64_bin.tar.gz /opt
 # Set up env variables
-ENV JAVA_HOME=/opt/jdk-9
+ENV JAVA_HOME=/opt/jdk-15.0.2
 ENV PATH=$PATH:$JAVA_HOME/bin
 CMD [&quot;jshell&quot;, &quot;-J-XX:+UnlockExperimentalVMOptions&quot;, \
                &quot;-J-XX:+UseCGroupMemoryLimitForHeap&quot;, \
                &quot;-R-XX:+UnlockExperimentalVMOptions&quot;, \
                &quot;-R-XX:+UseCGroupMemoryLimitForHeap&quot;]
+                                                   
 </code></pre><p>This image uses <code>debian</code> slim as the base image and installs the OpenJDK build
 of JDK for linux x64 (see the link:ch01-setup.adoc[setup section] for how to download this into the
 current directory).</p>
@@ -2223,7 +2224,7 @@ example many applications will not require Corba or RMI nor the compiler tools)<
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.29291: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/05f229d6acf6cc7d4ab86e48286088e368be9175">Update _index.md (05f229d)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.29291: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/31ca8916ddbffd39d48ec31c9c8500ceab877f9f">Update _index.md (31ca891)</a>
 </div>
 </div>
 

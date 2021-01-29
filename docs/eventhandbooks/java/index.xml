@@ -1133,7 +1133,7 @@ docker container rm &amp;lt;NAME&amp;gt;
 &lt;pre&gt;&lt;code&gt;8080/tcp -&amp;gt; 0.0.0.0:8080
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Port mapping can be also be found using &lt;code&gt;docker inspect&lt;/code&gt; command:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;docker container inspect --format=&#39;{{(index (index .NetworkSettings.Ports &amp;quot;8080/tcp&amp;quot;) 0).HostPort}}&#39; &amp;lt;CONTAINER ID&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;build-a-docker-image-with-jdk-15&#34;&gt;Build a Docker Image with JDK 15&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;build-and-run-a-docker-image-with-jdk-15&#34;&gt;Build and Run a Docker Image with JDK 15&lt;/h2&gt;
 &lt;p&gt;This chapter explains how to create a Docker image with JDK 9.&lt;/p&gt;
 &lt;p&gt;The link:ch03-build-image.adoc[prior chapter] explained how, in general, to build a Docker image with Java.
 This chapter expands on this topic and focuses on JDK 9 features.&lt;/p&gt;

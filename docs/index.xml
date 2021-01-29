@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title> – Documentation</title>
+    <title> – Home</title>
     <link>https://docker-community-leaders.github.io/dockercommunity/docs/</link>
-    <description>Recent content in Documentation on </description>
+    <description>Recent content in Home on </description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="https://docker-community-leaders.github.io/dockercommunity/docs/index.xml" rel="self" type="application/rss+xml" />

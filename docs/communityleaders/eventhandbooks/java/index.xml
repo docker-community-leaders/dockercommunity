@@ -805,10 +805,10 @@ INFO: Created user preferences directory.
 |  Welcome to JShell -- Version 15.0.2
 |  For an introduction type: /help intro
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will open a terminal in the container. Check the version of Java:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;root@8d0af9da5258:/# java -version
-openjdk version &amp;quot;1.8.0_141&amp;quot;
-OpenJDK Runtime Environment (build 1.8.0_141-8u141-b15-1~deb9u1-b15)
-OpenJDK 64-Bit Server VM (build 25.141-b15, mixed mode)
+&lt;pre&gt;&lt;code&gt;root@8d0af9da5258:/# java --version
+openjdk 15.0.2 2021-01-19
+OpenJDK Runtime Environment (build 15.0.2+7-27)
+OpenJDK 64-Bit Server VM (build 15.0.2+7-27, mixed mode, sharing)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A different JDK version may be shown in your case.&lt;/p&gt;
 &lt;p&gt;Exit out of the container by typing &lt;code&gt;exit&lt;/code&gt; in the container shell.&lt;/p&gt;
 &lt;h2 id=&#34;package-and-run-java-application-as-docker-image&#34;&gt;Package and run Java application as Docker image&lt;/h2&gt;
@@ -873,7 +873,6 @@ CMD java -cp /usr/src/helloworld-1.0-SNAPSHOT.jar org.examples.java.App
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Complete set of goals are listed at &lt;a href=&#34;https://github.com/fabric8io/docker-maven-plugin&#34;&gt;https://github.com/fabric8io/docker-maven-plugin&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Clone the sample code from &lt;a href=&#34;https://github.com/arun-gupta/docker-java-sample/&#34;&gt;https://github.com/arun-gupta/docker-java-sample/&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Create the Docker image:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;mvn -f docker-java-sample/pom.xml package -Pdocker

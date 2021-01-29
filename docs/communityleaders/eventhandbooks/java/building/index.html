@@ -1560,10 +1560,10 @@ INFO: Created user preferences directory.
 |  Welcome to JShell -- Version 15.0.2
 |  For an introduction type: /help intro
 </code></pre><p>This will open a terminal in the container. Check the version of Java:</p>
-<pre><code>root@8d0af9da5258:/# java -version
-openjdk version &quot;1.8.0_141&quot;
-OpenJDK Runtime Environment (build 1.8.0_141-8u141-b15-1~deb9u1-b15)
-OpenJDK 64-Bit Server VM (build 25.141-b15, mixed mode)
+<pre><code>root@8d0af9da5258:/# java --version
+openjdk 15.0.2 2021-01-19
+OpenJDK Runtime Environment (build 15.0.2+7-27)
+OpenJDK 64-Bit Server VM (build 15.0.2+7-27, mixed mode, sharing)
 </code></pre><p>A different JDK version may be shown in your case.</p>
 <p>Exit out of the container by typing <code>exit</code> in the container shell.</p>
 <h2 id="package-and-run-java-application-as-docker-image">Package and run Java application as Docker image</h2>
@@ -1628,7 +1628,6 @@ CMD java -cp /usr/src/helloworld-1.0-SNAPSHOT.jar org.examples.java.App
 </tr>
 </tbody>
 </table>
-<p>Complete set of goals are listed at <a href="https://github.com/fabric8io/docker-maven-plugin">https://github.com/fabric8io/docker-maven-plugin</a>.</p>
 <p>Clone the sample code from <a href="https://github.com/arun-gupta/docker-java-sample/">https://github.com/arun-gupta/docker-java-sample/</a>.</p>
 <p>Create the Docker image:</p>
 <pre><code>mvn -f docker-java-sample/pom.xml package -Pdocker
@@ -2329,7 +2328,7 @@ crafted to produce a minimal running OS image.</p>
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.30301: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/d7cf8aa9267b5f527eb5bd9965f169e3621dd003">Create _index.md (d7cf8aa)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.30301: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/0d4e090dd7f45bcf4239b2d02858228f9c08cee6">Update _index.md (0d4e090)</a>
 </div>
 </div>
 

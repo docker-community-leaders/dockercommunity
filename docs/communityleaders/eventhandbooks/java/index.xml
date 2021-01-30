@@ -1037,7 +1037,7 @@ arungupta/javaee7-hol        latest              da5c9d4f85ca        2 years ago
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This shows that the server started correctly, congratulations!&lt;/p&gt;
 &lt;p&gt;By default, Docker runs in the foreground. &lt;code&gt;-i&lt;/code&gt; allows to interact with the STDIN and &lt;code&gt;-t&lt;/code&gt; attach a TTY to the process. Switches can be combined together and used as &lt;code&gt;-it&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Hit Ctrl+C to stop the container.&lt;/p&gt;
-&lt;p&gt;=== Detached container&lt;/p&gt;
+&lt;h3 id=&#34;detached-container&#34;&gt;Detached container&lt;/h3&gt;
 &lt;p&gt;Restart the container in detached mode:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;docker container run -d jboss/wildfly
 254418caddb1e260e8489f872f51af4422bc4801d17746967d9777f565714600
@@ -1047,7 +1047,7 @@ arungupta/javaee7-hol        latest              da5c9d4f85ca        2 years ago
 &lt;pre&gt;&lt;code&gt;CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
 254418caddb1        jboss/wildfly       &amp;quot;/opt/jboss/wildfl...&amp;quot;   2 minutes ago       Up 2 minutes        8080/tcp            gifted_haibt
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Also try &lt;code&gt;docker container ls -a&lt;/code&gt; to see all the containers on this machine.&lt;/p&gt;
-&lt;p&gt;=== With default port&lt;/p&gt;
+&lt;h3 id=&#34;with-default-port&#34;&gt;With default port&lt;/h3&gt;
 &lt;p&gt;If you want the container to accept incoming connections, you will need to provide special options when invoking &lt;code&gt;docker run&lt;/code&gt;. The container, we just started, can&amp;rsquo;t be accessed by our browser. We need to stop it again and restart with different options.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;docker container stop `docker container ps | grep wildfly | awk &#39;{print $1}&#39;`
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Restart the container as:&lt;/p&gt;

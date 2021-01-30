@@ -1792,7 +1792,7 @@ arungupta/javaee7-hol        latest              da5c9d4f85ca        2 years ago
 </code></pre><p>This shows that the server started correctly, congratulations!</p>
 <p>By default, Docker runs in the foreground. <code>-i</code> allows to interact with the STDIN and <code>-t</code> attach a TTY to the process. Switches can be combined together and used as <code>-it</code>.</p>
 <p>Hit Ctrl+C to stop the container.</p>
-<p>=== Detached container</p>
+<h3 id="detached-container">Detached container</h3>
 <p>Restart the container in detached mode:</p>
 <pre><code>docker container run -d jboss/wildfly
 254418caddb1e260e8489f872f51af4422bc4801d17746967d9777f565714600
@@ -1802,7 +1802,7 @@ arungupta/javaee7-hol        latest              da5c9d4f85ca        2 years ago
 <pre><code>CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
 254418caddb1        jboss/wildfly       &quot;/opt/jboss/wildfl...&quot;   2 minutes ago       Up 2 minutes        8080/tcp            gifted_haibt
 </code></pre><p>Also try <code>docker container ls -a</code> to see all the containers on this machine.</p>
-<p>=== With default port</p>
+<h3 id="with-default-port">With default port</h3>
 <p>If you want the container to accept incoming connections, you will need to provide special options when invoking <code>docker run</code>. The container, we just started, can&rsquo;t be accessed by our browser. We need to stop it again and restart with different options.</p>
 <pre><code>docker container stop `docker container ps | grep wildfly | awk '{print $1}'`
 </code></pre><p>Restart the container as:</p>
@@ -2328,7 +2328,7 @@ crafted to produce a minimal running OS image.</p>
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.30301: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/0d4e090dd7f45bcf4239b2d02858228f9c08cee6">Update _index.md (0d4e090)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.30301: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/6bca9ece1840f4f12d5b8c97c9ae436a1c769b5c">Update _index.md (6bca9ec)</a>
 </div>
 </div>
 

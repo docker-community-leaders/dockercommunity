@@ -1993,7 +1993,7 @@ Removing network webapp_default
 &lt;li&gt;&lt;a href=&#34;#build-an-image&#34;&gt;Build an Image&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;docker-and-netbeans&#34;&gt;Docker and NetBeans&lt;/h2&gt;
-&lt;p&gt;This chapter will show you basic Docker tooling with NetBeans:&lt;/p&gt;
+&lt;p&gt;This section shows you basic Docker tooling with NetBeans:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Pull/Build Docker images&lt;/li&gt;
 &lt;li&gt;Run/Start/Stop Docker containers&lt;/li&gt;

@@ -1302,8 +1302,11 @@ if (!doNotTrack) {
       <ul>
         <li><a href="#deploy-application-using-swarm-mode">Deploy application using Swarm mode</a></li>
         <li><a href="#initialize-swarm">Initialize Swarm</a></li>
+        <li><a href="#multi-container-application">Multi-container application</a></li>
+        <li><a href="#verify-service-and-containers-in-application">Verify service and containers in application</a></li>
         <li><a href="#access-application">Access application</a></li>
         <li><a href="#stop-application">Stop application</a></li>
+        <li><a href="#remove-application-completely">Remove application completely</a></li>
       </ul>
     </li>
   </ul>
@@ -1462,7 +1465,7 @@ Insecure Registries:
  127.0.0.0/8
 Live Restore Enabled: false
 </code></pre><p>This cluster has 1 node, and that is a manager. By default, the manager node is also a worker node. This means the containers can run on this node.</p>
-<p>== Multi-container application</p>
+<h2 id="multi-container-application">Multi-container application</h2>
 <p>This section describes how to deploy a multi-container application using Docker Compose to Swarm mode use Docker CLI.</p>
 <p>Create a new directory and <code>cd</code> to it:</p>
 <pre><code>mkdir webapp
@@ -1482,7 +1485,7 @@ Creating service webapp_db
 Creating service webapp_web
 </code></pre><p>WildFly Swarm and MySQL services are started on this node. Each service has a single container. If the Swarm mode is enabled on multiple nodes then the containers will be distributed across them.</p>
 <p>A new overlay network is created. This can be verified using the command <code>docker network ls</code>. This network allows multiple containers on different hosts to communicate with each other.</p>
-<p>== Verify service and containers in application</p>
+<h2 id="verify-service-and-containers-in-application">Verify service and containers in application</h2>
 <p>Verify that the WildFly and MySQL services are running using <code>docker service ls</code>:</p>
 <pre><code>ID                  NAME                MODE                REPLICAS            IMAGE                                   PORTS
 j21lwelj529f        webapp_db           replicated          1/1                 mysql:8                                 *:3306-&gt;3306/tcp
@@ -1668,7 +1671,7 @@ webapp_web scaled to 0
 Since --detach=false was not specified, tasks will be scaled in the background.
 In a future release, --detach=false will become the default.
 </code></pre><p>This is especially useful if the stack contains volumes and you want to keep the data. It allows you to simply start the stack again with setting the replicas to a number higher than 0.</p>
-<p>== Remove application completely</p>
+<h2 id="remove-application-completely">Remove application completely</h2>
 <p>Shutdown the application using <code>docker stack rm webapp</code>:</p>
 <pre><code>Removing service webapp_db
 Removing service webapp_web
@@ -1848,7 +1851,7 @@ Removing network webapp_default
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.30301: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/6bca9ece1840f4f12d5b8c97c9ae436a1c769b5c">Update _index.md (6bca9ec)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 01.01.30301: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/da8c5e234cff79e32f96a1ff58fb15bf8e42af2f">Update _index.md (da8c5e2)</a>
 </div>
 </div>
 

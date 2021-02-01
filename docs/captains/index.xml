@@ -66,9 +66,12 @@ project for Node.js using Docker, Compose, and many best practices for local dev
       <description>
         
         
-        &lt;h2 id=&#34;welcome-to-the-docker-captains-page-on-github&#34;&gt;Welcome to the Docker Captains Page on GitHub!&lt;/h2&gt;
-&lt;p&gt;This is a private page. Click the below link to access&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/docker/captains&#34;&gt;CLICK HERE&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;This is a private page dedicated to Docker Captains. Click the below link to access&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/docker/captains&#34;&gt;Main Page&lt;/a&gt; &lt;br&gt;
+&lt;a href=&#34;https://github.com/docker/captains/blob/master/getting-started.md&#34;&gt;Getting Started&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://github.com/docker/captains/blob/master/briefings.md&#34;&gt;Briefings&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://docs.google.com/spreadsheets/d/17eOb9IpV5S3brlXZPlQz5J50RPk6-67e0NUdOLMJXC0/edit?usp=sharing&#34;&gt;CFP Schedule&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://github.com/docker/captains/blob/master/program-guidelines.md&#34;&gt;Code of Conduct&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
 
       </description>
     </item>

@@ -277,5 +277,36 @@ Look for potential speakers living in your city&lt;/p&gt;
       </description>
     </item>
     
+    <item>
+      <title>Docs: Speaker Guidelines</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/resources/speakers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/resources/speakers/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;speaker-guidelines&#34;&gt;Speaker Guidelines&lt;/h1&gt;
+&lt;p&gt;Thank you for volunteering to speak at a Docker Meetup! To make your talk a success, we offer some guidelines.  Please let the local Docker Community Leadership Team know of any other requirements you may have. We look forward to your talk.&lt;/p&gt;
+&lt;p&gt;Speak at a local chapter or university event and give concrete, first-hand examples which tell attendees about your Docker usage and challenges. By sharing your learnings, you can give attendees take-aways for using Docker to accomplish real tasks. You can also share your code and do a demo heavy deep-dive talk on what you have been able to transform with your use of the Docker stack. Entice your audience by going deeply technical and teach them how to do something they haven’t done.&lt;/p&gt;
+&lt;p&gt;To help us provide a safe environment for all our attendees and speakers,  we have a community code of conduct. Please review the community code of conduct here.&lt;/p&gt;
+&lt;h2 id=&#34;what-a-docker-community-event-talk-is&#34;&gt;What a Docker community event talk is:&lt;/h2&gt;
+&lt;h3 id=&#34;using-docker&#34;&gt;Using Docker&lt;/h3&gt;
+&lt;p&gt;Has Docker technology made you better at what you do? Is Docker EE an integral part of your company’s tech stack? Do you use Docker to do big things? Infuse your proposal with concrete, first-hand examples about your Docker usage, challenges and what you learned along the way, and inspire us on how to use Docker to accomplish real tasks.&lt;/p&gt;
+&lt;h3 id=&#34;deep-dives&#34;&gt;Deep Dives&lt;/h3&gt;
+&lt;p&gt;Propose code and demo heavy deep-dive sessions on what you have been able to transform with your use of Docker CE or EE. Entice your audience by going deeply technical and teach them how to do something they haven’t done.&lt;/p&gt;
+&lt;h3 id=&#34;get-specific&#34;&gt;Get specific&lt;/h3&gt;
+&lt;p&gt;While you should submit a topic that is broad enough to cover a range of interests, talks usually run about 40 minutes, so don’t try to boil the ocean. Stay focused on content that support your take-aways so you can deliver a clear and compelling story.&lt;/p&gt;
+&lt;h2 id=&#34;what-a-docker-community-event-talk-isnt&#34;&gt;What a Docker community event talk isn’t:&lt;/h2&gt;
+&lt;h3 id=&#34;a-sales-pitch&#34;&gt;A Sales Pitch&lt;/h3&gt;
+&lt;p&gt;Keep in mind this is a community event with attendees who are interested in learning, not hearing a sales pitch. It’s acceptable to mention your company’s product during a presentation but it should never be the focus of your talk.&lt;/p&gt;
+&lt;h3 id=&#34;sharing-content-that-is-not-for-public-consumption&#34;&gt;Sharing content that is not for public consumption&lt;/h3&gt;
+&lt;p&gt;Do not discuss any topic that is confidential or proprietary. Our policy is that all presentations and discussions are public and can be freely disclosed with and among the attendees.&lt;/p&gt;
+&lt;h3 id=&#34;make-people-uncomfortable&#34;&gt;Make people uncomfortable&lt;/h3&gt;
+&lt;p&gt;Avoid content which may make people uncomfortable, for example, jokes with sexual connotations.&lt;/p&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

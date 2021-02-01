@@ -936,8 +936,7 @@ bcf2f368fe23: Mounted from library/alpine
       <description>
         
         
-        &lt;h3 id=&#34;accessing--managing-docker-container---1-hour&#34;&gt;Accessing &amp;amp; Managing Docker Container - 1 hour&lt;/h3&gt;
-&lt;ul&gt;
+        &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#accessing-the-container-shell&#34;&gt;Accessing the Container Shell&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#running-a-command-inside-running-container&#34;&gt;Running a Command inside running Container&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#managing-docker-containers&#34;&gt;Managing Docker Containers&lt;/a&gt;&lt;/li&gt;

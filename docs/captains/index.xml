@@ -23,8 +23,7 @@
       <description>
         
         
-        &lt;h2 id=&#34;projects-maintained-by-docker-captains&#34;&gt;Projects maintained by Docker Captains&lt;/h2&gt;
-&lt;ul&gt;
+        &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/BretFisher/node-docker-good-defaults&#34;&gt;&lt;strong&gt;Node.js Good Defaults&lt;/strong&gt;&lt;/a&gt; - Default sample
 project for Node.js using Docker, Compose, and many best practices for local development, CI, and production deploy&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/gianarb/orbiter&#34;&gt;&lt;strong&gt;Orbiter&lt;/strong&gt;&lt;/a&gt; - Easy to setup Docker Swarm autoscaler. It is a tiny golang application that you can deploy close your monitoring stack to handler autoscaling event.&lt;/li&gt;

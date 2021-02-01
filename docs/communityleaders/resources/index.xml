@@ -14,6 +14,56 @@
     
     
     <item>
+      <title>Docs: Quickstart Your Own Meetup Chapter</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/resources/chapter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/resources/chapter/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Docker Chapter events are organized by community members who are interested in talking and learning about Docker. Anyone can start a Docker Chapter as long as there isn’t already a Docker Chapter group in your city. We simply ask our organizers to comply with our Code of Conduct and work with them to ensure everyone in the community is feeling welcome!
+Interested in launching a Docker Chapter Group?
+Fill out &lt;a href=&#34;https://docker.mobilize.io/entities/2371/registrations&#34;&gt;this form&lt;/a&gt; to get started and have our team reach out and create the user group on events.docker.com! Our community team would be happy to work with you on solving some of the challenges associated with organizing community events in your area.&lt;/p&gt;
+&lt;h2 id=&#34;what-are-the-best-practices-for-launching-a-docker-chapter-group&#34;&gt;What are the best practices for launching a Docker Chapter Group?&lt;/h2&gt;
+&lt;p&gt;Attend similar meetups to gain experience and gauge interest in Docker.
+Contact people interested in Docker to help organize and promote.
+Research companies in your area willing to host an event.
+Check out the calendar to find dates that don’t compete with other events.
+Understand what topics interest your local audience
+Pay attention to the Meetup page aesthetics, add logos and pictures, invite members to leave comments and reply to these comments
+Promote the event on social media and invite your peers&lt;/p&gt;
+&lt;h2 id=&#34;how-does-docker-inc-support-docker-chapter-community-leaders&#34;&gt;How does Docker, Inc support Docker Chapter Community Leaders?&lt;/h2&gt;
+&lt;p&gt;We send you some cool SWAG (t-shirts, stickers, etc)
+We promote every chapter event through social channels and the Docker Weekly newsletter.
+We help schedule speaking engagement from Docker employees and community members when we can.
+We Connect you with other community leaders, local users and companies willing to host or sponsor chapter events in your area.&lt;/p&gt;
+&lt;h2 id=&#34;are-there-any-benefits-associated-with-being-a-docker-community-leader&#34;&gt;Are there any benefits associated with being a Docker Community Leader?&lt;/h2&gt;
+&lt;p&gt;We see Docker Community Leaders as members of the Docker family. Although there are no direct compensation associated with being a community leader, we often reward active community leaders with free or discounted tickets to DockerCon, special swags, or treat you to a nice lunch (or a few beers) when you pay us a visit at Docker HQ.&lt;/p&gt;
+&lt;h2 id=&#34;how-many-attendees-usually-attend-docker-chapter-meetups&#34;&gt;How many attendees usually attend Docker Chapter meetups?&lt;/h2&gt;
+&lt;p&gt;Docker chapter events range from 30 to 400 attendees depending on the popularity of Docker in your city and the size of the venue we find to accommodate the meetups.&lt;/p&gt;
+&lt;h2 id=&#34;whats-the-standard-format-of-a-docker-chapter-event&#34;&gt;What’s the standard format of a Docker Chapter event?&lt;/h2&gt;
+&lt;p&gt;Docker community events are usually two or three hours long and start between 4pm and 7pm. We usually have from 1 to up to 3 main talks of about 30 minutes but sometimes adjust the agenda to accommodate 10 minutes lightning talks.&lt;/p&gt;
+&lt;h2 id=&#34;what-are-the-typical-first-steps-after-the-chapter-page-is-live&#34;&gt;What are the typical first steps after the chapter page is live?&lt;/h2&gt;
+&lt;p&gt;Post a message on one or all of the following Docker User channels including a link to your new meetup group: #Docker on IRC, Docker on Linkedin, Docker on Google+, Docker on Reddit,
+Create a Twitter handle for your group and ping @docker to get retweets
+Send an email to the docker-users mailing list including the link to your new Meetup group.
+Look for a company willing to provide the venue for the meetup
+Find a date for the first meetup that does not compete with other groups
+Look for potential speakers living in your city&lt;/p&gt;
+&lt;h2 id=&#34;am-i-allowed-to-use-the-docker-logo-&#34;&gt;Am I allowed to use the Docker logo ?&lt;/h2&gt;
+&lt;p&gt;You are allowed to use the Docker logo on the chapter group page as long as you respect our &lt;a href=&#34;https://github.com/docker/code-of-conduct&#34;&gt;code of conduct&lt;/a&gt;. Check out our &lt;a href=&#34;https://www.docker.com/brand-guidelines&#34;&gt;brand guidlines&lt;/a&gt; and the &lt;a href=&#34;https://www.docker.com/sites/default/files/legal/docker_logos_2018.zip&#34;&gt;Docker media kit&lt;/a&gt; to choose which versions of the Docker logo you’d like to use.&lt;/p&gt;
+&lt;h2 id=&#34;what-happens-if-i-no-longer-have-time-to-run-a-docker-chapter-group&#34;&gt;What happens if I no longer have time to run a Docker chapter group?&lt;/h2&gt;
+&lt;p&gt;We really appreciate all the contributions Docker Community Leaders make to the Docker community. Although we hope to collaborate with you in the long term, we totally understand it if you have to step down as an organizer, just reach out and let us know whether or not you’ve found a substitute. Reach out to the Docker team and we can help find someone who wants to step up and help organize events moving forward.&lt;/p&gt;
+&lt;h2 id=&#34;who-should-i-contact-if-i-my-company-wants-to-host--sponsor-a-chapter-event&#34;&gt;Who should I contact if I my company wants to host / sponsor a Chapter event?&lt;/h2&gt;
+&lt;p&gt;We are always looking for new office space to host Docker community events or new companies to sponsor food, drinks, swag or video recording. If your company is willing to sponsor a local Docker Chapter Group, please fill out &lt;a href=&#34;https://docker.mobilize.io/entities/2371/registrations&#34;&gt;this form&lt;/a&gt; or contact the local organizers directly via events.docker.com&lt;/p&gt;
+&lt;h2 id=&#34;who-should-i-contact-if-i-or-one-my-colleague-wants-to-give-a-talk-at-a-meetup&#34;&gt;Who should I contact if I or one my colleague wants to give a talk at a meetup?&lt;/h2&gt;
+&lt;p&gt;Please visit our &lt;a href=&#34;https://events.docker.com/get-involved/sponsor-an-event/&#34;&gt;sponsorship page&lt;/a&gt; to get started and have our team reach out or contact the local community leaders directly.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Community Leaders Guidelines</title>
       <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/resources/guidelines/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -221,56 +271,6 @@ Get the latest Docker news straight to your inbox! This weekly newsletter highli
 &lt;p&gt;Check out our YouTube page for videos of recorded talks from DockerCon, webinars and other meetups.&lt;/p&gt;
 &lt;h4 id=&#34;social-media&#34;&gt;Social Media&lt;/h4&gt;
 &lt;p&gt;Follow us on &lt;a href=&#34;https://twitter.com/docker&#34;&gt;Twitter&lt;/a&gt;, join the Docker community on &lt;a href=&#34;https://plus.google.com/u/0/communities/108146856671494713993&#34;&gt;Google+&lt;/a&gt;, like Docker on &lt;a href=&#34;https://www.facebook.com/docker.run&#34;&gt;Facebook&lt;/a&gt; and join the Docker Users Group on &lt;a href=&#34;https://www.linkedin.com/company/docker&#34;&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Quickstart Your Own Meetup Chapter</title>
-      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/resources/chapter/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/resources/chapter/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Docker Chapter events are organized by community members who are interested in talking and learning about Docker. Anyone can start a Docker Chapter as long as there isn’t already a Docker Chapter group in your city. We simply ask our organizers to comply with our Code of Conduct and work with them to ensure everyone in the community is feeling welcome!
-Interested in launching a Docker Chapter Group?
-Fill out &lt;a href=&#34;https://docker.mobilize.io/entities/2371/registrations&#34;&gt;this form&lt;/a&gt; to get started and have our team reach out and create the user group on events.docker.com! Our community team would be happy to work with you on solving some of the challenges associated with organizing community events in your area.&lt;/p&gt;
-&lt;h2 id=&#34;what-are-the-best-practices-for-launching-a-docker-chapter-group&#34;&gt;What are the best practices for launching a Docker Chapter Group?&lt;/h2&gt;
-&lt;p&gt;Attend similar meetups to gain experience and gauge interest in Docker.
-Contact people interested in Docker to help organize and promote.
-Research companies in your area willing to host an event.
-Check out the calendar to find dates that don’t compete with other events.
-Understand what topics interest your local audience
-Pay attention to the Meetup page aesthetics, add logos and pictures, invite members to leave comments and reply to these comments
-Promote the event on social media and invite your peers&lt;/p&gt;
-&lt;h2 id=&#34;how-does-docker-inc-support-docker-chapter-community-leaders&#34;&gt;How does Docker, Inc support Docker Chapter Community Leaders?&lt;/h2&gt;
-&lt;p&gt;We send you some cool SWAG (t-shirts, stickers, etc)
-We promote every chapter event through social channels and the Docker Weekly newsletter.
-We help schedule speaking engagement from Docker employees and community members when we can.
-We Connect you with other community leaders, local users and companies willing to host or sponsor chapter events in your area.&lt;/p&gt;
-&lt;h2 id=&#34;are-there-any-benefits-associated-with-being-a-docker-community-leader&#34;&gt;Are there any benefits associated with being a Docker Community Leader?&lt;/h2&gt;
-&lt;p&gt;We see Docker Community Leaders as members of the Docker family. Although there are no direct compensation associated with being a community leader, we often reward active community leaders with free or discounted tickets to DockerCon, special swags, or treat you to a nice lunch (or a few beers) when you pay us a visit at Docker HQ.&lt;/p&gt;
-&lt;h2 id=&#34;how-many-attendees-usually-attend-docker-chapter-meetups&#34;&gt;How many attendees usually attend Docker Chapter meetups?&lt;/h2&gt;
-&lt;p&gt;Docker chapter events range from 30 to 400 attendees depending on the popularity of Docker in your city and the size of the venue we find to accommodate the meetups.&lt;/p&gt;
-&lt;h2 id=&#34;whats-the-standard-format-of-a-docker-chapter-event&#34;&gt;What’s the standard format of a Docker Chapter event?&lt;/h2&gt;
-&lt;p&gt;Docker community events are usually two or three hours long and start between 4pm and 7pm. We usually have from 1 to up to 3 main talks of about 30 minutes but sometimes adjust the agenda to accommodate 10 minutes lightning talks.&lt;/p&gt;
-&lt;h2 id=&#34;what-are-the-typical-first-steps-after-the-chapter-page-is-live&#34;&gt;What are the typical first steps after the chapter page is live?&lt;/h2&gt;
-&lt;p&gt;Post a message on one or all of the following Docker User channels including a link to your new meetup group: #Docker on IRC, Docker on Linkedin, Docker on Google+, Docker on Reddit,
-Create a Twitter handle for your group and ping @docker to get retweets
-Send an email to the docker-users mailing list including the link to your new Meetup group.
-Look for a company willing to provide the venue for the meetup
-Find a date for the first meetup that does not compete with other groups
-Look for potential speakers living in your city&lt;/p&gt;
-&lt;h2 id=&#34;am-i-allowed-to-use-the-docker-logo-&#34;&gt;Am I allowed to use the Docker logo ?&lt;/h2&gt;
-&lt;p&gt;You are allowed to use the Docker logo on the chapter group page as long as you respect our &lt;a href=&#34;https://github.com/docker/code-of-conduct&#34;&gt;code of conduct&lt;/a&gt;. Check out our &lt;a href=&#34;https://www.docker.com/brand-guidelines&#34;&gt;brand guidlines&lt;/a&gt; and the &lt;a href=&#34;https://www.docker.com/sites/default/files/legal/docker_logos_2018.zip&#34;&gt;Docker media kit&lt;/a&gt; to choose which versions of the Docker logo you’d like to use.&lt;/p&gt;
-&lt;h2 id=&#34;what-happens-if-i-no-longer-have-time-to-run-a-docker-chapter-group&#34;&gt;What happens if I no longer have time to run a Docker chapter group?&lt;/h2&gt;
-&lt;p&gt;We really appreciate all the contributions Docker Community Leaders make to the Docker community. Although we hope to collaborate with you in the long term, we totally understand it if you have to step down as an organizer, just reach out and let us know whether or not you’ve found a substitute. Reach out to the Docker team and we can help find someone who wants to step up and help organize events moving forward.&lt;/p&gt;
-&lt;h2 id=&#34;who-should-i-contact-if-i-my-company-wants-to-host--sponsor-a-chapter-event&#34;&gt;Who should I contact if I my company wants to host / sponsor a Chapter event?&lt;/h2&gt;
-&lt;p&gt;We are always looking for new office space to host Docker community events or new companies to sponsor food, drinks, swag or video recording. If your company is willing to sponsor a local Docker Chapter Group, please fill out &lt;a href=&#34;https://docker.mobilize.io/entities/2371/registrations&#34;&gt;this form&lt;/a&gt; or contact the local organizers directly via events.docker.com&lt;/p&gt;
-&lt;h2 id=&#34;who-should-i-contact-if-i-or-one-my-colleague-wants-to-give-a-talk-at-a-meetup&#34;&gt;Who should I contact if I or one my colleague wants to give a talk at a meetup?&lt;/h2&gt;
-&lt;p&gt;Please visit our &lt;a href=&#34;https://events.docker.com/get-involved/sponsor-an-event/&#34;&gt;sponsorship page&lt;/a&gt; to get started and have our team reach out or contact the local community leaders directly.&lt;/p&gt;
 
       </description>
     </item>

@@ -14,16 +14,17 @@
     
     
     <item>
-      <title>Blog: hub tool</title>
-      <link>https://docker-community-leaders.github.io/dockercommunity/blog/2021/01/31/hub-tool/</link>
-      <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
+      <title>Blog: Open Sourcing the Docker Hub CLI Tool</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/blog/2021/01/28/open-sourcing-the-docker-hub-cli-tool/</link>
+      <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://docker-community-leaders.github.io/dockercommunity/blog/2021/01/31/hub-tool/</guid>
+      <guid>https://docker-community-leaders.github.io/dockercommunity/blog/2021/01/28/open-sourcing-the-docker-hub-cli-tool/</guid>
       <description>
         
         
-        &lt;p&gt;At Docker, we are committed to making developer’s lives easier, and maintaining and extending our commitment to the Open Source community and open standards for many of our projects. We believe building new capabilities into the Docker Platform in partnership with our developer community and in full transparency leads to much better software.
-Last December, we announced the release of a new experimental Docker Hub CLI tool, also known as hub-tool. This new CLI lets you explore, inspect and manage your content on Docker Hub as well as work with your teams and manage your account. We demonstrated it during the last Docker Community All Hands in December 2020.&lt;/p&gt;
+        &lt;p&gt;At Docker, we are committed to making developer’s lives easier, and maintaining and extending our commitment to the Open Source community and open standards for many of our projects. We believe building new capabilities into the Docker Platform in partnership with our developer community and in full transparency leads to much better software.&lt;/p&gt;
+&lt;p&gt;Last December, we announced the release of a new experimental Docker Hub CLI tool, also known as hub-tool. This new CLI lets you explore, inspect and manage your content on Docker Hub as well as work with your teams and manage your account. We demonstrated it during the last Docker Community All Hands in December 2020.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.docker.com/blog/open-sourcing-the-docker-hub-cli-tool/&#34;&gt;Read the Complete Story&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>

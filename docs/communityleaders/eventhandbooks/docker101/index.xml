@@ -342,8 +342,7 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
       <description>
         
         
-        &lt;h2 id=&#34;recommended-agenda&#34;&gt;Recommended Agenda&lt;/h2&gt;
-&lt;table&gt;
+        &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Description&lt;/th&gt;
@@ -444,8 +443,7 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
       <description>
         
         
-        &lt;h3 id=&#34;getting-started-with-docker-image---1-hour&#34;&gt;Getting Started with Docker Image - 1 hour&lt;/h3&gt;
-&lt;ul&gt;
+        &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#running-hello-world-example&#34;&gt;Running Hello World Example&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#working-with-docker-image&#34;&gt;Working with Docker Image&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#saving-images-and-containers-as-tar-files-for-sharing&#34;&gt;Saving Images and Containers as Tar Files for Sharing&lt;/a&gt;&lt;/li&gt;

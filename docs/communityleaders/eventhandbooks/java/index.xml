@@ -532,8 +532,7 @@ Install them only if you plan to attempt them.&lt;/p&gt;
       <description>
         
         
-        &lt;h3 id=&#34;basics-of-dockerbasics-of-docker---30-min&#34;&gt;&lt;a href=&#34;#basics-of-docker&#34;&gt;Basics of Docker&lt;/a&gt; - 30 min&lt;/h3&gt;
-&lt;ul&gt;
+        &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#main-components-of-docker-system&#34;&gt;Main Components of Docker System&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#test-your-knowledge&#34;&gt;Test Your Knowledge&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

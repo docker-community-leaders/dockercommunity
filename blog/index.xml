@@ -14,6 +14,22 @@
     
     
     <item>
+      <title>Blog: Build Docker images *quickly* with GitHub Actions and a self-hosted runner</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/blog/2021/01/28/build-docker-images-quickly-with-github-actions-and-a-self-hosted-runner/</link>
+      <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/blog/2021/01/28/build-docker-images-quickly-with-github-actions-and-a-self-hosted-runner/</guid>
+      <description>
+        
+        
+        &lt;p&gt;GitHub Actions is a fantastic workflow engine. Combine it with multi-stage Docker builds and you have a CI process defined in a few lines of YAML, which lives inside your Git repo.
+In this blog, Docker Captain Elton Stoneman how to build Docker images &lt;em&gt;quickly&lt;/em&gt; with GitHub Actions and a self-hosted runner&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.sixeyed.com/build-docker-images-quickly-with-github-actions-and-a-self-hosted-runner/&#34;&gt;Read the Complete Story&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: How to use Docker Security Scan Locally</title>
       <link>https://docker-community-leaders.github.io/dockercommunity/blog/2021/01/28/how-to-use-docker-security-scan-locally/</link>
       <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>

@@ -56,5 +56,30 @@ There, other Docker Captains and Docker staff ask questions, share feedback and 
       </description>
     </item>
     
+    <item>
+      <title>Docs: Social Media</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communicate/social/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communicate/social/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Follow us on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://twitter.com/docker&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/docker.run&#34;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/company/docker&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/user/dockerrun&#34;&gt;YouTube page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://plus.google.com/+DockerIo&#34;&gt;Google+&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://linkedin.com/company/1301808&#34;&gt;LinkedIn (Docker, Inc.)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://linkedin.com/groups/6538078&#34;&gt;LinkedIn (Docker Users)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://plus.google.com/u/0/communities/108146856671494713993&#34;&gt;Google+ Docker community&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://slideshare.net/docker&#34;&gt;SlideShare&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

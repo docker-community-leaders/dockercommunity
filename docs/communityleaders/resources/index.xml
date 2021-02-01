@@ -69,12 +69,11 @@
       <description>
         
         
-        &lt;h2 id=&#34;how-to-conduct-a-docker-chaptervirtual-meetup-event&#34;&gt;How to conduct a Docker Chapter/Virtual Meetup event&lt;/h2&gt;
-&lt;p&gt;Docker Chapter events and meetups are social events organized by community members who are interested in talking and learning about Docker.&lt;/p&gt;
+        &lt;p&gt;Docker Chapter events and meetups are social events organized by community members who are interested in talking and learning about Docker.&lt;/p&gt;
 &lt;p&gt;Anyone who is interested in meeting with others to discuss about Docker is welcome to organize virtualchapter events.
 The first step is to read and understand our &lt;a href=&#34;https://github.com/docker/code-of-conduct&#34;&gt;Code of Conduct&lt;/a&gt; and then to &lt;a href=&#34;https://community.docker.com/registrations/groups/1865&#34;&gt;apply to the program here&lt;/a&gt; to be formally onboarded by a member of the Docker Community Team.&lt;/p&gt;
 &lt;p&gt;This guide helps you to successfully organize Docker Chapter Events. It provides tips, checklists, and concepts to do your planning effectively.&lt;/p&gt;
-&lt;h1 id=&#34;preparation&#34;&gt;Preparation&lt;/h1&gt;
+&lt;h2 id=&#34;preparation&#34;&gt;Preparation&lt;/h2&gt;
 &lt;p&gt;At first, make sure you answer the following questions:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Bootstrap or contribute:&lt;/strong&gt; Anyone can start a Docker Chapter as long as there is not an existing Docker user group in your city. Check out the &lt;a href=&#34;https://events.docker.com/chapters/&#34;&gt;Docker community page&lt;/a&gt; to make sure a group does not already exist in your city. If one does exist and you would like to help out please click the contact us button on the chapter page to email the local team.&lt;/li&gt;
@@ -82,7 +81,7 @@ The first step is to read and understand our &lt;a href=&#34;https://github.com/
 Try go get others involved. Spread the tasks across several shoulders, but make sure there is not just a single person responsible who manages all the important information and tasks. Life happens, it&amp;rsquo;s nice to know you have someone who can help out when you&amp;rsquo;re busy from time to time.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Check: Commitment&lt;/strong&gt;: Ask yourself: Are you willing to make a long term commitment to your community? Starting a chapter is a long term responsibility and goes far beyond your first event. Organizing events is very rewarding in several aspects but building and maintaining a community requires a commitment. We set a goal of 1 event per quarter. Can you commit to that?&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;structure-your-meetup-project&#34;&gt;Structure Your Meetup Project&lt;/h1&gt;
+&lt;h2 id=&#34;structure-your-meetup-project&#34;&gt;Structure Your Meetup Project&lt;/h2&gt;
 &lt;p&gt;If you decided to start, &lt;a href=&#34;https://community.docker.com/registrations/groups/1865&#34;&gt;apply to the program here&lt;/a&gt; and a member of the Community Team will be in touch. The Community Team can help with things like finding venues, sponsors and speakers and can provide swag for your event.&lt;/p&gt;
 &lt;p&gt;Once the group is launched, we recommend scheduling the first meetup with enough lead time for successful promotion.&lt;/p&gt;
 &lt;p&gt;Next, make yourself familiar with the three most relevant tools:&lt;/p&gt;
@@ -121,7 +120,7 @@ This planning document should gather all relevant information for the particular
 &lt;/ul&gt;
 &lt;p&gt;See the following as example:&lt;/p&gt;
 &lt;img src=&#34;Images_for_meetup_guide/Screenshot_Tasks.png&#34; width=&#34;480&#34;&gt;
-&lt;h3 id=&#34;plan-each-category&#34;&gt;Plan each category&lt;/h3&gt;
+&lt;h2 id=&#34;plan-each-category&#34;&gt;Plan each category&lt;/h2&gt;
 &lt;p&gt;Next, see the following tips for each category:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Advertisement&lt;/strong&gt;:
@@ -206,7 +205,7 @@ Manage the speakers&amp;rsquo; time by two simple methods:&lt;/p&gt;
 &lt;p&gt;Document all your feedback and ideas for next time.&lt;/p&gt;
 &lt;p&gt;Don&amp;rsquo;t forget to distribute the slides for attendees.&lt;/p&gt;
 &lt;p&gt;If applicable, write a blog post about the meetup with pictures and its highlights. If Docker retweets it or includes this post in the Docker weekly, you meetup receives attention bonus points.&lt;/p&gt;
-&lt;h1 id=&#34;online-resources-available-to-meetup-organizers&#34;&gt;Online Resources available to Meetup organizers&lt;/h1&gt;
+&lt;h2 id=&#34;online-resources-available-to-meetup-organizers&#34;&gt;Online Resources available to Meetup organizers&lt;/h2&gt;
 &lt;h4 id=&#34;the-docker-community-directorytpscommunitydockercom&#34;&gt;&lt;a href=&#34;tps://community.docker.com&#34;&gt;The Docker Community Directory&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;The Docker Community Directory is a simple communication &amp;amp; directory tool for us to share events, activities, and programs with groups of active community members. All our members can easily reach one another. You can open discussions among selected members, send direct messages, share ideas and experiences, get help finding sponsors and speakers and help other members succeed and run great meetup events. When the community supports each other, everyone wins!
 The Docker Community page.&lt;/p&gt;

@@ -1698,16 +1698,56 @@ if (!doNotTrack) {
 </ul>
 <h2 id="nodeselector">nodeSelector</h2>
 <h2 id="steps">Steps</h2>
-<pre><code>git clone https://github.com/collabnix/dockerlabs
-cd dockerlabs/kubernetes/workshop/Scheduler101/
-kubectl label nodes node2 mynode=worker-1
-kubectl apply -f pod-nginx.yaml
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="highlight">
+    <div class="copy-code-icon" style="text-align:right">
+    <a href="https://%25!s%28%3cnil%3e%29/master/content/en/examples//k8s/scheduler101/pod-nginx.yaml" download="/k8s/scheduler101/pod-nginx.yaml"><code>/k8s/scheduler101/pod-nginx.yaml</code>
+    </a>
+    <img src="https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg" style="max-height:24px; cursor: pointer" onclick="copyCode('k8sscheduler101pod-nginxyaml')" title="Copy /k8s/scheduler101/pod-nginx.yaml to clipboard">
+    </img>
+    </div>
+    <div class="includecode" id="k8sscheduler101pod-nginxyaml">
+    <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">apiVersion</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>v1<span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">#version of the API to use</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">kind</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>Pod<span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">#What kind of object we&#39;re deploying</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">#information about our object we&#39;re deploying</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>nginx<span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">#Name of the pod</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">labels</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">#A tag on the pod created</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">env</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>test<span style="color:#f8f8f8;text-decoration:underline"> 
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">spec</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">#specifications for our object</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">containers</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>nginx<span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#8f5902;font-style:italic">#the name of the container within the pod</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>nginx<span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">#which container image should be pulled</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">imagePullPolicy</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>IfNotPresent<span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">#image pull policy </span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">nodeSelector</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">#Nodeselector condition </span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">mynode</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>worker<span style="color:#0000cf;font-weight:bold">-1</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic"># label on the node where pod is going to deploy</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div>
+    </div>
+</div>
+
+
+<pre><code>$ kubectl label nodes node2 mynode=worker-1
+$ kubectl apply -f pod-nginx.yaml
 </code></pre><ul>
 <li>We have label on the node with node name,in this case i have given node2 as mynode=worker-1 label.</li>
 </ul>
 <h2 id="viewing-your-pods">Viewing Your Pods</h2>
-<pre><code>kubectl get pods --output=wide
-</code></pre><pre><code>[node1 Scheduler101]$ kubectl describe po nginx
+<pre><code>$ kubectl get pods --output=wide
+</code></pre><pre><code>$ kubectl describe po nginx
 Name:               nginx
 Namespace:          default
 Priority:           0
@@ -1759,7 +1799,7 @@ Events:
 <li>You can check in above output  Node-Selectors:  mynode=worker-1</li>
 </ul>
 <h2 id="deleting-the-pod">Deleting the Pod</h2>
-<pre><code>kubectl delete -f pod-nginx.yaml
+<pre><code>$ kubectl delete -f pod-nginx.yaml
 pod &quot;nginx&quot; deleted
 </code></pre><h1 id="node-affinity">Node affinity</h1>
 <ul>
@@ -1775,18 +1815,69 @@ pod &quot;nginx&quot; deleted
 <li>preferredDuringSchedulingIgnoredDuringExecution  (Required during scheduling, ignored during execution; we are also known as &ldquo;soft&rdquo; requirements)</li>
 </ol>
 <h2 id="steps-1">Steps</h2>
-<pre><code>git clone https://github.com/collabnix/dockerlabs
-cd dockerlabs/kubernetes/workshop/Scheduler101/
-kubectl label nodes node2 mynode=worker-1
-kubectl label nodes node3 mynode=worker-3
-kubectl apply -f pod-with-node-affinity.yaml
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="highlight">
+    <div class="copy-code-icon" style="text-align:right">
+    <a href="https://%25!s%28%3cnil%3e%29/master/content/en/examples//k8s/scheduler101/pod-with-node-affinity.yaml" download="/k8s/scheduler101/pod-with-node-affinity.yaml"><code>/k8s/scheduler101/pod-with-node-affinity.yaml</code>
+    </a>
+    <img src="https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg" style="max-height:24px; cursor: pointer" onclick="copyCode('k8sscheduler101pod-with-node-affinityyaml')" title="Copy /k8s/scheduler101/pod-with-node-affinity.yaml to clipboard">
+    </img>
+    </div>
+    <div class="includecode" id="k8sscheduler101pod-with-node-affinityyaml">
+    <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">apiVersion</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>v1<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">kind</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>Pod<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>with-node-affinity<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">spec</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">affinity</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">nodeAffinity</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">requiredDuringSchedulingIgnoredDuringExecution</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">nodeSelectorTerms</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span>- <span style="color:#204a87;font-weight:bold">matchExpressions</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">          </span>- <span style="color:#204a87;font-weight:bold">key</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>mynode<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">operator</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>In<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">values</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span>- worker<span style="color:#0000cf;font-weight:bold">-1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">preferredDuringSchedulingIgnoredDuringExecution</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#204a87;font-weight:bold">weight</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">preference</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">matchExpressions</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">          </span>- <span style="color:#204a87;font-weight:bold">key</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>mynode<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">operator</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>In<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">values</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span>- worker<span style="color:#0000cf;font-weight:bold">-3</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">containers</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>nginx<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>nginx<span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div>
+    </div>
+</div>
+
+
+<pre><code>$ kubectl label nodes node2 mynode=worker-1
+$ kubectl label nodes node3 mynode=worker-3
+$ kubectl apply -f pod-with-node-affinity.yaml
 </code></pre><h2 id="viewing-your-pods-1">Viewing Your Pods</h2>
-<pre><code>
-kubectl get pods --output=wide
+<pre><code>$ kubectl get pods --output=wide
 NAME                 READY   STATUS    RESTARTS   AGE     IP          NODE          NOMINATED NODE   READINESS GATES
 with-node-affinity   1/1     Running   0          9m46s   10.44.0.1   kube-slave1   &lt;none&gt;           &lt;none&gt;
 
-</code></pre><pre><code>[node1 Scheduler101]$ kubectl describe po
+</code></pre><pre><code>$ kubectl describe po
 Name:               with-node-affinity
 Namespace:          default
 Priority:           0
@@ -1837,7 +1928,7 @@ Events:
   Normal  Started    0s    kubelet, node3     Started container nginx
 </code></pre><h2 id="step--cleanup">Step  Cleanup</h2>
 <p>Finally you can clean up the resources you created in your cluster:</p>
-<pre><code>kubectl delete -f pod-with-node-affinity.yaml
+<pre><code>$ kubectl delete -f pod-with-node-affinity.yaml
 </code></pre><h1 id="anti-node-affinity-">Anti-Node Affinity ?</h1>
 <ul>
 <li>Some scenarios require that you don’t use one or more nodes except for particular pods. Think of the nodes that host your monitoring application.</li>
@@ -1845,23 +1936,72 @@ Events:
 <li>In such a case, you need to use node anti-affinity to keep pods away from a set of nodes.</li>
 </ul>
 <h2 id="steps-2">Steps</h2>
-<pre><code>git clone https://github.com/collabnix/dockerlabs
-cd dockerlabs/kubernetes/workshop/Scheduler101/
-kubectl label nodes node2 mynode=worker-1
-kubectl label nodes node3 mynode=worker-3
-kubectl apply -f pod-anti-node-affinity.yaml
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="highlight">
+    <div class="copy-code-icon" style="text-align:right">
+    <a href="https://%25!s%28%3cnil%3e%29/master/content/en/examples//k8s/scheduler101/pod-anti-node-affinity.yaml" download="/k8s/scheduler101/pod-anti-node-affinity.yaml"><code>/k8s/scheduler101/pod-anti-node-affinity.yaml</code>
+    </a>
+    <img src="https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg" style="max-height:24px; cursor: pointer" onclick="copyCode('k8sscheduler101pod-anti-node-affinityyaml')" title="Copy /k8s/scheduler101/pod-anti-node-affinity.yaml to clipboard">
+    </img>
+    </div>
+    <div class="includecode" id="k8sscheduler101pod-anti-node-affinityyaml">
+    <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">apiVersion</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>v1<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">kind</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>Pod<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>nginx<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">spec</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">affinity</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">nodeAffinity</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">     </span><span style="color:#204a87;font-weight:bold">requiredDuringSchedulingIgnoredDuringExecution</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">       </span><span style="color:#204a87;font-weight:bold">nodeSelectorTerms</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">       </span>- <span style="color:#204a87;font-weight:bold">matchExpressions</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">         </span>- <span style="color:#204a87;font-weight:bold">key</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>mynode<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">           </span><span style="color:#204a87;font-weight:bold">operator</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>In<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">           </span><span style="color:#204a87;font-weight:bold">values</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> 
+</span><span style="color:#f8f8f8;text-decoration:underline">           </span>- worker<span style="color:#0000cf;font-weight:bold">-1</span><span style="color:#f8f8f8;text-decoration:underline">       
+</span><span style="color:#f8f8f8;text-decoration:underline">         </span>- <span style="color:#204a87;font-weight:bold">key</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>mynode<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">           </span><span style="color:#204a87;font-weight:bold">operator</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>NotIn<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">           </span><span style="color:#204a87;font-weight:bold">values</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">           </span>- worker<span style="color:#0000cf;font-weight:bold">-3</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">containers</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"> </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>nginx<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>nginx<span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div>
+    </div>
+</div>
+
+
+<pre><code>$ kubectl label nodes node2 mynode=worker-1
+$ kubectl label nodes node3 mynode=worker-3
+$ kubectl apply -f pod-anti-node-affinity.yaml
 </code></pre><h2 id="viewing-your-pods-2">Viewing Your Pods</h2>
-<pre><code>[node1 Scheduler101]$ kubectl get pods --output=wide
+<pre><code>$ kubectl get pods --output=wide
 NAME    READY   STATUS    RESTARTS   AGE     IP          NODE    NOMINATED NODE   READINESS GATES
 nginx   1/1     Running   0          2m37s   10.44.0.1   node2   &lt;none&gt;           &lt;none&gt;
 
 </code></pre><h2 id="get-nodes-label-detail">Get nodes label detail</h2>
-<pre><code>[node1 Scheduler101]$ kubectl get nodes --show-labels | grep mynode
+<pre><code>$ kubectl get nodes --show-labels | grep mynode
 node2   Ready    &lt;none&gt;   166m   v1.14.9   beta.kubernetes.io/arch=amd64,beta.kubernetes.io/os=linux,kubernetes.io/arch=amd64,kubernetes.io/hostname=node2,kubernetes.io/os=linux,mynode=worker-1,role=dev
 node3   Ready    &lt;none&gt;   165m   v1.14.9   beta.kubernetes.io/arch=amd64,beta.kubernetes.io/os=linux,kubernetes.io/arch=amd64,kubernetes.io/hostname=node3,kubernetes.io/os=linux,mynode=worker-3
 
 </code></pre><h2 id="get-pod-describe">Get pod describe</h2>
-<pre><code>[node1 Scheduler101]$ kubectl describe pods nginx
+<pre><code>$ kubectl describe pods nginx
 Name:               nginx
 Namespace:          default
 Priority:           0
@@ -1915,7 +2055,7 @@ Events:
 </ul>
 <h2 id="step--cleanup-1">Step  Cleanup</h2>
 <p>Finally you can clean up the resources you created in your cluster:</p>
-<pre><code>kubectl delete -f pod-anti-node-affinity.yaml
+<pre><code>$ kubectl delete -f pod-anti-node-affinity.yaml
 </code></pre><h1 id="what-is-node-taints-and-tolerations-">What is Node taints and tolerations ?</h1>
 <ul>
 <li>
@@ -1929,26 +2069,67 @@ Events:
 </li>
 </ul>
 <h2 id="steps-3">Steps</h2>
-<pre><code>git clone https://github.com/collabnix/dockerlabs
-cd dockerlabs/kubernetes/workshop/Scheduler101/
-kubectl label nodes node2 role=dev
-kubectl label nodes node3 role=dev
 
-[node1 Scheduler101]$ kubectl taint nodes node2 role=dev:NoSchedule
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="highlight">
+    <div class="copy-code-icon" style="text-align:right">
+    <a href="https://%25!s%28%3cnil%3e%29/master/content/en/examples//k8s/scheduler101/pod-taint-node.yaml" download="/k8s/scheduler101/pod-taint-node.yaml"><code>/k8s/scheduler101/pod-taint-node.yaml</code>
+    </a>
+    <img src="https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg" style="max-height:24px; cursor: pointer" onclick="copyCode('k8sscheduler101pod-taint-nodeyaml')" title="Copy /k8s/scheduler101/pod-taint-node.yaml to clipboard">
+    </img>
+    </div>
+    <div class="includecode" id="k8sscheduler101pod-taint-nodeyaml">
+    <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">apiVersion</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>v1<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">kind</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>Pod<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>nginx<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">spec</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">affinity</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">nodeAffinity</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">     </span><span style="color:#204a87;font-weight:bold">requiredDuringSchedulingIgnoredDuringExecution</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">       </span><span style="color:#204a87;font-weight:bold">nodeSelectorTerms</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">       </span>- <span style="color:#204a87;font-weight:bold">matchExpressions</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">         </span>- <span style="color:#204a87;font-weight:bold">key</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>role<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">           </span><span style="color:#204a87;font-weight:bold">operator</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>In<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">           </span><span style="color:#204a87;font-weight:bold">values</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">           </span>- dev<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">containers</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"> </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>nginx<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>nginx<span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div>
+    </div>
+</div>
+
+
+<pre><code>$ kubectl label nodes node2 role=dev
+$ kubectl label nodes node3 role=dev
+
+$ kubectl taint nodes node2 role=dev:NoSchedule
 node/node2 tainted
-[node1 Scheduler101]$
-
-
-kubectl apply -f pod-taint-node.yaml
+$ kubectl apply -f pod-taint-node.yaml
 </code></pre><h2 id="viewing-your-pods-3">Viewing Your Pods</h2>
-<pre><code>kubectl get pods --output=wide
+<pre><code>$ kubectl get pods --output=wide
 </code></pre><h2 id="get-nodes-label-detail-1">Get nodes label detail</h2>
 <pre><code>[node1 Scheduler101]$ kubectl get nodes --show-labels|grep mynode |grep role
 node2   Ready    &lt;none&gt;   175m   v1.14.9   beta.kubernetes.io/arch=amd64,beta.kubernetes.io/os=linux,kubernetes.io/arch=amd64,kubernetes.io/hostname=node2,kubernetes.io/os=linux,mynode=worker-1,role=dev
 node3   Ready    &lt;none&gt;   175m   v1.14.9   beta.kubernetes.io/arch=amd64,beta.kubernetes.io/os=linux,kubernetes.io/arch=amd64,kubernetes.io/hostname=node3,kubernetes.io/os=linux,mynode=worker-3,role=dev
 
 </code></pre><h2 id="get-pod-describe-1">Get pod describe</h2>
-<pre><code>[node1 Scheduler101]$ kubectl describe pods nginx
+<pre><code>$ kubectl describe pods nginx
 Name:               nginx
 Namespace:          default
 Priority:           0
@@ -2002,19 +2183,62 @@ Events:
 </ul>
 <h2 id="step--cleanup-2">Step  Cleanup</h2>
 <p>Finally you can clean up the resources you created in your cluster:</p>
-<pre><code>kubectl delete -f pod-tain-node.yaml
+<pre><code>$ kubectl delete -f pod-tain-node.yaml
 </code></pre><h2 id="tolerations">Tolerations</h2>
 <ul>
 <li>A toleration is a way of ignoring a taint during scheduling. Tolerations aren’t applied to nodes, but rather the pods. So, in the example above, if we apply a toleration to the PodSpec, we could “tolerate” the slow disks on that node and still use it.</li>
 </ul>
 <h2 id="steps-4">Steps</h2>
-<pre><code>git clone https://github.com/collabnix/dockerlabs
-cd dockerlabs/kubernetes/workshop/Scheduler101/
-kubectl apply -f pod-tolerations-node.yaml
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="highlight">
+    <div class="copy-code-icon" style="text-align:right">
+    <a href="https://%25!s%28%3cnil%3e%29/master/content/en/examples//k8s/scheduler101/pod-tolerations-node.yaml" download="/k8s/scheduler101/pod-tolerations-node.yaml"><code>/k8s/scheduler101/pod-tolerations-node.yaml</code>
+    </a>
+    <img src="https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg" style="max-height:24px; cursor: pointer" onclick="copyCode('k8sscheduler101pod-tolerations-nodeyaml')" title="Copy /k8s/scheduler101/pod-tolerations-node.yaml to clipboard">
+    </img>
+    </div>
+    <div class="includecode" id="k8sscheduler101pod-tolerations-nodeyaml">
+    <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">apiVersion</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>v1<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">kind</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>Pod<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>nginx<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">labels</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">env</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>test<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">spec</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">containers</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>nginx<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>nginx<span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">1.7.9</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">imagePullPolicy</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>IfNotPresent<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">tolerations</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">key</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;role&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">operator</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;Equal&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">value</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;dev&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">effect</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;NoSchedule&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div>
+    </div>
+</div>
+
+
+<pre><code>$ kubectl apply -f pod-tolerations-node.yaml
 </code></pre><h2 id="viewing-your-pods-4">Viewing Your Pods</h2>
-<pre><code>kubectl get pods --output=wide
+<pre><code>$ kubectl get pods --output=wide
 </code></pre><h2 id="which-node-is-this-pod-running-on">Which Node Is This Pod Running On?</h2>
-<pre><code>[node1 Scheduler101]$ kubectl describe pods nginx
+<pre><code>$ kubectl describe pods nginx
 Name:               nginx
 Namespace:          default
 Priority:           0
@@ -2063,12 +2287,11 @@ Events:
   Normal  Pulling    1s    kubelet, node3     Pulling image &quot;nginx:1.7.9
 </code></pre><h2 id="step--cleanup-3">Step  Cleanup</h2>
 <p>Finally you can clean up the resources you created in your cluster:</p>
-<pre><code>kubectl delete -f pod-tolerations-node.yaml
+<pre><code>$ kubectl delete -f pod-tolerations-node.yaml
 </code></pre><ul>
 <li>An important thing to notice, though, is that tolerations may enable a tainted node to accept a pod but it does not guarantee that this pod runs on that specific node.</li>
 <li>In other words, the tainted node  will be considered as one of the candidates for running our pod. However, if another node has a higher priority score, it will be chosen instead. For situations like this, you need to combine the toleration with nodeSelector or node affinity parameters.</li>
 </ul>
-<p><a href=""> Next &raquo;</a></p>
 
         <div class="section-index">
     
@@ -2263,7 +2486,7 @@ Events:
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 02.02.1012: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/4a2cf46e440268d5ca46926cf7595b6b0fb0d406">Update _index.md (4a2cf46)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 02.02.1012: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/8575c5612382f848258d380f5073745ae3198109">Merge pull request #47 from apurvabhandari/patch-17 (8575c56)</a>
 </div>
 </div>
 
@@ -2359,7 +2582,44 @@ Events:
 
 
 
+<script async src="../../../../../js/sweetalert-2.1.2.min.js"></script>
+<script type="text/javascript">
+function copyCode(elem){
+  if (document.getElementById(elem)) {
+    
+    var targetId = "_hiddenCopyText_";
+    
+    target = document.getElementById(targetId);
+    if (!target) {
+      var target = document.createElement("textarea");
+      target.style.position = "absolute";
+      target.style.left = "-9999px";
+      target.style.top = "0";
+      target.id = targetId;
+      document.body.appendChild(target);
+    }
+    target.value = document.getElementById(elem).innerText;
+    
+    target.select();
 
+    
+    var succeed;
+    try {
+        succeed = document.execCommand("copy");
+    } catch(e) {
+        swal("Oh, no…","Sorry, your browser doesn't support copying this example to your clipboard.");
+        succeed = false;
+    }
+    if (succeed) {
+      swal("Copied to clipboard: ",elem);
+      return succeed;
+    } else {
+      swal("Oops!", elem + " not found when trying to copy code");
+      return false;
+    }
+  }
+}
+</script>
 
 <script type="text/javascript" async
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">

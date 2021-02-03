@@ -14,19 +14,6 @@
     
     
     <item>
-      <title>Docs: CFP Schedule</title>
-      <link>https://docker-community-leaders.github.io/dockercommunity/docs/captains/resources/change-me/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/captains/resources/change-me/</guid>
-      <description>
-        
-        
-        
-      </description>
-    </item>
-    
-    <item>
       <title>Docs: Briefings</title>
       <link>https://docker-community-leaders.github.io/dockercommunity/docs/captains/resources/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -45,6 +32,19 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docker-community-leaders.github.io/dockercommunity/docs/captains/resources/coc/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: CFP Schedule</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/captains/resources/cfp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/captains/resources/cfp/</guid>
       <description>
         
         

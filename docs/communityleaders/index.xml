@@ -96,7 +96,7 @@
       &lt;/div&gt;
       &lt;div class=&#34;card border-primary-dark&#34;&gt;
         &lt;img
-          src=&#34;../../docs/images/logos/docker301.png&#34;
+          src=&#34;../../docs/images/logos/under-construction.png&#34;
 		  class=&#34;card-img-top&#34;
 		  draggable=&#34;false&#34;
           style=&#34;padding: 2rem;&#34;
@@ -140,7 +140,7 @@
       &lt;/div&gt;
       &lt;div class=&#34;card border-primary-dark&#34;&gt;
         &lt;img
-          src=&#34;../../docs/images/logos/docker-nodes.png&#34;
+          src=&#34;../../docs/images/logos/under-construction.png&#34;
 		  class=&#34;card-img-top&#34;
 		  draggable=&#34;false&#34;
           style=&#34;padding: 2rem;&#34;
@@ -159,7 +159,7 @@
       &lt;/div&gt;
       &lt;div class=&#34;card border-primary-dark&#34;&gt;
         &lt;img
-          src=&#34;../../docs/images/logos/docker-golang.png&#34;
+          src=&#34;../../docs/images/logos/under-construction.png&#34;
 		  class=&#34;card-img-top&#34;
 		  draggable=&#34;false&#34;
           style=&#34;padding: 2rem;&#34;

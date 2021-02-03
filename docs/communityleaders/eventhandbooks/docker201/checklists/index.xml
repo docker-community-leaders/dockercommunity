@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title> – Event Checklist</title>
+    <title> – Your Event Checklist</title>
     <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/docker201/checklists/</link>
-    <description>Recent content in Event Checklist on </description>
+    <description>Recent content in Your Event Checklist on </description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/docker201/checklists/index.xml" rel="self" type="application/rss+xml" />

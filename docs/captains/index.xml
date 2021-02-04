@@ -15,20 +15,6 @@
     
     
     <item>
-      <title>Docs: Resources</title>
-      <link>https://docker-community-leaders.github.io/dockercommunity/docs/captains/resources/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/captains/resources/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Please Note: This is a private page accessible by Captains only.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
       <title>Docs: Projects</title>
       <link>https://docker-community-leaders.github.io/dockercommunity/docs/captains/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -67,6 +53,20 @@ project for Node.js using Docker, Compose, and many best practices for local dev
 &lt;li&gt;&lt;a href=&#34;https://github.com/crazy-max/swarm-cronjob&#34;&gt;&lt;strong&gt;swarm-cronjob&lt;/strong&gt;&lt;/a&gt; - Create jobs on a time-based schedule on Docker Swarm.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/crazy-max/diun&#34;&gt;&lt;strong&gt;Diun&lt;/strong&gt;&lt;/a&gt; - Receive notifications when an image is updated on a Docker registry.&lt;/li&gt;
 &lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Resources</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/captains/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/captains/resources/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Please Note: This is a private page accessible by Captains only.&lt;/p&gt;
 
       </description>
     </item>

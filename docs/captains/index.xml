@@ -67,6 +67,33 @@ project for Node.js using Docker, Compose, and many best practices for local dev
         
         
         &lt;p&gt;Please Note: This is a private page accessible by Captains only.&lt;/p&gt;
+&lt;h2 id=&#34;captains-blogstwitter&#34;&gt;Captains Blogs/Twitter&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Antonis Kalipetis&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/akalipetis&#34;&gt;@akalipetis&lt;/a&gt; - &lt;a href=&#34;https://www.akalipetis.com&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bret Fisher&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/bretfisher&#34;&gt;@BretFisher&lt;/a&gt; - &lt;a href=&#34;https://www.bretfisher.com&#34;&gt;Blog&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/c/BretFisherITPro&#34;&gt;YouTube&lt;/a&gt; - &lt;a href=&#34;https://www.facebook.com/bretfisher.devops&#34;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Brian Christner&lt;/strong&gt; &lt;a href=&#34;https://twitter.com/idomyowntricks&#34;&gt;@idomyowntricks&lt;/a&gt; - &lt;a href=&#34;https://brianchristner.io&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gianluca Arbezzano&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/gianarb&#34;&gt;@gianarb&lt;/a&gt; - &lt;a href=&#34;https://gianarb.it&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Jeff Nickoloff&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/allingeek&#34;&gt;@allingeek&lt;/a&gt; - &lt;a href=&#34;https://medium.com/@allingeek&#34;&gt;Blog&lt;/a&gt; - &lt;a href=&#34;https://medium.com/on-docker&#34;&gt;Blog - On-Docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;John Lees-Miller&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/jdleesmiller&#34;&gt;@jdleesmiller&lt;/a&gt; - &lt;a href=&#34;http://jdlm.info/&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;John Zaccone&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/JohnZaccone&#34;&gt;@JohnZaccone&lt;/a&gt; - &lt;a href=&#34;http://johnzaccone.io&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Laura Frank&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/rhein_wein&#34;&gt;@rhein_wein&lt;/a&gt; - &lt;a href=&#34;https://blog.codeship.com/author/laurafrank/&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lee Calcote&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/lcalcote&#34;&gt;@lcalcote&lt;/a&gt; - &lt;a href=&#34;https://gingergeek.com&#34;&gt;Blog&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/watch?v=Wcn4Ji__DCA&amp;amp;list=PLYjO73_1efChX9NuRaU7WocTbgrfvCoPE&#34;&gt;YouTube&lt;/a&gt; - &lt;a href=&#34;https://linkedin.com/in/leecalcote&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Luc Juggery&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/lucjuggery&#34;&gt;@lucjuggery&lt;/a&gt; - &lt;a href=&#34;https://medium.com/lucjuggery&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Manuel Morejon&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/morejon85&#34;&gt;@morejon85&lt;/a&gt; - &lt;a href=&#34;http://mmorejon.github.io&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nicholas Dille&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/nicholasdille&#34;&gt;@nicholasdille&lt;/a&gt; - &lt;a href=&#34;http://dille.name&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nick Janetakis&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/nickjanetakis&#34;&gt;@nickjanetakis&lt;/a&gt; - &lt;a href=&#34;https://nickjanetakis.com&#34;&gt;Blog&lt;/a&gt; - &lt;a href=&#34;https://www.youtube.com/c/nickjanetakis&#34;&gt;YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nils De Moor&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/ndemoor&#34;&gt;@ndemoor&lt;/a&gt; - &lt;a href=&#34;https://cntnr.io&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nigel Poulton&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/nigelpoulton&#34;&gt;@nigelpoulton&lt;/a&gt; - &lt;a href=&#34;http://nigelpoulton.com&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Phil Estes&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/estesp&#34;&gt;@estesp&lt;/a&gt; - &lt;a href=&#34;https://integratedcode.us&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Philipp Garbe&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/pgarbe&#34;&gt;@pgarbe&lt;/a&gt; - &lt;a href=&#34;http://garbe.io&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Shawn Bower&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/drizzt51&#34;&gt;@drizzt51&lt;/a&gt; - &lt;a href=&#34;https://medium.com/@shawn.bower&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stefan Scherer&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/stefscherer&#34;&gt;@stefscherer&lt;/a&gt; - &lt;a href=&#34;https://stefanscherer.github.io&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tim Tyler&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/timotyler&#34;&gt;@timotyler&lt;/a&gt; - &lt;a href=&#34;https://medium.com/@tim.tyler&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Adrian Mouat&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/adrianmouat&#34;&gt;@adrianmouat&lt;/a&gt; - &lt;a href=&#34;https://container-solutions.com/author/adrianm/&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nicolas De Loof&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/ndeloof&#34;&gt;@ndeloof&lt;/a&gt; - &lt;a href=&#34;http://blog.loof.fr&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kevin Alvarez (aka CrazyMax)&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/crazyws&#34;&gt;@crazyws&lt;/a&gt; - &lt;a href=&#34;https://crazymax.dev/&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ajeet Rania&lt;/strong&gt; - &lt;a href=&#34;https://twitter.com/ajeetsraina&#34;&gt;@ajeetsraina&lt;/a&gt; - &lt;a href=&#34;https://collabnix.com/&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>

@@ -1735,8 +1735,6 @@ if (!doNotTrack) {
 	<h1>Deploying Your First Kubernetes Service</h1>
         <div class="lead">Deploying Your First Kubernetes Service</div>
 	
-            <p class="reading-time"><i class="fa fa-clock" aria-hidden="true"></i> 12 minute read</p>
-        
 	<h1 id="what-are-kubernetes-services">What are Kubernetes Services?</h1>
 <p>Say, you have pods running nginx in a flat, cluster wide, address space. In theory, you could talk to these pods directly, but what happens when a node dies? The pods die with it, and the Deployment will create new ones, with different IPs. This is the problem a Service solves.</p>
 <p>Kubernetes Pods are mortal. They are born and when they die, they are not resurrected. If you use a Deployment to run your app, it can create and destroy Pods dynamically. Each Pod gets its own IP address, however in a Deployment, the set of Pods running in one moment in time could be different from the set of Pods running that application a moment later.</p>
@@ -2185,7 +2183,7 @@ spec:
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 02.02.4042: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/d87901e7af733d5160c362bd574b82dccef5f441">Update _index.md (d87901e)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 02.02.4042: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/a7561ea4979b53de98b2ea094813ce2e31e6ac00">Update config.toml (a7561ea)</a>
 </div>
 </div>
 

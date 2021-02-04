@@ -14,6 +14,29 @@
     
     
     <item>
+      <title>Docs: Contribute to Docker docs</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/contribution-guidelines/docs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/contribution-guidelines/docs/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Thank you so much for your interest in contributing to &lt;a href=&#34;https://docker.com&#34;&gt;Docker&lt;/a&gt; tutorials. Docker has open source in its DNA, and has always worked closely with the community.&lt;/p&gt;
+&lt;p&gt;Just a few quick things to be aware of before you get started.&lt;/p&gt;
+&lt;p&gt;We welcome issues and pull requests for fixing a problem with an existing tutorial. We are not accepting new tutorials. If you want to contribute new tutorials, please consider contributing to &lt;a href=&#34;https://training.play-with-docker.com&#34;&gt;training.play-with-docker.com&lt;/a&gt; in this repository: &lt;a href=&#34;https://github.com/play-with-docker/play-with-docker.github.io&#34;&gt;https://github.com/play-with-docker/play-with-docker.github.io&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Anything you contribute will be under an Apache license. Docker will choose which tutorials to accept and reject, and will be able to take any tutorials here and put them in Docker documentation. Likewise, anything posted here may be forked by anyone on GitHub.&lt;/p&gt;
+&lt;p&gt;We will be following the lightweight version of the Docker contribution policies and procedures as explained in&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.docker.com&#34;&gt;Docker documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The &lt;a href=&#34;https://github.com/moby/moby/blob/master/CONTRIBUTING.md&#34;&gt;Docker engine repo&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This largely boils down to &lt;a href=&#34;https://github.com/moby/moby/blob/master/CONTRIBUTING.md#sign-your-work&#34;&gt;signing your PRs&lt;/a&gt;, following the Docker &lt;a href=&#34;https://www.docker.com/trademark-guidelines&#34;&gt;trademark guidelines&lt;/a&gt;, and following the community guidelines.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: How to contribute to Moby Project</title>
       <link>https://docker-community-leaders.github.io/dockercommunity/docs/contribution-guidelines/moby/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

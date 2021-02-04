@@ -1652,6 +1652,19 @@ if (!doNotTrack) {
 
 
 
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#using-the-command-line">Using the command line</a></li>
+        <li><a href="#add-the-upstream-repository-as-a-git-remote-repository">Add the upstream repository as a Git remote repository:</a></li>
+        <li><a href="#check-your-remotes">Check your remotes:</a></li>
+        <li><a href="#using-the-github-web-ui">Using the GitHub web UI</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
 
 
           </div>
@@ -1698,9 +1711,92 @@ if (!doNotTrack) {
 	<h1>How to contribute to Get Involved Site</h1>
         <div class="lead">A Guide to contribute to &ldquo;Get Involved&rdquo; Site</div>
 	
-            <p class="reading-time"><i class="fa fa-clock" aria-hidden="true"></i> 0 minute read</p>
+            <p class="reading-time"><i class="fa fa-clock" aria-hidden="true"></i> 5 minute read</p>
         
-	
+	<p>Community and participation are the backbone of Docker. Whether you&rsquo;re technical or not, we welcome contributions from anyone around the world. This page is intended for people who want to contribute content to this Docker Community repository docs and who don&rsquo;t use Git or GitHub often. The page is basically a quick guide to get going with a GitHub repository, using either Git on CLI or the GitHub web user interface (UI).</p>
+<h2 id="using-the-command-line">Using the command line</h2>
+<ul>
+<li>
+<p>Fork/Clone the docker-community-leaders/community repository:</p>
+</li>
+<li>
+<p>Go to the docker-community-leaders/dockercommunity on GitHub.</p>
+</li>
+<li>
+<p>Click Fork to make your own copy of the repository. GitHub creates a copy at <a href="https://github.com/">https://github.com/</a><your-github-username>/community.</p>
+</li>
+<li>
+<p>Open a terminal on your local machine.</p>
+</li>
+<li>
+<p>Clone your forked repository, to copy the files down to your local machine. This example creates a directory called community and uses SSH cloning to download the files:</p>
+</li>
+</ul>
+<pre><code>mkdir community
+cd community/
+git clone git@github.com:&lt;your-github-username&gt;/dockercommunity.git
+cd dockercommunity/
+</code></pre><h2 id="add-the-upstream-repository-as-a-git-remote-repository">Add the upstream repository as a Git remote repository:</h2>
+<pre><code>git remote add upstream https://github.com/docker-community-leaders/dockercommunity.git
+</code></pre><h2 id="check-your-remotes">Check your remotes:</h2>
+<pre><code>git remote -vv
+</code></pre><p>You should have 2 remote repositories:</p>
+<ul>
+<li>origin - points to your own fork of the repository on gitHub - that is, the one you cloned your local repository from.</li>
+<li>upstream - points to the actual repository on gitHub.</li>
+</ul>
+<p>Create a branch. In this example, replace documentupdates with any branch name you like. Choose a branch name that helps you recognize the updates you plan to make in that branch:</p>
+<pre><code>git checkout -b documentupdates
+</code></pre><p>Add and edit the files as you like. The doc pages are in the /community/content/docs/ directory.</p>
+<p>Run git status at any time, to check the status of your local files. Git tells you which files need adding or committing to your local repository.</p>
+<p>Commit your updated files to your local Git repository. Example commit:</p>
+<pre><code>git commit -a -m &quot;Fixed some doc errors.&quot;
+</code></pre><p>Or:</p>
+<pre><code>git add add-this-doc.md
+git commit -a -m &quot;Added a shiny new doc.&quot;
+</code></pre><p>Push from your branch (for example, updates) to the relevant branch on your fork on GitHub:</p>
+<pre><code>git checkout documentupdates
+git push origin documentsupdates
+</code></pre><p>When you&rsquo;re ready to start the review process, create a pull request (PR) in the branch on your fork on the GitHub UI, based on the above push. The PR is auto-sent to the upstream repository - that is, the one you forked from.</p>
+<p>If you need to change the files in your PR, continue changing them locally in the same branch, then push them again in the same way. GitHub automatically sends them through to the same PR on the upstream repository!</p>
+<p>Hint: If you&rsquo;re authenticating to GitHub via SSH, use ssh-add to add your SSH key passphrase to the managing agent, so that you don&rsquo;t have to keep authenticating to GitHub. You need to do this again after every reboot.</p>
+<h2 id="using-the-github-web-ui">Using the GitHub web UI</h2>
+<p>Note: The GitHub web UI is suitable for quick updates to a single file. If your update is more complex or you need to update more than one file within one pull request (PR), then the command line provides a better experience.</p>
+<p>Follow these steps to edit a page using the GitHub UI:</p>
+<ul>
+<li>
+<p>Sign in to GitHub if you haven&rsquo;t yet done so.</p>
+</li>
+<li>
+<p>Go to the page that you want to edit on the Docker Community Site.</p>
+</li>
+<li>
+<p>Click Edit this page.</p>
+</li>
+</ul>
+<p>If this is the first time you&rsquo;re updating a file in the Community site repository, a screen opens asking you to fork the repository. A fork is a copy of the repository where you can make your updates before submitting them for review. You only have to fork the repository once:</p>
+<ul>
+<li>Click Fork this repository.</li>
+</ul>
+<p>If GitHub asks you Where should we fork the site and offers your username as an option, click the link on your username.
+Wait a few seconds while GitHub makes a copy of the repository at <a href="https://github.com/yourusername/community">https://github.com/yourusername/community</a>. This copy is your fork of the docker-community-leaders/community repository.</p>
+<p>The GitHub editor interface opens for the selected page. Make your updates to the content.</p>
+<ul>
+<li>Click Preview changes at the top of the editing area to see the effect of your changes.</li>
+</ul>
+<p>If you need to make more changes, click Edit file at the top of the preview area.</p>
+<p>When you are ready to submit your changes, scroll down to the Propose file change section at the bottom of the editing area.</p>
+<p>Enter a short description of your update. This short description becomes the title of your pull request (PR).</p>
+<p>In the second text box (for the extended description), enter a more detailed description.</p>
+<p>Click Propose file change. A new screen appears, offering you the opportunity to open a pull request.</p>
+<p>Click Create pull request.</p>
+<p>Optionally, edit the pull request title and description.</p>
+<p>Make sure Allow edits from maintainers remains checked.</p>
+<p>Click Create pull request again. You have now sent a request to the repository maintainers to review your change.</p>
+<p>Check the online preview of your changes:</p>
+<p>Wait for the automated PR workflow to do some checks. When it&rsquo;s ready, you should see a comment like this: deploy/netlify — Deploy preview ready!
+Click Details to the right of &ldquo;Deploy preview ready&rdquo; to see a preview of your updates.</p>
+
         <div class="section-index">
     
     
@@ -1902,7 +1998,7 @@ if (!doNotTrack) {
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 02.02.4042: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/53d20ce199f6300de3cdd239ca93f15c39ef6013">Update _index.md (53d20ce)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 02.02.4042: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/d87901e7af733d5160c362bd574b82dccef5f441">Update _index.md (d87901e)</a>
 </div>
 </div>
 

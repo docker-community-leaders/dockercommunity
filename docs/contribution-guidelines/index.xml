@@ -22,7 +22,12 @@
       <description>
         
         
-        
+        &lt;p&gt;Want to hack on the Moby Project? Awesome! We have a contributor&amp;rsquo;s guide that explains
+&lt;a href=&#34;https://github.com/moby/moby/tree/master/docs/contributing&#34;&gt;setting up a development environment and the contribution
+process&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;[&lt;img src=&#34;https://github.com/moby/moby/tree/master/docs/contributing/&#34; alt=&#34;Contributors guide&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This &lt;a href=&#34;https://github.com/moby/moby/blob/master/CONTRIBUTING.md#moby-community-guidelines&#34;&gt;link&lt;/a&gt; contains information about reporting issues as well as some tips and guidelines useful to experienced open source contributors. Finally, make sure you read our community guidelines before you start participating.&lt;/p&gt;
+
       </description>
     </item>
     

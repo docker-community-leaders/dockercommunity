@@ -66,7 +66,17 @@ project for Node.js using Docker, Compose, and many best practices for local dev
       <description>
         
         
-        
+        &lt;h4 id=&#34;getting-started-privatehttpsgithubcomdockercaptainsblobmastergetting-startedmd&#34;&gt;&lt;a href=&#34;https://github.com/docker/captains/blob/master/getting-started.md&#34;&gt;Getting Started (Private)&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;This repo includes more information on which platforms we use (and why!), where to ask questions and more.&lt;/em&gt;&lt;/p&gt;
+&lt;h4 id=&#34;docker-captains-briefings-privatehttpsgithubcomdockercaptainsblobmasterbriefingsmd&#34;&gt;&lt;a href=&#34;https://github.com/docker/captains/blob/master/briefings.md&#34;&gt;Docker Captains Briefings (Private)&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;This repo contains links to all of the recorded briefings including videos, slides and relevant blog posts.&lt;/em&gt;&lt;/p&gt;
+&lt;h4 id=&#34;swim-lanes-for-docker-captains-privatehttpsgithubcomdockercaptainsblobmasterswimlanesmd&#34;&gt;&lt;a href=&#34;https://github.com/docker/captains/blob/master/swimlanes.md&#34;&gt;Swim Lanes for Docker Captains (Private)&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;The Swim Lanes are a guide to topics that are of interest to the Docker community. Check out this link to see how we are mangaing Captains content creation and speaking events.&lt;/em&gt;&lt;/p&gt;
+&lt;h4 id=&#34;cfp-schedule-for-docker-captains-privatehttpsdocsgooglecomspreadsheetsd17eob9ipv5s3brlxzplqz5j50rpk6-67e0nudolmjxc0edituspsharing&#34;&gt;&lt;a href=&#34;https://docs.google.com/spreadsheets/d/17eOb9IpV5S3brlXZPlQz5J50RPk6-67e0NUdOLMJXC0/edit?usp=sharing&#34;&gt;CFP Schedule for Docker Captains (Private)&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;We update this sheet regularly with CFP opportunities for Docker Captains. If you see an event that is missing, &lt;a href=&#34;mailto:events@docker.com&#34;&gt;please ping us&lt;/a&gt; and we can add it!&lt;/em&gt;&lt;/p&gt;
+&lt;h4 id=&#34;docker-captains-code-of-conduct-privatehttpsgithubcomdockercaptainsblobmasterprogram-guidelinesmd&#34;&gt;&lt;a href=&#34;https://github.com/docker/captains/blob/master/program-guidelines.md&#34;&gt;Docker Captains Code of Conduct (Private)&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;By becoming a member of this program, you agree to abide by the Code of Conduct. This is to ensure that the Captains are a respected, professional group that has a positive impact in the ecosystem. The Code of Conduct is not a comprehensive list of do’s and don’ts, but rather a living set of guidelines to follow that we will continue to refine as the program matures. You are responsible for keeping abreast of changes to this document.&lt;/em&gt;&lt;/p&gt;
+
       </description>
     </item>
     

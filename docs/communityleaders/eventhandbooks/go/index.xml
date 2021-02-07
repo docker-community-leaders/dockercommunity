@@ -421,7 +421,7 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
 &lt;p&gt;You can download the latest version of GoLang (Golang 15.7 ) from the below links:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://golang.org/dl/go1.15.7.windows-amd64.msi&#34;&gt;Windows&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://golang.org/dl/go1.15.7.darwin-amd64.pkg&#34;&gt;Apple Macos &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://golang.org/dl/go1.15.7.darwin-amd64.pkg&#34;&gt;MacOS &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://golang.org/dl/go1.15.7.linux-amd64.tar.gz&#34;&gt;Linux&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://golang.org/dl/go1.15.7.src.tar.gz&#34;&gt;Using Source&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

@@ -82,6 +82,20 @@
     </item>
     
     <item>
+      <title>Docs: Kubernetes</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;img src=&#34;under-construction.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: GoLang</title>
       <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/go/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -837,20 +851,6 @@ A show of confidence raises the bar
 &lt;pre&gt;&lt;code&gt;$ docker-compose down
 
 &lt;/code&gt;&lt;/pre&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Kubernetes</title>
-      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/</guid>
-      <description>
-        
-        
-        &lt;p&gt;&lt;img src=&#34;under-construction.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
-
       </description>
     </item>
     

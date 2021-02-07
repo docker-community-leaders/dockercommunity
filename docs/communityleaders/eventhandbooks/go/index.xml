@@ -408,5 +408,112 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
       </description>
     </item>
     
+    <item>
+      <title>Docs: GoLang</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/go/golangapp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/go/golangapp/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;download-golang--latest-version-golang-157-&#34;&gt;Download Golang ( latest version Golang 15.7 )&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://golang.org/dl/go1.15.7.windows-amd64.msi&#34;&gt;Windows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://golang.org/dl/go1.15.7.darwin-amd64.pkg&#34;&gt;Apple Macos &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://golang.org/dl/go1.15.7.linux-amd64.tar.gz&#34;&gt;Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://golang.org/dl/go1.15.7.src.tar.gz&#34;&gt;github source&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;install-golang&#34;&gt;Install Golang&lt;/h1&gt;
+&lt;p&gt;Select the tab for your computer&amp;rsquo;s operating system below, then follow its installation instructions.&lt;/p&gt;
+&lt;ul class=&#34;nav nav-tabs&#34; id=&#34;install-golang&#34; role=&#34;tablist&#34;&gt;&lt;li class=&#34;nav-item&#34;&gt;&lt;a data-toggle=&#34;tab&#34; class=&#34;nav-link active&#34; href=&#34;#install-golang-0&#34; role=&#34;tab&#34; aria-controls=&#34;install-golang-0&#34; aria-selected=&#34;true&#34;&gt;Linux&lt;/a&gt;&lt;/li&gt;
+	  
+		&lt;li class=&#34;nav-item&#34;&gt;&lt;a data-toggle=&#34;tab&#34; class=&#34;nav-link&#34; href=&#34;#install-golang-1&#34; role=&#34;tab&#34; aria-controls=&#34;install-golang-1&#34;&gt;Mac&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&#34;nav-item&#34;&gt;&lt;a data-toggle=&#34;tab&#34; class=&#34;nav-link&#34; href=&#34;#install-golang-2&#34; role=&#34;tab&#34; aria-controls=&#34;install-golang-2&#34;&gt;Windows&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;div class=&#34;tab-content&#34; id=&#34;install-golang&#34;&gt;&lt;div id=&#34;install-golang-0&#34; class=&#34;tab-pane show active&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;install-golang-0&#34;&gt;
+
+&lt;p&gt;&lt;p&gt;This is &lt;strong&gt;some markdown.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;if you have a previous version of Go installed, be sure to &lt;a href=&#34;&#34;&gt;remove it&lt;/a&gt;&lt;a href=&#34;https://golang.org/doc/manage-install&#34;&gt;https://golang.org/doc/manage-install&lt;/a&gt; before installing another.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Download the archive and extract it into &lt;code&gt;/usr/local&lt;/code&gt;, creating a Go tree in &lt;code&gt;/usr/local/go&lt;/code&gt;.
+For example, run the following as root or through sudo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;tar -C /usr/local -xzf go1.15.7.linux-amd64.tar.gz
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Add &lt;code&gt;/usr/local/go/bin&lt;/code&gt; to the PATH environment variable.
+You can do this by adding the following line to your $HOME/.profile or /etc/profile (for a system-wide installation):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;export PATH=$PATH:/usr/local/go/bin
+
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote class=&#34;note callout&#34;&gt;
+  &lt;div&gt;&lt;strong&gt;Note:&lt;/strong&gt; Changes made to a profile file may not apply until the next time you log into your computer. To apply the changes immediately, just run the shell commands directly or execute them from the profile using a command such as source &lt;code&gt;$HOME/.profile&lt;/code&gt;.&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Verify that you&amp;rsquo;ve installed Go by opening a command prompt and typing the following command:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+$ go version
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Confirm that the command prints the installed version of Go.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+  &lt;div id=&#34;install-golang-1&#34; class=&#34;tab-pane&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;install-golang-1&#34;&gt;
+
+&lt;p&gt;&lt;p&gt;1.Open the package file you downloaded and follow the prompts to install Go.&lt;/p&gt;
+&lt;p&gt;The package installs the Go distribution to /usr/local/go. The package should put the /usr/local/go/bin directory in your PATH environment variable. You may need to restart any open Terminal sessions for the change to take effect.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+$ go version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Confirm that the command prints the installed version of Go.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+  &lt;div id=&#34;install-golang-2&#34; class=&#34;tab-pane&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;install-golang-2&#34;&gt;
+
+&lt;p&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;Open the MSI file you downloaded and follow the prompts to install Go.
+By default, the installer will install Go to C:\Go. You can change the location as needed. After installing, you will need to close and reopen any open command prompts so that changes to the environment made by the installer are reflected at the command prompt.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Verify that you&amp;rsquo;ve installed Go.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;1.In Windows, click the Start menu. &lt;br&gt;
+2.In the menu&amp;rsquo;s search box, type cmd, then press the Enter key. &lt;br&gt;
+3.In the Command Prompt window that appears, type the following command: &lt;br&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+$ go version
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Confirm that the command prints the installed version of Go.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

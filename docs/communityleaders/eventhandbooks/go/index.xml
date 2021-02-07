@@ -423,7 +423,7 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
 &lt;li&gt;&lt;a href=&#34;https://golang.org/dl/go1.15.7.windows-amd64.msi&#34;&gt;Windows&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://golang.org/dl/go1.15.7.darwin-amd64.pkg&#34;&gt;Apple Macos &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://golang.org/dl/go1.15.7.linux-amd64.tar.gz&#34;&gt;Linux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://golang.org/dl/go1.15.7.src.tar.gz&#34;&gt;github source&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://golang.org/dl/go1.15.7.src.tar.gz&#34;&gt;Using Source&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;install-golang&#34;&gt;Install Golang&lt;/h1&gt;
 &lt;p&gt;Select the tab for your computer&amp;rsquo;s operating system below, then follow its installation instructions.&lt;/p&gt;

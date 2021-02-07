@@ -2476,28 +2476,6 @@ $
     </item>
     
     <item>
-      <title>Docs: Addition Resources</title>
-      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/docker101/resources/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/docker101/resources/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Follow the below additional resources which you might find useful:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/&#34;&gt;Play with Docker Training Classroom&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/beginner-linux/&#34;&gt;Docker for Beginners - Linux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/ops-s1-images/&#34;&gt;Doing More With Docker Images&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/windows-containers-basics/&#34;&gt;Windows Containers Basics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/windows-containers-setup/&#34;&gt;Windows Container Setup&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/windows-containers-multicontainer/&#34;&gt;Windows Containers Multi-Container Applications&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
       <title>Docs: Creating Private Docker Registry </title>
       <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/docker101/registry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -3098,6 +3076,28 @@ b747d43fa277   nginx               &amp;quot;nginx -g &#39;daemon off&amp;quot; 
 &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; The port mapping is actually port address translation (PAT).&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;test-your-knowledge&#34;&gt;Test Your Knowledge&lt;/h2&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Addition Resources</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/docker101/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/docker101/resources/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Follow the below additional resources which you might find useful:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/&#34;&gt;Play with Docker Training Classroom&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/beginner-linux/&#34;&gt;Docker for Beginners - Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/ops-s1-images/&#34;&gt;Doing More With Docker Images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/windows-containers-basics/&#34;&gt;Windows Containers Basics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/windows-containers-setup/&#34;&gt;Windows Container Setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/windows-containers-multicontainer/&#34;&gt;Windows Containers Multi-Container Applications&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>

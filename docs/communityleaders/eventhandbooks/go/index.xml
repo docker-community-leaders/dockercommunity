@@ -371,7 +371,7 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
 &lt;td&gt;11:15 AM to 11:30 AM&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;../dockercompose/&#34;&gt;Dockerize Multi-Container Go Application Using Docker Compose&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../compose/&#34;&gt;Dockerize Multi-Container Go Application Using Docker Compose&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;11:30 AM to 1:00 PM&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;

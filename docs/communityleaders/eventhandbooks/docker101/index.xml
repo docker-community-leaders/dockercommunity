@@ -2476,6 +2476,28 @@ $
     </item>
     
     <item>
+      <title>Docs: Addition Resources</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/docker101/change-me/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/docker101/change-me/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Follow the below additional resources which you might find useful:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/&#34;&gt;Play with Docker Training Classroom&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/beginner-linux/&#34;&gt;Docker for Beginners - Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/ops-s1-images/&#34;&gt;Doing More With Docker Images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/windows-containers-basics/&#34;&gt;Windows Containers Basics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/windows-containers-setup/&#34;&gt;Windows Container Setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/windows-containers-multicontainer/&#34;&gt;Windows Containers Multi-Container Applications&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Creating Private Docker Registry </title>
       <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/docker101/registry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

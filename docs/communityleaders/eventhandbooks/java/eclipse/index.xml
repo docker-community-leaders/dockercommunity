@@ -13,24 +13,5 @@
       
     
     
-    <item>
-      <title>Docs: Additional Resources</title>
-      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/java/eclipse/resources/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/java/eclipse/resources/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Follow the below links for additional resources and links&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/java-debugging-eclipse/&#34;&gt;In-container Java Development: Eclipse&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/java-debugging-intellij/&#34;&gt;In-container Java Development: Intellij&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/java-debugging-netbeans/&#34;&gt;In-container Java Development: Netbeans&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
   </channel>
 </rss>

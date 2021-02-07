@@ -524,8 +524,7 @@ $ go version
       <description>
         
         
-        &lt;h1 id=&#34;dockerize-your-first-golang-application&#34;&gt;Dockerize your first Golang Application&lt;/h1&gt;
-&lt;p&gt;Create the main.go file with the following content:
+        &lt;p&gt;Create the main.go file with the following content:
 
 
  

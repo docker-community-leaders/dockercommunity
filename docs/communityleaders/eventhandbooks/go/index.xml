@@ -333,5 +333,80 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
       </description>
     </item>
     
+    <item>
+      <title>Docs: Agenda</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/go/agenda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/go/agenda/</guid>
+      <description>
+        
+        
+        &lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Timing&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Welcome&lt;/td&gt;
+&lt;td&gt;8:45 AM to 9:00 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;../prerequisite/&#34;&gt;Installing Go&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;9:00 AM to 9:15 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;../golangapp/&#34;&gt;Dockerize your first Golang Application &lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;9:15 AM to 10:15 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;../gomodules/&#34;&gt;Working with Go Modules and Docker&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;10:15 AM to 11:15 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Coffee/Tea Break&lt;/td&gt;
+&lt;td&gt;11:15 AM to 11:30 AM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;../dockercompose/&#34;&gt;Dockerize Multi-Container Go Application Using Docker Compose&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;11:30 AM to 1:00 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Lunch&lt;/td&gt;
+&lt;td&gt;1:00 PM to 2:00 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;&#34;&gt;1&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;2:00 PM to 3:30 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;&#34;&gt;2&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;3:30 PM to 4:00 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;&#34;&gt;3&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;4:00 PM to 4:30 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Coffee/Tea Break&lt;/td&gt;
+&lt;td&gt;4:00 PM to 4:30 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;&#34;&gt;4&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;4:45 PM to 5:45 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Quiz/Prize/Certificate Distribution&lt;/td&gt;
+&lt;td&gt;5:45 PM to 6:00 PM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

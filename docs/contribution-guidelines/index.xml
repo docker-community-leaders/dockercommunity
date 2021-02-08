@@ -14,6 +14,299 @@
     
     
     <item>
+      <title>Docs: How to contribute code to Docker</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/contribution-guidelines/contributecode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/contribution-guidelines/contributecode/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;contributing-to-docker&#34;&gt;Contributing to Docker&lt;/h1&gt;
+&lt;p&gt;Want to hack on Docker? Awesome!  We have a contributor&amp;rsquo;s guide that explains
+&lt;a href=&#34;https://docs.docker.com/opensource/project/who-written-for/&#34;&gt;setting up a Docker development environment and the contribution
+process&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This page contains information about reporting issues as well as some tips and
+guidelines useful to experienced open source contributors. Finally, make sure
+you read our &lt;a href=&#34;#docker-community-guidelines&#34;&gt;community guidelines&lt;/a&gt; before you
+start participating.&lt;/p&gt;
+&lt;h2 id=&#34;topics&#34;&gt;Topics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#reporting-security-issues&#34;&gt;Reporting Security Issues&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#design-and-cleanup-proposals&#34;&gt;Design and Cleanup Proposals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#reporting-other-issues&#34;&gt;Reporting Issues&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#quick-contribution-tips-and-guidelines&#34;&gt;Quick Contribution Tips and Guidelines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#docker-community-guidelines&#34;&gt;Community Guidelines&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reporting-security-issues&#34;&gt;Reporting security issues&lt;/h2&gt;
+&lt;p&gt;The Docker maintainers take security seriously. If you discover a security
+issue, please bring it to their attention right away!&lt;/p&gt;
+&lt;p&gt;Please &lt;strong&gt;DO NOT&lt;/strong&gt; file a public issue, instead send your report privately to
+&lt;a href=&#34;mailto:security@docker.com&#34;&gt;security@docker.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Security reports are greatly appreciated and we will publicly thank you for it.
+We also like to send gifts—if you&amp;rsquo;re into Docker swag, make sure to let
+us know. We currently do not offer a paid security bounty program, but are not
+ruling it out in the future.&lt;/p&gt;
+&lt;h2 id=&#34;reporting-other-issues&#34;&gt;Reporting other issues&lt;/h2&gt;
+&lt;p&gt;A great way to contribute to the project is to send a detailed report when you
+encounter an issue. We always appreciate a well-written, thorough bug report,
+and will thank you for it!&lt;/p&gt;
+&lt;p&gt;Check that &lt;a href=&#34;https://github.com/docker/compose-cli/issues&#34;&gt;our issue database&lt;/a&gt;
+doesn&amp;rsquo;t already include that problem or suggestion before submitting an issue.
+If you find a match, you can use the &amp;ldquo;subscribe&amp;rdquo; button to get notified on
+updates. Do &lt;em&gt;not&lt;/em&gt; leave random &amp;ldquo;+1&amp;rdquo; or &amp;ldquo;I have this too&amp;rdquo; comments, as they
+only clutter the discussion, and don&amp;rsquo;t help to resolve it. However, if you
+have ways to reproduce the issue or have additional information that may help
+resolving the issue, please leave a comment.&lt;/p&gt;
+&lt;p&gt;When reporting issues, always include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The output of &lt;code&gt;docker version&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;The output of &lt;code&gt;docker context show&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;The output of &lt;code&gt;docker info&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Also include the steps required to reproduce the problem if possible and
+applicable. This information will help us review and fix your issue faster.
+When sending lengthy log files, consider posting them as a gist
+(&lt;a href=&#34;https://gist.github.com&#34;&gt;https://gist.github.com&lt;/a&gt;).
+Don&amp;rsquo;t forget to remove sensitive data from your log files before posting (you
+can replace those parts with &amp;ldquo;REDACTED&amp;rdquo;).&lt;/p&gt;
+&lt;h2 id=&#34;quick-contribution-tips-and-guidelines&#34;&gt;Quick contribution tips and guidelines&lt;/h2&gt;
+&lt;p&gt;This section gives the experienced contributor some tips and guidelines.&lt;/p&gt;
+&lt;h3 id=&#34;pull-requests-are-always-welcome&#34;&gt;Pull requests are always welcome&lt;/h3&gt;
+&lt;p&gt;Not sure if that typo is worth a pull request? Found a bug and know how to fix
+it? Do it! We will appreciate it. Any significant change, like adding a backend,
+should be documented as
+&lt;a href=&#34;https://github.com/docker/compose-cli/issues&#34;&gt;a GitHub issue&lt;/a&gt;
+before anybody starts working on it.&lt;/p&gt;
+&lt;p&gt;We are always thrilled to receive pull requests. We do our best to process them
+quickly. If your pull request is not accepted on the first try,
+don&amp;rsquo;t get discouraged! Our contributor&amp;rsquo;s guide explains
+&lt;a href=&#34;https://docs.docker.com/opensource/workflow/make-a-contribution/&#34;&gt;the review process we use for simple changes&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;talking-to-other-docker-users-and-contributors&#34;&gt;Talking to other Docker users and contributors&lt;/h3&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;col width=&#34;45%&#34;&gt;
+  &lt;col width=&#34;65%&#34;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Community Slack&lt;/td&gt;
+    &lt;td&gt;
+      The Docker Community has a dedicated Slack chat to discuss features and issues.  You can sign-up &lt;a href=&#34;https://community.docker.com/registrations/groups/4316&#34; target=&#34;_blank&#34;&gt;with this link&lt;/a&gt;.
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Forums&lt;/td&gt;
+    &lt;td&gt;
+      A public forum for users to discuss questions and explore current design patterns and
+      best practices about Docker and related projects in the Docker Ecosystem. To participate,
+      just log in with your Docker Hub account on &lt;a href=&#34;https://forums.docker.com&#34; target=&#34;_blank&#34;&gt;https://forums.docker.com&lt;/a&gt;.
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Twitter&lt;/td&gt;
+    &lt;td&gt;
+      You can follow &lt;a href=&#34;https://twitter.com/docker/&#34; target=&#34;_blank&#34;&gt;Docker&#39;s Twitter feed&lt;/a&gt;
+      to get updates on our products. You can also tweet us questions or just
+      share blogs or stories.
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Stack Overflow&lt;/td&gt;
+    &lt;td&gt;
+      Stack Overflow has over 17000 Docker questions listed. We regularly
+      monitor &lt;a href=&#34;https://stackoverflow.com/search?tab=newest&amp;q=docker&#34; target=&#34;_blank&#34;&gt;Docker questions&lt;/a&gt;
+      and so do many other knowledgeable Docker users.
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;conventions&#34;&gt;Conventions&lt;/h3&gt;
+&lt;p&gt;Fork the repository and make changes on your fork in a feature branch:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If it&amp;rsquo;s a bug fix branch, name it XXXX-something where XXXX is the number of
+the issue.&lt;/li&gt;
+&lt;li&gt;If it&amp;rsquo;s a feature branch, create an enhancement issue to announce
+your intentions, and name it XXXX-something where XXXX is the number of the
+issue.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Submit unit tests for your changes. Go has a great test framework built in; use
+it! Take a look at existing tests for inspiration. &lt;a href=&#34;README.md&#34;&gt;Run the full test
+suite&lt;/a&gt; on your branch before
+submitting a pull request.&lt;/p&gt;
+&lt;p&gt;Write clean code. Universally formatted code promotes ease of writing, reading,
+and maintenance. Always run &lt;code&gt;gofmt -s -w file.go&lt;/code&gt; on each changed file before
+committing your changes. Most editors have plug-ins that do this automatically.&lt;/p&gt;
+&lt;p&gt;Pull request descriptions should be as clear as possible and include a reference
+to all the issues that they address.&lt;/p&gt;
+&lt;p&gt;Commit messages must start with a capitalized and short summary (max. 50 chars)
+written in the imperative, followed by an optional, more detailed explanatory
+text which is separated from the summary by an empty line.&lt;/p&gt;
+&lt;p&gt;Code review comments may be added to your pull request. Discuss, then make the
+suggested modifications and push additional commits to your feature branch. Post
+a comment after pushing. New commits show up in the pull request automatically,
+but the reviewers are notified only when you comment.&lt;/p&gt;
+&lt;p&gt;Pull requests must be cleanly rebased on top of master without multiple branches
+mixed into the PR.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Git tip&lt;/strong&gt;: If your PR no longer merges cleanly, use &lt;code&gt;rebase master&lt;/code&gt; in your
+feature branch to update your pull request rather than &lt;code&gt;merge master&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Before you make a pull request, squash your commits into logical units of work
+using &lt;code&gt;git rebase -i&lt;/code&gt; and &lt;code&gt;git push -f&lt;/code&gt;. A logical unit of work is a consistent
+set of patches that should be reviewed together: for example, upgrading the
+version of a vendored dependency and taking advantage of its now available new
+feature constitute two separate units of work. Implementing a new function and
+calling it in another file constitute a single logical unit of work. The very
+high majority of submissions should have a single commit, so if in doubt: squash
+down to one.&lt;/p&gt;
+&lt;p&gt;After every commit, make sure the test suite passes. Include documentation
+changes in the same pull request so that a revert would remove all traces of
+the feature or fix.&lt;/p&gt;
+&lt;p&gt;Include an issue reference like &lt;code&gt;Closes #XXXX&lt;/code&gt; or &lt;code&gt;Fixes #XXXX&lt;/code&gt; in the pull
+request description that close an issue. Including references automatically
+closes the issue on a merge.&lt;/p&gt;
+&lt;p&gt;Please do not add yourself to the &lt;code&gt;AUTHORS&lt;/code&gt; file, as it is regenerated regularly
+from the Git history.&lt;/p&gt;
+&lt;p&gt;Please see the &lt;a href=&#34;#coding-style&#34;&gt;Coding Style&lt;/a&gt; for further guidelines.&lt;/p&gt;
+&lt;h3 id=&#34;merge-approval&#34;&gt;Merge approval&lt;/h3&gt;
+&lt;p&gt;Docker maintainers use LGTM (Looks Good To Me) in comments on the code review to
+indicate acceptance.&lt;/p&gt;
+&lt;p&gt;A change requires at least 2 LGTMs from the maintainers of each
+component affected.&lt;/p&gt;
+&lt;p&gt;For more details, see the &lt;a href=&#34;MAINTAINERS&#34;&gt;MAINTAINERS&lt;/a&gt; page.&lt;/p&gt;
+&lt;h3 id=&#34;sign-your-work&#34;&gt;Sign your work&lt;/h3&gt;
+&lt;p&gt;The sign-off is a simple line at the end of the explanation for the patch. Your
+signature certifies that you wrote the patch or otherwise have the right to pass
+it on as an open-source patch. The rules are pretty simple: if you can certify
+the below (from &lt;a href=&#34;http://developercertificate.org/&#34;&gt;developercertificate.org&lt;/a&gt;):&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Developer Certificate of Origin
+Version 1.1
+
+Copyright (C) 2004, 2006 The Linux Foundation and its contributors.
+660 York Street, Suite 102,
+San Francisco, CA 94110 USA
+
+Everyone is permitted to copy and distribute verbatim copies of this
+license document, but changing it is not allowed.
+
+Developer&#39;s Certificate of Origin 1.1
+
+By making a contribution to this project, I certify that:
+
+(a) The contribution was created in whole or in part by me and I
+    have the right to submit it under the open source license
+    indicated in the file; or
+
+(b) The contribution is based upon previous work that, to the best
+    of my knowledge, is covered under an appropriate open source
+    license and I have the right under that license to submit that
+    work with modifications, whether created in whole or in part
+    by me, under the same open source license (unless I am
+    permitted to submit under a different license), as indicated
+    in the file; or
+
+(c) The contribution was provided directly to me by some other
+    person who certified (a), (b) or (c) and I have not modified
+    it.
+
+(d) I understand and agree that this project and the contribution
+    are public and that a record of the contribution (including all
+    personal information I submit with it, including my sign-off) is
+    maintained indefinitely and may be redistributed consistent with
+    this project or the open source license(s) involved.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then you just add a line to every git commit message:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Signed-off-by: Joe Smith &amp;lt;joe.smith@email.com&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Use your real name (sorry, no pseudonyms or anonymous contributions.)&lt;/p&gt;
+&lt;p&gt;If you set your &lt;code&gt;user.name&lt;/code&gt; and &lt;code&gt;user.email&lt;/code&gt; git configs, you can sign your
+commit automatically with &lt;code&gt;git commit -s&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;how-can-i-become-a-maintainer&#34;&gt;How can I become a maintainer?&lt;/h3&gt;
+&lt;p&gt;The procedures for adding new maintainers are explained in the global
+&lt;a href=&#34;https://github.com/docker/opensource/blob/master/MAINTAINERS&#34;&gt;MAINTAINERS&lt;/a&gt;
+file in the
+&lt;a href=&#34;https://github.com/docker/opensource/&#34;&gt;https://github.com/docker/opensource/&lt;/a&gt;
+repository.&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t forget: being a maintainer is a time investment. Make sure you
+will have time to make yourself available. You don&amp;rsquo;t have to be a
+maintainer to make a difference on the project!&lt;/p&gt;
+&lt;h2 id=&#34;docker-community-guidelines&#34;&gt;Docker community guidelines&lt;/h2&gt;
+&lt;p&gt;We want to keep the Docker community awesome, growing and collaborative. We need
+your help to keep it that way. To help with this we&amp;rsquo;ve come up with some general
+guidelines for the community as a whole:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Be nice: Be courteous, respectful and polite to fellow community members:
+no regional, racial, gender, or other abuse will be tolerated. We like
+nice people way better than mean ones!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Encourage diversity and participation: Make everyone in our community feel
+welcome, regardless of their background and the extent of their
+contributions, and do everything possible to encourage participation in
+our community.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Keep it legal: Basically, don&amp;rsquo;t get us in trouble. Share only content that
+you own, do not share private or sensitive information, and don&amp;rsquo;t break
+the law.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Stay on topic: Make sure that you are posting to the correct channel and
+avoid off-topic discussions. Remember when you update an issue or respond
+to an email you are potentially sending to a large number of people. Please
+consider this before you update. Also remember that nobody likes spam.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Don&amp;rsquo;t send email to the maintainers: There&amp;rsquo;s no need to send email to the
+maintainers to ask them to investigate an issue or to take a look at a
+pull request. Instead of sending an email, GitHub mentions should be
+used to ping maintainers to review a pull request, a proposal or an
+issue.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;coding-style&#34;&gt;Coding Style&lt;/h2&gt;
+&lt;p&gt;Unless explicitly stated, we follow all coding guidelines from the Go
+community. While some of these standards may seem arbitrary, they somehow seem
+to result in a solid, consistent codebase.&lt;/p&gt;
+&lt;p&gt;It is possible that the code base does not currently comply with these
+guidelines. We are not looking for a massive PR that fixes this, since that
+goes against the spirit of the guidelines. All new contributions should make a
+best effort to clean up and make the code base better than they left it.
+Obviously, apply your best judgement. Remember, the goal here is to make the
+code base easier for humans to navigate and understand. Always keep that in
+mind when nudging others to comply.&lt;/p&gt;
+&lt;p&gt;The rules:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;All code should be formatted with &lt;code&gt;gofmt -s&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;All code should pass the default levels of
+&lt;a href=&#34;https://github.com/golang/lint&#34;&gt;&lt;code&gt;golint&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;All code should follow the guidelines covered in &lt;a href=&#34;http://golang.org/doc/effective_go.html&#34;&gt;Effective
+Go&lt;/a&gt; and &lt;a href=&#34;https://github.com/golang/go/wiki/CodeReviewComments&#34;&gt;Go Code Review
+Comments&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Comment the code. Tell us the why, the history and the context.&lt;/li&gt;
+&lt;li&gt;Document &lt;em&gt;all&lt;/em&gt; declarations and methods, even private ones. Declare
+expectations, caveats and anything else that may be important. If a type
+gets exported, having the comments already there will ensure it&amp;rsquo;s ready.&lt;/li&gt;
+&lt;li&gt;Variable name length should be proportional to its context and no longer.
+&lt;code&gt;noCommaALongVariableNameLikeThisIsNotMoreClearWhenASimpleCommentWouldDo&lt;/code&gt;.
+In practice, short methods will have short variable names and globals will
+have longer names.&lt;/li&gt;
+&lt;li&gt;No underscores in package names. If you need a compound name, step back,
+and re-examine why you need a compound name. If you still think you need a
+compound name, lose the underscore.&lt;/li&gt;
+&lt;li&gt;No utils or helpers packages. If a function is not general enough to
+warrant its own package, it has not been written generally enough to be a
+part of a util package. Just leave it unexported and well-documented.&lt;/li&gt;
+&lt;li&gt;All tests should run with &lt;code&gt;go test&lt;/code&gt; and outside tooling should not be
+required. No, we don&amp;rsquo;t need another unit testing framework. Assertion
+packages are acceptable if they provide &lt;em&gt;real&lt;/em&gt; incremental value.&lt;/li&gt;
+&lt;li&gt;Even though we call these &amp;ldquo;rules&amp;rdquo; above, they are actually just
+guidelines. Since you&amp;rsquo;ve read all the rules, you now know that.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If you are having trouble getting into the mood of idiomatic Go, we recommend
+reading through &lt;a href=&#34;https://golang.org/doc/effective_go.html&#34;&gt;Effective Go&lt;/a&gt;. The
+&lt;a href=&#34;https://blog.golang.org&#34;&gt;Go Blog&lt;/a&gt; is also a great resource. Drinking the
+kool-aid is a lot easier than going thirsty.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: How to contribute to Docker documentation</title>
       <link>https://docker-community-leaders.github.io/dockercommunity/docs/contribution-guidelines/docs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -14,25 +14,6 @@
     
     
     <item>
-      <title>Docs: Additional Resources</title>
-      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/java/resources/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/java/resources/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Follow the below links for additional resources and links&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/java-debugging-eclipse/&#34;&gt;In-container Java Development: Eclipse&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/java-debugging-intellij/&#34;&gt;In-container Java Development: Intellij&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/java-debugging-netbeans/&#34;&gt;In-container Java Development: Netbeans&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
       <title>Docs: Event Checklist</title>
       <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/java/checklists/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2252,6 +2233,25 @@ ADD dockercon.war /opt/jboss/wildfly/standalone/deployments/
 &lt;p&gt;Give the image name, specify an empty directory, click on &amp;ldquo;&lt;code&gt;Edit Dockerfile&lt;/code&gt;&amp;rdquo; to edit the contents of Dockerfile&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;docker-eclipse-build-image.png&#34; alt=&#34;My Image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Click on &amp;ldquo;&lt;code&gt;Save&lt;/code&gt;&amp;rdquo; and &amp;ldquo;&lt;code&gt;Finish&lt;/code&gt;&amp;rdquo; to create the image.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Additional Resources</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/java/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/java/resources/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Follow the below links for additional resources and links&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/java-debugging-eclipse/&#34;&gt;In-container Java Development: Eclipse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/java-debugging-intellij/&#34;&gt;In-container Java Development: Intellij&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://training.play-with-docker.com/java-debugging-netbeans/&#34;&gt;In-container Java Development: Netbeans&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>

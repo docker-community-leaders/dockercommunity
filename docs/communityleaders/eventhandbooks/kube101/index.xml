@@ -335,6 +335,19 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
     </item>
     
     <item>
+      <title>Docs: Recommended Agenda</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/agenda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/agenda/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Deploying Your First Nginx Pod</title>
       <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/pods101/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2834,19 +2847,6 @@ default backend - 404
 &lt;/li&gt;
 &lt;/ul&gt;
 
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Recommended Agenda</title>
-      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/agenda/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/kube101/agenda/</guid>
-      <description>
-        
-        
-        
       </description>
     </item>
     

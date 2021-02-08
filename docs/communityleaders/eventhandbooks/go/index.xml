@@ -640,6 +640,295 @@ ajeetraina@Ajeets-MacBook-Pro realtime-sensor-jetson %
     </item>
     
     <item>
+      <title>Docs: Building and Running a Docker Container</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/go/building/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/go/building/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#build-a-docker-image&#34;&gt;Build a Docker Image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#run-a-docker-container&#34;&gt;Running a Docker Container&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#example-go-application&#34;&gt;Example Go Application&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;build-a-docker-image&#34;&gt;Build a Docker Image&lt;/h2&gt;
+&lt;p&gt;This section explains how to create a Docker image.&lt;/p&gt;
+&lt;h2 id=&#34;dockerfile&#34;&gt;Dockerfile&lt;/h2&gt;
+&lt;p&gt;Docker build images by reading instructions from a &lt;em&gt;Dockerfile&lt;/em&gt;. A &lt;em&gt;Dockerfile&lt;/em&gt; is a text document that contains all the commands a user could call on the command line to assemble an image. &lt;code&gt;docker image build&lt;/code&gt; command uses this file and executes all the commands in succession to create an image.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;build&lt;/code&gt; command is also passed a context that is used during image creation. This context can be a path on your local filesystem or a URL to a Git repository.&lt;/p&gt;
+&lt;p&gt;Dockerfile is usually called Dockerfile. The complete list of commands that can be specified in this file are explained at &lt;a href=&#34;https://docs.docker.com/reference/builder/&#34;&gt;https://docs.docker.com/reference/builder/&lt;/a&gt;. The common commands are listed below:&lt;/p&gt;
+&lt;h2 id=&#34;common-commands-for-dockerfile&#34;&gt;Common commands for Dockerfile&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Command&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Purpose&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;FROM&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;First non-comment instruction in &lt;em&gt;Dockerfile&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;FROM ubuntu&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;COPY&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Copies mulitple source files from the context to the file system of the container at the specified path&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;COPY .bash_profile /home&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;ENV&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Sets the environment variable&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;ENV HOSTNAME=test&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;RUN&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Executes a command&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;RUN apt-get update&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;CMD&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Defaults for an executing container&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;CMD [&amp;quot;/bin/echo&amp;quot;, &amp;quot;hello world&amp;quot;]&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;EXPOSE&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Informs the network ports that the container will listen on&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;EXPOSE 8093&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;==================&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;create-your-first-image&#34;&gt;Create your first image&lt;/h2&gt;
+&lt;p&gt;Create a new directory &lt;code&gt;hellodocker&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In that directory, create a new text file &lt;code&gt;Dockerfile&lt;/code&gt;. Use the following contents:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;FROM ubuntu:latest
+
+CMD [&amp;quot;/bin/echo&amp;quot;, &amp;quot;hello world&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This image uses &lt;code&gt;ubuntu&lt;/code&gt; as the base image. &lt;code&gt;CMD&lt;/code&gt; command defines the command that needs to run. It provides a different entry point of &lt;code&gt;/bin/echo&lt;/code&gt; and an argument &amp;ldquo;&lt;code&gt;hello world&lt;/code&gt;&amp;rdquo;.&lt;/p&gt;
+&lt;h2 id=&#34;build-the-image&#34;&gt;Build the image&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;  docker image build . -t helloworld
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;.&lt;/code&gt; in this command is the context for the command &lt;code&gt;docker image build&lt;/code&gt;. &lt;code&gt;-t&lt;/code&gt; adds a tag to the image.&lt;/p&gt;
+&lt;p&gt;The following output is shown:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ubuntu:latest
+latest: Pulling from library/ubuntu
+9fb6c798fa41: Pull complete 
+3b61febd4aef: Pull complete 
+9d99b9777eb0: Pull complete 
+d010c8cf75d7: Pull complete 
+7fac07fb303e: Pull complete 
+Digest: sha256:31371c117d65387be2640b8254464102c36c4e23d2abe1f6f4667e47716483f1
+Status: Downloaded newer image for ubuntu:latest
+ ---&amp;gt; 2d696327ab2e
+Step 2/2 : CMD /bin/echo hello world
+ ---&amp;gt; Running in 9356a508590c
+ ---&amp;gt; e61f88f3a0f7
+Removing intermediate container 9356a508590c
+Successfully built e61f88f3a0f7
+Successfully tagged helloworld:latest
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;list-the-images&#34;&gt;List the images&lt;/h2&gt;
+&lt;p&gt;You can list the images available using &lt;code&gt;docker image ls&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+helloworld          latest              e61f88f3a0f7        3 minutes ago       122MB
+ubuntu              latest              2d696327ab2e        4 days ago          122MB
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Other images may be shown as well but we are interested in these two images for now.&lt;/p&gt;
+&lt;p&gt;Run the container using the command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker container run helloworld
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;to see the output:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hello world
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you do not see the expected output, check your Dockerfile that the content exactly matches as shown above. Build the image again and now run it.&lt;/p&gt;
+&lt;p&gt;Change the base image from &lt;code&gt;ubuntu&lt;/code&gt; to &lt;code&gt;busybox&lt;/code&gt; in &lt;code&gt;Dockerfile&lt;/code&gt;. Build the image again:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker image build -t helloworld:2 .
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and view the images using &lt;code&gt;docker image ls&lt;/code&gt; command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+helloworld          2                   7fbedda27c66        3 seconds ago       1.13MB
+helloworld          latest              e61f88f3a0f7        5 minutes ago       122MB
+ubuntu              latest              2d696327ab2e        4 days ago          122MB
+busybox             latest              54511612f1c4        9 days ago          1.13MB
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;helloworld:2&lt;/code&gt; is the format that allows to specify the image name and assign a tag/version to it separated by &lt;code&gt;:&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;example-go-application&#34;&gt;Example Go Application&lt;/h2&gt;
+&lt;p&gt;Create a &lt;code&gt;main.go&lt;/code&gt; file with the following content:
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;highlight&#34;&gt;
+    &lt;div class=&#34;copy-code-icon&#34; style=&#34;text-align:right&#34;&gt;
+    &lt;a href=&#34;https://%25!s%28%3cnil%3e%29/master/content/en/examples//Golang/simple-app/main.go&#34; download=&#34;/Golang/simple-app/main.go&#34;&gt;&lt;code&gt;/Golang/simple-app/main.go&lt;/code&gt;
+    &lt;/a&gt;
+    &lt;img src=&#34;https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg&#34; style=&#34;max-height:24px; cursor: pointer&#34; onclick=&#34;copyCode(&#39;golangsimple-appmaingo&#39;)&#34; title=&#34;Copy /Golang/simple-app/main.go to clipboard&#34;&gt;
+    &lt;/img&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;includecode&#34; id=&#34;golangsimple-appmaingo&#34;&gt;
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;main&lt;/span&gt;
+
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;
+	&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;log&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;net/http&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#000&#34;&gt;fmt&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Println&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Go Docker Tutorial&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+
+	&lt;span style=&#34;color:#000&#34;&gt;http&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;HandleFunc&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;func&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;w&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;http&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ResponseWriter&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;r&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;http&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Request&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#000&#34;&gt;fmt&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Fprintf&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;w&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Hello World&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+	&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;})&lt;/span&gt;
+
+	&lt;span style=&#34;color:#000&#34;&gt;log&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Fatal&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;http&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ListenAndServe&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;:8081&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;))&lt;/span&gt;
+
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/p&gt;
+&lt;p&gt;Now that we have our server, let’s set about writing our Dockerfile and construct a container in which our Go application will live.&lt;/p&gt;
+&lt;p&gt;Create Dockerfile with following content:
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;highlight&#34;&gt;
+    &lt;div class=&#34;copy-code-icon&#34; style=&#34;text-align:right&#34;&gt;
+    &lt;a href=&#34;https://%25!s%28%3cnil%3e%29/master/content/en/examples//Golang/simple-app/Dockerfile&#34; download=&#34;/Golang/simple-app/Dockerfile&#34;&gt;&lt;code&gt;/Golang/simple-app/Dockerfile&lt;/code&gt;
+    &lt;/a&gt;
+    &lt;img src=&#34;https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg&#34; style=&#34;max-height:24px; cursor: pointer&#34; onclick=&#34;copyCode(&#39;golangsimple-appdockerfile&#39;)&#34; title=&#34;Copy /Golang/simple-app/Dockerfile to clipboard&#34;&gt;
+    &lt;/img&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;includecode&#34; id=&#34;golangsimple-appdockerfile&#34;&gt;
+    &lt;pre&gt;&lt;code&gt;FROM golang:1.12.0-alpine3.9
+RUN mkdir /app
+ADD . /app
+WORKDIR /app
+RUN go build -o main .
+CMD [&amp;#34;/app/main&amp;#34;]
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/p&gt;
+&lt;p&gt;Now that we have defined everything we need for our Go application to run in our Dockerfile we can now build an image using this file. In order to do that, we’ll need to run the following command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker build -t my-go-app .
+Sending build context to Docker daemon   5.12kB
+Step 1/6 : FROM golang:1.12.0-alpine3.9
+ ---&amp;gt; d4953956cf1e
+Step 2/6 : RUN mkdir /app
+ ---&amp;gt; Using cache
+ ---&amp;gt; be346f9ff24f
+Step 3/6 : ADD . /app
+ ---&amp;gt; eb420da7413c
+Step 4/6 : WORKDIR /app
+ ---&amp;gt; Running in d623a88e4a00
+Removing intermediate container d623a88e4a00
+ ---&amp;gt; ffc439c5bec5
+Step 5/6 : RUN go build -o main .
+ ---&amp;gt; Running in 15805f4f7685
+Removing intermediate container 15805f4f7685
+ ---&amp;gt; 31828faf8ae4
+Step 6/6 : CMD [&amp;quot;/app/main&amp;quot;]
+ ---&amp;gt; Running in 9d54463b7e84
+Removing intermediate container 9d54463b7e84
+ ---&amp;gt; 3f9244a1a240
+Successfully built 3f9244a1a240
+Successfully tagged my-go-app:latest
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;We can now verify that our image exists on our machine by using &lt;code&gt;docker images&lt;/code&gt; command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker images
+REPOSITORY                                 TAG                 IMAGE ID            CREATED             SIZE
+my-go-app                                  latest              3f9244a1a240        2 minutes ago       355MB$ docker images
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In order to run this newly created image, we can use the docker run command and pass in the ports we want to map to and the image we wish to run.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker run -p 8080:8081 -it my-go-app
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-p 8080:8081&lt;/code&gt; - This exposes our application which is running on port 8081 within our container on http://localhost:8080 on our local machine.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-it&lt;/code&gt; - This flag specifies that we want to run this image in interactive mode with a tty for this container process.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;my-go-app &lt;/code&gt; - This is the name of the image that we want to run in a container.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Awesome! Now if you go to &lt;a href=&#34;http://localhost:8080&#34;&gt;http://localhost:8080&lt;/a&gt; in your browser, you should see that the application is responds with &lt;code&gt;Hello, &amp;quot;/&amp;quot;.&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;run-container-in-background&#34;&gt;Run Container in Background&lt;/h3&gt;
+&lt;p&gt;You’ll notice that if we &lt;code&gt;ctrl-c&lt;/code&gt; this within the terminal, it will kill the container. If we want to have it run permanently in the background, you can replace &lt;code&gt;-it&lt;/code&gt; with &lt;code&gt;-d &lt;/code&gt; to run this container in detached mode.&lt;/p&gt;
+&lt;p&gt;In order to view the list of containers running in the background you can use docker ps which should output something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+70fcc9195865        my-go-app           &amp;quot;/app/main&amp;quot;              5 seconds ago       Up 3 seconds        0.0.0.0:8080-&amp;gt;8081/tcp   silly_swirles
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;go-modules&#34;&gt;Go Modules&lt;/h3&gt;
+&lt;p&gt;Let’s look at a more complex example which features imported modules. In this instance, we will need to add a step within our Dockerfile which does the job of downloading our dependencies prior to the go build command executing:&lt;/p&gt;
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;highlight&#34;&gt;
+    &lt;div class=&#34;copy-code-icon&#34; style=&#34;text-align:right&#34;&gt;
+    &lt;a href=&#34;https://%25!s%28%3cnil%3e%29/master/content/en/examples//Golang/simple-app/Dockerfile.module&#34; download=&#34;/Golang/simple-app/Dockerfile.module&#34;&gt;&lt;code&gt;/Golang/simple-app/Dockerfile.module&lt;/code&gt;
+    &lt;/a&gt;
+    &lt;img src=&#34;https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/static/images/copycode.svg&#34; style=&#34;max-height:24px; cursor: pointer&#34; onclick=&#34;copyCode(&#39;golangsimple-appdockerfilemodule&#39;)&#34; title=&#34;Copy /Golang/simple-app/Dockerfile.module to clipboard&#34;&gt;
+    &lt;/img&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;includecode&#34; id=&#34;golangsimple-appdockerfilemodule&#34;&gt;
+    &lt;pre&gt;&lt;code class=&#34;language-module&#34; data-lang=&#34;module&#34;&gt;FROM golang:1.12.0-alpine3.9
+RUN mkdir /app
+ADD . /app
+WORKDIR /app
+## Add this go mod download command to pull in any dependencies
+RUN go mod download
+## Our project will now successfully build with the necessary go libraries included.
+RUN go build -o main .
+## Our start command which kicks off
+## our newly created binary executable
+CMD [&amp;#34;/app/main&amp;#34;]
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Dockerize Your First Go Application</title>
       <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/go/golangapp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

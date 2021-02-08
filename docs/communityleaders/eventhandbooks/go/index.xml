@@ -516,6 +516,130 @@ $ go version
     </item>
     
     <item>
+      <title>Docs: Basics of Docker</title>
+      <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/go/basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/go/basics/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#main-components-of-docker-system&#34;&gt;Main Components of Docker System&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#test-your-knowledge&#34;&gt;Test Your Knowledge&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;basics-of-docker&#34;&gt;Basics of Docker&lt;/h2&gt;
+&lt;p&gt;This section introduces the basic terminology of Docker.&lt;/p&gt;
+&lt;p&gt;Docker is a platform for developers and sysadmins to build, ship, and run applications. Docker lets you quickly assemble applications from components and eliminates the friction that can come when shipping code. Docker lets you test and deploy your code into production as fast as possible.&lt;/p&gt;
+&lt;p&gt;Docker simplifies software delivery by making it easy to build and share images that contain your application’s entire environment, or &lt;em&gt;application operating system&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;what-does-it-mean-by-an-application-operating-system-&#34;&gt;What does it mean by an application operating system ?&lt;/h2&gt;
+&lt;p&gt;Your application typically requires a specific version of operating system, application server, runtime, and database server. It may also require configuration files, and multiple other dependencies. The application may need binding to specific ports and certain amount of memory. The components and configuration together required to run your application is what is referred to as application operating system.&lt;/p&gt;
+&lt;p&gt;You can certainly provide an installation script that will download and install these components. Docker simplifies this process by allowing to create an image that contains your application and infrastructure together, managed as one component. These images are then used to create Docker containers which run on the container virtualization platform, provided by Docker.&lt;/p&gt;
+&lt;h2 id=&#34;main-components-of-docker-system&#34;&gt;Main Components of Docker System&lt;/h2&gt;
+&lt;p&gt;Docker has three main components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Images are the &lt;em&gt;build component&lt;/em&gt; of Docker and are the read-only templates defining an application operating system.&lt;/li&gt;
+&lt;li&gt;Containers are the &lt;em&gt;run component&lt;/em&gt; of Docker and created from images. Containers can be run, started, stopped, moved, and deleted.&lt;/li&gt;
+&lt;li&gt;Images are stored, shared, and managed in a registry and are the &lt;em&gt;distribution component&lt;/em&gt; of Docker.&lt;/li&gt;
+&lt;li&gt;DockerHub is a publicly available registry and is available at &lt;a href=&#34;http://hub.docker.com&#34;&gt;http://hub.docker.com&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In order for these three components to work together, the &lt;em&gt;Docker Daemon&lt;/em&gt; (or Docker Engine) runs on a host machine and does the heavy lifting of building, running, and distributing Docker containers. In addition, the &lt;em&gt;Client&lt;/em&gt; is a Docker binary which accepts commands from the user and communicates back and forth with the Engine.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;docker-architecture.png&#34; alt=&#34;docker-architecture&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The Client communicates with the Engine that is either co-located on the same host or on a different host. Client uses the &lt;code&gt;pull&lt;/code&gt; command to request the Engine to pull an image from the registry. The Engine then downloads the image from Docker Store, or whichever registry is configured. Multiple images can be downloaded from the registry and installed on the Engine. Client uses the &lt;code&gt;run&lt;/code&gt; run the container.&lt;/p&gt;
+&lt;h2 id=&#34;docker-image&#34;&gt;Docker Image&lt;/h2&gt;
+&lt;p&gt;We&amp;rsquo;ve already seen that Docker images are read-only templates from which Docker containers are launched. Each image consists of a series of layers. Docker makes use of union file systems to combine these layers into a single image. Union file systems allow files and directories of separate file systems, known as branches, to be transparently overlaid, forming a single coherent file system.&lt;/p&gt;
+&lt;p&gt;One of the reasons Docker is so lightweight is because of these layers. When you change a Docker image—for example, update an application to a new version— a new layer gets built. Thus, rather than replacing the whole image or entirely rebuilding, as you may do with a virtual machine, only that layer is added or updated. Now you don&amp;rsquo;t need to distribute a whole new image, just the update, making distributing Docker images faster and simpler.&lt;/p&gt;
+&lt;p&gt;Every image starts from a base image, for example &lt;code&gt;ubuntu&lt;/code&gt;, a base Ubuntu image, or &lt;code&gt;fedora&lt;/code&gt;, a base Fedora image. You can also use images of your own as the basis for a new image, for example if you have a base Apache image you could use this as the base of all your web application images.&lt;/p&gt;
+&lt;p&gt;NOTE: By default, Docker obtains these base images from Docker Store.&lt;/p&gt;
+&lt;p&gt;Docker images are then built from these base images using a simple, descriptive set of steps we call instructions. Each instruction creates a new layer in our image. Instructions include actions like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Run a command&lt;/li&gt;
+&lt;li&gt;Add a file or directory&lt;/li&gt;
+&lt;li&gt;Create an environment variable&lt;/li&gt;
+&lt;li&gt;Run a process when launching a container&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These instructions are stored in a file called a Dockerfile. Docker reads this Dockerfile when you request a build of an image, executes the instructions, and returns a final image.&lt;/p&gt;
+&lt;h2 id=&#34;docker-container&#34;&gt;Docker Container&lt;/h2&gt;
+&lt;p&gt;A container consists of an operating system, user-added files, and meta-data. As we&amp;rsquo;ve seen, each container is built from an image. That image tells Docker what the container holds, what process to run when the container is launched, and a variety of other configuration data. The Docker image is read-only. When Docker runs a container from an image, it adds a read-write layer on top of the image (using a union file system as we saw earlier) in which your application can then run.&lt;/p&gt;
+&lt;h2 id=&#34;docker-engine&#34;&gt;Docker Engine&lt;/h2&gt;
+&lt;p&gt;Docker Host is created as part of installing Docker on your machine. Once your Docker host has been created, it then allows you to manage images and containers. For example, the image can be downloaded and containers can be started, stopped and restarted.&lt;/p&gt;
+&lt;h3 id=&#34;docker-client&#34;&gt;Docker Client&lt;/h3&gt;
+&lt;p&gt;The client communicates with the Docker Host and let&amp;rsquo;s you work with images and containers.&lt;/p&gt;
+&lt;p&gt;Check if your client is working using the following command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker -v
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It shows the output:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Docker version 20.10.2, build 2291f61
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;NOTE: The exact version may differ based upon how recently the installation was performed.&lt;/p&gt;
+&lt;p&gt;The exact version of Client and Server can be seen using &lt;code&gt;docker version&lt;/code&gt; command. This shows the output as:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; docker version
+Client: Docker Engine - Community
+ Cloud integration: 1.0.7
+ Version:           20.10.2
+ API version:       1.41
+ Go version:        go1.13.15
+ Git commit:        2291f61
+ Built:             Mon Dec 28 16:12:42 2020
+ OS/Arch:           darwin/amd64
+ Context:           default
+ Experimental:      true
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          20.10.2
+  API version:      1.41 (minimum version 1.12)
+  Go version:       go1.13.15
+  Git commit:       8891c58
+  Built:            Mon Dec 28 16:15:28 2020
+  OS/Arch:          linux/amd64
+  Experimental:     true
+ containerd:
+  Version:          1.4.3
+  GitCommit:        269548fa27e0089a8b8278fc4fc781d7f65a939b
+ runc:
+  Version:          1.0.0-rc92
+  GitCommit:        ff819c7e9184c13b7c2607fe6c30ae19403a7aff
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+ajeetraina@Ajeets-MacBook-Pro realtime-sensor-jetson % 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The complete set of commands can be seen using &lt;code&gt;docker --help&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;test-your-knowledge&#34;&gt;Test Your Knowledge&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S. No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Question.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Response&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;What is difference between Docker Image and Docker Container?&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Where are all Docker images stored?&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Is DockerHub a public or private Docker registry?&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;What is the main role of Docker Engine?&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Dockerize Your First Go Application</title>
       <link>https://docker-community-leaders.github.io/dockercommunity/docs/communityleaders/eventhandbooks/go/golangapp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

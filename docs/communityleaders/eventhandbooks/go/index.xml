@@ -413,7 +413,88 @@ Note: The RSVP limits you set in Bevy do not translate to meetup. The best way t
       <description>
         
         
-        &lt;h1 id=&#34;download-golang&#34;&gt;Download Golang&lt;/h1&gt;
+        &lt;h2 id=&#34;setup-environment&#34;&gt;Setup Environment&lt;/h2&gt;
+&lt;p&gt;This section describes the hardware and software needed for this workshop, and how to configure them.
+This workshop is designed for a BYOL (Bring Your Own Laptop) style hands-on-lab.&lt;/p&gt;
+&lt;h3 id=&#34;hardware--software&#34;&gt;Hardware &amp;amp; Software&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Memory: At least 4 GB+, strongly preferred 8 GB&lt;/li&gt;
+&lt;li&gt;Operating System: Mac OS X (10.10.3+), Windows 10 Pro+ 64-bit, Ubuntu 12+, CentOS 7+.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;install-docker&#34;&gt;Install Docker&lt;/h3&gt;
+&lt;p&gt;Docker runs natively on Mac, Windows and Linux.
+This lab will use &lt;a href=&#34;https://www.docker.com/community-edition&#34;&gt;Docker Community Edition (CE)&lt;/a&gt;.
+Download the Docker CE edition for your machine from the &lt;a href=&#34;https://store.docker.com/search?type=edition&amp;amp;offering=community&#34;&gt;Docker Store&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;NOTE&lt;/em&gt;: Docker CE requires a fairly recent operating system version.
+If your machine does not meet the requirements, then you need to install &lt;a href=&#34;https://www.docker.com/products/docker-toolbox&#34;&gt;Docker Toolbox&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This workshop is tested with Docker Community Edition &lt;code&gt;19.03.13-ce-rc10, build fec3683&lt;/code&gt; on Ubuntu &lt;code&gt;20.04.1 LTS&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;docker-images&#34;&gt;Docker Images&lt;/h3&gt;
+&lt;p&gt;This tutorial uses a few Docker images and software.
+Let&amp;rsquo;s download them before we start the tutorial.&lt;/p&gt;
+&lt;p&gt;In order to download the Docker images we will be using &lt;code&gt;docker-compose&lt;/code&gt;.
+You can install &lt;code&gt;docker-compose&lt;/code&gt; following the instructions provided in the doc &lt;a href=&#34;https://docs.docker.com/compose/install/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now, download the &lt;a href=&#34;https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/content/en/docs/CommunityLeaders/EventHandbooks/Go/prerequisite/docker-compose-pull-images.yml&#34;&gt;docker-compose-pull-images.yml&lt;/a&gt; file and use the following command to pull the required images:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl -O https://raw.githubusercontent.com/docker-community-leaders/alphasite/master/pages/handbooks/go/scripts/docker-compose-pull-images.yml
+docker-compose -f docker-compose-pull-images.yml pull --parallel
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;other-software&#34;&gt;Other Software&lt;/h3&gt;
+&lt;p&gt;The softwares in this section are specific to certain parts of the workshop.
+Install them only if you plan to attempt them.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Install &lt;a href=&#34;https://git-scm.com&#34;&gt;git&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install &lt;a href=&#34;https://golang.org/doc/install&#34;&gt;Go&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Download and install a code editor of your choice:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://code.visualstudio.com/download&#34;&gt;Visual Studio Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jetbrains.com/go/download/&#34;&gt;GoLand&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sublimetext.com/3&#34;&gt;Sublime Text&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Download and install Java IDE of your choice:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;S.No.&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Name of Software&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Link to Follow&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Git&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://git-scm.com&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Go&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://golang.org/doc/install&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Visual Studio Code&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://code.visualstudio.com/download&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;GoLand&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.jetbrains.com/go/download/&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Sublime Text 3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://www.sublimetext.com/3&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;download-golang&#34;&gt;Download Golang&lt;/h1&gt;
 &lt;p&gt;You can download the latest version of GoLang (Golang 15.7 ) from the below links:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://golang.org/dl/go1.15.7.windows-amd64.msi&#34;&gt;Windows&lt;/a&gt;&lt;/li&gt;

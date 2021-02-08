@@ -1927,6 +1927,18 @@ if (!doNotTrack) {
 
 
 
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#setup-environment">Setup Environment</a></li>
+      </ul>
+    </li>
+    <li><a href="#download-golang">Download Golang</a></li>
+    <li><a href="#install-golang">Install Golang</a></li>
+  </ul>
+</nav>
+
 
 
           </div>
@@ -1993,7 +2005,88 @@ if (!doNotTrack) {
 	<h1>Prerequisite</h1>
         <div class="lead">Installing Go on Linux, Mac and Windows</div>
 	
-	<h1 id="download-golang">Download Golang</h1>
+	<h2 id="setup-environment">Setup Environment</h2>
+<p>This section describes the hardware and software needed for this workshop, and how to configure them.
+This workshop is designed for a BYOL (Bring Your Own Laptop) style hands-on-lab.</p>
+<h3 id="hardware--software">Hardware &amp; Software</h3>
+<ul>
+<li>Memory: At least 4 GB+, strongly preferred 8 GB</li>
+<li>Operating System: Mac OS X (10.10.3+), Windows 10 Pro+ 64-bit, Ubuntu 12+, CentOS 7+.</li>
+</ul>
+<h3 id="install-docker">Install Docker</h3>
+<p>Docker runs natively on Mac, Windows and Linux.
+This lab will use <a href="https://www.docker.com/community-edition">Docker Community Edition (CE)</a>.
+Download the Docker CE edition for your machine from the <a href="https://store.docker.com/search?type=edition&amp;offering=community">Docker Store</a>.</p>
+<p><em>NOTE</em>: Docker CE requires a fairly recent operating system version.
+If your machine does not meet the requirements, then you need to install <a href="https://www.docker.com/products/docker-toolbox">Docker Toolbox</a>.</p>
+<p>This workshop is tested with Docker Community Edition <code>19.03.13-ce-rc10, build fec3683</code> on Ubuntu <code>20.04.1 LTS</code>.</p>
+<h3 id="docker-images">Docker Images</h3>
+<p>This tutorial uses a few Docker images and software.
+Let&rsquo;s download them before we start the tutorial.</p>
+<p>In order to download the Docker images we will be using <code>docker-compose</code>.
+You can install <code>docker-compose</code> following the instructions provided in the doc <a href="https://docs.docker.com/compose/install/">here</a>.</p>
+<p>Now, download the <a href="https://raw.githubusercontent.com/docker-community-leaders/dockercommunity/master/content/en/docs/CommunityLeaders/EventHandbooks/Go/prerequisite/docker-compose-pull-images.yml">docker-compose-pull-images.yml</a> file and use the following command to pull the required images:</p>
+<pre><code>curl -O https://raw.githubusercontent.com/docker-community-leaders/alphasite/master/pages/handbooks/go/scripts/docker-compose-pull-images.yml
+docker-compose -f docker-compose-pull-images.yml pull --parallel
+</code></pre><h3 id="other-software">Other Software</h3>
+<p>The softwares in this section are specific to certain parts of the workshop.
+Install them only if you plan to attempt them.</p>
+<ul>
+<li>
+<p>Install <a href="https://git-scm.com">git</a></p>
+</li>
+<li>
+<p>Install <a href="https://golang.org/doc/install">Go</a></p>
+</li>
+<li>
+<p>Download and install a code editor of your choice:</p>
+<ul>
+<li><a href="https://code.visualstudio.com/download">Visual Studio Code</a></li>
+<li><a href="https://www.jetbrains.com/go/download/">GoLand</a></li>
+<li><a href="https://www.sublimetext.com/3">Sublime Text</a></li>
+</ul>
+</li>
+<li>
+<p>Download and install Java IDE of your choice:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">S.No.</th>
+<th align="left">Name of Software</th>
+<th align="left">Link to Follow</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left">Git</td>
+<td align="left"><a href="https://git-scm.com">Link</a></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Go</td>
+<td align="left"><a href="https://golang.org/doc/install">Link</a></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Visual Studio Code</td>
+<td align="left"><a href="https://code.visualstudio.com/download">Link</a></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">GoLand</td>
+<td align="left"><a href="https://www.jetbrains.com/go/download/">Link</a></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Sublime Text 3</td>
+<td align="left"><a href="https://www.sublimetext.com/3">Link</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="download-golang">Download Golang</h1>
 <p>You can download the latest version of GoLang (Golang 15.7 ) from the below links:</p>
 <ul>
 <li><a href="https://golang.org/dl/go1.15.7.windows-amd64.msi">Windows</a></li>
@@ -2311,7 +2404,7 @@ $ go version
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified 02.02.8082: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/c007cb5bb77febc4d288c074e4edc14b82b33673">Update _index.md (c007cb5)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified 02.02.8082: <a  href="https://github.com/docker-community-leaders/dockercommunity/commit/9a400eacfcdd6adb245f77a88877c813044dbe66">Update _index.md (9a400ea)</a>
 </div>
 </div>
 

@@ -110,6 +110,10 @@ algolia_docsearch = false
 # Enable Lunr.js offline search
 offlineSearch = false 
 
+# Enable RSS
+
+rss_sections = ["Captains"]
+
 # User interface configuration
 [params.ui]
 # Enable to show the side bar menu in its compact state.

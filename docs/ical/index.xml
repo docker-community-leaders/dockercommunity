@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title> – Upcoming Events</title>
+    <title> – Cal</title>
     <link>https://docker-community-leaders.github.io/dockercommunity/docs/ical/</link>
-    <description>Recent content in Upcoming Events on </description>
+    <description>Recent content in Cal on </description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="https://docker-community-leaders.github.io/dockercommunity/docs/ical/index.xml" rel="self" type="application/rss+xml" />

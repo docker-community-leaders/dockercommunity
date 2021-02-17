@@ -82,3 +82,8 @@ anchor = "smart"
     name = "Community Tools"
     url = "/docs/communicate"
     weight = 60
+    
+  [[menu.main]]
+    name = "iCal"
+    url = "/docs/ical"
+    weight = 80
